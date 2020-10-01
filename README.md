@@ -30,10 +30,12 @@
 	- Lời chúc và hẹn gặp lại
 	- ...
 - Thêm 1 thanh nhắc nhở nhân viên: kiểu như "Luôn tươi cười, nói cảm ơn, nói xin chào",... hoặc gì gì đó.
+- ...
 
 ### 2. Quản lý quán
 - Kiểm tra còn bao nhiêu ghế trống trong quán
 - Quản lý quán theo mã id, mỗi khách/nhóm khách sẽ có ID riêng. Được đánh số theo từ 1 -> số lượng ghế.
+- ...
 	
 ### 3. Quản lý, thống kê thu chi, tình hình tài chính của quán
 - Sẽ bao gồm 2 mục chính là: thu và chi
@@ -42,14 +44,17 @@
 - Thống kê được tình hình tài chính theo: ngày, tuần, quý, tháng, năm or Từ ... tới ...
 - Thống kê và hiển thị cho người dùng thấy theo dạng các lược đồ: dạng cột, tròn
 - Quán lý số lượng khách tới quán
+- ...
 	
 ### 4. Đăng nhập, phân quyền
 - Sẽ có 2 cấp bậc
 - Cấp 1 là người chủ quán, có quyền quyết định toàn bộ về việc: xóa bớt nhân viên, thêm nhân viên, reset mật khẩu cho nhân viên, xem báo cáo tình hình tài chính và quyền thiết lập ở mục 5.
 - Cấp 2 là nhân viên thu ngân, có quyền ở mục 1, 2, 6
+- ...
 	
 ### 5. Thiết lập
 - Thêm/Xóa/Thay đổi thông tin về một món vào trong danh sách món
+- ...
 	
 ### 6. Quán lý thông tin khách hàng
 - Lưu tên, sdt của khách hàng
@@ -61,14 +66,18 @@ Và/hoặc (tức là thỏa hết điều kiện hoặc 1 số):
 	- Số lần tới quán
 	- Đi vào dịp sinh nhật quán
 	- ...
+- ...
 	
 ### 7. Thông báo
 - Thông báo cho chủ quán:
 	- Tình hình tài chính cuối tháng (or ngày, or năm, tháng, quý) (Do chủ quán set ngay từ đầu).
 	- Thông báo nếu tháng/ngày/quý/năm TĂNG/GIẢM so với tháng/ngày/quý/năm trước. Và tăng/giảm bao nhiêu phần trăm (do chủ quán set) thì mới thông báo.
+	- ...
 - Thông báo cho nhân viên thu ngân:
 	- Món xyz đã hết, size xyz đã hết.
 	- Thanh thông báo chương trình giảm giá trong ngày hôm nay.
+	- ...
+- ...
 		
 		
 
