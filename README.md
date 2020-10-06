@@ -54,6 +54,7 @@
 	
 ### 5. Thiết lập
 - Thêm/Xóa/Thay đổi thông tin về một món vào trong danh sách món
+- Thêm/sửa/xóa/thay đổi thông tin, tài khoản của nhân viên
 - ...
 	
 ### 6. Quán lý thông tin khách hàng
@@ -66,6 +67,9 @@ Và/hoặc (tức là thỏa hết điều kiện hoặc 1 số):
 	- Số lần tới quán
 	- Đi vào dịp sinh nhật quán
 	- ...
+- Món ăn mà khách hàng thường xuyên sử dụng nhất
+- Đánh giá của khách hàng
+- Các thông tin cá nhân khác như: sinh nhật,....
 - ...
 	
 ### 7. Thông báo
