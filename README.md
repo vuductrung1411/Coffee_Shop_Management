@@ -83,7 +83,9 @@ Và/hoặc (tức là thỏa hết điều kiện hoặc 1 số):
 - ...
 		
 		
-
+## Giao diện dự kiến
+- Giao diện vẫn đang được phát triển và hoàn thiện dần
+- link: https://ninjamock.com/s/TJ2Z5Gx
 ## Tác giả
 - Vũ Đức Trung (leader)
 - Lê Hoàng Phú (developer)
