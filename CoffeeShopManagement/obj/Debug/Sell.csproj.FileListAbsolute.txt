@@ -1,0 +1,10 @@
+C:\Users\TRUNG\source\repos\Do an\CoffeeShopManegement\Sale\bin\Debug\Sale.exe.config
+C:\Users\TRUNG\source\repos\Do an\CoffeeShopManegement\Sale\bin\Debug\Sale.exe
+C:\Users\TRUNG\source\repos\Do an\CoffeeShopManegement\Sale\bin\Debug\Sale.pdb
+C:\Users\TRUNG\source\repos\Do an\CoffeeShopManegement\Sale\obj\Debug\Sell.csprojAssemblyReference.cache
+C:\Users\TRUNG\source\repos\Do an\CoffeeShopManegement\Sale\obj\Debug\Sale.Sell.resources
+C:\Users\TRUNG\source\repos\Do an\CoffeeShopManegement\Sale\obj\Debug\Sale.Properties.Resources.resources
+C:\Users\TRUNG\source\repos\Do an\CoffeeShopManegement\Sale\obj\Debug\Sell.csproj.GenerateResource.cache
+C:\Users\TRUNG\source\repos\Do an\CoffeeShopManegement\Sale\obj\Debug\Sell.csproj.CoreCompileInputs.cache
+C:\Users\TRUNG\source\repos\Do an\CoffeeShopManegement\Sale\obj\Debug\Sale.exe
+C:\Users\TRUNG\source\repos\Do an\CoffeeShopManegement\Sale\obj\Debug\Sale.pdb
