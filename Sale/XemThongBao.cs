@@ -1,0 +1,25 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Sale
+{
+    public partial class XemThongBao : Form
+    {
+        public XemThongBao()
+        {
+            InitializeComponent();
+        }
+
+        private void XemThongBao_Load(object sender, EventArgs e)
+        {
+            //chbdanhsachmon.Items.Add("ki");
+        }
+    }
+}
