@@ -10,13 +10,21 @@ using System.Windows.Forms;
 
 namespace Sale
 {
-    public partial class Sell : Frame
+    public partial class Sell : Form
     {
         public Sell()
         {
             InitializeComponent();
         }
 
-        
+        private void inRaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Sell_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

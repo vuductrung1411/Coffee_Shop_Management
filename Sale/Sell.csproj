@@ -33,8 +33,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,13 +47,26 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Frame.cs">
+    <Compile Include="KhachHang_ThongTin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frame.Designer.cs">
-      <DependentUpon>Frame.cs</DependentUpon>
+    <Compile Include="KhachHang_ThongTin.Designer.cs">
+      <DependentUpon>KhachHang_ThongTin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KhachHang_ThongTin_ChinhSua.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KhachHang_ThongTin_ChinhSua.Designer.cs">
+      <DependentUpon>KhachHang_ThongTin_ChinhSua.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs" />
+    <Compile Include="MainForm.designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Sell.cs">
       <SubType>Form</SubType>
@@ -60,8 +76,26 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Frame.resx">
-      <DependentUpon>Frame.cs</DependentUpon>
+    <Compile Include="ThongTinTaiChinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThongTinTaiChinh.Designer.cs">
+      <DependentUpon>ThongTinTaiChinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XemThongBao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XemThongBao.Designer.cs">
+      <DependentUpon>XemThongBao.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="KhachHang_ThongTin.resx">
+      <DependentUpon>KhachHang_ThongTin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KhachHang_ThongTin_ChinhSua.resx">
+      <DependentUpon>KhachHang_ThongTin_ChinhSua.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sell.resx">
       <DependentUpon>Sell.cs</DependentUpon>
@@ -76,6 +110,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ThongTinTaiChinh.resx">
+      <DependentUpon>ThongTinTaiChinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XemThongBao.resx">
+      <DependentUpon>XemThongBao.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

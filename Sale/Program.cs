@@ -17,6 +17,10 @@ namespace Sale
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Sell());
+            Application.Run(new KhachHang_ThongTin());
+            Application.Run(new KhachHang_ThongTin_ChinhSua());
+            Application.Run(new XemThongBao());
+            Application.Run(new ThongTinTaiChinh());
         }
     }
 }

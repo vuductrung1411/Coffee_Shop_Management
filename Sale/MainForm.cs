@@ -8,13 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Sale
+namespace Coffee_Shop_Management
 {
-    public partial class Frame : Form
+    public partial class MainForm : Form
     {
-        public Frame()
+        public MainForm()
         {
             InitializeComponent();
-        }
+        } 
     }
 }
