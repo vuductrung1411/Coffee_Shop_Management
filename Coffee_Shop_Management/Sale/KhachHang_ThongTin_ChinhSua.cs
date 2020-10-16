@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Sale
 {
-    public partial class KhachHang_ThongTin_ChinhSua : Form
+    public partial class KhachHang_ThongTin_ChinhSua : System.Windows.Forms.Form
     {
         public KhachHang_ThongTin_ChinhSua()
         {

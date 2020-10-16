@@ -28,18 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.ThemUser_Cancel_button = new System.Windows.Forms.Button();
+            this.ThemUser_DongY_button = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.ThemUser_Confirm_textbox = new System.Windows.Forms.TextBox();
+            this.ThemUser_Password_textbox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.ThemUser_Username_textbox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.ThemUser_CMND_textbox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.ThemUser_Name_textbox = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -51,27 +51,29 @@
             this.pictureBox1.Location = new System.Drawing.Point(751, 358);
             this.pictureBox1.Size = new System.Drawing.Size(225, 146);
             // 
-            // button2
+            // ThemUser_Cancel_button
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(431, 305);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(110, 46);
-            this.button2.TabIndex = 50;
-            this.button2.Text = "Hủy";
-            this.button2.UseVisualStyleBackColor = false;
+            this.ThemUser_Cancel_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.ThemUser_Cancel_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ThemUser_Cancel_button.Location = new System.Drawing.Point(411, 305);
+            this.ThemUser_Cancel_button.Name = "ThemUser_Cancel_button";
+            this.ThemUser_Cancel_button.Size = new System.Drawing.Size(130, 46);
+            this.ThemUser_Cancel_button.TabIndex = 6;
+            this.ThemUser_Cancel_button.Text = "Hủy";
+            this.ThemUser_Cancel_button.UseVisualStyleBackColor = false;
+            this.ThemUser_Cancel_button.Click += new System.EventHandler(this.ThemUser_Cancel_button_Click);
             // 
-            // button1
+            // ThemUser_DongY_button
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(220, 305);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(103, 46);
-            this.button1.TabIndex = 49;
-            this.button1.Text = "Đồng ý";
-            this.button1.UseVisualStyleBackColor = false;
+            this.ThemUser_DongY_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.ThemUser_DongY_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ThemUser_DongY_button.Location = new System.Drawing.Point(220, 305);
+            this.ThemUser_DongY_button.Name = "ThemUser_DongY_button";
+            this.ThemUser_DongY_button.Size = new System.Drawing.Size(133, 46);
+            this.ThemUser_DongY_button.TabIndex = 5;
+            this.ThemUser_DongY_button.Text = "Đồng ý";
+            this.ThemUser_DongY_button.UseVisualStyleBackColor = false;
+            this.ThemUser_DongY_button.Click += new System.EventHandler(this.ThemUser_DongY_button_Click);
             // 
             // label3
             // 
@@ -93,22 +95,24 @@
             this.label1.Text = "Mật khẩu:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // textBox2
+            // ThemUser_Confirm_textbox
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(220, 249);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(321, 27);
-            this.textBox2.TabIndex = 46;
+            this.ThemUser_Confirm_textbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ThemUser_Confirm_textbox.Location = new System.Drawing.Point(220, 249);
+            this.ThemUser_Confirm_textbox.Name = "ThemUser_Confirm_textbox";
+            this.ThemUser_Confirm_textbox.Size = new System.Drawing.Size(321, 27);
+            this.ThemUser_Confirm_textbox.TabIndex = 4;
+            this.ThemUser_Confirm_textbox.UseSystemPasswordChar = true;
             // 
-            // textBox1
+            // ThemUser_Password_textbox
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(220, 196);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(321, 27);
-            this.textBox1.TabIndex = 45;
+            this.ThemUser_Password_textbox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ThemUser_Password_textbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ThemUser_Password_textbox.Location = new System.Drawing.Point(220, 196);
+            this.ThemUser_Password_textbox.Name = "ThemUser_Password_textbox";
+            this.ThemUser_Password_textbox.Size = new System.Drawing.Size(321, 27);
+            this.ThemUser_Password_textbox.TabIndex = 3;
+            this.ThemUser_Password_textbox.UseSystemPasswordChar = true;
             // 
             // label2
             // 
@@ -120,13 +124,13 @@
             this.label2.Text = "Tên đăng nhập:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // textBox3
+            // ThemUser_Username_textbox
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(220, 145);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(321, 27);
-            this.textBox3.TabIndex = 51;
+            this.ThemUser_Username_textbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ThemUser_Username_textbox.Location = new System.Drawing.Point(220, 145);
+            this.ThemUser_Username_textbox.Name = "ThemUser_Username_textbox";
+            this.ThemUser_Username_textbox.Size = new System.Drawing.Size(321, 27);
+            this.ThemUser_Username_textbox.TabIndex = 2;
             // 
             // label4
             // 
@@ -138,45 +142,47 @@
             this.label4.Text = "Số CMMD:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // textBox4
+            // ThemUser_CMND_textbox
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(220, 93);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(321, 27);
-            this.textBox4.TabIndex = 53;
+            this.ThemUser_CMND_textbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ThemUser_CMND_textbox.Location = new System.Drawing.Point(220, 93);
+            this.ThemUser_CMND_textbox.Name = "ThemUser_CMND_textbox";
+            this.ThemUser_CMND_textbox.Size = new System.Drawing.Size(321, 27);
+            this.ThemUser_CMND_textbox.TabIndex = 1;
             // 
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(243, 131);
+            this.label5.Location = new System.Drawing.Point(54, 43);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(160, 27);
             this.label5.TabIndex = 56;
             this.label5.Text = "Tên nhân viên:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // textBox5
+            // ThemUser_Name_textbox
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(409, 131);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(321, 27);
-            this.textBox5.TabIndex = 55;
+            this.ThemUser_Name_textbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ThemUser_Name_textbox.Location = new System.Drawing.Point(220, 43);
+            this.ThemUser_Name_textbox.Name = "ThemUser_Name_textbox";
+            this.ThemUser_Name_textbox.Size = new System.Drawing.Size(321, 27);
+            this.ThemUser_Name_textbox.TabIndex = 0;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox4);
+            this.groupBox1.Controls.Add(this.ThemUser_CMND_textbox);
+            this.groupBox1.Controls.Add(this.ThemUser_Name_textbox);
+            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.ThemUser_Cancel_button);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.ThemUser_DongY_button);
+            this.groupBox1.Controls.Add(this.ThemUser_Username_textbox);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.ThemUser_Password_textbox);
+            this.groupBox1.Controls.Add(this.ThemUser_Confirm_textbox);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(189, 94);
+            this.groupBox1.Location = new System.Drawing.Point(180, 79);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(588, 385);
             this.groupBox1.TabIndex = 57;
@@ -199,15 +205,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(977, 506);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox5);
             this.Controls.Add(this.groupBox1);
             this.Name = "FormThemUser";
             this.Text = "Thêm tài khoản";
             this.Controls.SetChildIndex(this.pictureBox1, 0);
             this.Controls.SetChildIndex(this.groupBox1, 0);
-            this.Controls.SetChildIndex(this.textBox5, 0);
-            this.Controls.SetChildIndex(this.label5, 0);
             this.Controls.SetChildIndex(this.label6, 0);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -219,18 +221,18 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button ThemUser_Cancel_button;
+        private System.Windows.Forms.Button ThemUser_DongY_button;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox ThemUser_Confirm_textbox;
+        private System.Windows.Forms.TextBox ThemUser_Password_textbox;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox ThemUser_Username_textbox;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox ThemUser_CMND_textbox;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox ThemUser_Name_textbox;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label6;
     }

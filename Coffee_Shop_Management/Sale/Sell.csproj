@@ -64,11 +64,11 @@
     <Compile Include="FormKetQuaThongKe.Designer.cs">
       <DependentUpon>FormKetQuaThongKe.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormLogin.cs">
+    <Compile Include="fLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormLogin.Designer.cs">
-      <DependentUpon>FormLogin.cs</DependentUpon>
+    <Compile Include="fLogin.Designer.cs">
+      <DependentUpon>fLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="FormSuaMon.cs">
       <SubType>Form</SubType>
@@ -156,6 +156,15 @@
     <Compile Include="XemThongBao.Designer.cs">
       <DependentUpon>XemThongBao.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="fLogin.resx">
+      <DependentUpon>fLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormThemMon.resx">
+      <DependentUpon>FormThemMon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormThemUser.resx">
+      <DependentUpon>FormThemUser.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="KhachHang_ThongTin.resx">
       <DependentUpon>KhachHang_ThongTin.cs</DependentUpon>
     </EmbeddedResource>

@@ -68,3 +68,6 @@ C:\Users\TRUNG\Desktop\Coffee_Shop_Management\Coffee_Shop_Management\Sale\obj\De
 C:\Users\TRUNG\Desktop\Coffee_Shop_Management\Coffee_Shop_Management\Sale\obj\Debug\Sell.csproj.CoreCompileInputs.cache
 C:\Users\TRUNG\Desktop\Coffee_Shop_Management\Coffee_Shop_Management\Sale\obj\Debug\Sale.exe
 C:\Users\TRUNG\Desktop\Coffee_Shop_Management\Coffee_Shop_Management\Sale\obj\Debug\Sale.pdb
+C:\Users\TRUNG\Desktop\Coffee_Shop_Management\Coffee_Shop_Management\Sale\obj\Debug\Coffee_Shop_Management.FormThemUser.resources
+C:\Users\TRUNG\Desktop\Coffee_Shop_Management\Coffee_Shop_Management\Sale\obj\Debug\Coffee_Shop_Management.fLogin.resources
+C:\Users\TRUNG\Desktop\Coffee_Shop_Management\Coffee_Shop_Management\Sale\obj\Debug\Coffee_Shop_Management.FormThemMon.resources
