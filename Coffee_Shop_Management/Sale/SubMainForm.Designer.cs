@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(649, 303);
-            this.pictureBox1.Size = new System.Drawing.Size(226, 146);
+            this.Logo.Location = new System.Drawing.Point(649, 303);
+            this.Logo.Size = new System.Drawing.Size(226, 146);
             // 
             // SubMainForm
             // 
@@ -42,7 +42,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(877, 450);
             this.Name = "SubMainForm";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             this.ResumeLayout(false);
 
         }

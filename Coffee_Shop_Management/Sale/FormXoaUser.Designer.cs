@@ -34,14 +34,14 @@
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(584, 268);
-            this.pictureBox1.Size = new System.Drawing.Size(204, 132);
+            this.Logo.Location = new System.Drawing.Point(584, 268);
+            this.Logo.Size = new System.Drawing.Size(204, 132);
             // 
             // label2
             // 
@@ -119,12 +119,12 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "FormXoaUser";
             this.Text = "Xóa tài khoản";
-            this.Controls.SetChildIndex(this.pictureBox1, 0);
+            this.Controls.SetChildIndex(this.Logo, 0);
             this.Controls.SetChildIndex(this.groupBox1, 0);
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.listBox1, 0);
             this.Controls.SetChildIndex(this.label1, 0);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

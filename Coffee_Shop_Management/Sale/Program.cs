@@ -44,7 +44,7 @@ namespace Sale
             //Application.Run(new FormKetQuaThongKe());
             #region Phần này Trung làm dở, không đụng vào, đổi tên phần này cũng là Trung làm
             //Application.Run(new FormThemUser());
-            //Application.Run(new fLogin());
+            Application.Run(new fLogin());
             #endregion
         }
     }
