@@ -37,7 +37,7 @@ namespace Coffee_Shop_Management
             connection.Open();
 
             //Chuan bi cau lenh query viet bang SQL 
-            String sqlQuery = "select * from NHANVIEN";
+            String sqlQuery = "select * from ACCOUNT";
             //Tao mot Sqlcommand de thuc hien cau lenh truy van da chuan bi voi ket noi hien tai 
             SqlCommand command = new SqlCommand(sqlQuery, connection);
 
@@ -48,8 +48,8 @@ namespace Coffee_Shop_Management
             while (reader.HasRows)
             {
                 if (reader.Read() == false) break;
-                string username = reader.GetString(0);
-                string password = reader.GetString(3);
+                string username = reader.GetString(1);
+                string password = reader.GetString(2);
                 if (username == tk && password == mk)
                 {
                     // Đăng nhập thành công, làm công việc tiếp theo 

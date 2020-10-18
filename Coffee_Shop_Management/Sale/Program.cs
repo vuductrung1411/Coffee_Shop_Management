@@ -17,7 +17,7 @@ namespace Sale
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            #region PHÚ làm trong thứ 7
+            #region Phú
             // Code phần Thêm khách hàng mới 
             // Sửa tên 
             // Tạo Table KHACHHANG
@@ -30,7 +30,7 @@ namespace Sale
             //Application.Run(new ThongTinTaiChinh());
             //Application.Run(new FormThucDon());
 
-            #region THÁI làm trong thứ 7
+            #region Thái
             // Tạo Table MON
             // Sửa lại tên của phần này
             //Application.Run(new FormThemMon());
@@ -42,8 +42,8 @@ namespace Sale
             //Application.Run(new FormXoaUser());
             //Application.Run(new FormThongKe());
             //Application.Run(new FormKetQuaThongKe());
-            #region Phần này Trung làm dở, không đụng vào, đổi tên phần này cũng là Trung làm
-            //Application.Run(new FormThemUser());
+            #region Phần này Trung làm dở, không đụng vào
+            //Application.Run(new fAddUser());
             Application.Run(new fLogin());
             #endregion
         }

@@ -59,8 +59,6 @@ C:\Users\TRUNG\Desktop\Coffee_Shop_Management\Coffee_Shop_Management\Sale\bin\De
 C:\Users\TRUNG\Desktop\Coffee_Shop_Management\Coffee_Shop_Management\Sale\obj\Debug\Sell.csprojAssemblyReference.cache
 C:\Users\TRUNG\Desktop\Coffee_Shop_Management\Coffee_Shop_Management\Sale\obj\Debug\Sale.KhachHang_ThongTin.resources
 C:\Users\TRUNG\Desktop\Coffee_Shop_Management\Coffee_Shop_Management\Sale\obj\Debug\Sale.KhachHang_ThongTin_ChinhSua.resources
-C:\Users\TRUNG\Desktop\Coffee_Shop_Management\Coffee_Shop_Management\Sale\obj\Debug\Coffee_Shop_Management.MainForm.resources
-C:\Users\TRUNG\Desktop\Coffee_Shop_Management\Coffee_Shop_Management\Sale\obj\Debug\Sale.Sell.resources
 C:\Users\TRUNG\Desktop\Coffee_Shop_Management\Coffee_Shop_Management\Sale\obj\Debug\Sale.Properties.Resources.resources
 C:\Users\TRUNG\Desktop\Coffee_Shop_Management\Coffee_Shop_Management\Sale\obj\Debug\Sale.ThongTinTaiChinh.resources
 C:\Users\TRUNG\Desktop\Coffee_Shop_Management\Coffee_Shop_Management\Sale\obj\Debug\Sale.XemThongBao.resources
@@ -68,6 +66,10 @@ C:\Users\TRUNG\Desktop\Coffee_Shop_Management\Coffee_Shop_Management\Sale\obj\De
 C:\Users\TRUNG\Desktop\Coffee_Shop_Management\Coffee_Shop_Management\Sale\obj\Debug\Sell.csproj.CoreCompileInputs.cache
 C:\Users\TRUNG\Desktop\Coffee_Shop_Management\Coffee_Shop_Management\Sale\obj\Debug\Sale.exe
 C:\Users\TRUNG\Desktop\Coffee_Shop_Management\Coffee_Shop_Management\Sale\obj\Debug\Sale.pdb
-C:\Users\TRUNG\Desktop\Coffee_Shop_Management\Coffee_Shop_Management\Sale\obj\Debug\Coffee_Shop_Management.FormThemUser.resources
 C:\Users\TRUNG\Desktop\Coffee_Shop_Management\Coffee_Shop_Management\Sale\obj\Debug\Coffee_Shop_Management.fLogin.resources
 C:\Users\TRUNG\Desktop\Coffee_Shop_Management\Coffee_Shop_Management\Sale\obj\Debug\Coffee_Shop_Management.FormThemMon.resources
+C:\Users\TRUNG\Desktop\Coffee_Shop_Management\Coffee_Shop_Management\Sale\obj\Debug\Coffee_Shop_Management.fAddUser.resources
+C:\Users\TRUNG\Desktop\Coffee_Shop_Management\Coffee_Shop_Management\Sale\obj\Debug\Coffee_Shop_Management.fMain.resources
+C:\Users\TRUNG\Desktop\Coffee_Shop_Management\Coffee_Shop_Management\Sale\obj\Debug\Sale.fSell.resources
+C:\Users\TRUNG\Desktop\Coffee_Shop_Management\Coffee_Shop_Management\Sale\obj\Debug\Coffee_Shop_Management.SubMainForm.resources
+C:\Users\TRUNG\Desktop\Coffee_Shop_Management\Coffee_Shop_Management\Sale\obj\Debug\Coffee_Shop_Management.fChangeInfoUser.resources

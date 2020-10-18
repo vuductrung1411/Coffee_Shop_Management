@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Coffee_Shop_Management
 {
-    public partial class SubMainForm : MainForm
+    public partial class SubMainForm : fMain
     {
         public SubMainForm()
         {

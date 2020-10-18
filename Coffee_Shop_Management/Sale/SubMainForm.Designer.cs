@@ -31,7 +31,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // Logo
             // 
             this.Logo.Location = new System.Drawing.Point(649, 303);
             this.Logo.Size = new System.Drawing.Size(226, 146);
@@ -42,6 +42,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(877, 450);
             this.Name = "SubMainForm";
+            this.Text = "Cũng là form tổng nhưng size nhỏ hơn";
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             this.ResumeLayout(false);
 

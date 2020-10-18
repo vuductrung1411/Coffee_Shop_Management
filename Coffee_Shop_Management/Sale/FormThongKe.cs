@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Coffee_Shop_Management
 {
-    public partial class FormThongKe : MainForm
+    public partial class FormThongKe : fMain
     {
         public FormThongKe()
         {

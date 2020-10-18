@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace Coffee_Shop_Management
 {
-    public partial class fMain : System.Windows.Forms.Form
+    public partial class fChangeInfoUser : SubMainForm
     {
-        public fMain()
+        public fChangeInfoUser()
         {
             InitializeComponent();
-        } 
+        }
     }
 }

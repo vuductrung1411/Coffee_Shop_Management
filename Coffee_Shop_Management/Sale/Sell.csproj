@@ -52,11 +52,11 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormChangeInfoUser.cs">
+    <Compile Include="fChangeInfoUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormChangeInfoUser.Designer.cs">
-      <DependentUpon>FormChangeInfoUser.cs</DependentUpon>
+    <Compile Include="fChangeInfoUser.Designer.cs">
+      <DependentUpon>fChangeInfoUser.cs</DependentUpon>
     </Compile>
     <Compile Include="FormKetQuaThongKe.cs">
       <SubType>Form</SubType>
@@ -82,11 +82,11 @@
     <Compile Include="FormThemMon.Designer.cs">
       <DependentUpon>FormThemMon.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormThemUser.cs">
+    <Compile Include="fAddUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormThemUser.Designer.cs">
-      <DependentUpon>FormThemUser.cs</DependentUpon>
+    <Compile Include="fAddUser.Designer.cs">
+      <DependentUpon>fAddUser.cs</DependentUpon>
     </Compile>
     <Compile Include="FormThongKe.cs">
       <SubType>Form</SubType>
@@ -130,11 +130,11 @@
     <Compile Include="MainForm.designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Sell.cs">
+    <Compile Include="fSell.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Sell.Designer.cs">
-      <DependentUpon>Sell.cs</DependentUpon>
+    <Compile Include="fSell.Designer.cs">
+      <DependentUpon>fSell.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -159,11 +159,14 @@
     <EmbeddedResource Include="fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="fChangeInfoUser.resx">
+      <DependentUpon>fChangeInfoUser.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormThemMon.resx">
       <DependentUpon>FormThemMon.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormThemUser.resx">
-      <DependentUpon>FormThemUser.cs</DependentUpon>
+    <EmbeddedResource Include="fAddUser.resx">
+      <DependentUpon>fAddUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KhachHang_ThongTin.resx">
       <DependentUpon>KhachHang_ThongTin.cs</DependentUpon>
@@ -174,8 +177,8 @@
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Sell.resx">
-      <DependentUpon>Sell.cs</DependentUpon>
+    <EmbeddedResource Include="fSell.resx">
+      <DependentUpon>fSell.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -187,6 +190,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SubMainForm.resx">
+      <DependentUpon>SubMainForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ThongTinTaiChinh.resx">
       <DependentUpon>ThongTinTaiChinh.cs</DependentUpon>
     </EmbeddedResource>
