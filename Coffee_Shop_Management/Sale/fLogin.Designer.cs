@@ -28,74 +28,74 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Login_Cancel_button = new System.Windows.Forms.Button();
-            this.Login_Login_button = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.Login_Password_textbox = new System.Windows.Forms.TextBox();
+            this.bCancel = new System.Windows.Forms.Button();
+            this.bLogin = new System.Windows.Forms.Button();
+            this.lPassword = new System.Windows.Forms.Label();
+            this.lUsername = new System.Windows.Forms.Label();
+            this.tbPassword = new System.Windows.Forms.TextBox();
             this.tbUsername = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.bgLogin = new System.Windows.Forms.GroupBox();
+            this.lbLogin_title = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.bgLogin.SuspendLayout();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // Logo
             // 
             this.Logo.Location = new System.Drawing.Point(650, 302);
             // 
-            // Login_Cancel_button
+            // bCancel
             // 
-            this.Login_Cancel_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.Login_Cancel_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Login_Cancel_button.Location = new System.Drawing.Point(379, 149);
-            this.Login_Cancel_button.Name = "Login_Cancel_button";
-            this.Login_Cancel_button.Size = new System.Drawing.Size(140, 46);
-            this.Login_Cancel_button.TabIndex = 3;
-            this.Login_Cancel_button.Text = "Hủy";
-            this.Login_Cancel_button.UseVisualStyleBackColor = false;
-            this.Login_Cancel_button.Click += new System.EventHandler(this.Login_Cancel_button_Click);
+            this.bCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.bCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bCancel.Location = new System.Drawing.Point(379, 149);
+            this.bCancel.Name = "bCancel";
+            this.bCancel.Size = new System.Drawing.Size(140, 46);
+            this.bCancel.TabIndex = 3;
+            this.bCancel.Text = "Hủy";
+            this.bCancel.UseVisualStyleBackColor = false;
+            this.bCancel.Click += new System.EventHandler(this.bCancel_Click);
             // 
-            // Login_Login_button
+            // bLogin
             // 
-            this.Login_Login_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.Login_Login_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Login_Login_button.Location = new System.Drawing.Point(198, 149);
-            this.Login_Login_button.Name = "Login_Login_button";
-            this.Login_Login_button.Size = new System.Drawing.Size(141, 46);
-            this.Login_Login_button.TabIndex = 2;
-            this.Login_Login_button.Text = "Đăng nhập";
-            this.Login_Login_button.UseVisualStyleBackColor = false;
-            this.Login_Login_button.Click += new System.EventHandler(this.Login_Login_button_Click);
+            this.bLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.bLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bLogin.Location = new System.Drawing.Point(198, 149);
+            this.bLogin.Name = "bLogin";
+            this.bLogin.Size = new System.Drawing.Size(141, 46);
+            this.bLogin.TabIndex = 2;
+            this.bLogin.Text = "Đăng nhập";
+            this.bLogin.UseVisualStyleBackColor = false;
+            this.bLogin.Click += new System.EventHandler(this.bLogin_Click);
             // 
-            // label3
+            // lPassword
             // 
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(74, 96);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(118, 27);
-            this.label3.TabIndex = 42;
-            this.label3.Text = "Mật khẩu:";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lPassword.Location = new System.Drawing.Point(74, 96);
+            this.lPassword.Name = "lPassword";
+            this.lPassword.Size = new System.Drawing.Size(118, 27);
+            this.lPassword.TabIndex = 42;
+            this.lPassword.Text = "Mật khẩu:";
+            this.lPassword.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label1
+            // lUsername
             // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(23, 43);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(169, 27);
-            this.label1.TabIndex = 41;
-            this.label1.Text = "Tên đăng nhập:";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lUsername.Location = new System.Drawing.Point(23, 43);
+            this.lUsername.Name = "lUsername";
+            this.lUsername.Size = new System.Drawing.Size(169, 27);
+            this.lUsername.TabIndex = 41;
+            this.lUsername.Text = "Tên đăng nhập:";
+            this.lUsername.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // Login_Password_textbox
+            // tbPassword
             // 
-            this.Login_Password_textbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Login_Password_textbox.Location = new System.Drawing.Point(198, 96);
-            this.Login_Password_textbox.Name = "Login_Password_textbox";
-            this.Login_Password_textbox.Size = new System.Drawing.Size(321, 27);
-            this.Login_Password_textbox.TabIndex = 1;
-            this.Login_Password_textbox.UseSystemPasswordChar = true;
+            this.tbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbPassword.Location = new System.Drawing.Point(198, 96);
+            this.tbPassword.Name = "tbPassword";
+            this.tbPassword.Size = new System.Drawing.Size(321, 27);
+            this.tbPassword.TabIndex = 1;
+            this.tbPassword.UseSystemPasswordChar = true;
             // 
             // tbUsername
             // 
@@ -106,46 +106,46 @@
             this.tbUsername.Size = new System.Drawing.Size(321, 27);
             this.tbUsername.TabIndex = 0;
             // 
-            // groupBox1
+            // bgLogin
             // 
-            this.groupBox1.Controls.Add(this.Login_Cancel_button);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.Login_Login_button);
-            this.groupBox1.Controls.Add(this.tbUsername);
-            this.groupBox1.Controls.Add(this.Login_Password_textbox);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Location = new System.Drawing.Point(153, 124);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(548, 230);
-            this.groupBox1.TabIndex = 45;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Đăng nhập";
+            this.bgLogin.Controls.Add(this.bCancel);
+            this.bgLogin.Controls.Add(this.lUsername);
+            this.bgLogin.Controls.Add(this.bLogin);
+            this.bgLogin.Controls.Add(this.tbUsername);
+            this.bgLogin.Controls.Add(this.tbPassword);
+            this.bgLogin.Controls.Add(this.lPassword);
+            this.bgLogin.Location = new System.Drawing.Point(153, 124);
+            this.bgLogin.Name = "bgLogin";
+            this.bgLogin.Size = new System.Drawing.Size(548, 230);
+            this.bgLogin.TabIndex = 45;
+            this.bgLogin.TabStop = false;
+            this.bgLogin.Text = "Đăng nhập";
             // 
-            // label2
+            // lbLogin_title
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(299, 39);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(260, 54);
-            this.label2.TabIndex = 46;
-            this.label2.Text = "Đăng nhập";
+            this.lbLogin_title.AutoSize = true;
+            this.lbLogin_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbLogin_title.Location = new System.Drawing.Point(299, 39);
+            this.lbLogin_title.Name = "lbLogin_title";
+            this.lbLogin_title.Size = new System.Drawing.Size(260, 54);
+            this.lbLogin_title.TabIndex = 46;
+            this.lbLogin_title.Text = "Đăng nhập";
             // 
             // fLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(877, 450);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.lbLogin_title);
+            this.Controls.Add(this.bgLogin);
             this.Name = "fLogin";
             this.Text = "Đăng nhập";
             this.Controls.SetChildIndex(this.Logo, 0);
-            this.Controls.SetChildIndex(this.groupBox1, 0);
-            this.Controls.SetChildIndex(this.label2, 0);
+            this.Controls.SetChildIndex(this.bgLogin, 0);
+            this.Controls.SetChildIndex(this.lbLogin_title, 0);
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.bgLogin.ResumeLayout(false);
+            this.bgLogin.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -153,13 +153,13 @@
 
         #endregion
 
-        private System.Windows.Forms.Button Login_Cancel_button;
-        private System.Windows.Forms.Button Login_Login_button;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox Login_Password_textbox;
+        private System.Windows.Forms.Button bCancel;
+        private System.Windows.Forms.Button bLogin;
+        private System.Windows.Forms.Label lPassword;
+        private System.Windows.Forms.Label lUsername;
+        private System.Windows.Forms.TextBox tbPassword;
         private System.Windows.Forms.TextBox tbUsername;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.GroupBox bgLogin;
+        private System.Windows.Forms.Label lbLogin_title;
     }
 }

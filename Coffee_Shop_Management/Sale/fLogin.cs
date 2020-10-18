@@ -19,14 +19,14 @@ namespace Coffee_Shop_Management
             InitializeComponent();
         }
 
-        private void Login_Cancel_button_Click(object sender, EventArgs e)
+        private void bCancel_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void Login_Login_button_Click(object sender, EventArgs e)
+        private void bLogin_Click(object sender, EventArgs e)
         {
-            string mk = Encode(this.Login_Password_textbox.Text);
+            string mk = Encode(this.tbPassword.Text);
             string tk = this.tbUsername.Text;
 
             //xac dinh duong dan den database 

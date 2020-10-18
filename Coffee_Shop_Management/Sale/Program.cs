@@ -38,13 +38,14 @@ namespace Sale
             //Application.Run(new FormXoaMon());
             #endregion
 
-            //Application.Run(new FormChangeInfoUser());
+
             //Application.Run(new FormXoaUser());
             //Application.Run(new FormThongKe());
             //Application.Run(new FormKetQuaThongKe());
-            #region Phần này Trung làm dở, không đụng vào
+            #region Trung
+            Application.Run(new fChangeInfoUser());
             //Application.Run(new fAddUser());
-            Application.Run(new fLogin());
+            //Application.Run(new fLogin());
             #endregion
         }
     }
