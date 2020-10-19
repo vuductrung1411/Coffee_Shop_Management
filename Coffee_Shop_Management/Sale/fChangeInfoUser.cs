@@ -22,28 +22,14 @@ namespace Coffee_Shop_Management
         // Lỗi
         private bool Error_Create()
         {
-            // Mật khẩu không khớp nhau
-            if (this.tbPassword.Text != this.tbConfirm.Text)
-            {
-                MessageBox.Show("Mật khẩu không khớp!");
-                return true;
-            }
-
             // Nhập thiếu thông tin
             if (this.tbName.Text == "" || this.tbCMND.Text == "" || this.cbSex.Text == "" || this.tbSDT.Text == ""
-                || this.cbPosition.Text == "" || this.tbAddress.Text == "" || this.tbSalary.Text == "" || this.tbStaffIndex.Text == ""
-                || this.tbUsername.Text == "" || this.tbPassword.Text == "" || this.tbConfirm.Text == "")
+                || this.cbPosition.Text == "" || this.tbAddress.Text == "" || this.tbSalary.Text == "" || this.tbStaffIndex.Text == "")
             {
                 MessageBox.Show("Vui lòng điền đầy đủ thông tin!");
                 return true;
             }
 
-            // Mật khẩu quá ngắn: <6 ký tự
-            if (this.tbPassword.Text.Length < 6)
-            {
-                MessageBox.Show("Vui lòng nhập mật khẩu nhiều hơn 6 ký tự!");
-                return true;
-            }
 
             //xac dinh duong dan den database 
             String connString = @"Server=DESKTOP-77359PP;Database=COFFEE_SHOP_MANAGEMENT;User Id=sa;Password=123456;";
@@ -72,12 +58,6 @@ namespace Coffee_Shop_Management
 
                     if (manv == this.tbStaffIndex.Text) continue;
 
-                    // Trùng MANV
-                    //if (manv == this.tbStaffIndex.Text)
-                    //{
-                    //    MessageBox.Show("Mã NV này đã tồn tại trong dữ liệu.");
-                    //    return true;
-                    //}
                     // Trùng CMND
                     if (cmnd == this.tbCMND.Text)
                     {
@@ -113,8 +93,62 @@ namespace Coffee_Shop_Management
             return false;
         }
 
+        // Kiểm tra xem tài khoản và mật khẩu đúng chưa
+        private bool CheckAccount()
+        {
+            //xac dinh duong dan den database 
+            String connString = @"Server=DESKTOP-77359PP;Database=COFFEE_SHOP_MANAGEMENT;User Id=sa;Password=123456;";
+
+            //ket noi csdl bang Sqlconnection 
+            SqlConnection connection = new SqlConnection(connString);
+            connection.Open();
+
+            //Chuan bi cau lenh query viet bang SQL 
+            try
+            {
+                String sqlQuery = "select USERNAME, PASS from ACCOUNT";
+                //Tao mot Sqlcommand de thuc hien cau lenh truy van da chuan bi voi ket noi hien tai 
+                SqlCommand command = new SqlCommand(sqlQuery, connection);
+                //Thuc hien cau truy van va nhan ve mot doi tuong reader ho tro do du lieu
+                SqlDataReader reader = command.ExecuteReader();
+
+                //Su dung reader de doc tung dong du lieu va thuc hien thao tac xu ly mong muon voi du lieu doc len 
+                while (reader.HasRows)
+                {
+                    if (reader.Read() == false) break;
+                    string user = reader.GetString(0);
+                    string pass = reader.GetString(1);
+                    if (this.tbUsername.Text == user && Encode(this.tbPassword.Text) == pass)
+                    {
+                        connection.Close();
+                        return true;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                //xu ly khi ket noi co van de
+                MessageBox.Show(ex.ToString());
+                //MessageBox.Show("Ket noi xay ra loi hoac doc du lieu bi loi");
+                return true;
+            }
+            finally
+            {
+                //Dong ket noi sau khi thao tac ket thuc
+                connection.Close();
+            }
+            return false;
+        }
+
         private void bAccept_Click(object sender, EventArgs e)
         {
+            // Kiểm tra xem tài khoản và mật khẩu đúng chưa
+            if (CheckAccount() == false)
+            {
+                MessageBox.Show("Thông tin tài khoản hoặc mật khẩu không chính xác!");
+                return;
+            }
+
             // Nếu có lỗi thì thoát
             if (Error_Create() == true)
             {
@@ -160,28 +194,30 @@ namespace Coffee_Shop_Management
                     throw new Exception("Failed Query");
                 }
 
-                // -----------------------------------------------------
-                //Chuan bi cau lenh query viet bang SQL
-                sqlQuery = "UPDATE ACCOUNT SET USERNAME = @tk, PASS = @mk WHERE MANV = @manv";
-                //Tao mot Sqlcommand de thuc hien cau lenh truy van da chuan bi voi ket noi hien tai
-                command = new SqlCommand(sqlQuery, connection);
+                #region Đổi tài khoản mật khẩu
+                //// -----------------------------------------------------
+                ////Chuan bi cau lenh query viet bang SQL
+                //sqlQuery = "UPDATE ACCOUNT SET USERNAME = @tk, PASS = @mk WHERE MANV = @manv";
+                ////Tao mot Sqlcommand de thuc hien cau lenh truy van da chuan bi voi ket noi hien tai
+                //command = new SqlCommand(sqlQuery, connection);
 
-                string tk = this.tbUsername.Text;
-                string mk = this.tbPassword.Text;
+                //string tk = this.tbUsername.Text;
+                //string mk = this.tbPassword.Text;
 
-                command.Parameters.AddWithValue("@manv", this.tbStaffIndex.Text);
-                command.Parameters.AddWithValue("@tk", tk);
-                command.Parameters.AddWithValue("@mk", mk);
+                //command.Parameters.AddWithValue("@manv", this.tbStaffIndex.Text);
+                //command.Parameters.AddWithValue("@tk", tk);
+                //command.Parameters.AddWithValue("@mk", mk);
 
-                //Thuc hien cau truy van va nhan ve mot doi tuong reader ho tro do du lieu
-                rs = command.ExecuteNonQuery();
-                //Su dung reader de doc tung dong du lieu
-                //va thuc hien thao tac xu ly mong muon voi du lieu doc len
-                if (rs != 1)
-                {
-                    throw new Exception("Failed Query");
-                }
-                // -----------------------------------------------------
+                ////Thuc hien cau truy van va nhan ve mot doi tuong reader ho tro do du lieu
+                //rs = command.ExecuteNonQuery();
+                ////Su dung reader de doc tung dong du lieu
+                ////va thuc hien thao tac xu ly mong muon voi du lieu doc len
+                //if (rs != 1)
+                //{
+                //    throw new Exception("Failed Query");
+                //}
+                //// -----------------------------------------------------
+                #endregion
 
                 MessageBox.Show("Thay đổi thông tin tài khoản thành công!!!"); 
             }
@@ -221,5 +257,7 @@ namespace Coffee_Shop_Management
         {
             this.Close();
         }
+
+       
     }
 }

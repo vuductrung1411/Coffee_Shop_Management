@@ -43,7 +43,8 @@ namespace Sale
             //Application.Run(new FormThongKe());
             //Application.Run(new FormKetQuaThongKe());
             #region Trung
-            Application.Run(new fChangeInfoUser());
+            //Application.Run(new fChangeInfoUser());
+            //Application.Run(new fChangePasswordUser());
             //Application.Run(new fAddUser());
             //Application.Run(new fLogin());
             #endregion

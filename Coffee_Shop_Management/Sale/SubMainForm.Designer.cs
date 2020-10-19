@@ -42,7 +42,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(877, 450);
             this.Name = "SubMainForm";
-            this.Text = "Cũng là form tổng nhưng size nhỏ hơn";
+            this.Text = "Cũng là form tổng nhưng size nhỏ hơn :)))";
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             this.ResumeLayout(false);
 

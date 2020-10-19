@@ -30,6 +30,13 @@
         {
             this.lChangeInfoUser_title = new System.Windows.Forms.Label();
             this.gbChangeInfo = new System.Windows.Forms.GroupBox();
+            this.gbConfirm = new System.Windows.Forms.GroupBox();
+            this.bAccept = new System.Windows.Forms.Button();
+            this.tbUsername = new System.Windows.Forms.TextBox();
+            this.tbPassword = new System.Windows.Forms.TextBox();
+            this.lPassword = new System.Windows.Forms.Label();
+            this.lUsername = new System.Windows.Forms.Label();
+            this.bCancel = new System.Windows.Forms.Button();
             this.tbStaffIndex = new System.Windows.Forms.TextBox();
             this.lStaffIndex = new System.Windows.Forms.Label();
             this.cbPosition = new System.Windows.Forms.ComboBox();
@@ -46,16 +53,9 @@
             this.tbName = new System.Windows.Forms.TextBox();
             this.lName = new System.Windows.Forms.Label();
             this.lCMND = new System.Windows.Forms.Label();
-            this.bCancel = new System.Windows.Forms.Button();
-            this.lUsername = new System.Windows.Forms.Label();
-            this.bAccept = new System.Windows.Forms.Button();
-            this.tbUsername = new System.Windows.Forms.TextBox();
-            this.lConfirm = new System.Windows.Forms.Label();
-            this.tbPassword = new System.Windows.Forms.TextBox();
-            this.tbConfirm = new System.Windows.Forms.TextBox();
-            this.lPassword = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.gbChangeInfo.SuspendLayout();
+            this.gbConfirm.SuspendLayout();
             this.SuspendLayout();
             // 
             // Logo
@@ -67,7 +67,7 @@
             // 
             this.lChangeInfoUser_title.AutoSize = true;
             this.lChangeInfoUser_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lChangeInfoUser_title.Location = new System.Drawing.Point(147, 25);
+            this.lChangeInfoUser_title.Location = new System.Drawing.Point(164, 25);
             this.lChangeInfoUser_title.Name = "lChangeInfoUser_title";
             this.lChangeInfoUser_title.Size = new System.Drawing.Size(621, 54);
             this.lChangeInfoUser_title.TabIndex = 62;
@@ -75,6 +75,7 @@
             // 
             // gbChangeInfo
             // 
+            this.gbChangeInfo.Controls.Add(this.gbConfirm);
             this.gbChangeInfo.Controls.Add(this.tbStaffIndex);
             this.gbChangeInfo.Controls.Add(this.lStaffIndex);
             this.gbChangeInfo.Controls.Add(this.cbPosition);
@@ -91,20 +92,95 @@
             this.gbChangeInfo.Controls.Add(this.tbName);
             this.gbChangeInfo.Controls.Add(this.lName);
             this.gbChangeInfo.Controls.Add(this.lCMND);
-            this.gbChangeInfo.Controls.Add(this.bCancel);
-            this.gbChangeInfo.Controls.Add(this.lUsername);
-            this.gbChangeInfo.Controls.Add(this.bAccept);
-            this.gbChangeInfo.Controls.Add(this.tbUsername);
-            this.gbChangeInfo.Controls.Add(this.lConfirm);
-            this.gbChangeInfo.Controls.Add(this.tbPassword);
-            this.gbChangeInfo.Controls.Add(this.tbConfirm);
-            this.gbChangeInfo.Controls.Add(this.lPassword);
             this.gbChangeInfo.Location = new System.Drawing.Point(91, 82);
             this.gbChangeInfo.Name = "gbChangeInfo";
-            this.gbChangeInfo.Size = new System.Drawing.Size(757, 368);
+            this.gbChangeInfo.Size = new System.Drawing.Size(743, 368);
             this.gbChangeInfo.TabIndex = 63;
             this.gbChangeInfo.TabStop = false;
             this.gbChangeInfo.Text = "Thay đổi thông tin";
+            // 
+            // gbConfirm
+            // 
+            this.gbConfirm.Controls.Add(this.bAccept);
+            this.gbConfirm.Controls.Add(this.tbUsername);
+            this.gbConfirm.Controls.Add(this.tbPassword);
+            this.gbConfirm.Controls.Add(this.lPassword);
+            this.gbConfirm.Controls.Add(this.bCancel);
+            this.gbConfirm.Controls.Add(this.lUsername);
+            this.gbConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbConfirm.ForeColor = System.Drawing.Color.Green;
+            this.gbConfirm.Location = new System.Drawing.Point(41, 194);
+            this.gbConfirm.Name = "gbConfirm";
+            this.gbConfirm.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.gbConfirm.Size = new System.Drawing.Size(660, 166);
+            this.gbConfirm.TabIndex = 69;
+            this.gbConfirm.TabStop = false;
+            this.gbConfirm.Text = "Nhập thông tin tài khoản và mật khẩu để xác nhận";
+            // 
+            // bAccept
+            // 
+            this.bAccept.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.bAccept.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bAccept.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.bAccept.Location = new System.Drawing.Point(177, 96);
+            this.bAccept.Name = "bAccept";
+            this.bAccept.Size = new System.Drawing.Size(135, 46);
+            this.bAccept.TabIndex = 10;
+            this.bAccept.Text = "Đồng ý";
+            this.bAccept.UseVisualStyleBackColor = false;
+            this.bAccept.Click += new System.EventHandler(this.bAccept_Click);
+            // 
+            // tbUsername
+            // 
+            this.tbUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbUsername.Location = new System.Drawing.Point(177, 30);
+            this.tbUsername.Name = "tbUsername";
+            this.tbUsername.Size = new System.Drawing.Size(450, 27);
+            this.tbUsername.TabIndex = 7;
+            // 
+            // tbPassword
+            // 
+            this.tbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbPassword.Location = new System.Drawing.Point(177, 63);
+            this.tbPassword.Name = "tbPassword";
+            this.tbPassword.Size = new System.Drawing.Size(450, 27);
+            this.tbPassword.TabIndex = 8;
+            this.tbPassword.UseSystemPasswordChar = true;
+            // 
+            // lPassword
+            // 
+            this.lPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lPassword.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.lPassword.Location = new System.Drawing.Point(13, 63);
+            this.lPassword.Name = "lPassword";
+            this.lPassword.Size = new System.Drawing.Size(158, 27);
+            this.lPassword.TabIndex = 47;
+            this.lPassword.Text = "Mật khẩu:";
+            this.lPassword.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lUsername
+            // 
+            this.lUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lUsername.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.lUsername.Location = new System.Drawing.Point(6, 28);
+            this.lUsername.Name = "lUsername";
+            this.lUsername.Size = new System.Drawing.Size(165, 27);
+            this.lUsername.TabIndex = 52;
+            this.lUsername.Text = "Tên đăng nhập:";
+            this.lUsername.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // bCancel
+            // 
+            this.bCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.bCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bCancel.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.bCancel.Location = new System.Drawing.Point(492, 96);
+            this.bCancel.Name = "bCancel";
+            this.bCancel.Size = new System.Drawing.Size(135, 46);
+            this.bCancel.TabIndex = 11;
+            this.bCancel.Text = "Hủy";
+            this.bCancel.UseVisualStyleBackColor = false;
+            this.bCancel.Click += new System.EventHandler(this.bCancel_Click);
             // 
             // tbStaffIndex
             // 
@@ -115,7 +191,7 @@
             this.tbStaffIndex.Name = "tbStaffIndex";
             this.tbStaffIndex.Size = new System.Drawing.Size(146, 27);
             this.tbStaffIndex.TabIndex = 68;
-            this.tbStaffIndex.Text = "NV0004";
+            this.tbStaffIndex.Text = "NV0013";
             // 
             // lStaffIndex
             // 
@@ -266,86 +342,6 @@
             this.lCMND.Text = "Số CMMD:";
             this.lCMND.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // bCancel
-            // 
-            this.bCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.bCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bCancel.Location = new System.Drawing.Point(533, 292);
-            this.bCancel.Name = "bCancel";
-            this.bCancel.Size = new System.Drawing.Size(135, 46);
-            this.bCancel.TabIndex = 11;
-            this.bCancel.Text = "Hủy";
-            this.bCancel.UseVisualStyleBackColor = false;
-            this.bCancel.Click += new System.EventHandler(this.bCancel_Click);
-            // 
-            // lUsername
-            // 
-            this.lUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lUsername.Location = new System.Drawing.Point(43, 192);
-            this.lUsername.Name = "lUsername";
-            this.lUsername.Size = new System.Drawing.Size(169, 27);
-            this.lUsername.TabIndex = 52;
-            this.lUsername.Text = "Tên đăng nhập:";
-            this.lUsername.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // bAccept
-            // 
-            this.bAccept.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.bAccept.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bAccept.Location = new System.Drawing.Point(218, 292);
-            this.bAccept.Name = "bAccept";
-            this.bAccept.Size = new System.Drawing.Size(135, 46);
-            this.bAccept.TabIndex = 10;
-            this.bAccept.Text = "Đồng ý";
-            this.bAccept.UseVisualStyleBackColor = false;
-            this.bAccept.Click += new System.EventHandler(this.bAccept_Click);
-            // 
-            // tbUsername
-            // 
-            this.tbUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbUsername.Location = new System.Drawing.Point(218, 192);
-            this.tbUsername.Name = "tbUsername";
-            this.tbUsername.Size = new System.Drawing.Size(450, 27);
-            this.tbUsername.TabIndex = 7;
-            // 
-            // lConfirm
-            // 
-            this.lConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lConfirm.Location = new System.Drawing.Point(7, 258);
-            this.lConfirm.Name = "lConfirm";
-            this.lConfirm.Size = new System.Drawing.Size(205, 27);
-            this.lConfirm.TabIndex = 48;
-            this.lConfirm.Text = "Nhập lại mật khẩu:";
-            this.lConfirm.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // tbPassword
-            // 
-            this.tbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbPassword.Location = new System.Drawing.Point(218, 225);
-            this.tbPassword.Name = "tbPassword";
-            this.tbPassword.Size = new System.Drawing.Size(450, 27);
-            this.tbPassword.TabIndex = 8;
-            this.tbPassword.UseSystemPasswordChar = true;
-            // 
-            // tbConfirm
-            // 
-            this.tbConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbConfirm.Location = new System.Drawing.Point(218, 258);
-            this.tbConfirm.Name = "tbConfirm";
-            this.tbConfirm.Size = new System.Drawing.Size(450, 27);
-            this.tbConfirm.TabIndex = 9;
-            this.tbConfirm.UseSystemPasswordChar = true;
-            // 
-            // lPassword
-            // 
-            this.lPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lPassword.Location = new System.Drawing.Point(47, 225);
-            this.lPassword.Name = "lPassword";
-            this.lPassword.Size = new System.Drawing.Size(165, 27);
-            this.lPassword.TabIndex = 47;
-            this.lPassword.Text = "Mật khẩu:";
-            this.lPassword.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // fChangeInfoUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -361,6 +357,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             this.gbChangeInfo.ResumeLayout(false);
             this.gbChangeInfo.PerformLayout();
+            this.gbConfirm.ResumeLayout(false);
+            this.gbConfirm.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -389,9 +387,8 @@
         private System.Windows.Forms.Label lUsername;
         private System.Windows.Forms.Button bAccept;
         private System.Windows.Forms.TextBox tbUsername;
-        private System.Windows.Forms.Label lConfirm;
         private System.Windows.Forms.TextBox tbPassword;
-        private System.Windows.Forms.TextBox tbConfirm;
         private System.Windows.Forms.Label lPassword;
+        private System.Windows.Forms.GroupBox gbConfirm;
     }
 }
