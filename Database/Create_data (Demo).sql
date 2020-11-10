@@ -1,0 +1,24 @@
+﻿USE THECOFFEESHOP
+GO
+
+
+INSERT INTO FOOD(TENMON, GIABAN) VALUES
+	(N'Cà phê đen', '10000'),
+	(N'Cà phê sữa', '15000')
+
+INSERT INTO CUSTOMER(HOTEN, SDT) VALUES
+	(N'Nguyễn Văn A', '0909509274242'),
+	(N'Trần Văn B', '45678890954567')
+
+INSERT INTO DISCOUNT(DISCOUNTVALUE, DISCOUNTTEXT) VALUES
+	(20, N'Sinh nhật lần 3 của quán'),
+	(30, N'Nhân dịp quốc khánh 30/4')
+
+INSERT INTO ACCOUNTINFO(HOTEN, CHUCVU) VALUES
+	(N'Staff0001', 0),
+	(N'Staff0002', 0),
+	(N'Staff0003', 0)
+
+INSERT INTO STOCK(TENHANG, GIANHAP) VALUES 
+	(N'Bịch cà phê Trung Nguyên 500gr', 1000000),
+	(N'Bịch Americano nhập khẩu từ Italy 250gr', 5000000)
