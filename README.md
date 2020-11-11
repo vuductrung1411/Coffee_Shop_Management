@@ -16,5 +16,4 @@
 - Ngoài ra, còn nhiều tính năng khác sẽ sớm được cập nhật sau
 		
 ## Tác giả
-- Vũ Đức Trung
-- Liên hệ với nhà phát triển: https://www.facebook.com/ductrungg01/
+* [Vũ Đức Trung](https://www.facebook.com/ductrungg01/)
