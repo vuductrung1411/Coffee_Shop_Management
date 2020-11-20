@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Coffee_Shop_Management
+=======
+# Coffee Shop Management
+>>>>>>> 785c85e12355669566eeb323dc3badb47f416d6d
 # Dự án phần mềm quản lý quán cà phê
 ## Mô tả
 - Người sử dụng:
@@ -16,5 +20,9 @@
 - Ngoài ra, còn nhiều tính năng khác sẽ sớm được cập nhật sau
 		
 ## Tác giả
+<<<<<<< HEAD
 - Vũ Đức Trung
 - Liên hệ với nhà phát triển: https://www.facebook.com/ductrungg01/
+=======
+* [Vũ Đức Trung](https://www.facebook.com/ductrungg01/)
+>>>>>>> 785c85e12355669566eeb323dc3badb47f416d6d
