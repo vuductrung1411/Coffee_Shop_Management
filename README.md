@@ -1,4 +1,4 @@
-# Coffee_Shop_Management
+# Coffee Shop Management
 # Dự án phần mềm quản lý quán cà phê
 ## Mô tả
 - Người sử dụng:
