@@ -763,6 +763,46 @@ namespace CoffeeShopManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap StartImage_2 {
+            get {
+                object obj = ResourceManager.GetObject("StartImage_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap StartImage_21 {
+            get {
+                object obj = ResourceManager.GetObject("StartImage_21", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap StartImage_3 {
+            get {
+                object obj = ResourceManager.GetObject("StartImage_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap StartImage_4 {
+            get {
+                object obj = ResourceManager.GetObject("StartImage_4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap StartImage1 {
             get {
                 object obj = ResourceManager.GetObject("StartImage1", resourceCulture);
@@ -776,6 +816,16 @@ namespace CoffeeShopManagement.Properties {
         internal static System.Drawing.Bitmap StartImage2 {
             get {
                 object obj = ResourceManager.GetObject("StartImage2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap StartImage3 {
+            get {
+                object obj = ResourceManager.GetObject("StartImage3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

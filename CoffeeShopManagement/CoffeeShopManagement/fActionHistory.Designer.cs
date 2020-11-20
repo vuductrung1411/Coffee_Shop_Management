@@ -46,7 +46,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::CoffeeShopManagement.Properties.Resources.ActionHistory;
-            this.ClientSize = new System.Drawing.Size(1500, 795);
+            this.ClientSize = new System.Drawing.Size(1499, 797);
             this.Controls.Add(this.dataGridView1);
             this.Name = "fActionHistory";
             this.Text = "Phần mềm quản lý quán cà phê";

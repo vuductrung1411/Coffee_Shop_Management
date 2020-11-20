@@ -55,9 +55,6 @@
             this.nudNumberOfFood = new System.Windows.Forms.NumericUpDown();
             this.cbFood = new System.Windows.Forms.ComboBox();
             this.tbPriceOfFood = new System.Windows.Forms.TextBox();
-            this.lvMenu = new System.Windows.Forms.ListView();
-            this.chNameOfFood = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.chPriceOfFood = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tbCustomerAge = new System.Windows.Forms.TextBox();
             this.tbFavoriteFood = new System.Windows.Forms.TextBox();
             this.tbCustomerMember = new System.Windows.Forms.TextBox();
@@ -67,10 +64,6 @@
             this.tbSumOfBill = new System.Windows.Forms.TextBox();
             this.tbTotal = new System.Windows.Forms.TextBox();
             this.dgvBill = new System.Windows.Forms.DataGridView();
-            this.cFoodName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cSelect = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.cbID = new System.Windows.Forms.ComboBox();
             this.lNotificationGetOutOfFood = new System.Windows.Forms.Label();
             this.bViewFullInfo = new System.Windows.Forms.Button();
@@ -80,12 +73,14 @@
             this.lBillHistory = new System.Windows.Forms.Label();
             this.tbNote = new System.Windows.Forms.TextBox();
             this.bEditFood = new System.Windows.Forms.Button();
+            this.dgvMenu = new System.Windows.Forms.DataGridView();
             this.msMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudNumberOfCustomers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudNumberOfFood)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudDiscount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBill)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMenu)).BeginInit();
             this.SuspendLayout();
             // 
             // lRemind
@@ -210,7 +205,7 @@
             // 
             this.lịchSửHóaĐơnToolStripMenuItem.Image = global::CoffeeShopManagement.Properties.Resources.BillIcon;
             this.lịchSửHóaĐơnToolStripMenuItem.Name = "lịchSửHóaĐơnToolStripMenuItem";
-            this.lịchSửHóaĐơnToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.lịchSửHóaĐơnToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.lịchSửHóaĐơnToolStripMenuItem.Text = "Lịch sử hóa đơn";
             this.lịchSửHóaĐơnToolStripMenuItem.Click += new System.EventHandler(this.lịchSửHóaĐơnToolStripMenuItem_Click);
             // 
@@ -218,7 +213,7 @@
             // 
             this.lịchSửNhậpHàngToolStripMenuItem.Image = global::CoffeeShopManagement.Properties.Resources.ImportIcon;
             this.lịchSửNhậpHàngToolStripMenuItem.Name = "lịchSửNhậpHàngToolStripMenuItem";
-            this.lịchSửNhậpHàngToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.lịchSửNhậpHàngToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.lịchSửNhậpHàngToolStripMenuItem.Text = "Lịch sử nhập hàng";
             this.lịchSửNhậpHàngToolStripMenuItem.Click += new System.EventHandler(this.lịchSửNhậpHàngToolStripMenuItem_Click);
             // 
@@ -226,7 +221,7 @@
             // 
             this.lịchSửHoạtĐộngToolStripMenuItem.Image = global::CoffeeShopManagement.Properties.Resources.ActionIcon;
             this.lịchSửHoạtĐộngToolStripMenuItem.Name = "lịchSửHoạtĐộngToolStripMenuItem";
-            this.lịchSửHoạtĐộngToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.lịchSửHoạtĐộngToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.lịchSửHoạtĐộngToolStripMenuItem.Text = "Lịch sử hoạt động";
             this.lịchSửHoạtĐộngToolStripMenuItem.Click += new System.EventHandler(this.lịchSửHoạtĐộngToolStripMenuItem_Click);
             // 
@@ -244,7 +239,7 @@
             // 
             this.thôngTinTàiKhoảnToolStripMenuItem.Image = global::CoffeeShopManagement.Properties.Resources.AccountInfo;
             this.thôngTinTàiKhoảnToolStripMenuItem.Name = "thôngTinTàiKhoảnToolStripMenuItem";
-            this.thôngTinTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.thôngTinTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.thôngTinTàiKhoảnToolStripMenuItem.Text = "Thông tin tài khoản";
             this.thôngTinTàiKhoảnToolStripMenuItem.Click += new System.EventHandler(this.thôngTinTàiKhoảnToolStripMenuItem_Click);
             // 
@@ -252,7 +247,7 @@
             // 
             this.đăngXuấtToolStripMenuItem.Image = global::CoffeeShopManagement.Properties.Resources.SignOut;
             this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
-            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
             this.đăngXuấtToolStripMenuItem.Click += new System.EventHandler(this.đăngXuấtToolStripMenuItem_Click);
             // 
@@ -400,32 +395,6 @@
             this.tbPriceOfFood.TabIndex = 14;
             this.tbPriceOfFood.TabStop = false;
             // 
-            // lvMenu
-            // 
-            this.lvMenu.BackColor = System.Drawing.Color.PaleGoldenrod;
-            this.lvMenu.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lvMenu.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.chNameOfFood,
-            this.chPriceOfFood});
-            this.lvMenu.HideSelection = false;
-            this.lvMenu.Location = new System.Drawing.Point(32, 115);
-            this.lvMenu.Name = "lvMenu";
-            this.lvMenu.Size = new System.Drawing.Size(419, 330);
-            this.lvMenu.TabIndex = 18;
-            this.lvMenu.TabStop = false;
-            this.lvMenu.UseCompatibleStateImageBehavior = false;
-            this.lvMenu.View = System.Windows.Forms.View.Details;
-            // 
-            // chNameOfFood
-            // 
-            this.chNameOfFood.Text = "Tên món";
-            this.chNameOfFood.Width = 314;
-            // 
-            // chPriceOfFood
-            // 
-            this.chPriceOfFood.Text = "Giá";
-            this.chPriceOfFood.Width = 100;
-            // 
             // tbCustomerAge
             // 
             this.tbCustomerAge.BackColor = System.Drawing.Color.White;
@@ -538,43 +507,12 @@
             this.dgvBill.BackgroundColor = System.Drawing.Color.PaleGoldenrod;
             this.dgvBill.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvBill.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBill.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.cFoodName,
-            this.cAmount,
-            this.cPrice,
-            this.cSelect});
             this.dgvBill.Location = new System.Drawing.Point(944, 115);
             this.dgvBill.Name = "dgvBill";
             this.dgvBill.RowHeadersVisible = false;
             this.dgvBill.Size = new System.Drawing.Size(520, 330);
             this.dgvBill.TabIndex = 30;
             this.dgvBill.TabStop = false;
-            // 
-            // cFoodName
-            // 
-            this.cFoodName.HeaderText = "Tên Món";
-            this.cFoodName.Name = "cFoodName";
-            this.cFoodName.ReadOnly = true;
-            this.cFoodName.Width = 330;
-            // 
-            // cAmount
-            // 
-            this.cAmount.HeaderText = "SL";
-            this.cAmount.Name = "cAmount";
-            this.cAmount.Width = 60;
-            // 
-            // cPrice
-            // 
-            this.cPrice.HeaderText = "Đơn giá";
-            this.cPrice.Name = "cPrice";
-            this.cPrice.ReadOnly = true;
-            this.cPrice.Width = 80;
-            // 
-            // cSelect
-            // 
-            this.cSelect.HeaderText = "Chọn";
-            this.cSelect.Name = "cSelect";
-            this.cSelect.Width = 45;
             // 
             // cbID
             // 
@@ -708,6 +646,16 @@
             this.bEditFood.Text = "Sửa";
             this.bEditFood.UseVisualStyleBackColor = false;
             // 
+            // dgvMenu
+            // 
+            this.dgvMenu.BackgroundColor = System.Drawing.Color.PaleGoldenrod;
+            this.dgvMenu.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvMenu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMenu.Location = new System.Drawing.Point(35, 115);
+            this.dgvMenu.Name = "dgvMenu";
+            this.dgvMenu.Size = new System.Drawing.Size(416, 330);
+            this.dgvMenu.TabIndex = 43;
+            // 
             // fSell
             // 
             this.AcceptButton = this.bCheckOut;
@@ -715,6 +663,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::CoffeeShopManagement.Properties.Resources.Sell4;
             this.ClientSize = new System.Drawing.Size(1500, 791);
+            this.Controls.Add(this.dgvMenu);
             this.Controls.Add(this.bEditFood);
             this.Controls.Add(this.tbNote);
             this.Controls.Add(this.lBillHistory);
@@ -733,7 +682,6 @@
             this.Controls.Add(this.tbCustomerMember);
             this.Controls.Add(this.tbFavoriteFood);
             this.Controls.Add(this.tbCustomerAge);
-            this.Controls.Add(this.lvMenu);
             this.Controls.Add(this.tbPriceOfFood);
             this.Controls.Add(this.cbFood);
             this.Controls.Add(this.nudNumberOfFood);
@@ -755,6 +703,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudDiscount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBill)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMenu)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -778,9 +727,6 @@
         private System.Windows.Forms.NumericUpDown nudNumberOfFood;
         private System.Windows.Forms.ComboBox cbFood;
         private System.Windows.Forms.TextBox tbPriceOfFood;
-        private System.Windows.Forms.ListView lvMenu;
-        private System.Windows.Forms.ColumnHeader chNameOfFood;
-        private System.Windows.Forms.ColumnHeader chPriceOfFood;
         private System.Windows.Forms.TextBox tbCustomerAge;
         private System.Windows.Forms.TextBox tbFavoriteFood;
         private System.Windows.Forms.TextBox tbCustomerMember;
@@ -809,10 +755,7 @@
         private System.Windows.Forms.ToolStripMenuItem lịchSửHóaĐơnToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem lịchSửNhậpHàngToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem lịchSửHoạtĐộngToolStripMenuItem;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cFoodName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cAmount;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cPrice;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn cSelect;
         private System.Windows.Forms.Button bEditFood;
+        private System.Windows.Forms.DataGridView dgvMenu;
     }
 }

@@ -26,7 +26,7 @@ namespace CoffeeShopManagement
 
         private void lConnectToDeveloper_Click(object sender, EventArgs e)
         {
-            Process.Start(linkConnectToDeveloper);
+            Process.Start(DataProvider.Instance.linkToConnectDeveloper);
         }
 
         private void bLogin_Click(object sender, EventArgs e)
@@ -51,6 +51,21 @@ namespace CoffeeShopManagement
         private bool Login(string userName, string passWord)
         {
             return AccountDAO.Instance.Login(userName, passWord);
+        }
+
+        private void fLogin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbUsername_TextChanged(object sender, EventArgs e)
+        {
+            this.lNotification.Text = "";
+        }
+
+        private void tbPassword_TextChanged(object sender, EventArgs e)
+        {
+            this.lNotification.Text = "";
         }
     }
 }

@@ -12,7 +12,7 @@ namespace CoffeeShopManagement
 {
     public partial class fMainForm : Form
     {
-        public string linkConnectToDeveloper = "https://github.com/vuductrung1411/Coffee_Shop_Management";
+        public string linkConnectToDeveloper = "https://www.facebook.com/ductrungg01/";
         public fMainForm()
         {
             InitializeComponent();

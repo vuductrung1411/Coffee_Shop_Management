@@ -23,6 +23,7 @@ DROP TABLE ACCOUNTINFO
 	-- BILL								 -- Lưu thông tin hóa đơn
 	-- BILLDETAIL						 -- Chi tiết hóa đơn
 	-- STOCK							 -- Quản lý kho, hàng đầu vào
+	-- HISTORY							 -- Lịch sử hoạt động
 
 CREATE TABLE ACCOUNTINFO
 (
@@ -121,6 +122,18 @@ CREATE TABLE STOCK
 	TENHANG NVARCHAR(50),					-- TÊN MÓN HÀNG NHẬP VÀO
 	GIANHAP INT,							-- GIÁ NHẬP VÀO
 	SL INT,									-- SỐ LƯỢNG HÀNG CÒN LẠI
+)
+GO
+
+CREATE TABLE HISTORY
+(
+	ID INT IDENTITY(1, 1) PRIMARY KEY,					
+	IDACTION INT,											-- ID của người thực hiện
+	IDOBJECT INT,											-- ID của người bị tác động
+	NAMEOFACTION NVARCHAR(50),								-- Tên người thực hiện
+	NAMEOFOBJECT NVARCHAR(50),								-- Tên người bị tác động
+	ACTION NVARCHAR(1000),									-- Loại tác động
+	ACTIONTIME SMALLDATETIME										-- Thời gian tác động
 )
 GO
 

@@ -118,14 +118,14 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="ActionIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ActionIcon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Login1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Client" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Client.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sell3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sell.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="AddCustomer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AddCustomer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -135,6 +135,9 @@
   </data>
   <data name="BillHistory" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BillHistory.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChangeDatabase" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChangeDatabase.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="StockManagement" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\StockManagement.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -175,8 +178,14 @@
   <data name="StaffInfo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\StaffInfo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Sell1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sell.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Vàng nhẹ" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Vàng nhẹ.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="StartImage_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\StartImage_4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="DiscountEdit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DiscountEdit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -187,9 +196,6 @@
   <data name="BuyAndSellIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BuyAndSellIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ChangePassword" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ChangePassword.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="ShopInfomation" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ShopInfomation.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -199,11 +205,14 @@
   <data name="Đậm hơn màu trắng 1 chút xíu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Đậm hơn màu trắng 1 chút xíu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Login3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Login" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="StartImage2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\StartImage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ImportHistory" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ImportHistory.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="avatar_demo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\avatar_demo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -217,8 +226,8 @@
   <data name="Settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Settings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ImportIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ImportIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="StaffInfo2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\StaffInfo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="StaffInfo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\StaffInfo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -229,14 +238,17 @@
   <data name="coffeeicon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\coffeeicon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="StartImage_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\StartImage_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Login4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="DiscountAdd" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DiscountAdd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="coupon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\coupon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Historyicon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Historyicon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="CustomerList" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CustomerList.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -244,14 +256,8 @@
   <data name="AddFood" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AddFood.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="CustomerInfo3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CustomerInfo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="AddStock" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AddStock.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="StaffInfo2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\StaffInfo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="DiscountEdit1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DiscountEdit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -259,14 +265,17 @@
   <data name="CustomerInfo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CustomerInfo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Historyicon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Historyicon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ActionIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ActionIcon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="SignOut" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SignOut.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="CoffeeAvatar_Demo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CoffeeAvatar_Demo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="StartImage3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\StartImage1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Statistic" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Statistic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -277,8 +286,8 @@
   <data name="Frame" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Frame.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Sell3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Sell.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ActionHistory" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ActionHistory.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Sell_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Sell_icon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -295,6 +304,9 @@
   <data name="ConfirmPassword" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ConfirmPassword.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="StartImage_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\StartImage_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ShowPassword" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ShowPassword.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -304,35 +316,38 @@
   <data name="ButtonColor" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ButtonColor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="FoodReturn" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FoodReturn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ImportHistory" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ImportHistory.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="StartImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\StartImage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ChangeDatabase" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ChangeDatabase.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="CustomerInfo3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CustomerInfo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="FoodList" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FoodList.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ImportIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ImportIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Report" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Report.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Login" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="coupon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\coupon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="DiscountList" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DiscountList.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Login3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="FoodReturn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FoodReturn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChangePassword" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChangePassword.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ChangePassword1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ChangePassword.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Sell1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Sell.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="FoodList" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FoodList.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Notification" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Notification.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -346,7 +361,7 @@
   <data name="storehouse" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\storehouse.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ActionHistory" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ActionHistory.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="StartImage_21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\StartImage_21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

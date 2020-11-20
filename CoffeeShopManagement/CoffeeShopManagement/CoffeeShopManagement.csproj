@@ -499,5 +499,20 @@
   <ItemGroup>
     <Folder Include="DTO\" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StartImage1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StartImage_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StartImage_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StartImage_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StartImage_21.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

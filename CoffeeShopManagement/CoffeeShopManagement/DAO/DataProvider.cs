@@ -12,6 +12,8 @@ namespace QuanLyQuanCafe.DAO
     {
         private static DataProvider instance; // Ctrl + R + E
 
+        public string linkToConnectDeveloper = "https://www.facebook.com/ductrungg01/";
+
         public static DataProvider Instance
         {
             get { if (instance == null) instance = new DataProvider(); return DataProvider.instance; }

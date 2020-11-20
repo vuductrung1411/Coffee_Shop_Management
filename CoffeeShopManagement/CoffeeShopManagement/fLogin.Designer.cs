@@ -47,6 +47,7 @@
             this.tbPassword.TabIndex = 1;
             this.tbPassword.Text = "admin";
             this.tbPassword.UseSystemPasswordChar = true;
+            this.tbPassword.TextChanged += new System.EventHandler(this.tbPassword_TextChanged);
             // 
             // tbUsername
             // 
@@ -58,6 +59,7 @@
             this.tbUsername.Size = new System.Drawing.Size(485, 55);
             this.tbUsername.TabIndex = 0;
             this.tbUsername.Text = "admin";
+            this.tbUsername.TextChanged += new System.EventHandler(this.tbUsername_TextChanged);
             // 
             // cbShowPassword
             // 
@@ -113,12 +115,12 @@
             this.lNotification.AutoSize = true;
             this.lNotification.BackColor = System.Drawing.Color.Black;
             this.lNotification.Cursor = System.Windows.Forms.Cursors.No;
-            this.lNotification.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lNotification.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lNotification.ForeColor = System.Drawing.Color.Red;
             this.lNotification.Image = global::CoffeeShopManagement.Properties.Resources.Vàng_nhẹ;
-            this.lNotification.Location = new System.Drawing.Point(982, 465);
+            this.lNotification.Location = new System.Drawing.Point(980, 460);
             this.lNotification.Name = "lNotification";
-            this.lNotification.Size = new System.Drawing.Size(0, 22);
+            this.lNotification.Size = new System.Drawing.Size(0, 18);
             this.lNotification.TabIndex = 6;
             // 
             // fLogin
@@ -136,6 +138,7 @@
             this.Controls.Add(this.bLogin);
             this.Name = "fLogin";
             this.Text = "Phần mềm quản lý quán cà phê";
+            this.Load += new System.EventHandler(this.fLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
