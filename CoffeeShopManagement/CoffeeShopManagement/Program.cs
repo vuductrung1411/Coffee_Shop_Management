@@ -33,7 +33,6 @@ namespace CoffeeShopManagement
             //Application.Run(new fGetOutOfFoodList());                   // Danh sách món đã hết
             //Application.Run(new fImportHistory());                      // Lịch sử nhập hàng
             //Application.Run(new fLogin());                              // Đăng nhập
-            //Application.Run(new fMainForm());                           // Form tổng
             //Application.Run(new fPasswordChange());                     // Thay đổi mật khẩu
             //Application.Run(new fPasswordConfirm());                    // Xác nhận mật khẩu
             //Application.Run(new fReport());                             // Báo cáo thống kê
@@ -47,7 +46,7 @@ namespace CoffeeShopManagement
             //Application.Run(new fStockEdit());                          // Chỉnh sửa hàng trong kho
             //Application.Run(new fStockList());                          // Danh sách hàng đang lưu trữ trong kho
             #endregion
-            
+
             Application.Run(new fStart());
         }
     }

@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.1.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.1.2\lib\net40\Guna.UI2.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
@@ -54,255 +57,219 @@
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DAO\StaffDAO.cs" />
     <Compile Include="DAO\StockDAO.cs" />
-    <Compile Include="fActionHistory.cs">
+    <Compile Include="Form\History\fActionHistory.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fActionHistory.Designer.cs">
+    <Compile Include="Form\History\fActionHistory.Designer.cs">
       <DependentUpon>fActionHistory.cs</DependentUpon>
     </Compile>
-    <Compile Include="fBillHistory.cs">
+    <Compile Include="Form\History\fBillHistory.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fBillHistory.Designer.cs">
+    <Compile Include="Form\History\fBillHistory.Designer.cs">
       <DependentUpon>fBillHistory.cs</DependentUpon>
     </Compile>
-    <Compile Include="fCustomerList.cs">
+    <Compile Include="Form\Customer\fCustomerList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fCustomerList.Designer.cs">
+    <Compile Include="Form\Customer\fCustomerList.Designer.cs">
       <DependentUpon>fCustomerList.cs</DependentUpon>
     </Compile>
-    <Compile Include="fDatabaseChange.cs">
+    <Compile Include="Form\Database\fDatabaseChange.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fDatabaseChange.Designer.cs">
+    <Compile Include="Form\Database\fDatabaseChange.Designer.cs">
       <DependentUpon>fDatabaseChange.cs</DependentUpon>
     </Compile>
-    <Compile Include="fDiscountAdd.cs">
+    <Compile Include="Form\Discount\fDiscountAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fDiscountAdd.Designer.cs">
+    <Compile Include="Form\Discount\fDiscountAdd.Designer.cs">
       <DependentUpon>fDiscountAdd.cs</DependentUpon>
     </Compile>
-    <Compile Include="fDiscountEdit.cs">
+    <Compile Include="Form\Stock\fImportHistory.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fDiscountEdit.Designer.cs">
-      <DependentUpon>fDiscountEdit.cs</DependentUpon>
-    </Compile>
-    <Compile Include="fImportHistory.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="fImportHistory.Designer.cs">
+    <Compile Include="Form\Stock\fImportHistory.Designer.cs">
       <DependentUpon>fImportHistory.cs</DependentUpon>
     </Compile>
-    <Compile Include="fReport.cs">
+    <Compile Include="Form\Reports and statistics\fReport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fReport.Designer.cs">
+    <Compile Include="Form\Reports and statistics\fReport.Designer.cs">
       <DependentUpon>fReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="fShopInfomation.cs">
+    <Compile Include="Form\Shop\fShopInfomation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fShopInfomation.Designer.cs">
+    <Compile Include="Form\Shop\fShopInfomation.Designer.cs">
       <DependentUpon>fShopInfomation.cs</DependentUpon>
     </Compile>
-    <Compile Include="fStart.cs">
+    <Compile Include="Form\Start\fStart.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fStart.Designer.cs">
+    <Compile Include="Form\Start\fStart.Designer.cs">
       <DependentUpon>fStart.cs</DependentUpon>
     </Compile>
-    <Compile Include="fStockAdd.cs">
+    <Compile Include="Form\Stock\fStockAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fStockAdd.Designer.cs">
+    <Compile Include="Form\Stock\fStockAdd.Designer.cs">
       <DependentUpon>fStockAdd.cs</DependentUpon>
     </Compile>
-    <Compile Include="fStockList.cs">
+    <Compile Include="Form\Stock\fStockList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fStockList.Designer.cs">
+    <Compile Include="Form\Stock\fStockList.Designer.cs">
       <DependentUpon>fStockList.cs</DependentUpon>
     </Compile>
-    <Compile Include="fFoodEdit.cs">
+    <Compile Include="Form\Customer\fCustomerAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fFoodEdit.Designer.cs">
-      <DependentUpon>fFoodEdit.cs</DependentUpon>
-    </Compile>
-    <Compile Include="fCustomerAdd.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="fCustomerAdd.Designer.cs">
+    <Compile Include="Form\Customer\fCustomerAdd.Designer.cs">
       <DependentUpon>fCustomerAdd.cs</DependentUpon>
     </Compile>
-    <Compile Include="fFoodAdd.cs">
+    <Compile Include="Form\Food\fFoodAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fFoodAdd.Designer.cs">
+    <Compile Include="Form\Food\fFoodAdd.Designer.cs">
       <DependentUpon>fFoodAdd.cs</DependentUpon>
     </Compile>
-    <Compile Include="fStaffAdd.cs">
+    <Compile Include="Form\Staff\fStaffAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fStaffAdd.Designer.cs">
+    <Compile Include="Form\Staff\fStaffAdd.Designer.cs">
       <DependentUpon>fStaffAdd.cs</DependentUpon>
     </Compile>
-    <Compile Include="fPasswordChange.cs">
+    <Compile Include="Form\Password\fPasswordChange.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fPasswordChange.Designer.cs">
+    <Compile Include="Form\Password\fPasswordChange.Designer.cs">
       <DependentUpon>fPasswordChange.cs</DependentUpon>
     </Compile>
-    <Compile Include="fPasswordConfirm.cs">
+    <Compile Include="Form\Password\fPasswordConfirm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fPasswordConfirm.Designer.cs">
+    <Compile Include="Form\Password\fPasswordConfirm.Designer.cs">
       <DependentUpon>fPasswordConfirm.cs</DependentUpon>
     </Compile>
-    <Compile Include="fCustomerInfo.cs">
+    <Compile Include="Form\Customer\fCustomerInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fCustomerInfo.Designer.cs">
+    <Compile Include="Form\Customer\fCustomerInfo.Designer.cs">
       <DependentUpon>fCustomerInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="fStockEdit.cs">
+    <Compile Include="Form\Food\fFoodList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fStockEdit.Designer.cs">
-      <DependentUpon>fStockEdit.cs</DependentUpon>
-    </Compile>
-    <Compile Include="fFoodList.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="fFoodList.Designer.cs">
+    <Compile Include="Form\Food\fFoodList.Designer.cs">
       <DependentUpon>fFoodList.cs</DependentUpon>
     </Compile>
-    <Compile Include="fGetOutOfFoodList.cs">
+    <Compile Include="Form\Food\fGetOutOfFoodList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fGetOutOfFoodList.Designer.cs">
+    <Compile Include="Form\Food\fGetOutOfFoodList.Designer.cs">
       <DependentUpon>fGetOutOfFoodList.cs</DependentUpon>
     </Compile>
-    <Compile Include="fLogin.cs">
+    <Compile Include="Form\Login\fLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fLogin.Designer.cs">
+    <Compile Include="Form\Login\fLogin.Designer.cs">
       <DependentUpon>fLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="fMainForm.cs">
+    <Compile Include="Form\Sell\fSell.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fMainForm.Designer.cs">
-      <DependentUpon>fMainForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="fSell.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="fSell.Designer.cs">
+    <Compile Include="Form\Sell\fSell.Designer.cs">
       <DependentUpon>fSell.cs</DependentUpon>
     </Compile>
-    <Compile Include="fStaffList.cs">
+    <Compile Include="Form\Staff\fStaffList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fStaffList.Designer.cs">
+    <Compile Include="Form\Staff\fStaffList.Designer.cs">
       <DependentUpon>fStaffList.cs</DependentUpon>
     </Compile>
-    <Compile Include="fDiscountList.cs">
+    <Compile Include="Form\Discount\fDiscountList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fDiscountList.Designer.cs">
+    <Compile Include="Form\Discount\fDiscountList.Designer.cs">
       <DependentUpon>fDiscountList.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="fStaffInfo.cs">
+    <Compile Include="Form\Staff\fStaffInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fStaffInfo.Designer.cs">
+    <Compile Include="Form\Staff\fStaffInfo.Designer.cs">
       <DependentUpon>fStaffInfo.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="fActionHistory.resx">
+    <EmbeddedResource Include="Form\History\fActionHistory.resx">
       <DependentUpon>fActionHistory.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fBillHistory.resx">
+    <EmbeddedResource Include="Form\History\fBillHistory.resx">
       <DependentUpon>fBillHistory.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fCustomerList.resx">
+    <EmbeddedResource Include="Form\Customer\fCustomerList.resx">
       <DependentUpon>fCustomerList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fDatabaseChange.resx">
+    <EmbeddedResource Include="Form\Database\fDatabaseChange.resx">
       <DependentUpon>fDatabaseChange.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fDiscountAdd.resx">
+    <EmbeddedResource Include="Form\Discount\fDiscountAdd.resx">
       <DependentUpon>fDiscountAdd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fDiscountEdit.resx">
-      <DependentUpon>fDiscountEdit.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="fImportHistory.resx">
+    <EmbeddedResource Include="Form\Stock\fImportHistory.resx">
       <DependentUpon>fImportHistory.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fReport.resx">
+    <EmbeddedResource Include="Form\Reports and statistics\fReport.resx">
       <DependentUpon>fReport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fShopInfomation.resx">
+    <EmbeddedResource Include="Form\Shop\fShopInfomation.resx">
       <DependentUpon>fShopInfomation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fStart.resx">
+    <EmbeddedResource Include="Form\Start\fStart.resx">
       <DependentUpon>fStart.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fStockList.resx">
+    <EmbeddedResource Include="Form\Stock\fStockList.resx">
       <DependentUpon>fStockList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fStockAdd.resx">
+    <EmbeddedResource Include="Form\Stock\fStockAdd.resx">
       <DependentUpon>fStockAdd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fFoodEdit.resx">
-      <DependentUpon>fFoodEdit.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="fCustomerAdd.resx">
+    <EmbeddedResource Include="Form\Customer\fCustomerAdd.resx">
       <DependentUpon>fCustomerAdd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fFoodAdd.resx">
+    <EmbeddedResource Include="Form\Food\fFoodAdd.resx">
       <DependentUpon>fFoodAdd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fStaffAdd.resx">
+    <EmbeddedResource Include="Form\Staff\fStaffAdd.resx">
       <DependentUpon>fStaffAdd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fPasswordChange.resx">
+    <EmbeddedResource Include="Form\Password\fPasswordChange.resx">
       <DependentUpon>fPasswordChange.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fPasswordConfirm.resx">
+    <EmbeddedResource Include="Form\Password\fPasswordConfirm.resx">
       <DependentUpon>fPasswordConfirm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fCustomerInfo.resx">
+    <EmbeddedResource Include="Form\Customer\fCustomerInfo.resx">
       <DependentUpon>fCustomerInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fStockEdit.resx">
-      <DependentUpon>fStockEdit.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="fFoodList.resx">
+    <EmbeddedResource Include="Form\Food\fFoodList.resx">
       <DependentUpon>fFoodList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fGetOutOfFoodList.resx">
+    <EmbeddedResource Include="Form\Food\fGetOutOfFoodList.resx">
       <DependentUpon>fGetOutOfFoodList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fLogin.resx">
+    <EmbeddedResource Include="Form\Login\fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fMainForm.resx">
-      <DependentUpon>fMainForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="fSell.resx">
+    <EmbeddedResource Include="Form\Sell\fSell.resx">
       <DependentUpon>fSell.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fStaffList.resx">
+    <EmbeddedResource Include="Form\Staff\fStaffList.resx">
       <DependentUpon>fStaffList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fDiscountList.resx">
+    <EmbeddedResource Include="Form\Discount\fDiscountList.resx">
       <DependentUpon>fDiscountList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -310,9 +277,10 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="fStaffInfo.resx">
+    <EmbeddedResource Include="Form\Staff\fStaffInfo.resx">
       <DependentUpon>fStaffInfo.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -332,187 +300,106 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Frame.png" />
+    <Folder Include="DTO\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\ButtonColor.png" />
+    <None Include="Resources\Background.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Client.png" />
+    <None Include="Resources\Small Background.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Notification.jpg" />
+    <None Include="Resources\GetOutOfFoodList.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Settings.png" />
+    <None Include="Resources\Start1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Statistic.png" />
+    <None Include="Resources\Start3.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Account.jpg" />
+    <None Include="Resources\Start4.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\AccountInfo.png" />
+    <None Include="Resources\Start2.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\SignOut.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Sell_icon.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Vàng nhẹ.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Màu nền.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\avatar_demo.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\FoodReturn.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ShowPassword.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\CustomerInfo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\StaffList1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Đậm hơn màu trắng 1 chút xíu.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\AddStaff.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\AddCustomer.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\GetOutOfFood.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\AddFood.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\CoffeeAvatar_Demo.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\EditFood.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\FoodList.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ChangePassword.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ConfirmPassword.png" />
+    <None Include="Resources\Info Background.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Login.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\icon - Customer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon - Manage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon - Shop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon - Food.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon - Staff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon - Customerlist.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon - Discount.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon - Statistical.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon - Statistical1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon - Warehouse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon - History.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon - Bill History.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon - Import.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon - Action History.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon - Help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon - Connect to developer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon - Account.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon - Account Info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon - Logout.png" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\Sell.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\StaffInfo.png" />
+    <None Include="Resources\Customer Avatar %28Demo%29 - Boy.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\storehouse.png" />
+    <None Include="Resources\Customer Avatar %28Demo%29 - Girl.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\store.jpg" />
+    <None Include="Resources\Food Avatar %28Demo%29.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\stafficon.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\coffeeicon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\coupon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\help.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\StockManagement.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\AddStock.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\EditStock.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\CustomerList.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\DiscountList.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\DiscountAdd.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\DiscountEdit.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\StartImage.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Historyicon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\BillIcon.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ImportIcon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ActionIcon.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ShopInfomation.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ChangeDatabase.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Report.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\BuyAndSellIcon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\BillHistory.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ImportHistory.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ActionHistory.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DTO\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\StartImage1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\StartImage_2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\StartImage_3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\StartImage_4.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\StartImage_21.png" />
+    <None Include="Resources\Material Avatar %28Demo%29.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

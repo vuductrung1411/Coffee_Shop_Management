@@ -11,8 +11,12 @@ namespace QuanLyQuanCafe.DAO
     public class DataProvider
     {
         private static DataProvider instance; // Ctrl + R + E
+        private string DivideName = "DESKTOP-77359PP";
+        private string DatabaseName = "THECOFFEESHOP";
+        private string DatabaseUsername = "sa";
+        private string DatabasePassword = "123456";
 
-        public string linkToConnectDeveloper = "https://www.facebook.com/ductrungg01/";
+        public string linkToConnectDeveloper = "https://github.com/vuductrung1411/Coffee_Shop_Management";
 
         public static DataProvider Instance
         {
