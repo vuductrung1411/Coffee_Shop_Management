@@ -1,3 +1,20 @@
 Đặng Lê Nguyên Vũ
 Trung Nguyên Legend
 Cà phê của Giàu có và Hạnh phúc
+0965657284
+100
+25
+
+
+
+
+
+
+----- 
+Dòng 		Ý nghĩa
+--------|-------------
+1			Tên chủ quán
+2 			Tên quán
+3			Slogan của quán
+4 			Số ghế của quán
+5 			Số bàn/ID của quán

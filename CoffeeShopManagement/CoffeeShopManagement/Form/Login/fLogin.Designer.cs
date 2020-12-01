@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fLogin));
             this.lConnectToDeveloper = new System.Windows.Forms.Label();
-            this.lNotification = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,6 +42,7 @@
             this.cbxShowPassword = new System.Windows.Forms.CheckBox();
             this.lForgetPassword = new System.Windows.Forms.Label();
             this.bCreateAccount = new Guna.UI2.WinForms.Guna2Button();
+            this.lNotification = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lConnectToDeveloper
@@ -56,18 +56,6 @@
             this.lConnectToDeveloper.Size = new System.Drawing.Size(141, 13);
             this.lConnectToDeveloper.TabIndex = 5;
             this.lConnectToDeveloper.Text = "@ Liên hệ với nhà phát triển";
-            // 
-            // lNotification
-            // 
-            this.lNotification.AutoSize = true;
-            this.lNotification.BackColor = System.Drawing.Color.Black;
-            this.lNotification.Cursor = System.Windows.Forms.Cursors.No;
-            this.lNotification.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lNotification.ForeColor = System.Drawing.Color.Red;
-            this.lNotification.Location = new System.Drawing.Point(980, 460);
-            this.lNotification.Name = "lNotification";
-            this.lNotification.Size = new System.Drawing.Size(0, 18);
-            this.lNotification.TabIndex = 6;
             // 
             // label1
             // 
@@ -114,7 +102,7 @@
             this.bLogin.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bLogin.ForeColor = System.Drawing.Color.White;
             this.bLogin.HoverState.Parent = this.bLogin;
-            this.bLogin.Location = new System.Drawing.Point(986, 430);
+            this.bLogin.Location = new System.Drawing.Point(983, 446);
             this.bLogin.Name = "bLogin";
             this.bLogin.ShadowDecoration.Parent = this.bLogin;
             this.bLogin.Size = new System.Drawing.Size(483, 56);
@@ -153,6 +141,7 @@
             this.tbUsername.ShadowDecoration.Parent = this.tbUsername;
             this.tbUsername.Size = new System.Drawing.Size(483, 58);
             this.tbUsername.TabIndex = 11;
+            this.tbUsername.TextChanged += new System.EventHandler(this.tbUsername_TextChanged);
             // 
             // label4
             // 
@@ -220,6 +209,7 @@
             this.tbPassword.Size = new System.Drawing.Size(483, 58);
             this.tbPassword.TabIndex = 16;
             this.tbPassword.UseSystemPasswordChar = true;
+            this.tbPassword.TextChanged += new System.EventHandler(this.tbPassword_TextChanged);
             // 
             // cbxShowPassword
             // 
@@ -229,7 +219,7 @@
             this.cbxShowPassword.FlatAppearance.BorderSize = 0;
             this.cbxShowPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbxShowPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.cbxShowPassword.Location = new System.Drawing.Point(983, 366);
+            this.cbxShowPassword.Location = new System.Drawing.Point(983, 361);
             this.cbxShowPassword.Name = "cbxShowPassword";
             this.cbxShowPassword.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cbxShowPassword.Size = new System.Drawing.Size(125, 20);
@@ -245,7 +235,7 @@
             this.lForgetPassword.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lForgetPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lForgetPassword.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.lForgetPassword.Location = new System.Drawing.Point(1155, 493);
+            this.lForgetPassword.Location = new System.Drawing.Point(1154, 511);
             this.lForgetPassword.Name = "lForgetPassword";
             this.lForgetPassword.Size = new System.Drawing.Size(141, 20);
             this.lForgetPassword.TabIndex = 18;
@@ -271,13 +261,26 @@
             this.bCreateAccount.Text = "Tạo tài khoản";
             this.bCreateAccount.Click += new System.EventHandler(this.bCreateAccount_Click);
             // 
+            // lNotification
+            // 
+            this.lNotification.AutoSize = true;
+            this.lNotification.BackColor = System.Drawing.Color.Transparent;
+            this.lNotification.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Underline);
+            this.lNotification.ForeColor = System.Drawing.Color.Red;
+            this.lNotification.Location = new System.Drawing.Point(983, 394);
+            this.lNotification.Name = "lNotification";
+            this.lNotification.Size = new System.Drawing.Size(0, 18);
+            this.lNotification.TabIndex = 20;
+            // 
             // fLogin
             // 
+            this.AcceptButton = this.bLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::CoffeeShopManagement.Properties.Resources.Login;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1499, 761);
+            this.Controls.Add(this.lNotification);
             this.Controls.Add(this.bCreateAccount);
             this.Controls.Add(this.lForgetPassword);
             this.Controls.Add(this.cbxShowPassword);
@@ -290,7 +293,6 @@
             this.Controls.Add(this.bLogin);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.lNotification);
             this.Controls.Add(this.lConnectToDeveloper);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "fLogin";
@@ -303,7 +305,6 @@
 
         #endregion
         private System.Windows.Forms.Label lConnectToDeveloper;
-        private System.Windows.Forms.Label lNotification;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -316,5 +317,6 @@
         private System.Windows.Forms.CheckBox cbxShowPassword;
         private System.Windows.Forms.Label lForgetPassword;
         private Guna.UI2.WinForms.Guna2Button bCreateAccount;
+        private System.Windows.Forms.Label lNotification;
     }
 }

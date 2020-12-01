@@ -51,12 +51,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\AccountDAO.cs" />
+    <Compile Include="DAO\BillDAO.cs" />
+    <Compile Include="DAO\BillDetailDAO.cs" />
     <Compile Include="DAO\CustomerDAO.cs" />
     <Compile Include="DAO\DiscountDAO.cs" />
     <Compile Include="DAO\FoodDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DAO\StaffDAO.cs" />
     <Compile Include="DAO\StockDAO.cs" />
+    <Compile Include="DTO\Account.cs" />
+    <Compile Include="DTO\CustomerInShop.cs" />
+    <Compile Include="DTO\Infomation.cs" />
     <Compile Include="Form\History\fActionHistory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -299,9 +304,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DTO\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\Background.png" />
   </ItemGroup>
@@ -400,6 +403,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Material Avatar %28Demo%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon - Report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon - Comments.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon - Goods in Warehouse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon - Import Goods.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

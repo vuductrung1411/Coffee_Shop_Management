@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using CoffeeShopManagement.DTO;
 
 namespace CoffeeShopManagement
 {
@@ -17,33 +18,34 @@ namespace CoffeeShopManagement
     {
         #region Link
         private string QuotesLink = @".\Information\Quotes about Coffee.txt";
-        private string ShopInfoLink = @".\Information\Shop Infomation.txt";
         #endregion
 
         private int percent = 0;
         private string[] arrQuotes;
-        private string[] arrShopInfo;
         private int nQuotes;
 
         public fStart()
         {
+            // đọc thông tin cần thiết vào
+            Infomation.Instance.LoadInfo();
+
             InitializeComponent();
             
             ReadQuotes();
-            ReadShopInfo();
 
-            this.timer.Interval = 100;
-            this.pbProcessStart.Value = 10;
+            this.timer.Interval = 100; // 0.1miligiay cho 1%
+            this.pbProcessStart.Value = 0;
             PrintQuotes();
             this.timer.Start();
         }
         
+        // In hoa chuỗi
         private string UpperString(string s)
         {
-            s = s.ToUpper();
-            return s; 
+            return s.ToUpper(); 
         }
 
+        // Đọc dữ liệu từ file Quotes
         private void ReadQuotes()
         {
             arrQuotes = File.ReadAllLines(this.QuotesLink);
@@ -51,10 +53,7 @@ namespace CoffeeShopManagement
             lText.Text = this.nQuotes.ToString();
         }
 
-        private void ReadShopInfo()
-        {
-            arrShopInfo = File.ReadAllLines(this.ShopInfoLink);
-        }
+        // Đổi và in câu quotes khác
         private void PrintQuotes()
         {
             var rand = new Random();
@@ -66,63 +65,60 @@ namespace CoffeeShopManagement
             this.percent++;
             switch (this.percent)
             {
-                case 10:
-                    PrintQuotes();
-                    this.pbProcessStart.Value = 15;
+                case 5:
+                    this.pbProcessStart.Value = 5;
                     break;
-                case 20:
-                    this.pbProcessStart.Value = 20;
+                case 10:
+                    this.pbProcessStart.Value = 10;
+                    break;
+                case 15:
+                    PrintQuotes();
                     break;
                 case 25:
                     this.BackgroundImage = Properties.Resources.Start2;
+                    this.pbProcessStart.Value = 25;
                     this.lText.ForeColor = Color.Black;
                     break;
                 case 30:
+                    this.pbProcessStart.Value = 30;
                     PrintQuotes();
                     break;
                 case 35:
                     this.pbProcessStart.Value = 35;
-                    PrintQuotes();
                     break;
                 case 40:
                     this.pbProcessStart.Value = 40;
                     break;
                 case 45:
                     this.pbProcessStart.Value = 45;
+                    PrintQuotes();
                     break;
                 case 50:
-                    PrintQuotes();
                     this.BackgroundImage = Properties.Resources.Start3;
 
-                    this.lShopName2.Text = UpperString(this.arrShopInfo[1]);
-                    this.lSlogan2.Text = this.arrShopInfo[2];
+                    this.lShopName2.Text = UpperString(Infomation.Instance.shopName);
+                    this.lSlogan2.Text = Infomation.Instance.shopSlogan;
 
                     this.lText.ForeColor = Color.White;
                     this.pbProcessStart.Value = 50;
                     break;
-                case 55:
-                    this.pbProcessStart.Value = 55;
-                    break;
                 case 60:
                     this.pbProcessStart.Value = 60;
-                    break;
-                case 65:
-                    this.pbProcessStart.Value = 65;
+                    PrintQuotes();
                     break;
                 case 70:
-                    PrintQuotes();
-                    this.pbProcessStart.Value = 70;
+                    this.pbProcessStart.Value = 80;
                     break;
                 case 75:
                     this.BackgroundImage = Properties.Resources.Start4;
 
-                    this.lShopOwner.Text = UpperString(this.arrShopInfo[0]);
-                    this.lShopName1.Text = UpperString(this.arrShopInfo[1]);
-                    this.lSlogan1.Text = UpperString(this.arrShopInfo[2]);
+                    this.lShopOwner.Text = UpperString(Infomation.Instance.shopOwner);
+                    this.lShopName1.Text = UpperString(Infomation.Instance.shopName);
+                    this.lSlogan1.Text = UpperString(Infomation.Instance.shopSlogan);
                     this.lShopName2.Text = "";
                     this.lSlogan2.Text = "";
 
-                    this.pbProcessStart.Value = 95;
+                    PrintQuotes();
                     break;
                 case 80:
                     this.pbProcessStart.Value = 95;
@@ -131,8 +127,10 @@ namespace CoffeeShopManagement
                     PrintQuotes();
                     break;
                 case 100:
+                    this.pbProcessStart.Value = 99;
+                    PrintQuotes();
                     break;
-                case 103:
+                case 110:
                     this.pbProcessStart.Value = 100;
                     this.timer.Stop();
                     fLogin f = new fLogin();

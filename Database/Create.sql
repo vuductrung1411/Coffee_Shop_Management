@@ -5,6 +5,7 @@ USE THECOFFEESHOP
 GO
 
 -- Drop all table 
+DROP TABLE COMMENTS
 DROP TABLE STOCK 
 DROP TABLE BILLDETAIL 
 DROP TABLE BILL 
@@ -108,14 +109,15 @@ GO
 
 CREATE TABLE BILLDETAIL
 (
-	IDBILL INT NOT NULL,
-	IDFOOD INT NOT NULL,
-	SL INT,								-- SỐ LƯỢNG
+	IDBILL INT NOT NULL,				-- ID của hóa đơn
+	IDFOOD INT NOT NULL,				-- ID của món ăn
+	SL INT,								-- Số lượng
+	NOTE NVARCHAR(1000),
 
 	CONSTRAINT FK_BILLDETAIL_IDBILL FOREIGN KEY (IDBILL) REFERENCES BILL(ID),
 	CONSTRAINT FK_BILLDETAIL_IDFOOD FOREIGN KEY (IDFOOD) REFERENCES FOOD(ID),
 
-	CONSTRAINT PK_BILLDETAIL PRIMARY KEY (IDBILL, IDFOOD)
+	-- CONSTRAINT PK_BILLDETAIL PRIMARY KEY (IDBILL, IDFOOD)
 )
 GO
 
@@ -144,6 +146,16 @@ CREATE TABLE HISTORY
 )
 GO
 
+
+CREATE TABLE COMMENTS
+(
+	ID INT IDENTITY(1, 1) PRIMARY KEY,						-- 
+	IDCMT INT,												-- ID của khách hàng nêu ý kiến đóng góp		
+	NAMECMT NVARCHAR(100),									-- HỌ tên của khách
+	TEXTCMT NVARCHAR(1000)									-- Ý kiến đóng góp của khách
+)
+GO
+
 -- Thêm tài khoản gốc : admin
 	-- tk: admin
 	-- mk: admin (MD5 Encode - 21232f297a57a5a743894a0e4a801fc3)
@@ -168,3 +180,72 @@ GO
 
 EXEC USP_Login @userName = 'admin' , @passWord = '21232f297a57a5a743894a0e4a801fc3'
 
+-- Lấy ID account từ username
+CREATE PROC USP_GetIDByUsername
+@userName varchar(50)
+AS
+BEGIN
+	SELECT ID FROM ACCOUNT WHERE USERNAME = @userName
+END
+GO
+
+EXEC USP_GetIDByUsername @userName = 'admin'
+
+-- Thêm hóa đơn mới (chỉ có id nhân viên và id khách hàng)
+CREATE PROC USP_CreateNewBill
+@idStaff INT, @idCustomer INT
+AS
+BEGIN
+	Insert into BILL(IDSTAFF, IDCUSTOMER) VALUES
+	(@idStaff, @idCustomer)
+END
+
+EXEC USP_CreateNewBill @idStaff = 1 , @idCustomer = 1
+
+-- Thêm hóa đơn mới (mà không có mã khách hàng, chỉ có mã nhân viên)
+CREATE PROC USP_CreateNewBillWithoutCustomer
+@idStaff INT
+AS
+BEGIN
+	Insert into BILL(IDSTAFF) VALUES
+	(@idStaff)
+END
+
+EXEC USP_CreateNewBillWithoutCustomer @idStaff = 0
+
+-- Tìm kiếm ID khách hàng thông qua SDT
+CREATE PROC USP_GetIDCustomerBySDT
+@sdt VARCHAR(15)
+AS
+BEGIN
+	SELECT ID
+	FROM CUSTOMER
+	WHERE SDT = @sdt
+END
+
+EXEC USP_GetIDCustomerBySDT @sdt = '0931646220'
+
+-- Thêm dữ liệu vào BILLDETAIL
+CREATE PROC USP_InsertFoodIntoBill
+@idBill INT, @idFood INT, @sl INT, @note NVARCHAR(1000)
+AS
+BEGIN
+	INSERT INTO BILLDETAIL(IDBILL, IDFOOD, SL, NOTE) VALUES 
+		(@idBill, @idFood, @sl, @note)
+END
+GO
+
+EXEC USP_InsertFoodIntoBill @idBill = 55 , @idFood = 2 , @sl = 2 , @note = N'cho ít đá'
+
+-- Load ra Hóa đơn chi tiết từ mã hóa đơn
+CREATE PROC USP_LoadBillDetailsByBillID
+@idBill INT
+AS
+BEGIN
+	SELECT f.TENMON AS [Món], cthd.SL AS [Số lượng], cthd.NOTE AS [Lưu ý]
+	FROM BILLDETAIL cthd JOIN FOOD f ON f.ID = cthd.IDFOOD
+	WHERE cthd.IDBILL = @idBill
+END
+GO
+
+EXEC USP_LoadBillDetailsByBillID @idBill = 4

@@ -26,19 +26,43 @@ namespace CoffeeShopManagement
 
         private void bLogin_Click(object sender, EventArgs e)
         {
-            fSell f = new fSell();
-            this.Hide();
-            this.tbPassword.Text = "";
-            this.tbPassword.UseSystemPasswordChar = false;
-            cbxShowPassword.Checked = false;
-            f.ShowDialog();
-            this.Show();
+            this.lNotification.Text = "";
+            string userName = this.tbUsername.Text;
+            string passWord = this.tbPassword.Text;
+            if (Login(userName, passWord))
+            {
+                fSell f = new fSell(this.tbUsername.Text);
+                this.Hide();
+                f.ShowDialog();
+                this.tbPassword.Text = "";
+                this.cbxShowPassword.Checked = false;
+                this.Show();
+            }
+            else
+            {
+                this.lNotification.Text = "Tên tài khoản hoặc mật khẩu không chính xác!";
+            }
+        }
+
+        private bool Login(string userName, string passWord)
+        {
+            return AccountDAO.Instance.Login(userName, passWord);
         }
 
         private void bCreateAccount_Click(object sender, EventArgs e)
         {
             fStaffAdd f = new fStaffAdd();
             f.ShowDialog();
+        }
+
+        private void tbUsername_TextChanged(object sender, EventArgs e)
+        {
+            this.lNotification.Text = "";
+        }
+
+        private void tbPassword_TextChanged(object sender, EventArgs e)
+        {
+            this.lNotification.Text = "";
         }
     }
 }

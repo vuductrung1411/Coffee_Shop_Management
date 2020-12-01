@@ -1,4 +1,7 @@
-﻿namespace CoffeeShopManagement
+﻿using System.Drawing;
+using System.Windows.Forms;
+
+namespace CoffeeShopManagement
 {
     partial class fSell
     {
@@ -44,7 +47,11 @@
             this.danhSáchKháchHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.chươngTrìnhKhuyếnMãiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thốngKêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.báoCáoVàThốngKêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ýKiếnĐóngGópToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.khoHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hàngTrongKhoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nhậpThêmHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lịchSửToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lịchSửHóaĐơnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lịchSửNhậpHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -60,7 +67,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.dgvMenu = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.pnlManage = new System.Windows.Forms.Panel();
             this.lGetOutOfFood = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.tbCustomerSDT = new Guna.UI2.WinForms.Guna2TextBox();
@@ -74,7 +80,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.bAddCustomer = new Guna.UI2.WinForms.Guna2Button();
             this.bCustomerInfo = new Guna.UI2.WinForms.Guna2Button();
-            this.bContribute = new Guna.UI2.WinForms.Guna2Button();
+            this.bComments = new Guna.UI2.WinForms.Guna2Button();
             this.label12 = new System.Windows.Forms.Label();
             this.nudSLCustomer = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.label13 = new System.Windows.Forms.Label();
@@ -105,6 +111,10 @@
             this.label16 = new System.Windows.Forms.Label();
             this.tbNote = new Guna.UI2.WinForms.Guna2TextBox();
             this.label25 = new System.Windows.Forms.Label();
+            this.pnlManage = new System.Windows.Forms.FlowLayoutPanel();
+            this.bCombine = new Guna.UI2.WinForms.Guna2Button();
+            this.bChangeTableID = new Guna.UI2.WinForms.Guna2Button();
+            this.bNewCustomerInShop = new Guna.UI2.WinForms.Guna2Button();
             this.msMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudSLCustomer)).BeginInit();
@@ -116,6 +126,7 @@
             // msMenu
             // 
             this.msMenu.BackColor = System.Drawing.SystemColors.Control;
+            this.msMenu.Font = new System.Drawing.Font("Segoe UI", 9.25F);
             this.msMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.kháchHàngToolStripMenuItem,
             this.quảnLýToolStripMenuItem,
@@ -126,7 +137,7 @@
             this.tàiKhoảnToolStripMenuItem});
             this.msMenu.Location = new System.Drawing.Point(0, 0);
             this.msMenu.Name = "msMenu";
-            this.msMenu.Size = new System.Drawing.Size(1484, 24);
+            this.msMenu.Size = new System.Drawing.Size(1484, 25);
             this.msMenu.TabIndex = 0;
             this.msMenu.Text = "menuStrip1";
             // 
@@ -134,7 +145,7 @@
             // 
             this.kháchHàngToolStripMenuItem.Image = global::CoffeeShopManagement.Properties.Resources.icon___Customer;
             this.kháchHàngToolStripMenuItem.Name = "kháchHàngToolStripMenuItem";
-            this.kháchHàngToolStripMenuItem.Size = new System.Drawing.Size(98, 20);
+            this.kháchHàngToolStripMenuItem.Size = new System.Drawing.Size(104, 21);
             this.kháchHàngToolStripMenuItem.Text = "Khách hàng";
             this.kháchHàngToolStripMenuItem.Click += new System.EventHandler(this.kháchHàngToolStripMenuItem_Click);
             // 
@@ -148,14 +159,14 @@
             this.chươngTrìnhKhuyếnMãiToolStripMenuItem});
             this.quảnLýToolStripMenuItem.Image = global::CoffeeShopManagement.Properties.Resources.icon___Manage;
             this.quảnLýToolStripMenuItem.Name = "quảnLýToolStripMenuItem";
-            this.quảnLýToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
+            this.quảnLýToolStripMenuItem.Size = new System.Drawing.Size(80, 21);
             this.quảnLýToolStripMenuItem.Text = "Quản lý";
             // 
             // thôngTinQuánToolStripMenuItem
             // 
             this.thôngTinQuánToolStripMenuItem.Image = global::CoffeeShopManagement.Properties.Resources.icon___Shop;
             this.thôngTinQuánToolStripMenuItem.Name = "thôngTinQuánToolStripMenuItem";
-            this.thôngTinQuánToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
+            this.thôngTinQuánToolStripMenuItem.Size = new System.Drawing.Size(221, 22);
             this.thôngTinQuánToolStripMenuItem.Text = "Thông tin quán";
             this.thôngTinQuánToolStripMenuItem.Click += new System.EventHandler(this.thôngTinQuánToolStripMenuItem_Click);
             // 
@@ -163,7 +174,7 @@
             // 
             this.danhSáchMónToolStripMenuItem.Image = global::CoffeeShopManagement.Properties.Resources.icon___Food;
             this.danhSáchMónToolStripMenuItem.Name = "danhSáchMónToolStripMenuItem";
-            this.danhSáchMónToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
+            this.danhSáchMónToolStripMenuItem.Size = new System.Drawing.Size(221, 22);
             this.danhSáchMónToolStripMenuItem.Text = "Danh sách món";
             this.danhSáchMónToolStripMenuItem.Click += new System.EventHandler(this.danhSáchMónToolStripMenuItem_Click);
             // 
@@ -171,7 +182,7 @@
             // 
             this.danhSáchNhânViênToolStripMenuItem.Image = global::CoffeeShopManagement.Properties.Resources.icon___Staff;
             this.danhSáchNhânViênToolStripMenuItem.Name = "danhSáchNhânViênToolStripMenuItem";
-            this.danhSáchNhânViênToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
+            this.danhSáchNhânViênToolStripMenuItem.Size = new System.Drawing.Size(221, 22);
             this.danhSáchNhânViênToolStripMenuItem.Text = "Danh sách nhân viên";
             this.danhSáchNhânViênToolStripMenuItem.Click += new System.EventHandler(this.danhSáchNhânViênToolStripMenuItem_Click);
             // 
@@ -179,7 +190,7 @@
             // 
             this.danhSáchKháchHàngToolStripMenuItem.Image = global::CoffeeShopManagement.Properties.Resources.icon___Customerlist;
             this.danhSáchKháchHàngToolStripMenuItem.Name = "danhSáchKháchHàngToolStripMenuItem";
-            this.danhSáchKháchHàngToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
+            this.danhSáchKháchHàngToolStripMenuItem.Size = new System.Drawing.Size(221, 22);
             this.danhSáchKháchHàngToolStripMenuItem.Text = "Danh sách khách hàng";
             this.danhSáchKháchHàngToolStripMenuItem.Click += new System.EventHandler(this.danhSáchKháchHàngToolStripMenuItem_Click);
             // 
@@ -187,25 +198,60 @@
             // 
             this.chươngTrìnhKhuyếnMãiToolStripMenuItem.Image = global::CoffeeShopManagement.Properties.Resources.icon___Discount;
             this.chươngTrìnhKhuyếnMãiToolStripMenuItem.Name = "chươngTrìnhKhuyếnMãiToolStripMenuItem";
-            this.chươngTrìnhKhuyếnMãiToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
+            this.chươngTrìnhKhuyếnMãiToolStripMenuItem.Size = new System.Drawing.Size(221, 22);
             this.chươngTrìnhKhuyếnMãiToolStripMenuItem.Text = "Chương trình khuyến mãi";
             this.chươngTrìnhKhuyếnMãiToolStripMenuItem.Click += new System.EventHandler(this.chươngTrìnhKhuyếnMãiToolStripMenuItem_Click);
             // 
             // thốngKêToolStripMenuItem
             // 
+            this.thốngKêToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.báoCáoVàThốngKêToolStripMenuItem,
+            this.ýKiếnĐóngGópToolStripMenuItem});
             this.thốngKêToolStripMenuItem.Image = global::CoffeeShopManagement.Properties.Resources.icon___Statistical1;
             this.thốngKêToolStripMenuItem.Name = "thốngKêToolStripMenuItem";
-            this.thốngKêToolStripMenuItem.Size = new System.Drawing.Size(84, 20);
+            this.thốngKêToolStripMenuItem.Size = new System.Drawing.Size(90, 21);
             this.thốngKêToolStripMenuItem.Text = "Thống kê";
-            this.thốngKêToolStripMenuItem.Click += new System.EventHandler(this.thốngKêToolStripMenuItem_Click);
+            // 
+            // báoCáoVàThốngKêToolStripMenuItem
+            // 
+            this.báoCáoVàThốngKêToolStripMenuItem.Image = global::CoffeeShopManagement.Properties.Resources.icon___Report;
+            this.báoCáoVàThốngKêToolStripMenuItem.Name = "báoCáoVàThốngKêToolStripMenuItem";
+            this.báoCáoVàThốngKêToolStripMenuItem.Size = new System.Drawing.Size(237, 22);
+            this.báoCáoVàThốngKêToolStripMenuItem.Text = "Báo cáo và thống kê số liệu";
+            this.báoCáoVàThốngKêToolStripMenuItem.Click += new System.EventHandler(this.báoCáoVàThốngKêToolStripMenuItem_Click);
+            // 
+            // ýKiếnĐóngGópToolStripMenuItem
+            // 
+            this.ýKiếnĐóngGópToolStripMenuItem.Image = global::CoffeeShopManagement.Properties.Resources.icon___Comments;
+            this.ýKiếnĐóngGópToolStripMenuItem.Name = "ýKiếnĐóngGópToolStripMenuItem";
+            this.ýKiếnĐóngGópToolStripMenuItem.Size = new System.Drawing.Size(237, 22);
+            this.ýKiếnĐóngGópToolStripMenuItem.Text = "Ý kiến đóng góp";
             // 
             // khoHàngToolStripMenuItem
             // 
+            this.khoHàngToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.hàngTrongKhoToolStripMenuItem,
+            this.nhậpThêmHàngToolStripMenuItem});
             this.khoHàngToolStripMenuItem.Image = global::CoffeeShopManagement.Properties.Resources.icon___Warehouse;
             this.khoHàngToolStripMenuItem.Name = "khoHàngToolStripMenuItem";
-            this.khoHàngToolStripMenuItem.Size = new System.Drawing.Size(86, 20);
+            this.khoHàngToolStripMenuItem.Size = new System.Drawing.Size(92, 21);
             this.khoHàngToolStripMenuItem.Text = "Kho hàng";
-            this.khoHàngToolStripMenuItem.Click += new System.EventHandler(this.khoHàngToolStripMenuItem_Click);
+            // 
+            // hàngTrongKhoToolStripMenuItem
+            // 
+            this.hàngTrongKhoToolStripMenuItem.Image = global::CoffeeShopManagement.Properties.Resources.icon___Goods_in_Warehouse;
+            this.hàngTrongKhoToolStripMenuItem.Name = "hàngTrongKhoToolStripMenuItem";
+            this.hàngTrongKhoToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.hàngTrongKhoToolStripMenuItem.Text = "Hàng trong kho";
+            this.hàngTrongKhoToolStripMenuItem.Click += new System.EventHandler(this.hàngTrongKhoToolStripMenuItem_Click);
+            // 
+            // nhậpThêmHàngToolStripMenuItem
+            // 
+            this.nhậpThêmHàngToolStripMenuItem.Image = global::CoffeeShopManagement.Properties.Resources.icon___Import_Goods;
+            this.nhậpThêmHàngToolStripMenuItem.Name = "nhậpThêmHàngToolStripMenuItem";
+            this.nhậpThêmHàngToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.nhậpThêmHàngToolStripMenuItem.Text = "Nhập hàng";
+            this.nhậpThêmHàngToolStripMenuItem.Click += new System.EventHandler(this.nhậpThêmHàngToolStripMenuItem_Click);
             // 
             // lịchSửToolStripMenuItem
             // 
@@ -215,14 +261,14 @@
             this.lịchSửHoạtĐộngToolStripMenuItem});
             this.lịchSửToolStripMenuItem.Image = global::CoffeeShopManagement.Properties.Resources.icon___History;
             this.lịchSửToolStripMenuItem.Name = "lịchSửToolStripMenuItem";
-            this.lịchSửToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
+            this.lịchSửToolStripMenuItem.Size = new System.Drawing.Size(76, 21);
             this.lịchSửToolStripMenuItem.Text = "Lịch sử";
             // 
             // lịchSửHóaĐơnToolStripMenuItem
             // 
             this.lịchSửHóaĐơnToolStripMenuItem.Image = global::CoffeeShopManagement.Properties.Resources.icon___Bill_History;
             this.lịchSửHóaĐơnToolStripMenuItem.Name = "lịchSửHóaĐơnToolStripMenuItem";
-            this.lịchSửHóaĐơnToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.lịchSửHóaĐơnToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
             this.lịchSửHóaĐơnToolStripMenuItem.Text = "Lịch sử hóa đơn";
             this.lịchSửHóaĐơnToolStripMenuItem.Click += new System.EventHandler(this.lịchSửHóaĐơnToolStripMenuItem_Click);
             // 
@@ -230,7 +276,7 @@
             // 
             this.lịchSửNhậpHàngToolStripMenuItem.Image = global::CoffeeShopManagement.Properties.Resources.icon___Import;
             this.lịchSửNhậpHàngToolStripMenuItem.Name = "lịchSửNhậpHàngToolStripMenuItem";
-            this.lịchSửNhậpHàngToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.lịchSửNhậpHàngToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
             this.lịchSửNhậpHàngToolStripMenuItem.Text = "Lịch sử nhập hàng";
             this.lịchSửNhậpHàngToolStripMenuItem.Click += new System.EventHandler(this.lịchSửNhậpHàngToolStripMenuItem_Click);
             // 
@@ -238,7 +284,7 @@
             // 
             this.lịchSửHoạtĐộngToolStripMenuItem.Image = global::CoffeeShopManagement.Properties.Resources.icon___Action_History;
             this.lịchSửHoạtĐộngToolStripMenuItem.Name = "lịchSửHoạtĐộngToolStripMenuItem";
-            this.lịchSửHoạtĐộngToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.lịchSửHoạtĐộngToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
             this.lịchSửHoạtĐộngToolStripMenuItem.Text = "Lịch sử hoạt động";
             this.lịchSửHoạtĐộngToolStripMenuItem.Click += new System.EventHandler(this.lịchSửHoạtĐộngToolStripMenuItem_Click);
             // 
@@ -248,14 +294,14 @@
             this.liênHệVớiNhàPhátTriểnToolStripMenuItem});
             this.trợGiúpToolStripMenuItem.Image = global::CoffeeShopManagement.Properties.Resources.icon___Help;
             this.trợGiúpToolStripMenuItem.Name = "trợGiúpToolStripMenuItem";
-            this.trợGiúpToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
+            this.trợGiúpToolStripMenuItem.Size = new System.Drawing.Size(85, 21);
             this.trợGiúpToolStripMenuItem.Text = "Trợ giúp";
             // 
             // liênHệVớiNhàPhátTriểnToolStripMenuItem
             // 
             this.liênHệVớiNhàPhátTriểnToolStripMenuItem.Image = global::CoffeeShopManagement.Properties.Resources.icon___Connect_to_developer;
             this.liênHệVớiNhàPhátTriểnToolStripMenuItem.Name = "liênHệVớiNhàPhátTriểnToolStripMenuItem";
-            this.liênHệVớiNhàPhátTriểnToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
+            this.liênHệVớiNhàPhátTriểnToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
             this.liênHệVớiNhàPhátTriểnToolStripMenuItem.Text = "Liên hệ với nhà phát triển";
             this.liênHệVớiNhàPhátTriểnToolStripMenuItem.Click += new System.EventHandler(this.liênHệVớiNhàPhátTriểnToolStripMenuItem_Click);
             // 
@@ -266,14 +312,14 @@
             this.đăngXuấtToolStripMenuItem});
             this.tàiKhoảnToolStripMenuItem.Image = global::CoffeeShopManagement.Properties.Resources.icon___Account;
             this.tàiKhoảnToolStripMenuItem.Name = "tàiKhoảnToolStripMenuItem";
-            this.tàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(85, 20);
+            this.tàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(91, 21);
             this.tàiKhoảnToolStripMenuItem.Text = "Tài khoản";
             // 
             // thôngTinTàiKhoảnToolStripMenuItem
             // 
             this.thôngTinTàiKhoảnToolStripMenuItem.Image = global::CoffeeShopManagement.Properties.Resources.icon___Account_Info;
             this.thôngTinTàiKhoảnToolStripMenuItem.Name = "thôngTinTàiKhoảnToolStripMenuItem";
-            this.thôngTinTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.thôngTinTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.thôngTinTàiKhoảnToolStripMenuItem.Text = "Thông tin tài khoản";
             this.thôngTinTàiKhoảnToolStripMenuItem.Click += new System.EventHandler(this.thôngTinTàiKhoảnToolStripMenuItem_Click);
             // 
@@ -281,7 +327,7 @@
             // 
             this.đăngXuấtToolStripMenuItem.Image = global::CoffeeShopManagement.Properties.Resources.icon___Logout;
             this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
-            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
             this.đăngXuấtToolStripMenuItem.Click += new System.EventHandler(this.đăngXuấtToolStripMenuItem_Click);
             // 
@@ -342,11 +388,13 @@
             // 
             // dgvMenu
             // 
+            this.dgvMenu.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.dgvMenu.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvMenu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvMenu.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.dgvMenu.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvMenu.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvMenu.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
@@ -365,10 +413,13 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvMenu.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvMenu.EnableHeadersVisualStyles = false;
             this.dgvMenu.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvMenu.Location = new System.Drawing.Point(35, 107);
             this.dgvMenu.Name = "dgvMenu";
+            this.dgvMenu.ReadOnly = true;
             this.dgvMenu.RowHeadersVisible = false;
+            this.dgvMenu.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvMenu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvMenu.Size = new System.Drawing.Size(412, 319);
             this.dgvMenu.TabIndex = 6;
@@ -386,7 +437,7 @@
             this.dgvMenu.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dgvMenu.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvMenu.ThemeStyle.HeaderStyle.Height = 25;
-            this.dgvMenu.ThemeStyle.ReadOnly = false;
+            this.dgvMenu.ThemeStyle.ReadOnly = true;
             this.dgvMenu.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvMenu.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvMenu.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -394,14 +445,7 @@
             this.dgvMenu.ThemeStyle.RowsStyle.Height = 22;
             this.dgvMenu.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvMenu.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // pnlManage
-            // 
-            this.pnlManage.BackColor = System.Drawing.Color.Transparent;
-            this.pnlManage.Location = new System.Drawing.Point(35, 496);
-            this.pnlManage.Name = "pnlManage";
-            this.pnlManage.Size = new System.Drawing.Size(412, 236);
-            this.pnlManage.TabIndex = 7;
+            this.dgvMenu.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMenu_CellContentClick);
             // 
             // lGetOutOfFood
             // 
@@ -444,6 +488,7 @@
             this.tbCustomerSDT.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbCustomerSDT.FocusedState.Parent = this.tbCustomerSDT;
             this.tbCustomerSDT.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbCustomerSDT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.tbCustomerSDT.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbCustomerSDT.HoverState.Parent = this.tbCustomerSDT;
             this.tbCustomerSDT.Location = new System.Drawing.Point(605, 107);
@@ -455,6 +500,8 @@
             this.tbCustomerSDT.ShadowDecoration.Parent = this.tbCustomerSDT;
             this.tbCustomerSDT.Size = new System.Drawing.Size(286, 40);
             this.tbCustomerSDT.TabIndex = 0;
+            this.tbCustomerSDT.TextChanged += new System.EventHandler(this.tbCustomerSDT_TextChanged);
+            this.tbCustomerSDT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCustomerSDT_KeyPress);
             // 
             // tbCustomerName
             // 
@@ -469,10 +516,10 @@
             this.tbCustomerName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.tbCustomerName.DisabledState.Parent = this.tbCustomerName;
             this.tbCustomerName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbCustomerName.Enabled = false;
             this.tbCustomerName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbCustomerName.FocusedState.Parent = this.tbCustomerName;
             this.tbCustomerName.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbCustomerName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.tbCustomerName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbCustomerName.HoverState.Parent = this.tbCustomerName;
             this.tbCustomerName.Location = new System.Drawing.Point(605, 155);
@@ -514,6 +561,7 @@
             this.tbCustomerMember.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbCustomerMember.FocusedState.Parent = this.tbCustomerMember;
             this.tbCustomerMember.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbCustomerMember.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.tbCustomerMember.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbCustomerMember.HoverState.Parent = this.tbCustomerMember;
             this.tbCustomerMember.Location = new System.Drawing.Point(605, 202);
@@ -525,6 +573,7 @@
             this.tbCustomerMember.ShadowDecoration.Parent = this.tbCustomerMember;
             this.tbCustomerMember.Size = new System.Drawing.Size(286, 40);
             this.tbCustomerMember.TabIndex = 0;
+            this.tbCustomerMember.TabStop = false;
             // 
             // label9
             // 
@@ -553,6 +602,7 @@
             this.tbCustomerAge.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbCustomerAge.FocusedState.Parent = this.tbCustomerAge;
             this.tbCustomerAge.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbCustomerAge.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.tbCustomerAge.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbCustomerAge.HoverState.Parent = this.tbCustomerAge;
             this.tbCustomerAge.Location = new System.Drawing.Point(605, 249);
@@ -564,6 +614,7 @@
             this.tbCustomerAge.ShadowDecoration.Parent = this.tbCustomerAge;
             this.tbCustomerAge.Size = new System.Drawing.Size(286, 40);
             this.tbCustomerAge.TabIndex = 0;
+            this.tbCustomerAge.TabStop = false;
             // 
             // label10
             // 
@@ -592,6 +643,7 @@
             this.tbFavoriteFood.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbFavoriteFood.FocusedState.Parent = this.tbFavoriteFood;
             this.tbFavoriteFood.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbFavoriteFood.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.tbFavoriteFood.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbFavoriteFood.HoverState.Parent = this.tbFavoriteFood;
             this.tbFavoriteFood.Location = new System.Drawing.Point(605, 299);
@@ -603,6 +655,7 @@
             this.tbFavoriteFood.ShadowDecoration.Parent = this.tbFavoriteFood;
             this.tbFavoriteFood.Size = new System.Drawing.Size(286, 40);
             this.tbFavoriteFood.TabIndex = 0;
+            this.tbFavoriteFood.TabStop = false;
             // 
             // label11
             // 
@@ -632,6 +685,7 @@
             this.bAddCustomer.ShadowDecoration.Parent = this.bAddCustomer;
             this.bAddCustomer.Size = new System.Drawing.Size(411, 40);
             this.bAddCustomer.TabIndex = 10;
+            this.bAddCustomer.TabStop = false;
             this.bAddCustomer.Text = "Thêm mới";
             this.bAddCustomer.Click += new System.EventHandler(this.bAddCustomer_Click);
             // 
@@ -651,27 +705,29 @@
             this.bCustomerInfo.ShadowDecoration.Parent = this.bCustomerInfo;
             this.bCustomerInfo.Size = new System.Drawing.Size(193, 40);
             this.bCustomerInfo.TabIndex = 11;
+            this.bCustomerInfo.TabStop = false;
             this.bCustomerInfo.Text = "Thông tin chi tiết";
             this.bCustomerInfo.Click += new System.EventHandler(this.bCustomerInfo_Click);
             // 
-            // bContribute
+            // bComments
             // 
-            this.bContribute.AutoRoundedCorners = true;
-            this.bContribute.BackColor = System.Drawing.Color.Transparent;
-            this.bContribute.BorderRadius = 19;
-            this.bContribute.CheckedState.Parent = this.bContribute;
-            this.bContribute.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bContribute.CustomImages.Parent = this.bContribute;
-            this.bContribute.FillColor = System.Drawing.Color.LimeGreen;
-            this.bContribute.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bContribute.ForeColor = System.Drawing.Color.White;
-            this.bContribute.HoverState.Parent = this.bContribute;
-            this.bContribute.Location = new System.Drawing.Point(698, 395);
-            this.bContribute.Name = "bContribute";
-            this.bContribute.ShadowDecoration.Parent = this.bContribute;
-            this.bContribute.Size = new System.Drawing.Size(193, 40);
-            this.bContribute.TabIndex = 12;
-            this.bContribute.Text = "Đóng góp ý kiến";
+            this.bComments.AutoRoundedCorners = true;
+            this.bComments.BackColor = System.Drawing.Color.Transparent;
+            this.bComments.BorderRadius = 19;
+            this.bComments.CheckedState.Parent = this.bComments;
+            this.bComments.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bComments.CustomImages.Parent = this.bComments;
+            this.bComments.FillColor = System.Drawing.Color.LimeGreen;
+            this.bComments.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bComments.ForeColor = System.Drawing.Color.White;
+            this.bComments.HoverState.Parent = this.bComments;
+            this.bComments.Location = new System.Drawing.Point(698, 395);
+            this.bComments.Name = "bComments";
+            this.bComments.ShadowDecoration.Parent = this.bComments;
+            this.bComments.Size = new System.Drawing.Size(193, 40);
+            this.bComments.TabIndex = 12;
+            this.bComments.TabStop = false;
+            this.bComments.Text = "Đóng góp ý kiến";
             // 
             // label12
             // 
@@ -700,12 +756,13 @@
             this.nudSLCustomer.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.nudSLCustomer.FocusedState.Parent = this.nudSLCustomer;
             this.nudSLCustomer.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.nudSLCustomer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(126)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.nudSLCustomer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.nudSLCustomer.Location = new System.Drawing.Point(605, 495);
             this.nudSLCustomer.Name = "nudSLCustomer";
             this.nudSLCustomer.ShadowDecoration.Parent = this.nudSLCustomer;
             this.nudSLCustomer.Size = new System.Drawing.Size(286, 36);
             this.nudSLCustomer.TabIndex = 14;
+            this.nudSLCustomer.TabStop = false;
             this.nudSLCustomer.Value = new decimal(new int[] {
             1,
             0,
@@ -750,12 +807,12 @@
             this.nudSL.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.nudSL.FocusedState.Parent = this.nudSL;
             this.nudSL.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.nudSL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(126)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.nudSL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.nudSL.Location = new System.Drawing.Point(605, 573);
             this.nudSL.Name = "nudSL";
             this.nudSL.ShadowDecoration.Parent = this.nudSL;
             this.nudSL.Size = new System.Drawing.Size(286, 36);
-            this.nudSL.TabIndex = 18;
+            this.nudSL.TabIndex = 2;
             this.nudSL.Value = new decimal(new int[] {
             1,
             0,
@@ -789,6 +846,7 @@
             this.tbPrice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbPrice.FocusedState.Parent = this.tbPrice;
             this.tbPrice.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.tbPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbPrice.HoverState.Parent = this.tbPrice;
             this.tbPrice.Location = new System.Drawing.Point(605, 612);
@@ -800,12 +858,14 @@
             this.tbPrice.ShadowDecoration.Parent = this.tbPrice;
             this.tbPrice.Size = new System.Drawing.Size(286, 36);
             this.tbPrice.TabIndex = 20;
+            this.tbPrice.TabStop = false;
+            this.tbPrice.TextChanged += new System.EventHandler(this.tbPrice_TextChanged);
             // 
             // bAddFood
             // 
             this.bAddFood.AutoRoundedCorners = true;
             this.bAddFood.BackColor = System.Drawing.Color.Transparent;
-            this.bAddFood.BorderRadius = 21;
+            this.bAddFood.BorderRadius = 20;
             this.bAddFood.CheckedState.Parent = this.bAddFood;
             this.bAddFood.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bAddFood.CustomImages.Parent = this.bAddFood;
@@ -813,14 +873,15 @@
             this.bAddFood.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bAddFood.ForeColor = System.Drawing.Color.White;
             this.bAddFood.HoverState.Parent = this.bAddFood;
-            this.bAddFood.Location = new System.Drawing.Point(480, 690);
+            this.bAddFood.Location = new System.Drawing.Point(480, 691);
             this.bAddFood.Name = "bAddFood";
             this.bAddFood.ShadowDecoration.BorderRadius = 10;
             this.bAddFood.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.bAddFood.ShadowDecoration.Parent = this.bAddFood;
-            this.bAddFood.Size = new System.Drawing.Size(411, 44);
-            this.bAddFood.TabIndex = 21;
+            this.bAddFood.Size = new System.Drawing.Size(411, 42);
+            this.bAddFood.TabIndex = 3;
             this.bAddFood.Text = "Thêm món";
+            this.bAddFood.Click += new System.EventHandler(this.bAddFood_Click);
             // 
             // cbFood
             // 
@@ -835,8 +896,8 @@
             this.cbFood.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbFood.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbFood.FocusedState.Parent = this.cbFood;
-            this.cbFood.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbFood.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbFood.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.cbFood.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cbFood.HoverState.Parent = this.cbFood;
             this.cbFood.ItemHeight = 30;
             this.cbFood.ItemsAppearance.Parent = this.cbFood;
@@ -844,10 +905,12 @@
             this.cbFood.Name = "cbFood";
             this.cbFood.ShadowDecoration.Parent = this.cbFood;
             this.cbFood.Size = new System.Drawing.Size(286, 36);
-            this.cbFood.TabIndex = 16;
+            this.cbFood.TabIndex = 1;
+            this.cbFood.SelectedIndexChanged += new System.EventHandler(this.cbFood_SelectedIndexChanged);
             // 
             // dgvBill
             // 
+            this.dgvBill.AllowUserToResizeRows = false;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
             this.dgvBill.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvBill.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -863,7 +926,7 @@
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvBill.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.dgvBill.ColumnHeadersHeight = 4;
+            this.dgvBill.ColumnHeadersHeight = 25;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -876,7 +939,9 @@
             this.dgvBill.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvBill.Location = new System.Drawing.Point(921, 107);
             this.dgvBill.Name = "dgvBill";
+            this.dgvBill.ReadOnly = true;
             this.dgvBill.RowHeadersVisible = false;
+            this.dgvBill.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvBill.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvBill.Size = new System.Drawing.Size(394, 319);
             this.dgvBill.TabIndex = 23;
@@ -893,8 +958,8 @@
             this.dgvBill.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             this.dgvBill.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dgvBill.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgvBill.ThemeStyle.HeaderStyle.Height = 4;
-            this.dgvBill.ThemeStyle.ReadOnly = false;
+            this.dgvBill.ThemeStyle.HeaderStyle.Height = 25;
+            this.dgvBill.ThemeStyle.ReadOnly = true;
             this.dgvBill.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvBill.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvBill.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -973,7 +1038,8 @@
             this.cbTableID.Name = "cbTableID";
             this.cbTableID.ShadowDecoration.Parent = this.cbTableID;
             this.cbTableID.Size = new System.Drawing.Size(132, 36);
-            this.cbTableID.TabIndex = 27;
+            this.cbTableID.TabIndex = 4;
+            this.cbTableID.SelectedIndexChanged += new System.EventHandler(this.cbTableID_SelectedIndexChanged);
             // 
             // cbxTakeOut
             // 
@@ -1017,7 +1083,7 @@
             // 
             this.label20.BackColor = System.Drawing.Color.Transparent;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(916, 497);
+            this.label20.Location = new System.Drawing.Point(921, 497);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(192, 33);
             this.label20.TabIndex = 31;
@@ -1028,7 +1094,7 @@
             // 
             this.bCheckout.AutoRoundedCorners = true;
             this.bCheckout.BackColor = System.Drawing.Color.Transparent;
-            this.bCheckout.BorderRadius = 39;
+            this.bCheckout.BorderRadius = 42;
             this.bCheckout.CheckedState.Parent = this.bCheckout;
             this.bCheckout.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bCheckout.CustomImages.Parent = this.bCheckout;
@@ -1036,11 +1102,11 @@
             this.bCheckout.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bCheckout.ForeColor = System.Drawing.Color.White;
             this.bCheckout.HoverState.Parent = this.bCheckout;
-            this.bCheckout.Location = new System.Drawing.Point(921, 651);
+            this.bCheckout.Location = new System.Drawing.Point(921, 645);
             this.bCheckout.Name = "bCheckout";
             this.bCheckout.ShadowDecoration.Parent = this.bCheckout;
-            this.bCheckout.Size = new System.Drawing.Size(532, 80);
-            this.bCheckout.TabIndex = 32;
+            this.bCheckout.Size = new System.Drawing.Size(537, 86);
+            this.bCheckout.TabIndex = 5;
             this.bCheckout.Text = "Thanh toán";
             this.bCheckout.Click += new System.EventHandler(this.bCheckout_Click);
             // 
@@ -1048,7 +1114,7 @@
             // 
             this.label21.BackColor = System.Drawing.Color.Transparent;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(916, 537);
+            this.label21.Location = new System.Drawing.Point(921, 537);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(192, 33);
             this.label21.TabIndex = 33;
@@ -1059,7 +1125,7 @@
             // 
             this.label22.BackColor = System.Drawing.Color.Transparent;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(916, 577);
+            this.label22.Location = new System.Drawing.Point(921, 577);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(192, 33);
             this.label22.TabIndex = 34;
@@ -1085,15 +1151,16 @@
             this.tbDiscountValue.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbDiscountValue.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbDiscountValue.HoverState.Parent = this.tbDiscountValue;
-            this.tbDiscountValue.Location = new System.Drawing.Point(1114, 537);
+            this.tbDiscountValue.Location = new System.Drawing.Point(1078, 537);
             this.tbDiscountValue.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbDiscountValue.Name = "tbDiscountValue";
             this.tbDiscountValue.PasswordChar = '\0';
-            this.tbDiscountValue.PlaceholderText = "Số tiền được giảm giá";
+            this.tbDiscountValue.PlaceholderText = "Giảm giá";
             this.tbDiscountValue.SelectedText = "";
             this.tbDiscountValue.ShadowDecoration.Parent = this.tbDiscountValue;
-            this.tbDiscountValue.Size = new System.Drawing.Size(339, 36);
+            this.tbDiscountValue.Size = new System.Drawing.Size(375, 36);
             this.tbDiscountValue.TabIndex = 35;
+            this.tbDiscountValue.TabStop = false;
             // 
             // tbTotalValue
             // 
@@ -1114,15 +1181,16 @@
             this.tbTotalValue.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbTotalValue.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbTotalValue.HoverState.Parent = this.tbTotalValue;
-            this.tbTotalValue.Location = new System.Drawing.Point(1114, 497);
+            this.tbTotalValue.Location = new System.Drawing.Point(1078, 497);
             this.tbTotalValue.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbTotalValue.Name = "tbTotalValue";
             this.tbTotalValue.PasswordChar = '\0';
             this.tbTotalValue.PlaceholderText = "Tổng giá trị hóa đơn";
             this.tbTotalValue.SelectedText = "";
             this.tbTotalValue.ShadowDecoration.Parent = this.tbTotalValue;
-            this.tbTotalValue.Size = new System.Drawing.Size(339, 36);
+            this.tbTotalValue.Size = new System.Drawing.Size(375, 36);
             this.tbTotalValue.TabIndex = 36;
+            this.tbTotalValue.TabStop = false;
             // 
             // tbValuePayment
             // 
@@ -1143,22 +1211,23 @@
             this.tbValuePayment.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbValuePayment.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbValuePayment.HoverState.Parent = this.tbValuePayment;
-            this.tbValuePayment.Location = new System.Drawing.Point(1114, 577);
+            this.tbValuePayment.Location = new System.Drawing.Point(1078, 577);
             this.tbValuePayment.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbValuePayment.Name = "tbValuePayment";
             this.tbValuePayment.PasswordChar = '\0';
             this.tbValuePayment.PlaceholderText = "Thành tiên";
             this.tbValuePayment.SelectedText = "";
             this.tbValuePayment.ShadowDecoration.Parent = this.tbValuePayment;
-            this.tbValuePayment.Size = new System.Drawing.Size(339, 36);
+            this.tbValuePayment.Size = new System.Drawing.Size(375, 36);
             this.tbValuePayment.TabIndex = 37;
+            this.tbValuePayment.TabStop = false;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Brown;
             this.panel1.Controls.Add(this.lDiscountNotification);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 24);
+            this.panel1.Location = new System.Drawing.Point(0, 25);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1484, 24);
             this.panel1.TabIndex = 38;
@@ -1215,18 +1284,21 @@
             this.tbNote.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.tbNote.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbNote.FocusedState.Parent = this.tbNote;
-            this.tbNote.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbNote.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.tbNote.ForeColor = System.Drawing.Color.Red;
             this.tbNote.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbNote.HoverState.Parent = this.tbNote;
             this.tbNote.Location = new System.Drawing.Point(605, 651);
             this.tbNote.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbNote.Name = "tbNote";
             this.tbNote.PasswordChar = '\0';
+            this.tbNote.PlaceholderForeColor = System.Drawing.Color.Red;
             this.tbNote.PlaceholderText = "Lưu ý";
             this.tbNote.SelectedText = "";
             this.tbNote.ShadowDecoration.Parent = this.tbNote;
             this.tbNote.Size = new System.Drawing.Size(286, 36);
             this.tbNote.TabIndex = 41;
+            this.tbNote.TabStop = false;
             // 
             // label25
             // 
@@ -1239,6 +1311,74 @@
             this.label25.TabIndex = 42;
             this.label25.Text = "Thanh toán";
             // 
+            // pnlManage
+            // 
+            this.pnlManage.AutoScroll = true;
+            this.pnlManage.BackColor = System.Drawing.Color.Transparent;
+            this.pnlManage.Location = new System.Drawing.Point(35, 497);
+            this.pnlManage.Name = "pnlManage";
+            this.pnlManage.Size = new System.Drawing.Size(412, 234);
+            this.pnlManage.TabIndex = 43;
+            // 
+            // bCombine
+            // 
+            this.bCombine.AutoRoundedCorners = true;
+            this.bCombine.BackColor = System.Drawing.Color.Transparent;
+            this.bCombine.BorderRadius = 17;
+            this.bCombine.CheckedState.Parent = this.bCombine;
+            this.bCombine.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bCombine.CustomImages.Parent = this.bCombine;
+            this.bCombine.FillColor = System.Drawing.Color.ForestGreen;
+            this.bCombine.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bCombine.ForeColor = System.Drawing.Color.White;
+            this.bCombine.HoverState.Parent = this.bCombine;
+            this.bCombine.Location = new System.Drawing.Point(1321, 308);
+            this.bCombine.Name = "bCombine";
+            this.bCombine.ShadowDecoration.Parent = this.bCombine;
+            this.bCombine.Size = new System.Drawing.Size(132, 36);
+            this.bCombine.TabIndex = 44;
+            this.bCombine.Text = "Gộp bàn";
+            // 
+            // bChangeTableID
+            // 
+            this.bChangeTableID.AutoRoundedCorners = true;
+            this.bChangeTableID.BackColor = System.Drawing.Color.Transparent;
+            this.bChangeTableID.BorderRadius = 17;
+            this.bChangeTableID.CheckedState.Parent = this.bChangeTableID;
+            this.bChangeTableID.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bChangeTableID.CustomImages.Parent = this.bChangeTableID;
+            this.bChangeTableID.FillColor = System.Drawing.Color.Teal;
+            this.bChangeTableID.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bChangeTableID.ForeColor = System.Drawing.Color.White;
+            this.bChangeTableID.HoverState.Parent = this.bChangeTableID;
+            this.bChangeTableID.Location = new System.Drawing.Point(1321, 266);
+            this.bChangeTableID.Name = "bChangeTableID";
+            this.bChangeTableID.ShadowDecoration.Parent = this.bChangeTableID;
+            this.bChangeTableID.Size = new System.Drawing.Size(132, 36);
+            this.bChangeTableID.TabIndex = 45;
+            this.bChangeTableID.Text = "Đổi bàn";
+            // 
+            // bNewCustomerInShop
+            // 
+            this.bNewCustomerInShop.AutoRoundedCorners = true;
+            this.bNewCustomerInShop.BackColor = System.Drawing.Color.Transparent;
+            this.bNewCustomerInShop.BorderRadius = 16;
+            this.bNewCustomerInShop.CheckedState.Parent = this.bNewCustomerInShop;
+            this.bNewCustomerInShop.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bNewCustomerInShop.CustomImages.Parent = this.bNewCustomerInShop;
+            this.bNewCustomerInShop.Enabled = false;
+            this.bNewCustomerInShop.FillColor = System.Drawing.Color.Transparent;
+            this.bNewCustomerInShop.Font = new System.Drawing.Font("Segoe UI", 8.75F, System.Drawing.FontStyle.Bold);
+            this.bNewCustomerInShop.ForeColor = System.Drawing.Color.White;
+            this.bNewCustomerInShop.HoverState.Parent = this.bNewCustomerInShop;
+            this.bNewCustomerInShop.Location = new System.Drawing.Point(772, 58);
+            this.bNewCustomerInShop.Name = "bNewCustomerInShop";
+            this.bNewCustomerInShop.ShadowDecoration.Parent = this.bNewCustomerInShop;
+            this.bNewCustomerInShop.Size = new System.Drawing.Size(119, 35);
+            this.bNewCustomerInShop.TabIndex = 46;
+            this.bNewCustomerInShop.TabStop = false;
+            this.bNewCustomerInShop.Click += new System.EventHandler(this.bNewCustomerInShop_Click);
+            // 
             // fSell
             // 
             this.AcceptButton = this.bCheckout;
@@ -1247,6 +1387,10 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1484, 761);
+            this.Controls.Add(this.bNewCustomerInShop);
+            this.Controls.Add(this.bChangeTableID);
+            this.Controls.Add(this.bCombine);
+            this.Controls.Add(this.pnlManage);
             this.Controls.Add(this.label25);
             this.Controls.Add(this.tbNote);
             this.Controls.Add(this.label16);
@@ -1276,7 +1420,7 @@
             this.Controls.Add(this.label13);
             this.Controls.Add(this.nudSLCustomer);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.bContribute);
+            this.Controls.Add(this.bComments);
             this.Controls.Add(this.bCustomerInfo);
             this.Controls.Add(this.bAddCustomer);
             this.Controls.Add(this.tbFavoriteFood);
@@ -1290,7 +1434,6 @@
             this.Controls.Add(this.tbCustomerName);
             this.Controls.Add(this.tbCustomerSDT);
             this.Controls.Add(this.lGetOutOfFood);
-            this.Controls.Add(this.pnlManage);
             this.Controls.Add(this.dgvMenu);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -1343,7 +1486,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2DataGridView dgvMenu;
-        private System.Windows.Forms.Panel pnlManage;
         private Guna.UI2.WinForms.Guna2TextBox tbCustomerSDT;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lGetOutOfFood;
@@ -1357,7 +1499,7 @@
         private System.Windows.Forms.Label label8;
         private Guna.UI2.WinForms.Guna2Button bAddCustomer;
         private Guna.UI2.WinForms.Guna2Button bCustomerInfo;
-        private Guna.UI2.WinForms.Guna2Button bContribute;
+        private Guna.UI2.WinForms.Guna2Button bComments;
         private System.Windows.Forms.Label label12;
         private Guna.UI2.WinForms.Guna2NumericUpDown nudSLCustomer;
         private System.Windows.Forms.Label label13;
@@ -1388,5 +1530,13 @@
         private System.Windows.Forms.Label label16;
         private Guna.UI2.WinForms.Guna2TextBox tbNote;
         private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.ToolStripMenuItem báoCáoVàThốngKêToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ýKiếnĐóngGópToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem hàngTrongKhoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nhậpThêmHàngToolStripMenuItem;
+        private System.Windows.Forms.FlowLayoutPanel pnlManage;
+        private Guna.UI2.WinForms.Guna2Button bCombine;
+        private Guna.UI2.WinForms.Guna2Button bChangeTableID;
+        private Guna.UI2.WinForms.Guna2Button bNewCustomerInShop;
     }
 }

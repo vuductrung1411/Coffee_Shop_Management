@@ -30,6 +30,12 @@ namespace QuanLyQuanCafe.DAO
             return result.Rows.Count > 0;
         }
 
+        public int GetIDByUsername(string userName)
+        {
+            string query = "EXEC USP_GetIDByUsername @userName";
+            return (int)DataProvider.Instance.ExecuteScalar(query, new object[] { userName });
+        }
+
         public string Encode(string str)
         {
             //Tạo MD5 

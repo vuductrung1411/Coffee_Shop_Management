@@ -153,6 +153,16 @@ namespace CoffeeShopManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon___Comments {
+            get {
+                object obj = ResourceManager.GetObject("icon - Comments", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon___Connect_to_developer {
             get {
                 object obj = ResourceManager.GetObject("icon - Connect to developer", resourceCulture);
@@ -203,6 +213,16 @@ namespace CoffeeShopManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon___Goods_in_Warehouse {
+            get {
+                object obj = ResourceManager.GetObject("icon - Goods in Warehouse", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon___Help {
             get {
                 object obj = ResourceManager.GetObject("icon - Help", resourceCulture);
@@ -233,6 +253,16 @@ namespace CoffeeShopManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon___Import_Goods {
+            get {
+                object obj = ResourceManager.GetObject("icon - Import Goods", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon___Logout {
             get {
                 object obj = ResourceManager.GetObject("icon - Logout", resourceCulture);
@@ -246,6 +276,16 @@ namespace CoffeeShopManagement.Properties {
         internal static System.Drawing.Bitmap icon___Manage {
             get {
                 object obj = ResourceManager.GetObject("icon - Manage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon___Report {
+            get {
+                object obj = ResourceManager.GetObject("icon - Report", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
