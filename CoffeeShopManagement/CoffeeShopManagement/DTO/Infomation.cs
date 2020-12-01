@@ -11,10 +11,13 @@ namespace CoffeeShopManagement.DTO
     {
         #region Link
         private string ShopInfoLink = @".\Information\Shop Infomation.txt";
+        private string ShopPositionListLink = @".\Information\Position List.txt";
         #endregion
 
         private string[] arrShopInfo;
         public string shopOwner, shopName, shopSlogan, shopChair, shopTableID, shopSDT;
+
+        private string[] arrPositionList;
 
         private static Infomation instance;
 
@@ -35,6 +38,13 @@ namespace CoffeeShopManagement.DTO
             this.shopSDT = arrShopInfo[3];
             this.shopChair = arrShopInfo[4];
             this.shopTableID = arrShopInfo[5];
+        }
+
+        public string[] LoadPositionList()
+        {
+            arrPositionList = File.ReadAllLines(this.ShopPositionListLink);
+
+            return arrPositionList;
         }
     }
 }

@@ -18,13 +18,13 @@ namespace CoffeeShopManagement
     public partial class fSell : Form
     {
         // Danh sách khách hàng trong quán
-        List<CustomerInShop> CustomerList = new List<CustomerInShop> { new CustomerInShop(0) };
+        List<Customer> CustomerList = new List<Customer> { new Customer(0) };
         
         // Tài khoản của nhân viên/chủ quán đang đăng nhập vào
         Account account;
 
         // Lưu khách hàng hiện tại đang đặt món
-        CustomerInShop CustomerNow;
+        Customer CustomerNow;
 
         // Quản lý bàn đã được sử dụng hay chưa? UsedTableID[i] = false: chưa sử dụng, = true: đang được sử dụng
         bool[] UsedTableID;
@@ -52,7 +52,7 @@ namespace CoffeeShopManagement
             #endregion
         }
 
-        #region Method
+        #region METHODS
 
         // Load menu (Món, giá) 
         void LoadMenu()
@@ -116,9 +116,132 @@ namespace CoffeeShopManagement
             return s;
         }
 
+        /// <summary>
+        /// Reset lại thông tin (Khi có khách hàng mới)
+        /// </summary>
+        /// <param name="kind"></param> 1: không xóa SDT
+        void ResetInfomation(int kind = 0)
+        {
+            if (kind == 0)
+                this.tbCustomerSDT.Text = "";
+            this.tbCustomerName.Text = "";
+            this.tbCustomerMember.Text = "";
+            this.tbCustomerAge.Text = "";
+            this.tbFavoriteFood.Text = "";
+
+            this.nudSLCustomer.Value = 1;
+            this.cbFood.SelectedItem = null;
+            this.nudSL.Value = 1;
+            this.tbPrice.Text = "";
+            this.tbNote.Text = "";
+
+            this.dgvBill.DataSource = null;
+            this.cbTableID.SelectedItem = null;
+            this.cbxTakeOut.Checked = false;
+
+            this.tbTotalValue.Text = "";
+            this.tbDiscountValue.Text = "";
+            this.tbValuePayment.Text = "";
+        }
+
+        // Kiểm tra xem có tồn tại khách hàng hay không thông qua sdt được nhập
+        // true: có, false: không
+        bool CheckExistsCustomer(string sdt)
+        {
+            return CustomerDAO.Instance.CheckExistCustomerInDatabaseBySDT(sdt);
+        }
+
+        // Tô màu border cho mục "Thông tin khách hàng"
+        // 0: màu đen (Không có gì); 1: màu đỏ (Thông tin sdt không có trong database); 2: màu xanh lá cây (Có tồn tại khách hàng)
+        void BorderColorCustomer(int idColor)
+        {
+            switch (idColor)
+            {
+                case 0:
+                    this.tbCustomerSDT.BorderColor = Color.Black;
+                    this.tbCustomerName.BorderColor = Color.Black;
+                    this.tbCustomerMember.BorderColor = Color.Black;
+                    this.tbCustomerAge.BorderColor = Color.Black;
+                    this.tbFavoriteFood.BorderColor = Color.Black;
+                    break;
+                case 1:
+                    this.tbCustomerSDT.BorderColor = Color.Red;
+                    this.tbCustomerName.BorderColor = Color.Red;
+                    this.tbCustomerMember.BorderColor = Color.Red;
+                    this.tbCustomerAge.BorderColor = Color.Red;
+                    this.tbFavoriteFood.BorderColor = Color.Red;
+                    break;
+                case 2:
+                    this.tbCustomerSDT.BorderColor = Color.Green;
+                    this.tbCustomerName.BorderColor = Color.Green;
+                    this.tbCustomerMember.BorderColor = Color.Green;
+                    this.tbCustomerAge.BorderColor = Color.Green;
+                    this.tbFavoriteFood.BorderColor = Color.Green;
+                    break;
+            }    
+        }
+
+        /// <summary>
+        ///  Thêm khách hàng mới vào trong quán
+        /// </summary>
+        /// <param name="CustomerSDT"></param> SDT được nhập trong textbox
+        /// <param name="btnName"></param> Tên của btn được tạo mới
+        /// <param name="btnText"></param> Text của btn được tạo mới
+        void NewCustomerInShop(string CustomerSDT, string btnName, string btnText)
+        {
+            // lấy ra id của nhân viên
+            int idStaff = this.account.id;
+
+            // id của khách hàng thông qua sdt
+            int idCustomer = CustomerDAO.Instance.GetIDCustomerBySDT(CustomerSDT);
+
+            // thêm 1 hóa đơn mới vào database
+            BillDAO.Instance.CreateNewBill(idStaff, idCustomer);
+
+            // Thêm 1 khách hàng vào trong danh sách khách hàng
+            Customer newCustomer = new Customer(Int32.Parse(this.cbTableID.Text), CustomerSDT);
+            CustomerList.Add(newCustomer);
+
+            // Điều chỉnh lại khách hàng hiện tại
+            this.CustomerNow = newCustomer;
+
+            // Đánh dấu bàn đã được sử dụng
+            this.UsedTableID[Int32.Parse(cbTableID.Text)] = true;
+
+            // Vẽ thêm 1 button
+            #region Vẽ button
+            Random rand = new Random();
+
+            Guna2GradientButton btn = new Guna2GradientButton();
+            btn.Size = new Size(375, 27);
+            btn.AutoRoundedCorners = true;
+            btn.BackColor = Color.Transparent;
+            btn.CheckedState.Parent = btn;
+            btn.BorderRadius = 14;
+            btn.CustomImages.Parent = btn;
+            btn.Cursor = Cursors.Hand;
+            btn.FillColor = this.color[rand.Next(0, color.Length)];
+            btn.FillColor2 = this.color[rand.Next(0, color.Length)];
+            btn.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(0)));
+            btn.ForeColor = Color.White;
+            btn.HoverState.Parent = btn;
+            btn.ShadowDecoration.Parent = btn;
+            btn.BorderColor = Color.Black;
+            btn.BorderThickness = 1;
+
+            btn.Click += Btn_Click;
+            #endregion
+
+            btn.Name = btnName;
+            btn.Text = btnText;
+
+            // Thêm button vào panel
+            this.pnlManage.Controls.Add(btn);
+        }
+
         #endregion
 
-        #region Events
+        #region EVENTS
 
         private void bAddCustomer_Click(object sender, EventArgs e)
         {
@@ -286,80 +409,28 @@ namespace CoffeeShopManagement
             }
             #endregion
 
-            // Vẽ 1 button lên trên panel
-            #region Vẽ button
-            Random rand = new Random();
-
-            Guna2GradientButton btn = new Guna2GradientButton();
-            btn.Size = new Size(375, 27);
-            btn.AutoRoundedCorners = true;
-            btn.BackColor = Color.Transparent;
-            btn.CheckedState.Parent = btn;
-            btn.BorderRadius = 14;
-            btn.CustomImages.Parent = btn;
-            btn.Cursor = Cursors.Hand;
-            btn.FillColor = this.color[rand.Next(0, color.Length)];
-            btn.FillColor2 = this.color[rand.Next(0, color.Length)];
-            btn.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(0)));
-            btn.ForeColor = Color.White;
-            btn.HoverState.Parent = btn;
-            btn.ShadowDecoration.Parent = btn;
-            btn.BorderColor = Color.Black;
-            btn.BorderThickness = 1; 
-
-            btn.Click += Btn_Click;
-            #endregion
-
-            int idStaff = account.id;
             string SDT = this.tbCustomerSDT.Text;
-            SDT = ChuanHoaXau(SDT);
 
             // Nếu có nhập sdt
             if (SDT != "")
             {
-                // Không tồn tại khách hàng trong database sau khi tìm kiếm sdt
-                if (!CustomerDAO.Instance.CheckExistCustomerInDatabaseBySDT(SDT))
+                // Không tồn tại khách trong database
+                if (!CheckExistsCustomer(SDT))
                 {
-                    this.tbCustomerSDT.BorderColor = Color.Red;
-                    this.tbCustomerName.BorderColor = Color.Red;
+                    BorderColorCustomer(1);
                     return;
-                }
-                // tồn tại
+                }    
+                // Tồn tại khách trong database
                 else
                 {
-                    this.tbCustomerSDT.BorderColor = Color.Green;
-                    this.tbCustomerName.BorderColor = Color.Green;
+                    BorderColorCustomer(2);
                 }
-
-                // Biến mất, vô hiệu hóa nút "Khách hàng mới"
-                this.bNewCustomerInShop.Enabled = false;
-                this.bNewCustomerInShop.BackColor = Color.Transparent;
-                this.bNewCustomerInShop.FillColor = Color.Transparent;
-                this.bNewCustomerInShop.Text = "";
-
-                // id của khách hàng thông qua sdt
-                int idCustomer = CustomerDAO.Instance.GetIDCustomerBySDT(SDT);
 
                 // Nếu khách chưa tồn tại trong quán (đặt món đầu tiên) thì thêm một hóa đơn mới
                 if (!this.UsedTableID[Int32.Parse(cbTableID.Text)])
                 {
-                    // thêm 1 hóa đơn mới vào database
-                    BillDAO.Instance.CreateNewBill(idStaff, idCustomer);
-
-                    // Thêm 1 khách hàng vào trong danh sách khách hàng
-                    CustomerInShop newCustomer = new CustomerInShop(Int32.Parse(this.cbTableID.Text), SDT);
-                    CustomerList.Add(newCustomer);
-
-                    // Điều chỉnh lại khách hàng hiện tại
-                    this.CustomerNow = newCustomer;
-
-                    // Đánh dấu bàn đã được sử dụng
-                    this.UsedTableID[Int32.Parse(cbTableID.Text)] = true;
-
-                    btn.Name = SDT;
-                    btn.Text = cbTableID.Text + " | " + (tbCustomerName.Text == "" ? "NULL" : tbCustomerName.Text + " | " + SDT);
-                    // Thêm button vào panel
-                    this.pnlManage.Controls.Add(btn);
+                    string btnText = cbTableID.Text + " | " + (tbCustomerName.Text == "" ? "NULL" : tbCustomerName.Text + " | " + SDT);
+                    NewCustomerInShop(SDT, SDT, btnText);
                 }
             }
             // Không nhập sdt (Khách hàng ẩn danh)
@@ -368,29 +439,8 @@ namespace CoffeeShopManagement
                 // Nếu bàn này chưa có người sử dụng <=> khách hàng đặt món đầu tiên
                 if (!this.UsedTableID[Int32.Parse(cbTableID.Text)])
                 {
-                    // thêm 1 hóa đơn mới vào database
-                    BillDAO.Instance.CreateNewBill(idStaff);
-
-                    // Thêm 1 khách hàng vào trong danh sách khách hàng
-                    CustomerInShop newCustomer = new CustomerInShop(Int32.Parse(this.cbTableID.Text));
-                    CustomerList.Add(newCustomer);
-
-                    // Điều chỉnh lại khách hàng hiện tại
-                    this.CustomerNow = newCustomer;
-
-                    // Đánh dấu bàn đã được sử dụng
-                    this.UsedTableID[Int32.Parse(cbTableID.Text)] = true;
-
-                    btn.Name = "";
-                    btn.Text = cbTableID.Text + " | " + "NULL" + " | " + "NULL";
-                    // Thêm button vào panel
-                    this.pnlManage.Controls.Add(btn);
-
-                    // Mở lại nút "Khách hàng mới"
-                    this.bNewCustomerInShop.Enabled = true;
-                    this.bNewCustomerInShop.BackColor = Color.Transparent;
-                    this.bNewCustomerInShop.FillColor = Color.MediumTurquoise;
-                    this.bNewCustomerInShop.Text = "Khách hàng mới";
+                    string btnText = cbTableID.Text + " | " + "NULL" + " | " + "NULL";
+                    NewCustomerInShop(SDT, SDT, btnText);
                 } 
             }
 
@@ -402,7 +452,6 @@ namespace CoffeeShopManagement
 
             // Hiển thị lại thông tin hóa đơn
             LoadBillDetails();
-
 
             // Reset lại thông tin tránh để đặt nhầm nhiều lần
             this.cbFood.SelectedItem = null;
@@ -425,7 +474,7 @@ namespace CoffeeShopManagement
                 tableIDstr = tableIDstr + btn.Text[i];
             }
             int tableID = Int32.Parse(tableIDstr);
-            foreach (CustomerInShop item in CustomerList)
+            foreach (Customer item in CustomerList)
             {
                 if (item.tableID == tableID)
                 {
@@ -463,28 +512,22 @@ namespace CoffeeShopManagement
 
         private void tbCustomerSDT_TextChanged(object sender, EventArgs e)
         {
-            // Reset lại thông tin (tránh để bị giữ lại thông tin của khách trước đó)
-            this.cbFood.SelectedItem = null;
-            this.cbTableID.SelectedItem = null;
-            this.dgvBill.DataSource = null;
+            ResetInfomation();
             
             string SDT = this.tbCustomerSDT.Text;
-            SDT = ChuanHoaXau(SDT);
 
             if (SDT == "")
             {
-                this.tbCustomerSDT.BorderColor = Color.Black;
-                this.tbCustomerName.BorderColor = Color.Black;
-                this.tbCustomerName.Text = "";
+                BorderColorCustomer(0);
+                ResetInfomation();
                 return;
             }
 
             // Không tồn tại SDT này trong Database
-            if (!CustomerDAO.Instance.CheckExistCustomerInDatabaseBySDT(SDT))
+            if (!CheckExistsCustomer(SDT))
             {
-                this.tbCustomerName.BorderColor = Color.Red;
-                this.tbCustomerSDT.BorderColor = Color.Red;
-                this.tbCustomerName.Text = "";
+                BorderColorCustomer(1);
+                ResetInfomation(1);
             } 
             // Có tồn tại
             else
@@ -493,11 +536,11 @@ namespace CoffeeShopManagement
                 LoadTableID();
                 this.cbTableID.Enabled = true;
 
-                this.tbCustomerSDT.BorderColor = Color.Green;
-                this.tbCustomerName.BorderColor = Color.Green;
+                BorderColorCustomer(2);
 
-                // load ra tên
+                // load ra thông tin khách hàng
                 this.tbCustomerName.Text = CustomerDAO.Instance.GetNameCustomerBySDT(SDT);
+                /*Thêm mấy cái còn lại nữa*/
             }
 
             // Cho phép chọn bàn
@@ -533,8 +576,7 @@ namespace CoffeeShopManagement
             this.cbTableID.Enabled = true;
             LoadTableID();
         }
+
         #endregion
-
-
     }
 }

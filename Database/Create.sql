@@ -4,6 +4,8 @@ GO
 USE THECOFFEESHOP
 GO
 
+SET DATEFORMAT DMY
+
 -- Drop all table 
 DROP TABLE COMMENTS
 DROP TABLE STOCK 
@@ -68,7 +70,7 @@ CREATE TABLE CUSTOMER
 	ID INT IDENTITY(1, 1) PRIMARY KEY,
 	HOTEN NVARCHAR(50),
 	SDT VARCHAR(15),
-	GIOITINH INT,							-- 0: NAM, 1: NỮ
+	GIOITINH INT,							-- 0: NAM, 1: NỮ, 2: Giấu kín
 	NGAYSINH SMALLDATETIME
 )
 GO
@@ -178,7 +180,6 @@ BEGIN
 END
 GO
 
-EXEC USP_Login @userName = 'admin' , @passWord = '21232f297a57a5a743894a0e4a801fc3'
 
 -- Lấy ID account từ username
 CREATE PROC USP_GetIDByUsername
@@ -189,7 +190,6 @@ BEGIN
 END
 GO
 
-EXEC USP_GetIDByUsername @userName = 'admin'
 
 -- Thêm hóa đơn mới (chỉ có id nhân viên và id khách hàng)
 CREATE PROC USP_CreateNewBill
@@ -199,8 +199,7 @@ BEGIN
 	Insert into BILL(IDSTAFF, IDCUSTOMER) VALUES
 	(@idStaff, @idCustomer)
 END
-
-EXEC USP_CreateNewBill @idStaff = 1 , @idCustomer = 1
+GO
 
 -- Thêm hóa đơn mới (mà không có mã khách hàng, chỉ có mã nhân viên)
 CREATE PROC USP_CreateNewBillWithoutCustomer
@@ -210,8 +209,7 @@ BEGIN
 	Insert into BILL(IDSTAFF) VALUES
 	(@idStaff)
 END
-
-EXEC USP_CreateNewBillWithoutCustomer @idStaff = 0
+GO
 
 -- Tìm kiếm ID khách hàng thông qua SDT
 CREATE PROC USP_GetIDCustomerBySDT
@@ -222,8 +220,7 @@ BEGIN
 	FROM CUSTOMER
 	WHERE SDT = @sdt
 END
-
-EXEC USP_GetIDCustomerBySDT @sdt = '0931646220'
+GO
 
 -- Thêm dữ liệu vào BILLDETAIL
 CREATE PROC USP_InsertFoodIntoBill
@@ -234,8 +231,6 @@ BEGIN
 		(@idBill, @idFood, @sl, @note)
 END
 GO
-
-EXEC USP_InsertFoodIntoBill @idBill = 55 , @idFood = 2 , @sl = 2 , @note = N'cho ít đá'
 
 -- Load ra Hóa đơn chi tiết từ mã hóa đơn
 CREATE PROC USP_LoadBillDetailsByBillID
@@ -248,4 +243,13 @@ BEGIN
 END
 GO
 
-EXEC USP_LoadBillDetailsByBillID @idBill = 4
+-- Thêm khách hàng mới
+CREATE PROC USP_CreateNewCustomer
+@name NVARCHAR(50), @sdt VARCHAR(15), @gioitinh INT, @ngaysinh SMALLDATETIME
+AS
+BEGIN
+	INSERT INTO CUSTOMER(HOTEN, SDT, GIOITINH, NGAYSINH) VALUES (@name, @sdt, @gioitinh, @ngaysinh)
+END
+GO
+
+SELECT * FROM CUSTOMER WHERE SDT = '006'

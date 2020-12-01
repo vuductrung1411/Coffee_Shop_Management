@@ -60,7 +60,7 @@
     <Compile Include="DAO\StaffDAO.cs" />
     <Compile Include="DAO\StockDAO.cs" />
     <Compile Include="DTO\Account.cs" />
-    <Compile Include="DTO\CustomerInShop.cs" />
+    <Compile Include="DTO\Customer.cs" />
     <Compile Include="DTO\Infomation.cs" />
     <Compile Include="Form\History\fActionHistory.cs">
       <SubType>Form</SubType>

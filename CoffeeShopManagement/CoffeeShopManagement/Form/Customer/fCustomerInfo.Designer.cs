@@ -60,6 +60,7 @@
             this.bCancel = new Guna.UI2.WinForms.Guna2Button();
             this.cbMember = new Guna.UI2.WinForms.Guna2ComboBox();
             this.bEdit = new Guna.UI2.WinForms.Guna2Button();
+            this.lNotificationSDTSearch = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -119,7 +120,7 @@
             this.tbName.BorderRadius = 41;
             this.tbName.BorderThickness = 0;
             this.tbName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbName.DefaultText = "Nguyễn Phương Thảo";
+            this.tbName.DefaultText = "Tên khách hàng";
             this.tbName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.tbName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.tbName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -138,7 +139,7 @@
             this.tbName.PlaceholderForeColor = System.Drawing.Color.White;
             this.tbName.PlaceholderText = "";
             this.tbName.SelectedText = "";
-            this.tbName.SelectionStart = 18;
+            this.tbName.SelectionStart = 14;
             this.tbName.ShadowDecoration.Parent = this.tbName;
             this.tbName.Size = new System.Drawing.Size(1165, 84);
             this.tbName.TabIndex = 18;
@@ -149,7 +150,7 @@
             this.tbSearch.BackColor = System.Drawing.Color.Transparent;
             this.tbSearch.BorderRadius = 28;
             this.tbSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbSearch.DefaultText = "09929834543";
+            this.tbSearch.DefaultText = "";
             this.tbSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.tbSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.tbSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -166,12 +167,13 @@
             this.tbSearch.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
             this.tbSearch.Name = "tbSearch";
             this.tbSearch.PasswordChar = '\0';
-            this.tbSearch.PlaceholderText = "";
+            this.tbSearch.PlaceholderText = "SDT của khách hàng cần tìm";
             this.tbSearch.SelectedText = "";
-            this.tbSearch.SelectionStart = 11;
             this.tbSearch.ShadowDecoration.Parent = this.tbSearch;
             this.tbSearch.Size = new System.Drawing.Size(449, 58);
             this.tbSearch.TabIndex = 19;
+            this.tbSearch.TextChanged += new System.EventHandler(this.tbSearch_TextChanged);
+            this.tbSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbSearch_KeyPress);
             // 
             // label2
             // 
@@ -201,7 +203,9 @@
             // 
             this.bSearch.AutoRoundedCorners = true;
             this.bSearch.BackColor = System.Drawing.Color.Transparent;
+            this.bSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.bSearch.BorderRadius = 28;
+            this.bSearch.BorderThickness = 1;
             this.bSearch.CheckedState.Parent = this.bSearch;
             this.bSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bSearch.CustomImages.Parent = this.bSearch;
@@ -214,6 +218,7 @@
             this.bSearch.Size = new System.Drawing.Size(172, 58);
             this.bSearch.TabIndex = 22;
             this.bSearch.Text = "Tìm kiếm";
+            this.bSearch.Click += new System.EventHandler(this.bSearch_Click);
             // 
             // label6
             // 
@@ -266,6 +271,7 @@
             // 
             this.tbSDT.AutoRoundedCorners = true;
             this.tbSDT.BackColor = System.Drawing.Color.Transparent;
+            this.tbSDT.BorderColor = System.Drawing.Color.Black;
             this.tbSDT.BorderRadius = 17;
             this.tbSDT.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbSDT.DefaultText = "";
@@ -276,13 +282,15 @@
             this.tbSDT.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.tbSDT.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbSDT.FocusedState.Parent = this.tbSDT;
-            this.tbSDT.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tbSDT.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.tbSDT.ForeColor = System.Drawing.Color.Black;
             this.tbSDT.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbSDT.HoverState.Parent = this.tbSDT;
             this.tbSDT.Location = new System.Drawing.Point(48, 476);
+            this.tbSDT.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbSDT.Name = "tbSDT";
             this.tbSDT.PasswordChar = '\0';
-            this.tbSDT.PlaceholderText = "";
+            this.tbSDT.PlaceholderText = "Số điện thoại khách hàng";
             this.tbSDT.SelectedText = "";
             this.tbSDT.ShadowDecoration.Parent = this.tbSDT;
             this.tbSDT.Size = new System.Drawing.Size(318, 36);
@@ -292,6 +300,7 @@
             // 
             this.tbID.AutoRoundedCorners = true;
             this.tbID.BackColor = System.Drawing.Color.Transparent;
+            this.tbID.BorderColor = System.Drawing.Color.Black;
             this.tbID.BorderRadius = 17;
             this.tbID.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbID.DefaultText = "";
@@ -302,13 +311,15 @@
             this.tbID.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.tbID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbID.FocusedState.Parent = this.tbID;
-            this.tbID.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tbID.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.tbID.ForeColor = System.Drawing.Color.Black;
             this.tbID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbID.HoverState.Parent = this.tbID;
             this.tbID.Location = new System.Drawing.Point(48, 556);
+            this.tbID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbID.Name = "tbID";
             this.tbID.PasswordChar = '\0';
-            this.tbID.PlaceholderText = "";
+            this.tbID.PlaceholderText = "Mã khách hàng";
             this.tbID.SelectedText = "";
             this.tbID.ShadowDecoration.Parent = this.tbID;
             this.tbID.Size = new System.Drawing.Size(318, 36);
@@ -354,6 +365,7 @@
             // 
             this.tbAge.AutoRoundedCorners = true;
             this.tbAge.BackColor = System.Drawing.Color.Transparent;
+            this.tbAge.BorderColor = System.Drawing.Color.Black;
             this.tbAge.BorderRadius = 17;
             this.tbAge.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbAge.DefaultText = "";
@@ -364,13 +376,15 @@
             this.tbAge.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.tbAge.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbAge.FocusedState.Parent = this.tbAge;
-            this.tbAge.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tbAge.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.tbAge.ForeColor = System.Drawing.Color.Black;
             this.tbAge.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbAge.HoverState.Parent = this.tbAge;
             this.tbAge.Location = new System.Drawing.Point(419, 636);
+            this.tbAge.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbAge.Name = "tbAge";
             this.tbAge.PasswordChar = '\0';
-            this.tbAge.PlaceholderText = "";
+            this.tbAge.PlaceholderText = "Tuổi khách hàng";
             this.tbAge.SelectedText = "";
             this.tbAge.ShadowDecoration.Parent = this.tbAge;
             this.tbAge.Size = new System.Drawing.Size(318, 36);
@@ -380,14 +394,13 @@
             // 
             this.dtpBirthdate.AutoRoundedCorners = true;
             this.dtpBirthdate.BackColor = System.Drawing.Color.Transparent;
-            this.dtpBirthdate.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(221)))), ((int)(((byte)(226)))));
             this.dtpBirthdate.BorderRadius = 17;
             this.dtpBirthdate.BorderThickness = 1;
             this.dtpBirthdate.CheckedState.Parent = this.dtpBirthdate;
             this.dtpBirthdate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dtpBirthdate.FillColor = System.Drawing.Color.White;
             this.dtpBirthdate.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.dtpBirthdate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtpBirthdate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpBirthdate.HoverState.Parent = this.dtpBirthdate;
             this.dtpBirthdate.Location = new System.Drawing.Point(419, 560);
             this.dtpBirthdate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
@@ -402,6 +415,7 @@
             // 
             this.cbGender.AutoRoundedCorners = true;
             this.cbGender.BackColor = System.Drawing.Color.Transparent;
+            this.cbGender.BorderColor = System.Drawing.Color.Black;
             this.cbGender.BorderRadius = 17;
             this.cbGender.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbGender.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
@@ -410,12 +424,13 @@
             this.cbGender.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbGender.FocusedState.Parent = this.cbGender;
             this.cbGender.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbGender.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbGender.ForeColor = System.Drawing.Color.Black;
             this.cbGender.HoverState.Parent = this.cbGender;
             this.cbGender.ItemHeight = 30;
             this.cbGender.Items.AddRange(new object[] {
             "Nam",
-            "Nữ"});
+            "Nữ",
+            "Không xác định"});
             this.cbGender.ItemsAppearance.Parent = this.cbGender;
             this.cbGender.Location = new System.Drawing.Point(419, 476);
             this.cbGender.Name = "cbGender";
@@ -439,6 +454,7 @@
             // 
             this.tbFavoriteFood.AutoRoundedCorners = true;
             this.tbFavoriteFood.BackColor = System.Drawing.Color.Transparent;
+            this.tbFavoriteFood.BorderColor = System.Drawing.Color.Black;
             this.tbFavoriteFood.BorderRadius = 17;
             this.tbFavoriteFood.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbFavoriteFood.DefaultText = "";
@@ -449,13 +465,15 @@
             this.tbFavoriteFood.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.tbFavoriteFood.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbFavoriteFood.FocusedState.Parent = this.tbFavoriteFood;
-            this.tbFavoriteFood.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tbFavoriteFood.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.tbFavoriteFood.ForeColor = System.Drawing.Color.Black;
             this.tbFavoriteFood.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbFavoriteFood.HoverState.Parent = this.tbFavoriteFood;
             this.tbFavoriteFood.Location = new System.Drawing.Point(790, 476);
+            this.tbFavoriteFood.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbFavoriteFood.Name = "tbFavoriteFood";
             this.tbFavoriteFood.PasswordChar = '\0';
-            this.tbFavoriteFood.PlaceholderText = "";
+            this.tbFavoriteFood.PlaceholderText = "Món khoái khẩu của khách hàng";
             this.tbFavoriteFood.SelectedText = "";
             this.tbFavoriteFood.ShadowDecoration.Parent = this.tbFavoriteFood;
             this.tbFavoriteFood.Size = new System.Drawing.Size(318, 36);
@@ -477,6 +495,7 @@
             // 
             this.tbNumberOfVisit.AutoRoundedCorners = true;
             this.tbNumberOfVisit.BackColor = System.Drawing.Color.Transparent;
+            this.tbNumberOfVisit.BorderColor = System.Drawing.Color.Black;
             this.tbNumberOfVisit.BorderRadius = 17;
             this.tbNumberOfVisit.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbNumberOfVisit.DefaultText = "";
@@ -487,13 +506,15 @@
             this.tbNumberOfVisit.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.tbNumberOfVisit.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbNumberOfVisit.FocusedState.Parent = this.tbNumberOfVisit;
-            this.tbNumberOfVisit.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tbNumberOfVisit.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.tbNumberOfVisit.ForeColor = System.Drawing.Color.Black;
             this.tbNumberOfVisit.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbNumberOfVisit.HoverState.Parent = this.tbNumberOfVisit;
             this.tbNumberOfVisit.Location = new System.Drawing.Point(790, 560);
+            this.tbNumberOfVisit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbNumberOfVisit.Name = "tbNumberOfVisit";
             this.tbNumberOfVisit.PasswordChar = '\0';
-            this.tbNumberOfVisit.PlaceholderText = "";
+            this.tbNumberOfVisit.PlaceholderText = "Số lần tới quán của khách hàng";
             this.tbNumberOfVisit.SelectedText = "";
             this.tbNumberOfVisit.ShadowDecoration.Parent = this.tbNumberOfVisit;
             this.tbNumberOfVisit.Size = new System.Drawing.Size(318, 36);
@@ -515,6 +536,7 @@
             // 
             this.tbTurnOver.AutoRoundedCorners = true;
             this.tbTurnOver.BackColor = System.Drawing.Color.Transparent;
+            this.tbTurnOver.BorderColor = System.Drawing.Color.Black;
             this.tbTurnOver.BorderRadius = 17;
             this.tbTurnOver.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbTurnOver.DefaultText = "";
@@ -525,13 +547,15 @@
             this.tbTurnOver.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.tbTurnOver.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbTurnOver.FocusedState.Parent = this.tbTurnOver;
-            this.tbTurnOver.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tbTurnOver.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.tbTurnOver.ForeColor = System.Drawing.Color.Black;
             this.tbTurnOver.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbTurnOver.HoverState.Parent = this.tbTurnOver;
             this.tbTurnOver.Location = new System.Drawing.Point(790, 636);
+            this.tbTurnOver.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbTurnOver.Name = "tbTurnOver";
             this.tbTurnOver.PasswordChar = '\0';
-            this.tbTurnOver.PlaceholderText = "";
+            this.tbTurnOver.PlaceholderText = "Tổng doanh thu từ khách hàng này";
             this.tbTurnOver.SelectedText = "";
             this.tbTurnOver.ShadowDecoration.Parent = this.tbTurnOver;
             this.tbTurnOver.Size = new System.Drawing.Size(318, 36);
@@ -564,6 +588,7 @@
             this.bCancel.CheckedState.Parent = this.bCancel;
             this.bCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bCancel.CustomImages.Parent = this.bCancel;
+            this.bCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.bCancel.FillColor = System.Drawing.Color.Red;
             this.bCancel.Font = new System.Drawing.Font("Segoe UI", 12.25F);
             this.bCancel.ForeColor = System.Drawing.Color.White;
@@ -580,6 +605,7 @@
             // 
             this.cbMember.AutoRoundedCorners = true;
             this.cbMember.BackColor = System.Drawing.Color.Transparent;
+            this.cbMember.BorderColor = System.Drawing.Color.Black;
             this.cbMember.BorderRadius = 17;
             this.cbMember.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbMember.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -587,7 +613,7 @@
             this.cbMember.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbMember.FocusedState.Parent = this.cbMember;
             this.cbMember.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbMember.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbMember.ForeColor = System.Drawing.Color.Black;
             this.cbMember.HoverState.Parent = this.cbMember;
             this.cbMember.ItemHeight = 30;
             this.cbMember.Items.AddRange(new object[] {
@@ -623,13 +649,28 @@
             this.bEdit.TabIndex = 84;
             this.bEdit.Text = "Chỉnh sửa thông tin";
             // 
+            // lNotificationSDTSearch
+            // 
+            this.lNotificationSDTSearch.AutoSize = true;
+            this.lNotificationSDTSearch.BackColor = System.Drawing.Color.Transparent;
+            this.lNotificationSDTSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lNotificationSDTSearch.ForeColor = System.Drawing.Color.Red;
+            this.lNotificationSDTSearch.Location = new System.Drawing.Point(797, 192);
+            this.lNotificationSDTSearch.Name = "lNotificationSDTSearch";
+            this.lNotificationSDTSearch.Size = new System.Drawing.Size(0, 18);
+            this.lNotificationSDTSearch.TabIndex = 85;
+            // 
             // fCustomerInfo
             // 
+            this.AcceptButton = this.bSearch;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = global::CoffeeShopManagement.Properties.Resources.Info_Background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.CancelButton = this.bCancel;
             this.ClientSize = new System.Drawing.Size(1484, 761);
+            this.Controls.Add(this.lNotificationSDTSearch);
             this.Controls.Add(this.bEdit);
             this.Controls.Add(this.cbMember);
             this.Controls.Add(this.bCancel);
@@ -705,5 +746,6 @@
         private Guna.UI2.WinForms.Guna2Button bCancel;
         private Guna.UI2.WinForms.Guna2ComboBox cbMember;
         private Guna.UI2.WinForms.Guna2Button bEdit;
+        private System.Windows.Forms.Label lNotificationSDTSearch;
     }
 }

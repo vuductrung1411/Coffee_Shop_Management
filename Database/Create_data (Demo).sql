@@ -51,3 +51,4 @@ INSERT INTO ACCOUNT(ID, USERNAME, PASSWORD) VALUES
 INSERT INTO STOCK(TENHANG, GIANHAP) VALUES 
 	(N'Bịch cà phê Trung Nguyên 500gr', 1000000),
 	(N'Bịch Americano nhập khẩu từ Italy 250gr', 5000000)
+

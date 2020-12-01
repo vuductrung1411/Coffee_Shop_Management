@@ -1094,7 +1094,7 @@ namespace CoffeeShopManagement
             // 
             this.bCheckout.AutoRoundedCorners = true;
             this.bCheckout.BackColor = System.Drawing.Color.Transparent;
-            this.bCheckout.BorderRadius = 42;
+            this.bCheckout.BorderRadius = 47;
             this.bCheckout.CheckedState.Parent = this.bCheckout;
             this.bCheckout.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bCheckout.CustomImages.Parent = this.bCheckout;
@@ -1102,10 +1102,10 @@ namespace CoffeeShopManagement
             this.bCheckout.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bCheckout.ForeColor = System.Drawing.Color.White;
             this.bCheckout.HoverState.Parent = this.bCheckout;
-            this.bCheckout.Location = new System.Drawing.Point(921, 645);
+            this.bCheckout.Location = new System.Drawing.Point(921, 635);
             this.bCheckout.Name = "bCheckout";
             this.bCheckout.ShadowDecoration.Parent = this.bCheckout;
-            this.bCheckout.Size = new System.Drawing.Size(537, 86);
+            this.bCheckout.Size = new System.Drawing.Size(537, 96);
             this.bCheckout.TabIndex = 5;
             this.bCheckout.Text = "Thanh toán";
             this.bCheckout.Click += new System.EventHandler(this.bCheckout_Click);

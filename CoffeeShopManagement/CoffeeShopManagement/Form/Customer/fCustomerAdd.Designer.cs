@@ -42,7 +42,8 @@
             this.bOK = new Guna.UI2.WinForms.Guna2Button();
             this.bCancel = new Guna.UI2.WinForms.Guna2Button();
             this.pbAvatar = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.lUpload = new System.Windows.Forms.Label();
+            this.lUploadImage = new System.Windows.Forms.Label();
+            this.lNotificationSDT = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,7 +54,7 @@
             this.lTitle.Location = new System.Drawing.Point(18, 14);
             this.lTitle.Name = "lTitle";
             this.lTitle.Size = new System.Drawing.Size(173, 21);
-            this.lTitle.TabIndex = 0;
+            this.lTitle.TabIndex = 100;
             this.lTitle.Text = "Thêm khách hàng mới";
             // 
             // label1
@@ -63,7 +64,7 @@
             this.label1.Location = new System.Drawing.Point(52, 49);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(86, 13);
-            this.label1.TabIndex = 1;
+            this.label1.TabIndex = 100;
             this.label1.Text = "Tên khách hàng";
             // 
             // label2
@@ -121,7 +122,7 @@
             this.tbName.SelectedText = "";
             this.tbName.ShadowDecoration.Parent = this.tbName;
             this.tbName.Size = new System.Drawing.Size(427, 36);
-            this.tbName.TabIndex = 5;
+            this.tbName.TabIndex = 0;
             // 
             // tbSDT
             // 
@@ -148,13 +149,16 @@
             this.tbSDT.SelectedText = "";
             this.tbSDT.ShadowDecoration.Parent = this.tbSDT;
             this.tbSDT.Size = new System.Drawing.Size(427, 36);
-            this.tbSDT.TabIndex = 6;
+            this.tbSDT.TabIndex = 1;
+            this.tbSDT.TextChanged += new System.EventHandler(this.tbSDT_TextChanged);
+            this.tbSDT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbSDT_KeyPress);
             // 
             // dtpBirthdate
             // 
             this.dtpBirthdate.AutoRoundedCorners = true;
             this.dtpBirthdate.BackColor = System.Drawing.Color.Transparent;
             this.dtpBirthdate.BorderRadius = 17;
+            this.dtpBirthdate.BorderThickness = 1;
             this.dtpBirthdate.CheckedState.Parent = this.dtpBirthdate;
             this.dtpBirthdate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dtpBirthdate.FillColor = System.Drawing.Color.White;
@@ -167,7 +171,7 @@
             this.dtpBirthdate.Name = "dtpBirthdate";
             this.dtpBirthdate.ShadowDecoration.Parent = this.dtpBirthdate;
             this.dtpBirthdate.Size = new System.Drawing.Size(200, 36);
-            this.dtpBirthdate.TabIndex = 7;
+            this.dtpBirthdate.TabIndex = 2;
             this.dtpBirthdate.Value = new System.DateTime(2020, 11, 26, 23, 27, 53, 957);
             // 
             // cbGender
@@ -188,13 +192,14 @@
             this.cbGender.ItemHeight = 30;
             this.cbGender.Items.AddRange(new object[] {
             "Nam",
-            "Nữ"});
+            "Nữ",
+            "Không xác định"});
             this.cbGender.ItemsAppearance.Parent = this.cbGender;
             this.cbGender.Location = new System.Drawing.Point(282, 225);
             this.cbGender.Name = "cbGender";
             this.cbGender.ShadowDecoration.Parent = this.cbGender;
             this.cbGender.Size = new System.Drawing.Size(200, 36);
-            this.cbGender.TabIndex = 8;
+            this.cbGender.TabIndex = 3;
             // 
             // label6
             // 
@@ -223,8 +228,9 @@
             this.bOK.Name = "bOK";
             this.bOK.ShadowDecoration.Parent = this.bOK;
             this.bOK.Size = new System.Drawing.Size(200, 40);
-            this.bOK.TabIndex = 11;
+            this.bOK.TabIndex = 5;
             this.bOK.Text = "Thêm";
+            this.bOK.Click += new System.EventHandler(this.bOK_Click);
             // 
             // bCancel
             // 
@@ -242,7 +248,7 @@
             this.bCancel.Name = "bCancel";
             this.bCancel.ShadowDecoration.Parent = this.bCancel;
             this.bCancel.Size = new System.Drawing.Size(200, 40);
-            this.bCancel.TabIndex = 12;
+            this.bCancel.TabIndex = 6;
             this.bCancel.Text = "Quay lại";
             this.bCancel.Click += new System.EventHandler(this.bCancel_Click);
             // 
@@ -259,18 +265,29 @@
             this.pbAvatar.TabIndex = 13;
             this.pbAvatar.TabStop = false;
             // 
-            // lUpload
+            // lUploadImage
             // 
-            this.lUpload.AutoSize = true;
-            this.lUpload.BackColor = System.Drawing.Color.Transparent;
-            this.lUpload.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lUpload.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lUpload.ForeColor = System.Drawing.Color.Red;
-            this.lUpload.Location = new System.Drawing.Point(564, 300);
-            this.lUpload.Name = "lUpload";
-            this.lUpload.Size = new System.Drawing.Size(79, 18);
-            this.lUpload.TabIndex = 14;
-            this.lUpload.Text = "Tải ảnh lên";
+            this.lUploadImage.AutoSize = true;
+            this.lUploadImage.BackColor = System.Drawing.Color.Transparent;
+            this.lUploadImage.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lUploadImage.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lUploadImage.ForeColor = System.Drawing.Color.Red;
+            this.lUploadImage.Location = new System.Drawing.Point(564, 300);
+            this.lUploadImage.Name = "lUploadImage";
+            this.lUploadImage.Size = new System.Drawing.Size(79, 18);
+            this.lUploadImage.TabIndex = 4;
+            this.lUploadImage.Text = "Tải ảnh lên";
+            // 
+            // lNotificationSDT
+            // 
+            this.lNotificationSDT.AutoSize = true;
+            this.lNotificationSDT.BackColor = System.Drawing.Color.Transparent;
+            this.lNotificationSDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lNotificationSDT.ForeColor = System.Drawing.Color.Red;
+            this.lNotificationSDT.Location = new System.Drawing.Point(52, 184);
+            this.lNotificationSDT.Name = "lNotificationSDT";
+            this.lNotificationSDT.Size = new System.Drawing.Size(0, 13);
+            this.lNotificationSDT.TabIndex = 15;
             // 
             // fCustomerAdd
             // 
@@ -279,7 +296,8 @@
             this.BackgroundImage = global::CoffeeShopManagement.Properties.Resources.Small_Background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(734, 361);
-            this.Controls.Add(this.lUpload);
+            this.Controls.Add(this.lNotificationSDT);
+            this.Controls.Add(this.lUploadImage);
             this.Controls.Add(this.pbAvatar);
             this.Controls.Add(this.bCancel);
             this.Controls.Add(this.bOK);
@@ -319,6 +337,7 @@
         private Guna.UI2.WinForms.Guna2Button bOK;
         private Guna.UI2.WinForms.Guna2Button bCancel;
         private Guna.UI2.WinForms.Guna2PictureBox pbAvatar;
-        private System.Windows.Forms.Label lUpload;
+        private System.Windows.Forms.Label lUploadImage;
+        private System.Windows.Forms.Label lNotificationSDT;
     }
 }

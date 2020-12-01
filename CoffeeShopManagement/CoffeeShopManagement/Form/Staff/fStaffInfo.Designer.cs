@@ -233,7 +233,7 @@
             this.dtpBirthDate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dtpBirthDate.FillColor = System.Drawing.Color.White;
             this.dtpBirthDate.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.dtpBirthDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtpBirthDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpBirthDate.HoverState.Parent = this.dtpBirthDate;
             this.dtpBirthDate.Location = new System.Drawing.Point(425, 544);
             this.dtpBirthDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
@@ -449,7 +449,7 @@
             this.tbName.BorderRadius = 41;
             this.tbName.BorderThickness = 0;
             this.tbName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbName.DefaultText = "Vũ Đức Trung";
+            this.tbName.DefaultText = "Tên nhân viên";
             this.tbName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.tbName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.tbName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -468,7 +468,7 @@
             this.tbName.PlaceholderForeColor = System.Drawing.Color.White;
             this.tbName.PlaceholderText = "";
             this.tbName.SelectedText = "";
-            this.tbName.SelectionStart = 12;
+            this.tbName.SelectionStart = 13;
             this.tbName.ShadowDecoration.Parent = this.tbName;
             this.tbName.Size = new System.Drawing.Size(1165, 84);
             this.tbName.TabIndex = 49;

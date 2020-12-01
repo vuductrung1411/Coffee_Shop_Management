@@ -36,6 +36,14 @@ namespace QuanLyQuanCafe.DAO
             return (int)DataProvider.Instance.ExecuteScalar(query, new object[] { userName });
         }
 
+        // Kiểm tra coi đã tồn tại sdt này hay chưa
+        public bool CheckExistAccountInDatabaseBySDT(string sdt)
+        {
+            string query = "SELECT * FROM ACCOUNTINFO WHERE SDT = '" + sdt + "'";
+            DataTable result = DataProvider.Instance.ExecuteQuery(query);
+            return result.Rows.Count > 0;
+        }
+
         public string Encode(string str)
         {
             //Tạo MD5 
