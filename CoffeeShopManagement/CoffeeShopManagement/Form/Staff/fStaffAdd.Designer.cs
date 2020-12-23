@@ -65,13 +65,7 @@
             this.pbAvatar = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lNotificationSDT = new System.Windows.Forms.Label();
             this.lNotificationCMND = new System.Windows.Forms.Label();
-            this.lNotificationName = new System.Windows.Forms.Label();
-            this.lNotificationPosition = new System.Windows.Forms.Label();
-            this.lNotificationSalary = new System.Windows.Forms.Label();
-            this.lNotificationAddress = new System.Windows.Forms.Label();
-            this.lNotificationGender = new System.Windows.Forms.Label();
             this.lNotificationBirthdate = new System.Windows.Forms.Label();
-            this.lNotificationStartDate = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nudSalary)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
             this.SuspendLayout();
@@ -108,7 +102,7 @@
             this.tbName.HoverState.Parent = this.tbName;
             this.tbName.IconLeftSize = new System.Drawing.Size(30, 30);
             this.tbName.Location = new System.Drawing.Point(65, 71);
-            this.tbName.Margin = new System.Windows.Forms.Padding(5);
+            this.tbName.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.tbName.Name = "tbName";
             this.tbName.PasswordChar = '\0';
             this.tbName.PlaceholderForeColor = System.Drawing.Color.Gray;
@@ -116,7 +110,7 @@
             this.tbName.SelectedText = "";
             this.tbName.ShadowDecoration.Parent = this.tbName;
             this.tbName.Size = new System.Drawing.Size(300, 36);
-            this.tbName.TabIndex = 16;
+            this.tbName.TabIndex = 1;
             // 
             // label5
             // 
@@ -163,7 +157,7 @@
             this.tbSDT.HoverState.Parent = this.tbSDT;
             this.tbSDT.IconLeftSize = new System.Drawing.Size(30, 30);
             this.tbSDT.Location = new System.Drawing.Point(65, 151);
-            this.tbSDT.Margin = new System.Windows.Forms.Padding(5);
+            this.tbSDT.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.tbSDT.Name = "tbSDT";
             this.tbSDT.PasswordChar = '\0';
             this.tbSDT.PlaceholderForeColor = System.Drawing.Color.Gray;
@@ -171,7 +165,7 @@
             this.tbSDT.SelectedText = "";
             this.tbSDT.ShadowDecoration.Parent = this.tbSDT;
             this.tbSDT.Size = new System.Drawing.Size(300, 36);
-            this.tbSDT.TabIndex = 19;
+            this.tbSDT.TabIndex = 2;
             this.tbSDT.TextChanged += new System.EventHandler(this.tbSDT_TextChanged);
             this.tbSDT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbSDT_KeyPress);
             // 
@@ -242,7 +236,7 @@
             this.cbPosition.Name = "cbPosition";
             this.cbPosition.ShadowDecoration.Parent = this.cbPosition;
             this.cbPosition.Size = new System.Drawing.Size(300, 36);
-            this.cbPosition.TabIndex = 23;
+            this.cbPosition.TabIndex = 3;
             // 
             // label7
             // 
@@ -282,13 +276,23 @@
             this.nudSalary.DisabledState.UpDownButtonForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(203)))), ((int)(((byte)(203)))));
             this.nudSalary.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.nudSalary.FocusedState.Parent = this.nudSalary;
-            this.nudSalary.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.nudSalary.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(126)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.nudSalary.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.nudSalary.ForeColor = System.Drawing.Color.Black;
+            this.nudSalary.Increment = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
             this.nudSalary.Location = new System.Drawing.Point(65, 311);
+            this.nudSalary.Maximum = new decimal(new int[] {
+            1000000000,
+            0,
+            0,
+            0});
             this.nudSalary.Name = "nudSalary";
             this.nudSalary.ShadowDecoration.Parent = this.nudSalary;
             this.nudSalary.Size = new System.Drawing.Size(300, 36);
-            this.nudSalary.TabIndex = 26;
+            this.nudSalary.TabIndex = 4;
             this.nudSalary.UpDownButtonFillColor = System.Drawing.Color.Brown;
             // 
             // tbCMND
@@ -313,7 +317,7 @@
             this.tbCMND.HoverState.Parent = this.tbCMND;
             this.tbCMND.IconLeftSize = new System.Drawing.Size(30, 30);
             this.tbCMND.Location = new System.Drawing.Point(65, 391);
-            this.tbCMND.Margin = new System.Windows.Forms.Padding(5);
+            this.tbCMND.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.tbCMND.Name = "tbCMND";
             this.tbCMND.PasswordChar = '\0';
             this.tbCMND.PlaceholderForeColor = System.Drawing.Color.Gray;
@@ -321,7 +325,9 @@
             this.tbCMND.SelectedText = "";
             this.tbCMND.ShadowDecoration.Parent = this.tbCMND;
             this.tbCMND.Size = new System.Drawing.Size(300, 36);
-            this.tbCMND.TabIndex = 28;
+            this.tbCMND.TabIndex = 5;
+            this.tbCMND.TextChanged += new System.EventHandler(this.tbCMND_TextChanged);
+            this.tbCMND.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCMND_KeyPress);
             // 
             // label10
             // 
@@ -375,7 +381,7 @@
             this.dtpStartWorking.Name = "dtpStartWorking";
             this.dtpStartWorking.ShadowDecoration.Parent = this.dtpStartWorking;
             this.dtpStartWorking.Size = new System.Drawing.Size(300, 36);
-            this.dtpStartWorking.TabIndex = 31;
+            this.dtpStartWorking.TabIndex = 6;
             this.dtpStartWorking.Value = new System.DateTime(2020, 11, 27, 15, 57, 59, 474);
             // 
             // dtpBirthDate
@@ -396,8 +402,9 @@
             this.dtpBirthDate.Name = "dtpBirthDate";
             this.dtpBirthDate.ShadowDecoration.Parent = this.dtpBirthDate;
             this.dtpBirthDate.Size = new System.Drawing.Size(300, 36);
-            this.dtpBirthDate.TabIndex = 34;
+            this.dtpBirthDate.TabIndex = 7;
             this.dtpBirthDate.Value = new System.DateTime(2020, 11, 27, 15, 57, 59, 474);
+            this.dtpBirthDate.ValueChanged += new System.EventHandler(this.dtpBirthDate_ValueChanged);
             // 
             // label12
             // 
@@ -446,7 +453,8 @@
             this.cbGender.Name = "cbGender";
             this.cbGender.ShadowDecoration.Parent = this.cbGender;
             this.cbGender.Size = new System.Drawing.Size(300, 36);
-            this.cbGender.TabIndex = 37;
+            this.cbGender.TabIndex = 8;
+            this.cbGender.SelectedIndexChanged += new System.EventHandler(this.cbGender_SelectedIndexChanged);
             // 
             // label14
             // 
@@ -493,7 +501,7 @@
             this.tbID.HoverState.Parent = this.tbID;
             this.tbID.IconLeftSize = new System.Drawing.Size(30, 30);
             this.tbID.Location = new System.Drawing.Point(429, 392);
-            this.tbID.Margin = new System.Windows.Forms.Padding(5);
+            this.tbID.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.tbID.Name = "tbID";
             this.tbID.PasswordChar = '\0';
             this.tbID.PlaceholderForeColor = System.Drawing.Color.Gray;
@@ -502,6 +510,7 @@
             this.tbID.ShadowDecoration.Parent = this.tbID;
             this.tbID.Size = new System.Drawing.Size(300, 36);
             this.tbID.TabIndex = 42;
+            this.tbID.TextChanged += new System.EventHandler(this.tbID_TextChanged);
             // 
             // label16
             // 
@@ -548,7 +557,7 @@
             this.tbAddress.HoverState.Parent = this.tbAddress;
             this.tbAddress.IconLeftSize = new System.Drawing.Size(30, 30);
             this.tbAddress.Location = new System.Drawing.Point(429, 312);
-            this.tbAddress.Margin = new System.Windows.Forms.Padding(5);
+            this.tbAddress.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.tbAddress.Name = "tbAddress";
             this.tbAddress.PasswordChar = '\0';
             this.tbAddress.PlaceholderForeColor = System.Drawing.Color.Gray;
@@ -556,7 +565,8 @@
             this.tbAddress.SelectedText = "";
             this.tbAddress.ShadowDecoration.Parent = this.tbAddress;
             this.tbAddress.Size = new System.Drawing.Size(300, 36);
-            this.tbAddress.TabIndex = 39;
+            this.tbAddress.TabIndex = 9;
+            this.tbAddress.TextChanged += new System.EventHandler(this.tbAddress_TextChanged);
             // 
             // label18
             // 
@@ -596,8 +606,9 @@
             this.bOK.Name = "bOK";
             this.bOK.ShadowDecoration.Parent = this.bOK;
             this.bOK.Size = new System.Drawing.Size(300, 45);
-            this.bOK.TabIndex = 44;
+            this.bOK.TabIndex = 10;
             this.bOK.Text = "Thêm";
+            this.bOK.Click += new System.EventHandler(this.bOK_Click);
             // 
             // bCancel
             // 
@@ -615,7 +626,7 @@
             this.bCancel.Name = "bCancel";
             this.bCancel.ShadowDecoration.Parent = this.bCancel;
             this.bCancel.Size = new System.Drawing.Size(300, 45);
-            this.bCancel.TabIndex = 45;
+            this.bCancel.TabIndex = 11;
             this.bCancel.Text = "Hủy";
             this.bCancel.Click += new System.EventHandler(this.bCancel_Click);
             // 
@@ -653,9 +664,8 @@
             this.lNotificationSDT.ForeColor = System.Drawing.Color.Red;
             this.lNotificationSDT.Location = new System.Drawing.Point(62, 189);
             this.lNotificationSDT.Name = "lNotificationSDT";
-            this.lNotificationSDT.Size = new System.Drawing.Size(29, 13);
+            this.lNotificationSDT.Size = new System.Drawing.Size(0, 13);
             this.lNotificationSDT.TabIndex = 48;
-            this.lNotificationSDT.Text = "SDT";
             // 
             // lNotificationCMND
             // 
@@ -665,69 +675,8 @@
             this.lNotificationCMND.ForeColor = System.Drawing.Color.Red;
             this.lNotificationCMND.Location = new System.Drawing.Point(62, 430);
             this.lNotificationCMND.Name = "lNotificationCMND";
-            this.lNotificationCMND.Size = new System.Drawing.Size(39, 13);
+            this.lNotificationCMND.Size = new System.Drawing.Size(0, 13);
             this.lNotificationCMND.TabIndex = 49;
-            this.lNotificationCMND.Text = "CMND";
-            // 
-            // lNotificationName
-            // 
-            this.lNotificationName.AutoSize = true;
-            this.lNotificationName.BackColor = System.Drawing.Color.Transparent;
-            this.lNotificationName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lNotificationName.ForeColor = System.Drawing.Color.Red;
-            this.lNotificationName.Location = new System.Drawing.Point(62, 108);
-            this.lNotificationName.Name = "lNotificationName";
-            this.lNotificationName.Size = new System.Drawing.Size(39, 13);
-            this.lNotificationName.TabIndex = 50;
-            this.lNotificationName.Text = "Họ tên";
-            // 
-            // lNotificationPosition
-            // 
-            this.lNotificationPosition.AutoSize = true;
-            this.lNotificationPosition.BackColor = System.Drawing.Color.Transparent;
-            this.lNotificationPosition.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lNotificationPosition.ForeColor = System.Drawing.Color.Red;
-            this.lNotificationPosition.Location = new System.Drawing.Point(62, 270);
-            this.lNotificationPosition.Name = "lNotificationPosition";
-            this.lNotificationPosition.Size = new System.Drawing.Size(47, 13);
-            this.lNotificationPosition.TabIndex = 51;
-            this.lNotificationPosition.Text = "Chức vụ";
-            // 
-            // lNotificationSalary
-            // 
-            this.lNotificationSalary.AutoSize = true;
-            this.lNotificationSalary.BackColor = System.Drawing.Color.Transparent;
-            this.lNotificationSalary.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lNotificationSalary.ForeColor = System.Drawing.Color.Red;
-            this.lNotificationSalary.Location = new System.Drawing.Point(62, 350);
-            this.lNotificationSalary.Name = "lNotificationSalary";
-            this.lNotificationSalary.Size = new System.Drawing.Size(37, 13);
-            this.lNotificationSalary.TabIndex = 52;
-            this.lNotificationSalary.Text = "Lương";
-            // 
-            // lNotificationAddress
-            // 
-            this.lNotificationAddress.AutoSize = true;
-            this.lNotificationAddress.BackColor = System.Drawing.Color.Transparent;
-            this.lNotificationAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lNotificationAddress.ForeColor = System.Drawing.Color.Red;
-            this.lNotificationAddress.Location = new System.Drawing.Point(426, 350);
-            this.lNotificationAddress.Name = "lNotificationAddress";
-            this.lNotificationAddress.Size = new System.Drawing.Size(40, 13);
-            this.lNotificationAddress.TabIndex = 53;
-            this.lNotificationAddress.Text = "Địa chỉ";
-            // 
-            // lNotificationGender
-            // 
-            this.lNotificationGender.AutoSize = true;
-            this.lNotificationGender.BackColor = System.Drawing.Color.Transparent;
-            this.lNotificationGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lNotificationGender.ForeColor = System.Drawing.Color.Red;
-            this.lNotificationGender.Location = new System.Drawing.Point(426, 270);
-            this.lNotificationGender.Name = "lNotificationGender";
-            this.lNotificationGender.Size = new System.Drawing.Size(47, 13);
-            this.lNotificationGender.TabIndex = 54;
-            this.lNotificationGender.Text = "Giới tính";
             // 
             // lNotificationBirthdate
             // 
@@ -737,21 +686,8 @@
             this.lNotificationBirthdate.ForeColor = System.Drawing.Color.Red;
             this.lNotificationBirthdate.Location = new System.Drawing.Point(426, 189);
             this.lNotificationBirthdate.Name = "lNotificationBirthdate";
-            this.lNotificationBirthdate.Size = new System.Drawing.Size(47, 13);
-            this.lNotificationBirthdate.TabIndex = 55;
-            this.lNotificationBirthdate.Text = "Chức vụ";
-            // 
-            // lNotificationStartDate
-            // 
-            this.lNotificationStartDate.AutoSize = true;
-            this.lNotificationStartDate.BackColor = System.Drawing.Color.Transparent;
-            this.lNotificationStartDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lNotificationStartDate.ForeColor = System.Drawing.Color.Red;
-            this.lNotificationStartDate.Location = new System.Drawing.Point(426, 108);
-            this.lNotificationStartDate.Name = "lNotificationStartDate";
-            this.lNotificationStartDate.Size = new System.Drawing.Size(47, 13);
-            this.lNotificationStartDate.TabIndex = 56;
-            this.lNotificationStartDate.Text = "Chức vụ";
+            this.lNotificationBirthdate.Size = new System.Drawing.Size(0, 13);
+            this.lNotificationBirthdate.TabIndex = 50;
             // 
             // fStaffAdd
             // 
@@ -760,13 +696,7 @@
             this.BackgroundImage = global::CoffeeShopManagement.Properties.Resources.Background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1109, 561);
-            this.Controls.Add(this.lNotificationStartDate);
             this.Controls.Add(this.lNotificationBirthdate);
-            this.Controls.Add(this.lNotificationGender);
-            this.Controls.Add(this.lNotificationAddress);
-            this.Controls.Add(this.lNotificationSalary);
-            this.Controls.Add(this.lNotificationPosition);
-            this.Controls.Add(this.lNotificationName);
             this.Controls.Add(this.lNotificationCMND);
             this.Controls.Add(this.lNotificationSDT);
             this.Controls.Add(this.lUpload);
@@ -852,12 +782,6 @@
         private Guna.UI2.WinForms.Guna2PictureBox pbAvatar;
         private System.Windows.Forms.Label lNotificationSDT;
         private System.Windows.Forms.Label lNotificationCMND;
-        private System.Windows.Forms.Label lNotificationName;
-        private System.Windows.Forms.Label lNotificationPosition;
-        private System.Windows.Forms.Label lNotificationSalary;
-        private System.Windows.Forms.Label lNotificationAddress;
-        private System.Windows.Forms.Label lNotificationGender;
         private System.Windows.Forms.Label lNotificationBirthdate;
-        private System.Windows.Forms.Label lNotificationStartDate;
     }
 }

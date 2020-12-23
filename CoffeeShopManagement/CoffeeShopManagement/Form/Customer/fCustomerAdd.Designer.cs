@@ -122,7 +122,7 @@
             this.tbName.SelectedText = "";
             this.tbName.ShadowDecoration.Parent = this.tbName;
             this.tbName.Size = new System.Drawing.Size(427, 36);
-            this.tbName.TabIndex = 0;
+            this.tbName.TabIndex = 1;
             // 
             // tbSDT
             // 
@@ -149,7 +149,7 @@
             this.tbSDT.SelectedText = "";
             this.tbSDT.ShadowDecoration.Parent = this.tbSDT;
             this.tbSDT.Size = new System.Drawing.Size(427, 36);
-            this.tbSDT.TabIndex = 1;
+            this.tbSDT.TabIndex = 2;
             this.tbSDT.TextChanged += new System.EventHandler(this.tbSDT_TextChanged);
             this.tbSDT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbSDT_KeyPress);
             // 
@@ -164,6 +164,7 @@
             this.dtpBirthdate.FillColor = System.Drawing.Color.White;
             this.dtpBirthdate.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dtpBirthdate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpBirthdate.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.dtpBirthdate.HoverState.Parent = this.dtpBirthdate;
             this.dtpBirthdate.Location = new System.Drawing.Point(55, 225);
             this.dtpBirthdate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
@@ -171,7 +172,7 @@
             this.dtpBirthdate.Name = "dtpBirthdate";
             this.dtpBirthdate.ShadowDecoration.Parent = this.dtpBirthdate;
             this.dtpBirthdate.Size = new System.Drawing.Size(200, 36);
-            this.dtpBirthdate.TabIndex = 2;
+            this.dtpBirthdate.TabIndex = 3;
             this.dtpBirthdate.Value = new System.DateTime(2020, 11, 26, 23, 27, 53, 957);
             // 
             // cbGender
@@ -187,7 +188,7 @@
             this.cbGender.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbGender.FocusedState.Parent = this.cbGender;
             this.cbGender.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbGender.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbGender.ForeColor = System.Drawing.Color.Black;
             this.cbGender.HoverState.Parent = this.cbGender;
             this.cbGender.ItemHeight = 30;
             this.cbGender.Items.AddRange(new object[] {
@@ -199,7 +200,7 @@
             this.cbGender.Name = "cbGender";
             this.cbGender.ShadowDecoration.Parent = this.cbGender;
             this.cbGender.Size = new System.Drawing.Size(200, 36);
-            this.cbGender.TabIndex = 3;
+            this.cbGender.TabIndex = 4;
             // 
             // label6
             // 
@@ -217,12 +218,14 @@
             this.bOK.AutoRoundedCorners = true;
             this.bOK.BackColor = System.Drawing.Color.Transparent;
             this.bOK.BorderRadius = 19;
+            this.bOK.BorderThickness = 1;
             this.bOK.CheckedState.Parent = this.bOK;
             this.bOK.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bOK.CustomImages.Parent = this.bOK;
             this.bOK.FillColor = System.Drawing.Color.Chocolate;
             this.bOK.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bOK.ForeColor = System.Drawing.Color.White;
+            this.bOK.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.bOK.HoverState.Parent = this.bOK;
             this.bOK.Location = new System.Drawing.Point(55, 291);
             this.bOK.Name = "bOK";
@@ -237,6 +240,7 @@
             this.bCancel.AutoRoundedCorners = true;
             this.bCancel.BackColor = System.Drawing.Color.Transparent;
             this.bCancel.BorderRadius = 19;
+            this.bCancel.BorderThickness = 1;
             this.bCancel.CheckedState.Parent = this.bCancel;
             this.bCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bCancel.CustomImages.Parent = this.bCancel;

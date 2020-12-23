@@ -21,7 +21,7 @@ namespace CoffeeShopManagement
         List<Customer> CustomerList = new List<Customer> { new Customer(0) };
         
         // Tài khoản của nhân viên/chủ quán đang đăng nhập vào
-        Account account;
+        AccountInfo account;
 
         // Lưu khách hàng hiện tại đang đặt món
         Customer CustomerNow;
@@ -41,9 +41,11 @@ namespace CoffeeShopManagement
                 this.UsedTableID[i] = false;
             }
 
+            account = AccountDAO.Instance.GetAccountInfoByUsername(userName);
+
             InitializeComponent();
 
-            account = new Account(userName);
+            
 
             #region Load dữ liệu
             LoadTableID();
@@ -245,7 +247,18 @@ namespace CoffeeShopManagement
 
         private void bAddCustomer_Click(object sender, EventArgs e)
         {
-            fCustomerAdd f = new fCustomerAdd();
+            if (CustomerDAO.Instance.CheckExistCustomerInDatabaseBySDT(this.tbCustomerSDT.Text))
+            {
+                this.lNotificationCustomer.Text = "Khách hàng này đã tồn tại trong dữ liệu";
+
+                return;
+            }    
+            else
+            {
+                this.lNotificationCustomer.Text = "";
+            }    
+
+            fCustomerAdd f = new fCustomerAdd(this.tbCustomerSDT.Text, this.tbCustomerName.Text);
             f.ShowDialog();
         }
 
@@ -280,7 +293,16 @@ namespace CoffeeShopManagement
 
         private void kháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            fCustomerInfo f = new fCustomerInfo();
+            fCustomerInfo f;
+
+            if (CustomerDAO.Instance.CheckExistCustomerInDatabaseBySDT(this.tbCustomerSDT.Text))
+            {
+                f = new fCustomerInfo(this.tbCustomerSDT.Text);
+            }
+            else
+            {
+                f = new fCustomerInfo();
+            }    
             this.Hide();
             f.ShowDialog();
             this.Show();
@@ -355,7 +377,7 @@ namespace CoffeeShopManagement
 
         private void thôngTinTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            fStaffInfo f = new fStaffInfo();
+            fStaffInfo f = new fStaffInfo(account);
             this.Hide();
             f.ShowDialog();
             this.Show();
@@ -392,21 +414,17 @@ namespace CoffeeShopManagement
         {
             // Kiểm tra chọn đầy đủ thông tin
             #region Kiểm tra 
-            bool lackOfInfomation = false;
-            if (this.cbTableID.Text == "")
+            
+            if (this.cbTableID.Text == "" || this.cbFood.Text == "")
             {
-                this.cbTableID.BorderColor = Color.Red;
-                lackOfInfomation = true;
-            }
-            if (this.cbFood.Text == "")
-            {
-                lackOfInfomation = true;
-                this.cbFood.BorderColor = Color.Red;
-            }
-            if (lackOfInfomation == true)
-            {
+                if (this.cbTableID.Text == "")
+                    this.cbTableID.BorderColor = Color.Red;
+                if (this.cbFood.Text == "")
+                    this.cbFood.BorderColor = Color.Red;
+
                 return;
             }
+            
             #endregion
 
             string SDT = this.tbCustomerSDT.Text;
@@ -512,7 +530,7 @@ namespace CoffeeShopManagement
 
         private void tbCustomerSDT_TextChanged(object sender, EventArgs e)
         {
-            ResetInfomation();
+            ResetInfomation(1);
             
             string SDT = this.tbCustomerSDT.Text;
 
@@ -520,6 +538,8 @@ namespace CoffeeShopManagement
             {
                 BorderColorCustomer(0);
                 ResetInfomation();
+                this.lNotificationCustomer.Text = "";
+
                 return;
             }
 
@@ -528,6 +548,7 @@ namespace CoffeeShopManagement
             {
                 BorderColorCustomer(1);
                 ResetInfomation(1);
+                this.lNotificationCustomer.Text = "Không tồn tại khách hàng này trong dữ liệu";
             } 
             // Có tồn tại
             else
@@ -535,6 +556,8 @@ namespace CoffeeShopManagement
                 // Load lại combobox chọn bàn và cho phép sửa đổi nó
                 LoadTableID();
                 this.cbTableID.Enabled = true;
+
+                this.lNotificationCustomer.Text = "";
 
                 BorderColorCustomer(2);
 

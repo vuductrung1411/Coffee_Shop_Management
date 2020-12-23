@@ -63,6 +63,7 @@
             this.cbxShow.Name = "cbxShow";
             this.cbxShow.Size = new System.Drawing.Size(104, 17);
             this.cbxShow.TabIndex = 34;
+            this.cbxShow.TabStop = false;
             this.cbxShow.Text = "Hiển thị mật khẩu";
             this.cbxShow.UseVisualStyleBackColor = false;
             // 
@@ -82,7 +83,7 @@
             this.bConfirm.Name = "bConfirm";
             this.bConfirm.ShadowDecoration.Parent = this.bConfirm;
             this.bConfirm.Size = new System.Drawing.Size(211, 40);
-            this.bConfirm.TabIndex = 33;
+            this.bConfirm.TabIndex = 3;
             this.bConfirm.Text = "Xác nhận";
             // 
             // bCancel
@@ -101,7 +102,7 @@
             this.bCancel.Name = "bCancel";
             this.bCancel.ShadowDecoration.Parent = this.bCancel;
             this.bCancel.Size = new System.Drawing.Size(211, 40);
-            this.bCancel.TabIndex = 32;
+            this.bCancel.TabIndex = 4;
             this.bCancel.Text = "Quay lại";
             this.bCancel.Click += new System.EventHandler(this.bCancel_Click);
             // 
@@ -152,7 +153,7 @@
             this.tbPassword.SelectedText = "";
             this.tbPassword.ShadowDecoration.Parent = this.tbPassword;
             this.tbPassword.Size = new System.Drawing.Size(612, 35);
-            this.tbPassword.TabIndex = 29;
+            this.tbPassword.TabIndex = 2;
             // 
             // label2
             // 
@@ -189,7 +190,7 @@
             this.tbUsername.SelectedText = "";
             this.tbUsername.ShadowDecoration.Parent = this.tbUsername;
             this.tbUsername.Size = new System.Drawing.Size(612, 35);
-            this.tbUsername.TabIndex = 27;
+            this.tbUsername.TabIndex = 1;
             // 
             // label1
             // 

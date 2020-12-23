@@ -28,6 +28,14 @@ namespace CoffeeShopManagement
             }
         }
 
+        public fCustomerAdd(string sdt, string name)
+        {
+            InitializeComponent();
+
+            this.tbName.Text = name;
+            this.tbSDT.Text = sdt;
+        }
+
         #region METHODS
 
         // Reset lại thông tin

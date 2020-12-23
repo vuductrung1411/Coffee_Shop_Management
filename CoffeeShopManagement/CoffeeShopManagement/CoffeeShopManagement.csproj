@@ -60,8 +60,18 @@
     <Compile Include="DAO\StaffDAO.cs" />
     <Compile Include="DAO\StockDAO.cs" />
     <Compile Include="DTO\Account.cs" />
+    <Compile Include="DTO\AccountInfo.cs" />
     <Compile Include="DTO\Customer.cs" />
+    <Compile Include="DTO\Discount.cs" />
+    <Compile Include="DTO\Food.cs" />
     <Compile Include="DTO\Infomation.cs" />
+    <Compile Include="DTO\Staff.cs" />
+    <Compile Include="Form\Account\fAccountAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Account\fAccountAdd.Designer.cs">
+      <DependentUpon>fAccountAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\History\fActionHistory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -208,6 +218,9 @@
     <Compile Include="Form\Staff\fStaffInfo.Designer.cs">
       <DependentUpon>fStaffInfo.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Form\Account\fAccountAdd.resx">
+      <DependentUpon>fAccountAdd.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\History\fActionHistory.resx">
       <DependentUpon>fActionHistory.cs</DependentUpon>
     </EmbeddedResource>
@@ -304,7 +317,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Info Background.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Background.png" />
   </ItemGroup>
@@ -325,9 +340,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Start2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Info Background.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Login.png" />
@@ -415,6 +427,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icon - Import Goods.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Info Background1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

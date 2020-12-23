@@ -115,6 +115,7 @@ namespace CoffeeShopManagement
             this.bCombine = new Guna.UI2.WinForms.Guna2Button();
             this.bChangeTableID = new Guna.UI2.WinForms.Guna2Button();
             this.bNewCustomerInShop = new Guna.UI2.WinForms.Guna2Button();
+            this.lNotificationCustomer = new System.Windows.Forms.Label();
             this.msMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudSLCustomer)).BeginInit();
@@ -522,12 +523,11 @@ namespace CoffeeShopManagement
             this.tbCustomerName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.tbCustomerName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbCustomerName.HoverState.Parent = this.tbCustomerName;
-            this.tbCustomerName.Location = new System.Drawing.Point(605, 155);
+            this.tbCustomerName.Location = new System.Drawing.Point(605, 153);
             this.tbCustomerName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbCustomerName.Name = "tbCustomerName";
             this.tbCustomerName.PasswordChar = '\0';
             this.tbCustomerName.PlaceholderText = "Tên khách hàng";
-            this.tbCustomerName.ReadOnly = true;
             this.tbCustomerName.SelectedText = "";
             this.tbCustomerName.ShadowDecoration.Parent = this.tbCustomerName;
             this.tbCustomerName.Size = new System.Drawing.Size(286, 40);
@@ -538,7 +538,7 @@ namespace CoffeeShopManagement
             // 
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(480, 158);
+            this.label8.Location = new System.Drawing.Point(480, 156);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(98, 37);
             this.label8.TabIndex = 0;
@@ -564,7 +564,7 @@ namespace CoffeeShopManagement
             this.tbCustomerMember.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.tbCustomerMember.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbCustomerMember.HoverState.Parent = this.tbCustomerMember;
-            this.tbCustomerMember.Location = new System.Drawing.Point(605, 202);
+            this.tbCustomerMember.Location = new System.Drawing.Point(605, 199);
             this.tbCustomerMember.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbCustomerMember.Name = "tbCustomerMember";
             this.tbCustomerMember.PasswordChar = '\0';
@@ -579,7 +579,7 @@ namespace CoffeeShopManagement
             // 
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(480, 205);
+            this.label9.Location = new System.Drawing.Point(480, 202);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(98, 37);
             this.label9.TabIndex = 0;
@@ -605,7 +605,7 @@ namespace CoffeeShopManagement
             this.tbCustomerAge.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.tbCustomerAge.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbCustomerAge.HoverState.Parent = this.tbCustomerAge;
-            this.tbCustomerAge.Location = new System.Drawing.Point(605, 249);
+            this.tbCustomerAge.Location = new System.Drawing.Point(605, 245);
             this.tbCustomerAge.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbCustomerAge.Name = "tbCustomerAge";
             this.tbCustomerAge.PasswordChar = '\0';
@@ -620,7 +620,7 @@ namespace CoffeeShopManagement
             // 
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(480, 252);
+            this.label10.Location = new System.Drawing.Point(480, 248);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(98, 37);
             this.label10.TabIndex = 0;
@@ -646,7 +646,7 @@ namespace CoffeeShopManagement
             this.tbFavoriteFood.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.tbFavoriteFood.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbFavoriteFood.HoverState.Parent = this.tbFavoriteFood;
-            this.tbFavoriteFood.Location = new System.Drawing.Point(605, 299);
+            this.tbFavoriteFood.Location = new System.Drawing.Point(605, 291);
             this.tbFavoriteFood.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbFavoriteFood.Name = "tbFavoriteFood";
             this.tbFavoriteFood.PasswordChar = '\0';
@@ -661,7 +661,7 @@ namespace CoffeeShopManagement
             // 
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(480, 299);
+            this.label11.Location = new System.Drawing.Point(480, 291);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(140, 37);
             this.label11.TabIndex = 0;
@@ -680,7 +680,7 @@ namespace CoffeeShopManagement
             this.bAddCustomer.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bAddCustomer.ForeColor = System.Drawing.Color.White;
             this.bAddCustomer.HoverState.Parent = this.bAddCustomer;
-            this.bAddCustomer.Location = new System.Drawing.Point(480, 349);
+            this.bAddCustomer.Location = new System.Drawing.Point(480, 356);
             this.bAddCustomer.Name = "bAddCustomer";
             this.bAddCustomer.ShadowDecoration.Parent = this.bAddCustomer;
             this.bAddCustomer.Size = new System.Drawing.Size(411, 40);
@@ -700,7 +700,7 @@ namespace CoffeeShopManagement
             this.bCustomerInfo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bCustomerInfo.ForeColor = System.Drawing.Color.White;
             this.bCustomerInfo.HoverState.Parent = this.bCustomerInfo;
-            this.bCustomerInfo.Location = new System.Drawing.Point(480, 395);
+            this.bCustomerInfo.Location = new System.Drawing.Point(480, 402);
             this.bCustomerInfo.Name = "bCustomerInfo";
             this.bCustomerInfo.ShadowDecoration.Parent = this.bCustomerInfo;
             this.bCustomerInfo.Size = new System.Drawing.Size(193, 40);
@@ -721,7 +721,7 @@ namespace CoffeeShopManagement
             this.bComments.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bComments.ForeColor = System.Drawing.Color.White;
             this.bComments.HoverState.Parent = this.bComments;
-            this.bComments.Location = new System.Drawing.Point(698, 395);
+            this.bComments.Location = new System.Drawing.Point(698, 402);
             this.bComments.Name = "bComments";
             this.bComments.ShadowDecoration.Parent = this.bComments;
             this.bComments.Size = new System.Drawing.Size(193, 40);
@@ -1379,6 +1379,18 @@ namespace CoffeeShopManagement
             this.bNewCustomerInShop.TabStop = false;
             this.bNewCustomerInShop.Click += new System.EventHandler(this.bNewCustomerInShop_Click);
             // 
+            // lNotificationCustomer
+            // 
+            this.lNotificationCustomer.AutoSize = true;
+            this.lNotificationCustomer.BackColor = System.Drawing.Color.Transparent;
+            this.lNotificationCustomer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lNotificationCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lNotificationCustomer.ForeColor = System.Drawing.Color.Red;
+            this.lNotificationCustomer.Location = new System.Drawing.Point(491, 335);
+            this.lNotificationCustomer.Name = "lNotificationCustomer";
+            this.lNotificationCustomer.Size = new System.Drawing.Size(0, 16);
+            this.lNotificationCustomer.TabIndex = 47;
+            // 
             // fSell
             // 
             this.AcceptButton = this.bCheckout;
@@ -1387,6 +1399,7 @@ namespace CoffeeShopManagement
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1484, 761);
+            this.Controls.Add(this.lNotificationCustomer);
             this.Controls.Add(this.bNewCustomerInShop);
             this.Controls.Add(this.bChangeTableID);
             this.Controls.Add(this.bCombine);
@@ -1538,5 +1551,6 @@ namespace CoffeeShopManagement
         private Guna.UI2.WinForms.Guna2Button bCombine;
         private Guna.UI2.WinForms.Guna2Button bChangeTableID;
         private Guna.UI2.WinForms.Guna2Button bNewCustomerInShop;
+        private Label lNotificationCustomer;
     }
 }

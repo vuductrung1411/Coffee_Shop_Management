@@ -56,20 +56,9 @@ namespace CoffeeShopManagement.DAO
         // Thêm khách hàng mới vào trong Database
         public void CreateNewCustomer(string hoten, string sdt, string gioitinh, DateTime ngaysinh)
         {
-            // Để phù hợp với NVARCHAR trong SQL
-            //hoten = "N'" + hoten + "'";
-
-            // Đổi giới tính lại thành INT để phù hợp với SQL
-            // 0: Nam, 1: Nữ, 2: Giấu kín
-            int gender;
-            if (gioitinh == "Nam") gender = 0;
-            else if (gioitinh == "Nữ") gender = 1;
-            else gender = 2;
-
-            // Thêm
             string query = "EXEC USP_CreateNewCustomer @name , @sdt , @gioitinh , @ngaysinh";
 
-            int tmp = DataProvider.Instance.ExecuteNonQuery(query, new object[] { hoten, sdt, gender, ngaysinh.ToShortDateString() });
+            int tmp = DataProvider.Instance.ExecuteNonQuery(query, new object[] { hoten, sdt, gioitinh, ngaysinh.ToShortDateString() });
         }
     
         // Lấy ra thông tin khách hàng thông qua SDT
@@ -85,18 +74,6 @@ namespace CoffeeShopManagement.DAO
             string SDT = row["SDT"].ToString();
             string HOTEN = row["HOTEN"].ToString();
             string GIOITINH = row["GIOITINH"].ToString();
-            switch (GIOITINH)
-            {
-                case "0":
-                    GIOITINH = "Nam";
-                    break;
-                case "1":
-                    GIOITINH = "Nữ";
-                    break;
-                case "2":
-                    GIOITINH = "Không xác định";
-                    break;
-            }
             DateTime NGAYSINH = (DateTime)row["NGAYSINH"];
 
             Customer customer = new Customer(ID, SDT, NGAYSINH, HOTEN, GIOITINH);

@@ -81,7 +81,7 @@
             this.tbConfirm.SelectedText = "";
             this.tbConfirm.ShadowDecoration.Parent = this.tbConfirm;
             this.tbConfirm.Size = new System.Drawing.Size(612, 35);
-            this.tbConfirm.TabIndex = 17;
+            this.tbConfirm.TabIndex = 3;
             // 
             // label3
             // 
@@ -118,7 +118,7 @@
             this.tbNewPassword.SelectedText = "";
             this.tbNewPassword.ShadowDecoration.Parent = this.tbNewPassword;
             this.tbNewPassword.Size = new System.Drawing.Size(612, 35);
-            this.tbNewPassword.TabIndex = 15;
+            this.tbNewPassword.TabIndex = 2;
             // 
             // label2
             // 
@@ -155,7 +155,7 @@
             this.tbOldPassword.SelectedText = "";
             this.tbOldPassword.ShadowDecoration.Parent = this.tbOldPassword;
             this.tbOldPassword.Size = new System.Drawing.Size(612, 35);
-            this.tbOldPassword.TabIndex = 13;
+            this.tbOldPassword.TabIndex = 1;
             // 
             // label1
             // 
@@ -216,7 +216,7 @@
             this.bCancel.Name = "bCancel";
             this.bCancel.ShadowDecoration.Parent = this.bCancel;
             this.bCancel.Size = new System.Drawing.Size(211, 40);
-            this.bCancel.TabIndex = 22;
+            this.bCancel.TabIndex = 5;
             this.bCancel.Text = "Quay lại";
             this.bCancel.Click += new System.EventHandler(this.bCancel_Click);
             // 
@@ -236,7 +236,7 @@
             this.bConfirm.Name = "bConfirm";
             this.bConfirm.ShadowDecoration.Parent = this.bConfirm;
             this.bConfirm.Size = new System.Drawing.Size(211, 40);
-            this.bConfirm.TabIndex = 23;
+            this.bConfirm.TabIndex = 4;
             this.bConfirm.Text = "Xác nhận";
             // 
             // cbxShow1
@@ -251,6 +251,7 @@
             this.cbxShow1.Name = "cbxShow1";
             this.cbxShow1.Size = new System.Drawing.Size(104, 17);
             this.cbxShow1.TabIndex = 24;
+            this.cbxShow1.TabStop = false;
             this.cbxShow1.Text = "Hiển thị mật khẩu";
             this.cbxShow1.UseVisualStyleBackColor = false;
             // 
@@ -266,6 +267,7 @@
             this.cbxShow2.Name = "cbxShow2";
             this.cbxShow2.Size = new System.Drawing.Size(104, 17);
             this.cbxShow2.TabIndex = 25;
+            this.cbxShow2.TabStop = false;
             this.cbxShow2.Text = "Hiển thị mật khẩu";
             this.cbxShow2.UseVisualStyleBackColor = false;
             // 
@@ -281,6 +283,7 @@
             this.cbShow3.Name = "cbShow3";
             this.cbShow3.Size = new System.Drawing.Size(104, 17);
             this.cbShow3.TabIndex = 26;
+            this.cbShow3.TabStop = false;
             this.cbShow3.Text = "Hiển thị mật khẩu";
             this.cbShow3.UseVisualStyleBackColor = false;
             // 

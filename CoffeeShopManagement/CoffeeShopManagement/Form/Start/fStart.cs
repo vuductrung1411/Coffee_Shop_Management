@@ -49,7 +49,9 @@ namespace CoffeeShopManagement
         private void ReadQuotes()
         {
             arrQuotes = File.ReadAllLines(this.QuotesLink);
+
             this.nQuotes = arrQuotes.Count();
+
             lText.Text = this.nQuotes.ToString();
         }
 
@@ -63,13 +65,11 @@ namespace CoffeeShopManagement
         private void timer_Tick(object sender, EventArgs e)
         {
             this.percent++;
+
             switch (this.percent)
             {
                 case 5:
                     this.pbProcessStart.Value = 5;
-                    break;
-                case 10:
-                    this.pbProcessStart.Value = 10;
                     break;
                 case 15:
                     PrintQuotes();
@@ -80,17 +80,9 @@ namespace CoffeeShopManagement
                     this.lText.ForeColor = Color.Black;
                     break;
                 case 30:
-                    this.pbProcessStart.Value = 30;
                     PrintQuotes();
                     break;
-                case 35:
-                    this.pbProcessStart.Value = 35;
-                    break;
-                case 40:
-                    this.pbProcessStart.Value = 40;
-                    break;
                 case 45:
-                    this.pbProcessStart.Value = 45;
                     PrintQuotes();
                     break;
                 case 50:
@@ -105,9 +97,6 @@ namespace CoffeeShopManagement
                 case 60:
                     this.pbProcessStart.Value = 60;
                     PrintQuotes();
-                    break;
-                case 70:
-                    this.pbProcessStart.Value = 80;
                     break;
                 case 75:
                     this.BackgroundImage = Properties.Resources.Start4;
@@ -139,6 +128,11 @@ namespace CoffeeShopManagement
                     this.Close();
                     break;
             }
+        }
+
+        private void lSlogan1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

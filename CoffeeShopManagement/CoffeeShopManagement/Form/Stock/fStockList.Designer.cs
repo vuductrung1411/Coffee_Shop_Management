@@ -361,7 +361,7 @@
             this.bCancel.Name = "bCancel";
             this.bCancel.ShadowDecoration.Parent = this.bCancel;
             this.bCancel.Size = new System.Drawing.Size(300, 43);
-            this.bCancel.TabIndex = 42;
+            this.bCancel.TabIndex = 3;
             this.bCancel.Text = "Thoát";
             this.bCancel.Click += new System.EventHandler(this.bCancel_Click);
             // 
@@ -391,7 +391,7 @@
             this.bUse.ShadowDecoration.Parent = this.bUse;
             this.bUse.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 0, 50);
             this.bUse.Size = new System.Drawing.Size(300, 110);
-            this.bUse.TabIndex = 43;
+            this.bUse.TabIndex = 2;
             this.bUse.Text = "Sử dụng";
             // 
             // bImport
@@ -413,7 +413,7 @@
             this.bImport.Name = "bImport";
             this.bImport.ShadowDecoration.Parent = this.bImport;
             this.bImport.Size = new System.Drawing.Size(300, 110);
-            this.bImport.TabIndex = 44;
+            this.bImport.TabIndex = 1;
             this.bImport.Text = "Nhập thêm";
             // 
             // fStockList

@@ -101,11 +101,12 @@
             // 
             // panel1
             // 
+            this.panel1.AutoSize = true;
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.lShopName1);
-            this.panel1.Location = new System.Drawing.Point(31, 308);
+            this.panel1.Location = new System.Drawing.Point(9, 308);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1424, 141);
+            this.panel1.Size = new System.Drawing.Size(1463, 143);
             this.panel1.TabIndex = 4;
             // 
             // lShopName1
@@ -115,49 +116,54 @@
             this.lShopName1.ForeColor = System.Drawing.Color.Gold;
             this.lShopName1.Location = new System.Drawing.Point(0, 0);
             this.lShopName1.Name = "lShopName1";
-            this.lShopName1.Size = new System.Drawing.Size(1424, 141);
+            this.lShopName1.Size = new System.Drawing.Size(1463, 143);
             this.lShopName1.TabIndex = 0;
             this.lShopName1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel2
             // 
+            this.panel2.AutoSize = true;
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.lShopOwner);
-            this.panel2.Location = new System.Drawing.Point(55, 223);
+            this.panel2.Location = new System.Drawing.Point(9, 223);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1400, 69);
+            this.panel2.Size = new System.Drawing.Size(1463, 69);
             this.panel2.TabIndex = 5;
             // 
             // lShopOwner
             // 
+            this.lShopOwner.AutoSize = false;
             this.lShopOwner.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lShopOwner.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lShopOwner.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lShopOwner.Location = new System.Drawing.Point(0, 0);
             this.lShopOwner.Name = "lShopOwner";
-            this.lShopOwner.Size = new System.Drawing.Size(1400, 69);
+            this.lShopOwner.Size = new System.Drawing.Size(0, 33);
             this.lShopOwner.TabIndex = 0;
             this.lShopOwner.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel3
             // 
+            this.panel3.AutoSize = true;
             this.panel3.BackColor = System.Drawing.Color.Transparent;
             this.panel3.Controls.Add(this.lSlogan1);
-            this.panel3.Location = new System.Drawing.Point(31, 465);
+            this.panel3.Location = new System.Drawing.Point(9, 465);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1424, 85);
+            this.panel3.Size = new System.Drawing.Size(1463, 85);
             this.panel3.TabIndex = 6;
             // 
             // lSlogan1
             // 
+            this.lSlogan1.AutoSize = false;
             this.lSlogan1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lSlogan1.Font = new System.Drawing.Font("Montserrat Medium", 18.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lSlogan1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lSlogan1.Location = new System.Drawing.Point(0, 0);
             this.lSlogan1.Name = "lSlogan1";
-            this.lSlogan1.Size = new System.Drawing.Size(1424, 85);
+            this.lSlogan1.Size = new System.Drawing.Size(0, 34);
             this.lSlogan1.TabIndex = 0;
             this.lSlogan1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lSlogan1.Click += new System.EventHandler(this.lSlogan1_Click);
             // 
             // lShopName2
             // 
@@ -204,7 +210,9 @@
             this.Text = "Phần mềm quản lý quán cà phê";
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

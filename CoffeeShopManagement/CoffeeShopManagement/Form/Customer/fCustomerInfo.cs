@@ -21,6 +21,14 @@ namespace CoffeeShopManagement
             InitializeComponent();
         }
 
+        public fCustomerInfo(string sdt)
+        {
+            InitializeComponent();
+
+            this.tbSearch.Text = sdt;
+            this.bSearch.PerformClick();
+        }
+
         private void bCancel_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -84,10 +92,19 @@ namespace CoffeeShopManagement
             }
             else
             {
-                this.tbSearch.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                this.tbSearch.Font = new System.Drawing.Font("Segoe UI", 20.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             }
 
             this.lNotificationSDTSearch.Text = "";
+        }
+
+        private void tbSDT_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Verify that the pressed key isn't CTRL or any non-numeric digit
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

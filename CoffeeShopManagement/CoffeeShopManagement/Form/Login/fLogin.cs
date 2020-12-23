@@ -52,7 +52,9 @@ namespace CoffeeShopManagement
         private void bCreateAccount_Click(object sender, EventArgs e)
         {
             fStaffAdd f = new fStaffAdd();
+            this.Hide();
             f.ShowDialog();
+            this.Show();
         }
 
         private void tbUsername_TextChanged(object sender, EventArgs e)
@@ -63,6 +65,11 @@ namespace CoffeeShopManagement
         private void tbPassword_TextChanged(object sender, EventArgs e)
         {
             this.lNotification.Text = "";
+        }
+
+        private void lConnectToDeveloper_Click(object sender, EventArgs e)
+        {
+            Process.Start(DataProvider.Instance.linkToConnectDeveloper);
         }
     }
 }

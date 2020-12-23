@@ -49,15 +49,12 @@
             this.bSearch = new Guna.UI2.WinForms.Guna2Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.tbSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.tbName = new Guna.UI2.WinForms.Guna2TextBox();
             this.lUpload = new System.Windows.Forms.Label();
-            this.pbAvatar = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.lTitle = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.cbPosition = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.nudSalary = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.dtpStartWorking = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.tbAge = new Guna.UI2.WinForms.Guna2TextBox();
             this.label16 = new System.Windows.Forms.Label();
@@ -66,6 +63,10 @@
             this.bEdit = new Guna.UI2.WinForms.Guna2Button();
             this.bLayOff = new Guna.UI2.WinForms.Guna2Button();
             this.bChangePassword = new Guna.UI2.WinForms.Guna2Button();
+            this.lNotificationSDTSearch = new System.Windows.Forms.Label();
+            this.tbSearch = new Guna.UI2.WinForms.Guna2TextBox();
+            this.pbAvatar = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.nudSalary = new Guna.UI2.WinForms.Guna2NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudSalary)).BeginInit();
             this.SuspendLayout();
@@ -78,6 +79,7 @@
             this.bCancel.CheckedState.Parent = this.bCancel;
             this.bCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bCancel.CustomImages.Parent = this.bCancel;
+            this.bCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.bCancel.FillColor = System.Drawing.Color.Red;
             this.bCancel.Font = new System.Drawing.Font("Segoe UI", 12.25F);
             this.bCancel.ForeColor = System.Drawing.Color.White;
@@ -113,6 +115,7 @@
             // 
             this.tbAddress.AutoRoundedCorners = true;
             this.tbAddress.BackColor = System.Drawing.Color.Transparent;
+            this.tbAddress.BorderColor = System.Drawing.Color.Black;
             this.tbAddress.BorderRadius = 17;
             this.tbAddress.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbAddress.DefaultText = "";
@@ -123,13 +126,15 @@
             this.tbAddress.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.tbAddress.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbAddress.FocusedState.Parent = this.tbAddress;
-            this.tbAddress.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tbAddress.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.tbAddress.ForeColor = System.Drawing.Color.Black;
             this.tbAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbAddress.HoverState.Parent = this.tbAddress;
             this.tbAddress.Location = new System.Drawing.Point(425, 674);
+            this.tbAddress.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbAddress.Name = "tbAddress";
             this.tbAddress.PasswordChar = '\0';
-            this.tbAddress.PlaceholderText = "";
+            this.tbAddress.PlaceholderText = "Địa chỉ của nhân viên";
             this.tbAddress.SelectedText = "";
             this.tbAddress.ShadowDecoration.Parent = this.tbAddress;
             this.tbAddress.Size = new System.Drawing.Size(318, 36);
@@ -151,6 +156,7 @@
             // 
             this.tbCMND.AutoRoundedCorners = true;
             this.tbCMND.BackColor = System.Drawing.Color.Transparent;
+            this.tbCMND.BorderColor = System.Drawing.Color.Black;
             this.tbCMND.BorderRadius = 17;
             this.tbCMND.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbCMND.DefaultText = "";
@@ -161,17 +167,20 @@
             this.tbCMND.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.tbCMND.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbCMND.FocusedState.Parent = this.tbCMND;
-            this.tbCMND.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tbCMND.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.tbCMND.ForeColor = System.Drawing.Color.Black;
             this.tbCMND.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbCMND.HoverState.Parent = this.tbCMND;
             this.tbCMND.Location = new System.Drawing.Point(796, 544);
+            this.tbCMND.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbCMND.Name = "tbCMND";
             this.tbCMND.PasswordChar = '\0';
-            this.tbCMND.PlaceholderText = "";
+            this.tbCMND.PlaceholderText = "Số chứng minh nhân dân/căn cước công dân";
             this.tbCMND.SelectedText = "";
             this.tbCMND.ShadowDecoration.Parent = this.tbCMND;
             this.tbCMND.Size = new System.Drawing.Size(318, 36);
             this.tbCMND.TabIndex = 69;
+            this.tbCMND.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCMND_KeyPress);
             // 
             // label14
             // 
@@ -201,6 +210,7 @@
             // 
             this.cbGender.AutoRoundedCorners = true;
             this.cbGender.BackColor = System.Drawing.Color.Transparent;
+            this.cbGender.BorderColor = System.Drawing.Color.Black;
             this.cbGender.BorderRadius = 17;
             this.cbGender.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbGender.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
@@ -208,8 +218,8 @@
             this.cbGender.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbGender.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbGender.FocusedState.Parent = this.cbGender;
-            this.cbGender.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbGender.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbGender.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.cbGender.ForeColor = System.Drawing.Color.Black;
             this.cbGender.HoverState.Parent = this.cbGender;
             this.cbGender.ItemHeight = 30;
             this.cbGender.Items.AddRange(new object[] {
@@ -226,13 +236,12 @@
             // 
             this.dtpBirthDate.AutoRoundedCorners = true;
             this.dtpBirthDate.BackColor = System.Drawing.Color.Transparent;
-            this.dtpBirthDate.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(221)))), ((int)(((byte)(226)))));
             this.dtpBirthDate.BorderRadius = 17;
             this.dtpBirthDate.BorderThickness = 1;
             this.dtpBirthDate.CheckedState.Parent = this.dtpBirthDate;
             this.dtpBirthDate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dtpBirthDate.FillColor = System.Drawing.Color.White;
-            this.dtpBirthDate.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dtpBirthDate.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.dtpBirthDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpBirthDate.HoverState.Parent = this.dtpBirthDate;
             this.dtpBirthDate.Location = new System.Drawing.Point(425, 544);
@@ -284,6 +293,7 @@
             // 
             this.tbID.AutoRoundedCorners = true;
             this.tbID.BackColor = System.Drawing.Color.Transparent;
+            this.tbID.BorderColor = System.Drawing.Color.Black;
             this.tbID.BorderRadius = 17;
             this.tbID.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbID.DefaultText = "";
@@ -294,13 +304,15 @@
             this.tbID.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.tbID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbID.FocusedState.Parent = this.tbID;
-            this.tbID.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tbID.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.tbID.ForeColor = System.Drawing.Color.Black;
             this.tbID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbID.HoverState.Parent = this.tbID;
             this.tbID.Location = new System.Drawing.Point(54, 544);
+            this.tbID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbID.Name = "tbID";
             this.tbID.PasswordChar = '\0';
-            this.tbID.PlaceholderText = "";
+            this.tbID.PlaceholderText = "Mã nhân viên";
             this.tbID.SelectedText = "";
             this.tbID.ShadowDecoration.Parent = this.tbID;
             this.tbID.Size = new System.Drawing.Size(318, 36);
@@ -310,6 +322,7 @@
             // 
             this.tbSDT.AutoRoundedCorners = true;
             this.tbSDT.BackColor = System.Drawing.Color.Transparent;
+            this.tbSDT.BorderColor = System.Drawing.Color.Black;
             this.tbSDT.BorderRadius = 17;
             this.tbSDT.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbSDT.DefaultText = "";
@@ -320,17 +333,20 @@
             this.tbSDT.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.tbSDT.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbSDT.FocusedState.Parent = this.tbSDT;
-            this.tbSDT.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tbSDT.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.tbSDT.ForeColor = System.Drawing.Color.Black;
             this.tbSDT.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbSDT.HoverState.Parent = this.tbSDT;
             this.tbSDT.Location = new System.Drawing.Point(54, 479);
+            this.tbSDT.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbSDT.Name = "tbSDT";
             this.tbSDT.PasswordChar = '\0';
-            this.tbSDT.PlaceholderText = "";
+            this.tbSDT.PlaceholderText = "Số điện thoại nhân viên";
             this.tbSDT.SelectedText = "";
             this.tbSDT.ShadowDecoration.Parent = this.tbSDT;
             this.tbSDT.Size = new System.Drawing.Size(318, 36);
             this.tbSDT.TabIndex = 57;
+            this.tbSDT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbSDT_KeyPress);
             // 
             // label9
             // 
@@ -385,6 +401,7 @@
             this.bSearch.Size = new System.Drawing.Size(172, 58);
             this.bSearch.TabIndex = 53;
             this.bSearch.Text = "Tìm kiếm";
+            this.bSearch.Click += new System.EventHandler(this.bSearch_Click);
             // 
             // label4
             // 
@@ -410,36 +427,6 @@
             this.label2.TabIndex = 51;
             this.label2.Text = "Số điện thoại";
             // 
-            // tbSearch
-            // 
-            this.tbSearch.AutoRoundedCorners = true;
-            this.tbSearch.BackColor = System.Drawing.Color.Transparent;
-            this.tbSearch.BorderRadius = 28;
-            this.tbSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbSearch.DefaultText = "09929834543";
-            this.tbSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tbSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tbSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbSearch.DisabledState.Parent = this.tbSearch;
-            this.tbSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbSearch.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.tbSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbSearch.FocusedState.Parent = this.tbSearch;
-            this.tbSearch.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbSearch.ForeColor = System.Drawing.Color.Black;
-            this.tbSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbSearch.HoverState.Parent = this.tbSearch;
-            this.tbSearch.Location = new System.Drawing.Point(808, 129);
-            this.tbSearch.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
-            this.tbSearch.Name = "tbSearch";
-            this.tbSearch.PasswordChar = '\0';
-            this.tbSearch.PlaceholderText = "";
-            this.tbSearch.SelectedText = "";
-            this.tbSearch.SelectionStart = 11;
-            this.tbSearch.ShadowDecoration.Parent = this.tbSearch;
-            this.tbSearch.Size = new System.Drawing.Size(449, 58);
-            this.tbSearch.TabIndex = 50;
-            // 
             // tbName
             // 
             this.tbName.AutoRoundedCorners = true;
@@ -449,15 +436,16 @@
             this.tbName.BorderRadius = 41;
             this.tbName.BorderThickness = 0;
             this.tbName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbName.DefaultText = "Tên nhân viên";
+            this.tbName.DefaultText = "";
             this.tbName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.tbName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.tbName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.tbName.DisabledState.Parent = this.tbName;
             this.tbName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbName.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(201)))), ((int)(((byte)(151)))));
             this.tbName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbName.FocusedState.Parent = this.tbName;
-            this.tbName.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbName.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold);
             this.tbName.ForeColor = System.Drawing.Color.Black;
             this.tbName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbName.HoverState.Parent = this.tbName;
@@ -465,10 +453,10 @@
             this.tbName.Margin = new System.Windows.Forms.Padding(12, 13, 12, 13);
             this.tbName.Name = "tbName";
             this.tbName.PasswordChar = '\0';
-            this.tbName.PlaceholderForeColor = System.Drawing.Color.White;
-            this.tbName.PlaceholderText = "";
+            this.tbName.PlaceholderForeColor = System.Drawing.Color.WhiteSmoke;
+            this.tbName.PlaceholderText = "Họ và tên";
+            this.tbName.ReadOnly = true;
             this.tbName.SelectedText = "";
-            this.tbName.SelectionStart = 13;
             this.tbName.ShadowDecoration.Parent = this.tbName;
             this.tbName.Size = new System.Drawing.Size(1165, 84);
             this.tbName.TabIndex = 49;
@@ -485,19 +473,6 @@
             this.lUpload.Size = new System.Drawing.Size(79, 18);
             this.lUpload.TabIndex = 47;
             this.lUpload.Text = "Tải ảnh lên";
-            // 
-            // pbAvatar
-            // 
-            this.pbAvatar.AutoRoundedCorners = true;
-            this.pbAvatar.BackgroundImage = global::CoffeeShopManagement.Properties.Resources.Customer_Avatar__Demo____Girl;
-            this.pbAvatar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbAvatar.BorderRadius = 89;
-            this.pbAvatar.Location = new System.Drawing.Point(54, 110);
-            this.pbAvatar.Name = "pbAvatar";
-            this.pbAvatar.ShadowDecoration.Parent = this.pbAvatar;
-            this.pbAvatar.Size = new System.Drawing.Size(181, 248);
-            this.pbAvatar.TabIndex = 46;
-            this.pbAvatar.TabStop = false;
             // 
             // label1
             // 
@@ -535,6 +510,7 @@
             // 
             this.cbPosition.AutoRoundedCorners = true;
             this.cbPosition.BackColor = System.Drawing.Color.Transparent;
+            this.cbPosition.BorderColor = System.Drawing.Color.Black;
             this.cbPosition.BorderRadius = 17;
             this.cbPosition.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbPosition.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
@@ -542,13 +518,10 @@
             this.cbPosition.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbPosition.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbPosition.FocusedState.Parent = this.cbPosition;
-            this.cbPosition.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbPosition.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbPosition.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.cbPosition.ForeColor = System.Drawing.Color.Black;
             this.cbPosition.HoverState.Parent = this.cbPosition;
             this.cbPosition.ItemHeight = 30;
-            this.cbPosition.Items.AddRange(new object[] {
-            "Nam",
-            "Nữ"});
             this.cbPosition.ItemsAppearance.Parent = this.cbPosition;
             this.cbPosition.Location = new System.Drawing.Point(54, 609);
             this.cbPosition.Name = "cbPosition";
@@ -556,40 +529,17 @@
             this.cbPosition.Size = new System.Drawing.Size(318, 36);
             this.cbPosition.TabIndex = 76;
             // 
-            // nudSalary
-            // 
-            this.nudSalary.AutoRoundedCorners = true;
-            this.nudSalary.BackColor = System.Drawing.Color.Transparent;
-            this.nudSalary.BorderRadius = 17;
-            this.nudSalary.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.nudSalary.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.nudSalary.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.nudSalary.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.nudSalary.DisabledState.Parent = this.nudSalary;
-            this.nudSalary.DisabledState.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(177)))));
-            this.nudSalary.DisabledState.UpDownButtonForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(203)))), ((int)(((byte)(203)))));
-            this.nudSalary.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.nudSalary.FocusedState.Parent = this.nudSalary;
-            this.nudSalary.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.nudSalary.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(126)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.nudSalary.Location = new System.Drawing.Point(796, 479);
-            this.nudSalary.Name = "nudSalary";
-            this.nudSalary.ShadowDecoration.Parent = this.nudSalary;
-            this.nudSalary.Size = new System.Drawing.Size(318, 36);
-            this.nudSalary.TabIndex = 77;
-            // 
             // dtpStartWorking
             // 
             this.dtpStartWorking.AutoRoundedCorners = true;
             this.dtpStartWorking.BackColor = System.Drawing.Color.Transparent;
-            this.dtpStartWorking.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(221)))), ((int)(((byte)(226)))));
             this.dtpStartWorking.BorderRadius = 17;
             this.dtpStartWorking.BorderThickness = 1;
             this.dtpStartWorking.CheckedState.Parent = this.dtpStartWorking;
             this.dtpStartWorking.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dtpStartWorking.FillColor = System.Drawing.Color.White;
-            this.dtpStartWorking.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.dtpStartWorking.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtpStartWorking.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.dtpStartWorking.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpStartWorking.HoverState.Parent = this.dtpStartWorking;
             this.dtpStartWorking.Location = new System.Drawing.Point(54, 674);
             this.dtpStartWorking.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
@@ -604,6 +554,7 @@
             // 
             this.tbAge.AutoRoundedCorners = true;
             this.tbAge.BackColor = System.Drawing.Color.Transparent;
+            this.tbAge.BorderColor = System.Drawing.Color.Black;
             this.tbAge.BorderRadius = 17;
             this.tbAge.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbAge.DefaultText = "";
@@ -614,13 +565,15 @@
             this.tbAge.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.tbAge.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbAge.FocusedState.Parent = this.tbAge;
-            this.tbAge.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tbAge.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.tbAge.ForeColor = System.Drawing.Color.Black;
             this.tbAge.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbAge.HoverState.Parent = this.tbAge;
             this.tbAge.Location = new System.Drawing.Point(425, 609);
+            this.tbAge.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbAge.Name = "tbAge";
             this.tbAge.PasswordChar = '\0';
-            this.tbAge.PlaceholderText = "";
+            this.tbAge.PlaceholderText = "Tuổi của nhân viên";
             this.tbAge.SelectedText = "";
             this.tbAge.ShadowDecoration.Parent = this.tbAge;
             this.tbAge.Size = new System.Drawing.Size(318, 36);
@@ -642,6 +595,7 @@
             // 
             this.tbTimeWorking.AutoRoundedCorners = true;
             this.tbTimeWorking.BackColor = System.Drawing.Color.Transparent;
+            this.tbTimeWorking.BorderColor = System.Drawing.Color.Black;
             this.tbTimeWorking.BorderRadius = 17;
             this.tbTimeWorking.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbTimeWorking.DefaultText = "";
@@ -652,13 +606,15 @@
             this.tbTimeWorking.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.tbTimeWorking.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbTimeWorking.FocusedState.Parent = this.tbTimeWorking;
-            this.tbTimeWorking.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tbTimeWorking.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.tbTimeWorking.ForeColor = System.Drawing.Color.Black;
             this.tbTimeWorking.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbTimeWorking.HoverState.Parent = this.tbTimeWorking;
             this.tbTimeWorking.Location = new System.Drawing.Point(796, 609);
+            this.tbTimeWorking.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbTimeWorking.Name = "tbTimeWorking";
             this.tbTimeWorking.PasswordChar = '\0';
-            this.tbTimeWorking.PlaceholderText = "";
+            this.tbTimeWorking.PlaceholderText = "Số ngày làm việc cho tới hiện tại";
             this.tbTimeWorking.SelectedText = "";
             this.tbTimeWorking.ShadowDecoration.Parent = this.tbTimeWorking;
             this.tbTimeWorking.Size = new System.Drawing.Size(318, 36);
@@ -736,13 +692,108 @@
             this.bChangePassword.Text = "Thay đổi mật khẩu";
             this.bChangePassword.Click += new System.EventHandler(this.bChangePassword_Click_1);
             // 
+            // lNotificationSDTSearch
+            // 
+            this.lNotificationSDTSearch.AutoSize = true;
+            this.lNotificationSDTSearch.BackColor = System.Drawing.Color.Transparent;
+            this.lNotificationSDTSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lNotificationSDTSearch.ForeColor = System.Drawing.Color.Red;
+            this.lNotificationSDTSearch.Location = new System.Drawing.Point(803, 195);
+            this.lNotificationSDTSearch.Name = "lNotificationSDTSearch";
+            this.lNotificationSDTSearch.Size = new System.Drawing.Size(0, 18);
+            this.lNotificationSDTSearch.TabIndex = 87;
+            // 
+            // tbSearch
+            // 
+            this.tbSearch.AutoRoundedCorners = true;
+            this.tbSearch.BackColor = System.Drawing.Color.Transparent;
+            this.tbSearch.BorderColor = System.Drawing.Color.Black;
+            this.tbSearch.BorderRadius = 28;
+            this.tbSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbSearch.DefaultText = "";
+            this.tbSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.tbSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.tbSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbSearch.DisabledState.Parent = this.tbSearch;
+            this.tbSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbSearch.FocusedState.Parent = this.tbSearch;
+            this.tbSearch.Font = new System.Drawing.Font("Segoe UI", 16.75F);
+            this.tbSearch.ForeColor = System.Drawing.Color.Black;
+            this.tbSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbSearch.HoverState.Parent = this.tbSearch;
+            this.tbSearch.Location = new System.Drawing.Point(808, 129);
+            this.tbSearch.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
+            this.tbSearch.Name = "tbSearch";
+            this.tbSearch.PasswordChar = '\0';
+            this.tbSearch.PlaceholderText = "Số điện thoại của nhân viên cần tìm";
+            this.tbSearch.SelectedText = "";
+            this.tbSearch.ShadowDecoration.Parent = this.tbSearch;
+            this.tbSearch.Size = new System.Drawing.Size(449, 58);
+            this.tbSearch.TabIndex = 86;
+            this.tbSearch.TextChanged += new System.EventHandler(this.tbSearch_TextChanged);
+            this.tbSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbSearch_KeyPress);
+            // 
+            // pbAvatar
+            // 
+            this.pbAvatar.AutoRoundedCorners = true;
+            this.pbAvatar.BackgroundImage = global::CoffeeShopManagement.Properties.Resources.Customer_Avatar__Demo____Girl;
+            this.pbAvatar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbAvatar.BorderRadius = 89;
+            this.pbAvatar.Location = new System.Drawing.Point(54, 110);
+            this.pbAvatar.Name = "pbAvatar";
+            this.pbAvatar.ShadowDecoration.Parent = this.pbAvatar;
+            this.pbAvatar.Size = new System.Drawing.Size(181, 248);
+            this.pbAvatar.TabIndex = 46;
+            this.pbAvatar.TabStop = false;
+            // 
+            // nudSalary
+            // 
+            this.nudSalary.AutoRoundedCorners = true;
+            this.nudSalary.BackColor = System.Drawing.Color.Transparent;
+            this.nudSalary.BorderColor = System.Drawing.Color.Black;
+            this.nudSalary.BorderRadius = 17;
+            this.nudSalary.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.nudSalary.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.nudSalary.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.nudSalary.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.nudSalary.DisabledState.Parent = this.nudSalary;
+            this.nudSalary.DisabledState.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(177)))));
+            this.nudSalary.DisabledState.UpDownButtonForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(203)))), ((int)(((byte)(203)))));
+            this.nudSalary.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.nudSalary.FocusedState.Parent = this.nudSalary;
+            this.nudSalary.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.nudSalary.ForeColor = System.Drawing.Color.Black;
+            this.nudSalary.Increment = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.nudSalary.Location = new System.Drawing.Point(796, 479);
+            this.nudSalary.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.nudSalary.Maximum = new decimal(new int[] {
+            1000000000,
+            0,
+            0,
+            0});
+            this.nudSalary.Name = "nudSalary";
+            this.nudSalary.ShadowDecoration.Parent = this.nudSalary;
+            this.nudSalary.Size = new System.Drawing.Size(318, 36);
+            this.nudSalary.TabIndex = 88;
+            this.nudSalary.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            // 
             // fStaffInfo
             // 
+            this.AcceptButton = this.bSearch;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::CoffeeShopManagement.Properties.Resources.Info_Background;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.CancelButton = this.bCancel;
             this.ClientSize = new System.Drawing.Size(1484, 761);
+            this.Controls.Add(this.nudSalary);
+            this.Controls.Add(this.lNotificationSDTSearch);
+            this.Controls.Add(this.tbSearch);
             this.Controls.Add(this.bChangePassword);
             this.Controls.Add(this.bLayOff);
             this.Controls.Add(this.bEdit);
@@ -751,7 +802,6 @@
             this.Controls.Add(this.tbAge);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.dtpStartWorking);
-            this.Controls.Add(this.nudSalary);
             this.Controls.Add(this.cbPosition);
             this.Controls.Add(this.lTitle);
             this.Controls.Add(this.label6);
@@ -775,7 +825,6 @@
             this.Controls.Add(this.bSearch);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.tbSearch);
             this.Controls.Add(this.tbName);
             this.Controls.Add(this.lUpload);
             this.Controls.Add(this.pbAvatar);
@@ -813,7 +862,6 @@
         private Guna.UI2.WinForms.Guna2Button bSearch;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2TextBox tbSearch;
         private Guna.UI2.WinForms.Guna2TextBox tbName;
         private System.Windows.Forms.Label lUpload;
         private Guna.UI2.WinForms.Guna2PictureBox pbAvatar;
@@ -821,7 +869,6 @@
         private System.Windows.Forms.Label label6;
         private Guna.UI2.WinForms.Guna2HtmlLabel lTitle;
         private Guna.UI2.WinForms.Guna2ComboBox cbPosition;
-        private Guna.UI2.WinForms.Guna2NumericUpDown nudSalary;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtpStartWorking;
         private Guna.UI2.WinForms.Guna2TextBox tbAge;
         private System.Windows.Forms.Label label16;
@@ -830,5 +877,8 @@
         private Guna.UI2.WinForms.Guna2Button bEdit;
         private Guna.UI2.WinForms.Guna2Button bLayOff;
         private Guna.UI2.WinForms.Guna2Button bChangePassword;
+        private System.Windows.Forms.Label lNotificationSDTSearch;
+        private Guna.UI2.WinForms.Guna2TextBox tbSearch;
+        private Guna.UI2.WinForms.Guna2NumericUpDown nudSalary;
     }
 }

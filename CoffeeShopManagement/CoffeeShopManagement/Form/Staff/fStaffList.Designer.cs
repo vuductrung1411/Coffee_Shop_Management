@@ -83,7 +83,7 @@
             this.bAdd.Name = "bAdd";
             this.bAdd.ShadowDecoration.Parent = this.bAdd;
             this.bAdd.Size = new System.Drawing.Size(271, 43);
-            this.bAdd.TabIndex = 33;
+            this.bAdd.TabIndex = 1;
             this.bAdd.Text = "Thêm nhân viên mới";
             this.bAdd.Click += new System.EventHandler(this.bAdd_Click);
             // 
@@ -103,7 +103,7 @@
             this.bLayOff.Name = "bLayOff";
             this.bLayOff.ShadowDecoration.Parent = this.bLayOff;
             this.bLayOff.Size = new System.Drawing.Size(271, 43);
-            this.bLayOff.TabIndex = 32;
+            this.bLayOff.TabIndex = 2;
             this.bLayOff.Text = "Sa thải";
             // 
             // bCancel
@@ -122,7 +122,7 @@
             this.bCancel.Name = "bCancel";
             this.bCancel.ShadowDecoration.Parent = this.bCancel;
             this.bCancel.Size = new System.Drawing.Size(271, 43);
-            this.bCancel.TabIndex = 31;
+            this.bCancel.TabIndex = 4;
             this.bCancel.Text = "Thoát";
             this.bCancel.Click += new System.EventHandler(this.bCancel_Click);
             // 
@@ -141,7 +141,7 @@
             this.bInfo.Name = "bInfo";
             this.bInfo.ShadowDecoration.Parent = this.bInfo;
             this.bInfo.Size = new System.Drawing.Size(271, 43);
-            this.bInfo.TabIndex = 30;
+            this.bInfo.TabIndex = 3;
             this.bInfo.Text = "Thông tin chi tiết";
             this.bInfo.Click += new System.EventHandler(this.bInfo_Click);
             // 

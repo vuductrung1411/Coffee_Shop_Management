@@ -108,3 +108,4 @@ C:\Users\TRUNG\Desktop\NewPJ\CoffeeShopManagement\CoffeeShopManagement\obj\Debug
 C:\Users\TRUNG\Desktop\NewPJ\CoffeeShopManagement\CoffeeShopManagement\obj\Debug\CoffeeShopManagement.csproj.CopyComplete
 C:\Users\TRUNG\Desktop\NewPJ\CoffeeShopManagement\CoffeeShopManagement\obj\Debug\CoffeeShopManagement.exe
 C:\Users\TRUNG\Desktop\NewPJ\CoffeeShopManagement\CoffeeShopManagement\obj\Debug\CoffeeShopManagement.pdb
+C:\Users\TRUNG\Desktop\Coffee_Shop_Management\CoffeeShopManagement\CoffeeShopManagement\obj\Debug\CoffeeShopManagement.fAccountAdd.resources

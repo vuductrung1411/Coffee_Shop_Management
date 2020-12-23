@@ -32,7 +32,6 @@
             this.lTitle = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.lUpload = new System.Windows.Forms.Label();
-            this.pbAvatar = new Guna.UI2.WinForms.Guna2PictureBox();
             this.tbName = new Guna.UI2.WinForms.Guna2TextBox();
             this.tbSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -61,6 +60,7 @@
             this.cbMember = new Guna.UI2.WinForms.Guna2ComboBox();
             this.bEdit = new Guna.UI2.WinForms.Guna2Button();
             this.lNotificationSDTSearch = new System.Windows.Forms.Label();
+            this.pbAvatar = new Guna.UI2.WinForms.Guna2PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -98,24 +98,12 @@
             this.lUpload.TabIndex = 15;
             this.lUpload.Text = "Tải ảnh lên";
             // 
-            // pbAvatar
-            // 
-            this.pbAvatar.AutoRoundedCorners = true;
-            this.pbAvatar.BackgroundImage = global::CoffeeShopManagement.Properties.Resources.Customer_Avatar__Demo____Girl;
-            this.pbAvatar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbAvatar.BorderRadius = 89;
-            this.pbAvatar.Location = new System.Drawing.Point(48, 107);
-            this.pbAvatar.Name = "pbAvatar";
-            this.pbAvatar.ShadowDecoration.Parent = this.pbAvatar;
-            this.pbAvatar.Size = new System.Drawing.Size(181, 248);
-            this.pbAvatar.TabIndex = 14;
-            this.pbAvatar.TabStop = false;
-            // 
             // tbName
             // 
             this.tbName.AutoRoundedCorners = true;
             this.tbName.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.tbName.BackColor = System.Drawing.Color.Transparent;
+            this.tbName.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tbName.BorderColor = System.Drawing.Color.White;
             this.tbName.BorderRadius = 41;
             this.tbName.BorderThickness = 0;
@@ -126,6 +114,7 @@
             this.tbName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.tbName.DisabledState.Parent = this.tbName;
             this.tbName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbName.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(201)))), ((int)(((byte)(151)))));
             this.tbName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbName.FocusedState.Parent = this.tbName;
             this.tbName.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -148,6 +137,7 @@
             // 
             this.tbSearch.AutoRoundedCorners = true;
             this.tbSearch.BackColor = System.Drawing.Color.Transparent;
+            this.tbSearch.BorderColor = System.Drawing.Color.Black;
             this.tbSearch.BorderRadius = 28;
             this.tbSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbSearch.DefaultText = "";
@@ -156,10 +146,9 @@
             this.tbSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.tbSearch.DisabledState.Parent = this.tbSearch;
             this.tbSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbSearch.FillColor = System.Drawing.Color.WhiteSmoke;
             this.tbSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbSearch.FocusedState.Parent = this.tbSearch;
-            this.tbSearch.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbSearch.Font = new System.Drawing.Font("Segoe UI", 20.75F);
             this.tbSearch.ForeColor = System.Drawing.Color.Black;
             this.tbSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbSearch.HoverState.Parent = this.tbSearch;
@@ -203,7 +192,7 @@
             // 
             this.bSearch.AutoRoundedCorners = true;
             this.bSearch.BackColor = System.Drawing.Color.Transparent;
-            this.bSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.bSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.bSearch.BorderRadius = 28;
             this.bSearch.BorderThickness = 1;
             this.bSearch.CheckedState.Parent = this.bSearch;
@@ -211,6 +200,7 @@
             this.bSearch.CustomImages.Parent = this.bSearch;
             this.bSearch.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bSearch.ForeColor = System.Drawing.Color.White;
+            this.bSearch.HoverState.BorderColor = System.Drawing.Color.Red;
             this.bSearch.HoverState.Parent = this.bSearch;
             this.bSearch.Location = new System.Drawing.Point(1257, 126);
             this.bSearch.Name = "bSearch";
@@ -295,6 +285,7 @@
             this.tbSDT.ShadowDecoration.Parent = this.tbSDT;
             this.tbSDT.Size = new System.Drawing.Size(318, 36);
             this.tbSDT.TabIndex = 27;
+            this.tbSDT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbSDT_KeyPress);
             // 
             // tbID
             // 
@@ -572,6 +563,7 @@
             this.bSave.FillColor = System.Drawing.Color.Turquoise;
             this.bSave.Font = new System.Drawing.Font("Segoe UI", 12.25F);
             this.bSave.ForeColor = System.Drawing.Color.White;
+            this.bSave.HoverState.BorderColor = System.Drawing.Color.Red;
             this.bSave.HoverState.Parent = this.bSave;
             this.bSave.Location = new System.Drawing.Point(1176, 534);
             this.bSave.Name = "bSave";
@@ -660,13 +652,26 @@
             this.lNotificationSDTSearch.Size = new System.Drawing.Size(0, 18);
             this.lNotificationSDTSearch.TabIndex = 85;
             // 
+            // pbAvatar
+            // 
+            this.pbAvatar.AutoRoundedCorners = true;
+            this.pbAvatar.BackgroundImage = global::CoffeeShopManagement.Properties.Resources.Customer_Avatar__Demo____Girl;
+            this.pbAvatar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbAvatar.BorderRadius = 89;
+            this.pbAvatar.Location = new System.Drawing.Point(48, 107);
+            this.pbAvatar.Name = "pbAvatar";
+            this.pbAvatar.ShadowDecoration.Parent = this.pbAvatar;
+            this.pbAvatar.Size = new System.Drawing.Size(181, 248);
+            this.pbAvatar.TabIndex = 14;
+            this.pbAvatar.TabStop = false;
+            // 
             // fCustomerInfo
             // 
             this.AcceptButton = this.bSearch;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.BackgroundImage = global::CoffeeShopManagement.Properties.Resources.Info_Background;
+            this.BackgroundImage = global::CoffeeShopManagement.Properties.Resources.Info_Background1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CancelButton = this.bCancel;
             this.ClientSize = new System.Drawing.Size(1484, 761);

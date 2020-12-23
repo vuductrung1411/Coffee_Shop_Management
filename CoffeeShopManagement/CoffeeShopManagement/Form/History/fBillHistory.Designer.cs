@@ -79,7 +79,7 @@
             this.bFilt.Name = "bFilt";
             this.bFilt.ShadowDecoration.Parent = this.bFilt;
             this.bFilt.Size = new System.Drawing.Size(343, 35);
-            this.bFilt.TabIndex = 40;
+            this.bFilt.TabIndex = 8;
             this.bFilt.Text = "Lọc";
             // 
             // bCancel
@@ -98,7 +98,7 @@
             this.bCancel.Name = "bCancel";
             this.bCancel.ShadowDecoration.Parent = this.bCancel;
             this.bCancel.Size = new System.Drawing.Size(343, 35);
-            this.bCancel.TabIndex = 39;
+            this.bCancel.TabIndex = 9;
             this.bCancel.Text = "Quay lại";
             this.bCancel.Click += new System.EventHandler(this.bCancel_Click);
             // 
@@ -120,7 +120,7 @@
             this.dtpEndDate.Name = "dtpEndDate";
             this.dtpEndDate.ShadowDecoration.Parent = this.dtpEndDate;
             this.dtpEndDate.Size = new System.Drawing.Size(343, 30);
-            this.dtpEndDate.TabIndex = 38;
+            this.dtpEndDate.TabIndex = 5;
             this.dtpEndDate.Value = new System.DateTime(2020, 11, 27, 0, 44, 52, 352);
             // 
             // label5
@@ -151,7 +151,7 @@
             this.dtpStartDate.Name = "dtpStartDate";
             this.dtpStartDate.ShadowDecoration.Parent = this.dtpStartDate;
             this.dtpStartDate.Size = new System.Drawing.Size(343, 30);
-            this.dtpStartDate.TabIndex = 36;
+            this.dtpStartDate.TabIndex = 4;
             this.dtpStartDate.Value = new System.DateTime(2020, 11, 27, 0, 44, 52, 352);
             // 
             // label4
@@ -189,7 +189,7 @@
             this.tbBillID.SelectedText = "";
             this.tbBillID.ShadowDecoration.Parent = this.tbBillID;
             this.tbBillID.Size = new System.Drawing.Size(343, 30);
-            this.tbBillID.TabIndex = 34;
+            this.tbBillID.TabIndex = 3;
             // 
             // label3
             // 
@@ -226,7 +226,7 @@
             this.tbCustomerSDT.SelectedText = "";
             this.tbCustomerSDT.ShadowDecoration.Parent = this.tbCustomerSDT;
             this.tbCustomerSDT.Size = new System.Drawing.Size(343, 30);
-            this.tbCustomerSDT.TabIndex = 32;
+            this.tbCustomerSDT.TabIndex = 2;
             // 
             // label2
             // 
@@ -263,7 +263,7 @@
             this.tbStaffID.SelectedText = "";
             this.tbStaffID.ShadowDecoration.Parent = this.tbStaffID;
             this.tbStaffID.Size = new System.Drawing.Size(343, 30);
-            this.tbStaffID.TabIndex = 30;
+            this.tbStaffID.TabIndex = 1;
             // 
             // label1
             // 
@@ -357,7 +357,8 @@
             this.tbMinValue.SelectedText = "";
             this.tbMinValue.ShadowDecoration.Parent = this.tbMinValue;
             this.tbMinValue.Size = new System.Drawing.Size(162, 30);
-            this.tbMinValue.TabIndex = 42;
+            this.tbMinValue.TabIndex = 6;
+            this.tbMinValue.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbMinValue_KeyPress);
             // 
             // label6
             // 
@@ -394,7 +395,8 @@
             this.tbMaxValue.SelectedText = "";
             this.tbMaxValue.ShadowDecoration.Parent = this.tbMaxValue;
             this.tbMaxValue.Size = new System.Drawing.Size(162, 30);
-            this.tbMaxValue.TabIndex = 44;
+            this.tbMaxValue.TabIndex = 7;
+            this.tbMaxValue.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbMaxValue_KeyPress);
             // 
             // label7
             // 

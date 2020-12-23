@@ -158,7 +158,7 @@
             this.tbName.SelectedText = "";
             this.tbName.ShadowDecoration.Parent = this.tbName;
             this.tbName.Size = new System.Drawing.Size(300, 36);
-            this.tbName.TabIndex = 19;
+            this.tbName.TabIndex = 1;
             // 
             // label3
             // 
@@ -201,7 +201,7 @@
             this.tbPrice.SelectedText = "";
             this.tbPrice.ShadowDecoration.Parent = this.tbPrice;
             this.tbPrice.Size = new System.Drawing.Size(300, 36);
-            this.tbPrice.TabIndex = 22;
+            this.tbPrice.TabIndex = 2;
             // 
             // label2
             // 
@@ -244,7 +244,7 @@
             this.tbSL.SelectedText = "";
             this.tbSL.ShadowDecoration.Parent = this.tbSL;
             this.tbSL.Size = new System.Drawing.Size(300, 36);
-            this.tbSL.TabIndex = 25;
+            this.tbSL.TabIndex = 3;
             // 
             // label6
             // 
@@ -287,7 +287,7 @@
             this.tbCountry.SelectedText = "";
             this.tbCountry.ShadowDecoration.Parent = this.tbCountry;
             this.tbCountry.Size = new System.Drawing.Size(300, 36);
-            this.tbCountry.TabIndex = 27;
+            this.tbCountry.TabIndex = 4;
             // 
             // label1
             // 
@@ -330,7 +330,7 @@
             this.tbProvider.SelectedText = "";
             this.tbProvider.ShadowDecoration.Parent = this.tbProvider;
             this.tbProvider.Size = new System.Drawing.Size(300, 36);
-            this.tbProvider.TabIndex = 29;
+            this.tbProvider.TabIndex = 5;
             // 
             // label4
             // 
@@ -359,7 +359,7 @@
             this.bCancel.Name = "bCancel";
             this.bCancel.ShadowDecoration.Parent = this.bCancel;
             this.bCancel.Size = new System.Drawing.Size(300, 43);
-            this.bCancel.TabIndex = 32;
+            this.bCancel.TabIndex = 6;
             this.bCancel.Text = "Thoát";
             this.bCancel.Click += new System.EventHandler(this.bCancel_Click);
             // 

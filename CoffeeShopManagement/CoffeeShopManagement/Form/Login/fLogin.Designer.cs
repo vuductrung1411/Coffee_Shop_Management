@@ -56,6 +56,7 @@
             this.lConnectToDeveloper.Size = new System.Drawing.Size(141, 13);
             this.lConnectToDeveloper.TabIndex = 5;
             this.lConnectToDeveloper.Text = "@ Liên hệ với nhà phát triển";
+            this.lConnectToDeveloper.Click += new System.EventHandler(this.lConnectToDeveloper_Click);
             // 
             // label1
             // 
@@ -118,7 +119,7 @@
             this.tbUsername.BorderRadius = 28;
             this.tbUsername.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.tbUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbUsername.DefaultText = "1";
+            this.tbUsername.DefaultText = "";
             this.tbUsername.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.tbUsername.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.tbUsername.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -138,7 +139,6 @@
             this.tbUsername.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.tbUsername.PlaceholderText = "Nhập tên đăng nhập";
             this.tbUsername.SelectedText = "";
-            this.tbUsername.SelectionStart = 1;
             this.tbUsername.ShadowDecoration.Parent = this.tbUsername;
             this.tbUsername.Size = new System.Drawing.Size(483, 58);
             this.tbUsername.TabIndex = 0;
@@ -187,7 +187,7 @@
             this.tbPassword.BorderRadius = 28;
             this.tbPassword.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.tbPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbPassword.DefaultText = "1";
+            this.tbPassword.DefaultText = "";
             this.tbPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.tbPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.tbPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -206,7 +206,6 @@
             this.tbPassword.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.tbPassword.PlaceholderText = "Nhập mật khẩu";
             this.tbPassword.SelectedText = "";
-            this.tbPassword.SelectionStart = 1;
             this.tbPassword.ShadowDecoration.Parent = this.tbPassword;
             this.tbPassword.Size = new System.Drawing.Size(483, 58);
             this.tbPassword.TabIndex = 1;

@@ -1,4 +1,5 @@
-﻿using QuanLyQuanCafe.DAO;
+﻿using CoffeeShopManagement.DTO;
+using QuanLyQuanCafe.DAO;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -73,6 +74,23 @@ namespace CoffeeShopManagement.DAO
         {
             string query = "EXEC USP_InsertFoodIntoBill @idBill , @idFood , @sl , @note";
             int tmp = DataProvider.Instance.ExecuteNonQuery(query, new object[] { idBill, idFood, sl, note });
+        }
+
+        // Kiểm tra xem đã có món nào cùng tên chưa
+        public bool CheckExistsFoodName(string name)
+        {
+            string query = "SELECT * FROM FOOD WHERE TENMON = '" + name + "'";
+            DataTable result = DataProvider.Instance.ExecuteQuery(query);
+            return result.Rows.Count > 0;
+        }
+
+        // Thêm món mới vào danh sách món
+        public void CreateNewFood(Food food)
+        {
+            string query = "EXEC USP_CreateNewFood @tenmon , @giaban , @dvt , @nuocsx ";
+
+            int tmp = (int)DataProvider.Instance.ExecuteNonQuery(query, new object[]
+                { food.tenmon, food.gia, food.nuocsx, food.dvt});
         }
 
     }

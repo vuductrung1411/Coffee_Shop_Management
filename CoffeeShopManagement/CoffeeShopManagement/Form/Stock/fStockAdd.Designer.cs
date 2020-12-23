@@ -73,7 +73,7 @@
             this.bCancel.Name = "bCancel";
             this.bCancel.ShadowDecoration.Parent = this.bCancel;
             this.bCancel.Size = new System.Drawing.Size(135, 35);
-            this.bCancel.TabIndex = 30;
+            this.bCancel.TabIndex = 7;
             this.bCancel.Text = "Quay lại";
             this.bCancel.Click += new System.EventHandler(this.bCancel_Click_1);
             // 
@@ -93,7 +93,7 @@
             this.bOK.Name = "bOK";
             this.bOK.ShadowDecoration.Parent = this.bOK;
             this.bOK.Size = new System.Drawing.Size(135, 35);
-            this.bOK.TabIndex = 29;
+            this.bOK.TabIndex = 6;
             this.bOK.Text = "Thêm";
             // 
             // dtpDate
@@ -114,7 +114,7 @@
             this.dtpDate.Name = "dtpDate";
             this.dtpDate.ShadowDecoration.Parent = this.dtpDate;
             this.dtpDate.Size = new System.Drawing.Size(343, 30);
-            this.dtpDate.TabIndex = 27;
+            this.dtpDate.TabIndex = 5;
             this.dtpDate.Value = new System.DateTime(2020, 11, 27, 0, 44, 52, 352);
             // 
             // label4
@@ -152,7 +152,7 @@
             this.tbCountry.SelectedText = "";
             this.tbCountry.ShadowDecoration.Parent = this.tbCountry;
             this.tbCountry.Size = new System.Drawing.Size(343, 30);
-            this.tbCountry.TabIndex = 25;
+            this.tbCountry.TabIndex = 3;
             // 
             // label3
             // 
@@ -189,7 +189,8 @@
             this.tbPrice.SelectedText = "";
             this.tbPrice.ShadowDecoration.Parent = this.tbPrice;
             this.tbPrice.Size = new System.Drawing.Size(343, 30);
-            this.tbPrice.TabIndex = 23;
+            this.tbPrice.TabIndex = 2;
+            this.tbPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbPrice_KeyPress);
             // 
             // label2
             // 
@@ -226,7 +227,7 @@
             this.tbName.SelectedText = "";
             this.tbName.ShadowDecoration.Parent = this.tbName;
             this.tbName.Size = new System.Drawing.Size(343, 30);
-            this.tbName.TabIndex = 21;
+            this.tbName.TabIndex = 1;
             // 
             // label1
             // 
@@ -276,7 +277,7 @@
             this.tbProvider.SelectedText = "";
             this.tbProvider.ShadowDecoration.Parent = this.tbProvider;
             this.tbProvider.Size = new System.Drawing.Size(343, 30);
-            this.tbProvider.TabIndex = 33;
+            this.tbProvider.TabIndex = 4;
             // 
             // label6
             // 

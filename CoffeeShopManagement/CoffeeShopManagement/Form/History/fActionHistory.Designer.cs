@@ -134,7 +134,7 @@
             this.dtpEndDate.Name = "dtpEndDate";
             this.dtpEndDate.ShadowDecoration.Parent = this.dtpEndDate;
             this.dtpEndDate.Size = new System.Drawing.Size(343, 30);
-            this.dtpEndDate.TabIndex = 25;
+            this.dtpEndDate.TabIndex = 5;
             this.dtpEndDate.Value = new System.DateTime(2020, 11, 27, 0, 44, 52, 352);
             // 
             // label5
@@ -165,7 +165,7 @@
             this.dtpStartDate.Name = "dtpStartDate";
             this.dtpStartDate.ShadowDecoration.Parent = this.dtpStartDate;
             this.dtpStartDate.Size = new System.Drawing.Size(343, 30);
-            this.dtpStartDate.TabIndex = 23;
+            this.dtpStartDate.TabIndex = 4;
             this.dtpStartDate.Value = new System.DateTime(2020, 11, 27, 0, 44, 52, 352);
             // 
             // label4
@@ -203,7 +203,7 @@
             this.tbAction.SelectedText = "";
             this.tbAction.ShadowDecoration.Parent = this.tbAction;
             this.tbAction.Size = new System.Drawing.Size(343, 30);
-            this.tbAction.TabIndex = 21;
+            this.tbAction.TabIndex = 3;
             // 
             // label3
             // 
@@ -240,7 +240,7 @@
             this.tbIDObject.SelectedText = "";
             this.tbIDObject.ShadowDecoration.Parent = this.tbIDObject;
             this.tbIDObject.Size = new System.Drawing.Size(343, 30);
-            this.tbIDObject.TabIndex = 19;
+            this.tbIDObject.TabIndex = 2;
             // 
             // label2
             // 
@@ -277,7 +277,7 @@
             this.tbIDAction.SelectedText = "";
             this.tbIDAction.ShadowDecoration.Parent = this.tbIDAction;
             this.tbIDAction.Size = new System.Drawing.Size(343, 30);
-            this.tbIDAction.TabIndex = 17;
+            this.tbIDAction.TabIndex = 1;
             // 
             // label1
             // 
@@ -305,7 +305,7 @@
             this.bCancel.Name = "bCancel";
             this.bCancel.ShadowDecoration.Parent = this.bCancel;
             this.bCancel.Size = new System.Drawing.Size(343, 35);
-            this.bCancel.TabIndex = 26;
+            this.bCancel.TabIndex = 7;
             this.bCancel.Text = "Quay lại";
             this.bCancel.Click += new System.EventHandler(this.bCancel_Click);
             // 
@@ -325,7 +325,7 @@
             this.bFilt.Name = "bFilt";
             this.bFilt.ShadowDecoration.Parent = this.bFilt;
             this.bFilt.Size = new System.Drawing.Size(343, 35);
-            this.bFilt.TabIndex = 27;
+            this.bFilt.TabIndex = 6;
             this.bFilt.Text = "Lọc";
             // 
             // fActionHistory

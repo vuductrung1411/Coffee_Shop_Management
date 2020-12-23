@@ -211,6 +211,9 @@
   <data name="icon - Shop" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon - Shop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icon - Import Goods" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon - Import Goods.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Start1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Start1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -226,7 +229,7 @@
   <data name="GetOutOfFoodList" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GetOutOfFoodList.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon - Import Goods" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon - Import Goods.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Info Background1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Info Background1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

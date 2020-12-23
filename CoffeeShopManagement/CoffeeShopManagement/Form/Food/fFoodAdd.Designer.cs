@@ -35,7 +35,6 @@
             this.bCancel = new Guna.UI2.WinForms.Guna2Button();
             this.bOK = new Guna.UI2.WinForms.Guna2Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.tbPrice = new Guna.UI2.WinForms.Guna2TextBox();
             this.tbName = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -46,7 +45,11 @@
             this.label8 = new System.Windows.Forms.Label();
             this.tbUnit = new Guna.UI2.WinForms.Guna2TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.lNotificationFoodName = new System.Windows.Forms.Label();
+            this.lNotificationPrice = new System.Windows.Forms.Label();
+            this.nudPrice = new Guna.UI2.WinForms.Guna2NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPrice)).BeginInit();
             this.SuspendLayout();
             // 
             // lTitle
@@ -93,15 +96,17 @@
             this.bCancel.CheckedState.Parent = this.bCancel;
             this.bCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bCancel.CustomImages.Parent = this.bCancel;
+            this.bCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.bCancel.FillColor = System.Drawing.Color.Red;
             this.bCancel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bCancel.ForeColor = System.Drawing.SystemColors.Window;
+            this.bCancel.HoverState.BorderColor = System.Drawing.Color.Aqua;
             this.bCancel.HoverState.Parent = this.bCancel;
             this.bCancel.Location = new System.Drawing.Point(262, 287);
             this.bCancel.Name = "bCancel";
             this.bCancel.ShadowDecoration.Parent = this.bCancel;
             this.bCancel.Size = new System.Drawing.Size(200, 40);
-            this.bCancel.TabIndex = 21;
+            this.bCancel.TabIndex = 6;
             this.bCancel.Text = "Quay lại";
             this.bCancel.Click += new System.EventHandler(this.bCancel_Click);
             // 
@@ -116,13 +121,15 @@
             this.bOK.FillColor = System.Drawing.Color.Chocolate;
             this.bOK.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bOK.ForeColor = System.Drawing.Color.White;
+            this.bOK.HoverState.BorderColor = System.Drawing.Color.Aqua;
             this.bOK.HoverState.Parent = this.bOK;
             this.bOK.Location = new System.Drawing.Point(35, 287);
             this.bOK.Name = "bOK";
             this.bOK.ShadowDecoration.Parent = this.bOK;
             this.bOK.Size = new System.Drawing.Size(200, 40);
-            this.bOK.TabIndex = 20;
+            this.bOK.TabIndex = 5;
             this.bOK.Text = "Thêm";
+            this.bOK.Click += new System.EventHandler(this.bOK_Click);
             // 
             // label6
             // 
@@ -134,33 +141,6 @@
             this.label6.Size = new System.Drawing.Size(11, 13);
             this.label6.TabIndex = 19;
             this.label6.Text = "*";
-            // 
-            // tbPrice
-            // 
-            this.tbPrice.AutoRoundedCorners = true;
-            this.tbPrice.BackColor = System.Drawing.Color.Transparent;
-            this.tbPrice.BorderColor = System.Drawing.Color.Black;
-            this.tbPrice.BorderRadius = 17;
-            this.tbPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbPrice.DefaultText = "";
-            this.tbPrice.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tbPrice.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tbPrice.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbPrice.DisabledState.Parent = this.tbPrice;
-            this.tbPrice.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbPrice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbPrice.FocusedState.Parent = this.tbPrice;
-            this.tbPrice.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.tbPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbPrice.HoverState.Parent = this.tbPrice;
-            this.tbPrice.Location = new System.Drawing.Point(35, 143);
-            this.tbPrice.Name = "tbPrice";
-            this.tbPrice.PasswordChar = '\0';
-            this.tbPrice.PlaceholderText = "";
-            this.tbPrice.SelectedText = "";
-            this.tbPrice.ShadowDecoration.Parent = this.tbPrice;
-            this.tbPrice.Size = new System.Drawing.Size(427, 36);
-            this.tbPrice.TabIndex = 18;
             // 
             // tbName
             // 
@@ -177,17 +157,20 @@
             this.tbName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.tbName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbName.FocusedState.Parent = this.tbName;
-            this.tbName.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tbName.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.tbName.ForeColor = System.Drawing.Color.Black;
             this.tbName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbName.HoverState.Parent = this.tbName;
             this.tbName.Location = new System.Drawing.Point(35, 73);
+            this.tbName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbName.Name = "tbName";
             this.tbName.PasswordChar = '\0';
-            this.tbName.PlaceholderText = "";
+            this.tbName.PlaceholderText = "Tên món";
             this.tbName.SelectedText = "";
             this.tbName.ShadowDecoration.Parent = this.tbName;
             this.tbName.Size = new System.Drawing.Size(427, 36);
-            this.tbName.TabIndex = 17;
+            this.tbName.TabIndex = 1;
+            this.tbName.TextChanged += new System.EventHandler(this.tbName_TextChanged);
             // 
             // label2
             // 
@@ -235,17 +218,19 @@
             this.tbCountry.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.tbCountry.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbCountry.FocusedState.Parent = this.tbCountry;
-            this.tbCountry.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tbCountry.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.tbCountry.ForeColor = System.Drawing.Color.Black;
             this.tbCountry.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbCountry.HoverState.Parent = this.tbCountry;
             this.tbCountry.Location = new System.Drawing.Point(35, 213);
+            this.tbCountry.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbCountry.Name = "tbCountry";
             this.tbCountry.PasswordChar = '\0';
-            this.tbCountry.PlaceholderText = "";
+            this.tbCountry.PlaceholderText = "Nước sản xuất";
             this.tbCountry.SelectedText = "";
             this.tbCountry.ShadowDecoration.Parent = this.tbCountry;
             this.tbCountry.Size = new System.Drawing.Size(200, 36);
-            this.tbCountry.TabIndex = 26;
+            this.tbCountry.TabIndex = 3;
             // 
             // label4
             // 
@@ -294,17 +279,19 @@
             this.tbUnit.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.tbUnit.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbUnit.FocusedState.Parent = this.tbUnit;
-            this.tbUnit.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tbUnit.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.tbUnit.ForeColor = System.Drawing.Color.Black;
             this.tbUnit.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbUnit.HoverState.Parent = this.tbUnit;
             this.tbUnit.Location = new System.Drawing.Point(262, 213);
+            this.tbUnit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbUnit.Name = "tbUnit";
             this.tbUnit.PasswordChar = '\0';
-            this.tbUnit.PlaceholderText = "";
+            this.tbUnit.PlaceholderText = "Ví dụ: lít, cốc, đĩa,...";
             this.tbUnit.SelectedText = "";
             this.tbUnit.ShadowDecoration.Parent = this.tbUnit;
             this.tbUnit.Size = new System.Drawing.Size(200, 36);
-            this.tbUnit.TabIndex = 29;
+            this.tbUnit.TabIndex = 4;
             // 
             // label9
             // 
@@ -316,13 +303,75 @@
             this.label9.TabIndex = 28;
             this.label9.Text = "Đơn vị tính";
             // 
+            // lNotificationFoodName
+            // 
+            this.lNotificationFoodName.AutoSize = true;
+            this.lNotificationFoodName.BackColor = System.Drawing.Color.Transparent;
+            this.lNotificationFoodName.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.25F, System.Drawing.FontStyle.Underline);
+            this.lNotificationFoodName.ForeColor = System.Drawing.Color.Red;
+            this.lNotificationFoodName.Location = new System.Drawing.Point(36, 110);
+            this.lNotificationFoodName.Name = "lNotificationFoodName";
+            this.lNotificationFoodName.Size = new System.Drawing.Size(0, 12);
+            this.lNotificationFoodName.TabIndex = 31;
+            // 
+            // lNotificationPrice
+            // 
+            this.lNotificationPrice.AutoSize = true;
+            this.lNotificationPrice.BackColor = System.Drawing.Color.Transparent;
+            this.lNotificationPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lNotificationPrice.ForeColor = System.Drawing.Color.Red;
+            this.lNotificationPrice.Location = new System.Drawing.Point(32, 180);
+            this.lNotificationPrice.Name = "lNotificationPrice";
+            this.lNotificationPrice.Size = new System.Drawing.Size(0, 9);
+            this.lNotificationPrice.TabIndex = 32;
+            // 
+            // nudPrice
+            // 
+            this.nudPrice.AutoRoundedCorners = true;
+            this.nudPrice.BackColor = System.Drawing.Color.Transparent;
+            this.nudPrice.BorderColor = System.Drawing.Color.Black;
+            this.nudPrice.BorderRadius = 17;
+            this.nudPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.nudPrice.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.nudPrice.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.nudPrice.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.nudPrice.DisabledState.Parent = this.nudPrice;
+            this.nudPrice.DisabledState.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(177)))));
+            this.nudPrice.DisabledState.UpDownButtonForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(203)))), ((int)(((byte)(203)))));
+            this.nudPrice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.nudPrice.FocusedState.Parent = this.nudPrice;
+            this.nudPrice.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.nudPrice.ForeColor = System.Drawing.Color.Black;
+            this.nudPrice.Increment = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.nudPrice.Location = new System.Drawing.Point(35, 143);
+            this.nudPrice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.nudPrice.Maximum = new decimal(new int[] {
+            1410065408,
+            2,
+            0,
+            0});
+            this.nudPrice.Name = "nudPrice";
+            this.nudPrice.ShadowDecoration.Parent = this.nudPrice;
+            this.nudPrice.Size = new System.Drawing.Size(427, 36);
+            this.nudPrice.TabIndex = 2;
+            this.nudPrice.UseTransparentBackground = true;
+            // 
             // fFoodAdd
             // 
+            this.AcceptButton = this.bOK;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::CoffeeShopManagement.Properties.Resources.Small_Background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.CancelButton = this.bCancel;
             this.ClientSize = new System.Drawing.Size(734, 361);
+            this.Controls.Add(this.nudPrice);
+            this.Controls.Add(this.lNotificationPrice);
+            this.Controls.Add(this.lNotificationFoodName);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.tbUnit);
             this.Controls.Add(this.label9);
@@ -335,7 +384,6 @@
             this.Controls.Add(this.bCancel);
             this.Controls.Add(this.bOK);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.tbPrice);
             this.Controls.Add(this.tbName);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -346,6 +394,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Phần mềm quản lý quán cà phê";
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPrice)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -359,7 +408,6 @@
         private Guna.UI2.WinForms.Guna2Button bCancel;
         private Guna.UI2.WinForms.Guna2Button bOK;
         private System.Windows.Forms.Label label6;
-        private Guna.UI2.WinForms.Guna2TextBox tbPrice;
         private Guna.UI2.WinForms.Guna2TextBox tbName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
@@ -370,5 +418,8 @@
         private System.Windows.Forms.Label label8;
         private Guna.UI2.WinForms.Guna2TextBox tbUnit;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lNotificationFoodName;
+        private System.Windows.Forms.Label lNotificationPrice;
+        private Guna.UI2.WinForms.Guna2NumericUpDown nudPrice;
     }
 }

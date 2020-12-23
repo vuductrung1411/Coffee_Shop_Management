@@ -48,7 +48,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.tbNumberOfTableID = new Guna.UI2.WinForms.Guna2TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.dtpShopBirthDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.bCancel = new Guna.UI2.WinForms.Guna2Button();
@@ -90,7 +89,7 @@
             this.tbShopName.SelectedText = "";
             this.tbShopName.ShadowDecoration.Parent = this.tbShopName;
             this.tbShopName.Size = new System.Drawing.Size(259, 30);
-            this.tbShopName.TabIndex = 7;
+            this.tbShopName.TabIndex = 1;
             // 
             // label1
             // 
@@ -149,7 +148,8 @@
             this.tbShopSDT.SelectedText = "";
             this.tbShopSDT.ShadowDecoration.Parent = this.tbShopSDT;
             this.tbShopSDT.Size = new System.Drawing.Size(259, 30);
-            this.tbShopSDT.TabIndex = 13;
+            this.tbShopSDT.TabIndex = 2;
+            this.tbShopSDT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbShopSDT_KeyPress);
             // 
             // label3
             // 
@@ -197,7 +197,7 @@
             this.tbShopOwner.SelectedText = "";
             this.tbShopOwner.ShadowDecoration.Parent = this.tbShopOwner;
             this.tbShopOwner.Size = new System.Drawing.Size(259, 30);
-            this.tbShopOwner.TabIndex = 16;
+            this.tbShopOwner.TabIndex = 3;
             // 
             // label5
             // 
@@ -245,7 +245,7 @@
             this.tbShopAddress.SelectedText = "";
             this.tbShopAddress.ShadowDecoration.Parent = this.tbShopAddress;
             this.tbShopAddress.Size = new System.Drawing.Size(259, 30);
-            this.tbShopAddress.TabIndex = 19;
+            this.tbShopAddress.TabIndex = 4;
             // 
             // label8
             // 
@@ -282,7 +282,8 @@
             this.tbNumberOfChair.SelectedText = "";
             this.tbNumberOfChair.ShadowDecoration.Parent = this.tbNumberOfChair;
             this.tbNumberOfChair.Size = new System.Drawing.Size(259, 30);
-            this.tbNumberOfChair.TabIndex = 22;
+            this.tbNumberOfChair.TabIndex = 5;
+            this.tbNumberOfChair.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbNumberOfChair_KeyPress);
             // 
             // label10
             // 
@@ -319,7 +320,7 @@
             this.tbMaxCustomer.SelectedText = "";
             this.tbMaxCustomer.ShadowDecoration.Parent = this.tbMaxCustomer;
             this.tbMaxCustomer.Size = new System.Drawing.Size(259, 30);
-            this.tbMaxCustomer.TabIndex = 25;
+            this.tbMaxCustomer.TabIndex = 6;
             // 
             // label12
             // 
@@ -356,7 +357,8 @@
             this.tbNumberOfTableID.SelectedText = "";
             this.tbNumberOfTableID.ShadowDecoration.Parent = this.tbNumberOfTableID;
             this.tbNumberOfTableID.Size = new System.Drawing.Size(259, 30);
-            this.tbNumberOfTableID.TabIndex = 27;
+            this.tbNumberOfTableID.TabIndex = 7;
+            this.tbNumberOfTableID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbNumberOfTableID_KeyPress);
             // 
             // label9
             // 
@@ -367,17 +369,6 @@
             this.label9.Size = new System.Drawing.Size(57, 13);
             this.label9.TabIndex = 26;
             this.label9.Text = "Số bàn/ID";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.ForeColor = System.Drawing.Color.Red;
-            this.label11.Location = new System.Drawing.Point(464, 221);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(11, 13);
-            this.label11.TabIndex = 29;
-            this.label11.Text = "*";
             // 
             // label13
             // 
@@ -407,7 +398,7 @@
             this.dtpShopBirthDate.Name = "dtpShopBirthDate";
             this.dtpShopBirthDate.ShadowDecoration.Parent = this.dtpShopBirthDate;
             this.dtpShopBirthDate.Size = new System.Drawing.Size(259, 30);
-            this.dtpShopBirthDate.TabIndex = 30;
+            this.dtpShopBirthDate.TabIndex = 8;
             this.dtpShopBirthDate.Value = new System.DateTime(2020, 11, 27, 15, 37, 34, 137);
             // 
             // bCancel
@@ -426,7 +417,7 @@
             this.bCancel.Name = "bCancel";
             this.bCancel.ShadowDecoration.Parent = this.bCancel;
             this.bCancel.Size = new System.Drawing.Size(259, 35);
-            this.bCancel.TabIndex = 33;
+            this.bCancel.TabIndex = 10;
             this.bCancel.Text = "Quay lại";
             this.bCancel.Click += new System.EventHandler(this.bCancel_Click);
             // 
@@ -446,7 +437,7 @@
             this.bSave.Name = "bSave";
             this.bSave.ShadowDecoration.Parent = this.bSave;
             this.bSave.Size = new System.Drawing.Size(259, 35);
-            this.bSave.TabIndex = 32;
+            this.bSave.TabIndex = 9;
             this.bSave.Text = "Lưu";
             // 
             // fShopInfomation
@@ -459,7 +450,6 @@
             this.Controls.Add(this.bCancel);
             this.Controls.Add(this.bSave);
             this.Controls.Add(this.dtpShopBirthDate);
-            this.Controls.Add(this.label11);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.tbNumberOfTableID);
             this.Controls.Add(this.label9);
@@ -511,7 +501,6 @@
         private System.Windows.Forms.Label label12;
         private Guna.UI2.WinForms.Guna2TextBox tbNumberOfTableID;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label13;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtpShopBirthDate;
         private Guna.UI2.WinForms.Guna2Button bCancel;

@@ -81,7 +81,7 @@
             this.tbDevice.SelectedText = "";
             this.tbDevice.ShadowDecoration.Parent = this.tbDevice;
             this.tbDevice.Size = new System.Drawing.Size(263, 36);
-            this.tbDevice.TabIndex = 7;
+            this.tbDevice.TabIndex = 1;
             // 
             // label1
             // 
@@ -118,7 +118,7 @@
             this.tbDatabase.SelectedText = "";
             this.tbDatabase.ShadowDecoration.Parent = this.tbDatabase;
             this.tbDatabase.Size = new System.Drawing.Size(263, 36);
-            this.tbDatabase.TabIndex = 9;
+            this.tbDatabase.TabIndex = 2;
             // 
             // label2
             // 
@@ -155,7 +155,7 @@
             this.tbUsername.SelectedText = "";
             this.tbUsername.ShadowDecoration.Parent = this.tbUsername;
             this.tbUsername.Size = new System.Drawing.Size(263, 36);
-            this.tbUsername.TabIndex = 11;
+            this.tbUsername.TabIndex = 3;
             // 
             // label3
             // 
@@ -192,7 +192,7 @@
             this.tbPassword.SelectedText = "";
             this.tbPassword.ShadowDecoration.Parent = this.tbPassword;
             this.tbPassword.Size = new System.Drawing.Size(263, 36);
-            this.tbPassword.TabIndex = 13;
+            this.tbPassword.TabIndex = 4;
             // 
             // label4
             // 
@@ -263,7 +263,7 @@
             this.bCancel.Name = "bCancel";
             this.bCancel.ShadowDecoration.Parent = this.bCancel;
             this.bCancel.Size = new System.Drawing.Size(263, 40);
-            this.bCancel.TabIndex = 26;
+            this.bCancel.TabIndex = 6;
             this.bCancel.Text = "Quay lại";
             this.bCancel.Click += new System.EventHandler(this.bCancel_Click);
             // 
@@ -281,7 +281,7 @@
             this.bSave.Name = "bSave";
             this.bSave.ShadowDecoration.Parent = this.bSave;
             this.bSave.Size = new System.Drawing.Size(263, 40);
-            this.bSave.TabIndex = 25;
+            this.bSave.TabIndex = 5;
             this.bSave.Text = "Lưu";
             // 
             // fDatabaseChange

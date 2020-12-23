@@ -47,7 +47,7 @@ namespace CoffeeShopManagement
             //Application.Run(new fStockList());                          // Danh sách hàng đang lưu trữ trong kho
             #endregion
 
-            Application.Run(new fCustomerInfo());
+            Application.Run(new fCustomerAdd());
         }
     }
 }
