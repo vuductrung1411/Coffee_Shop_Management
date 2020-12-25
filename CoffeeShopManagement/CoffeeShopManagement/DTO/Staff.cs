@@ -10,11 +10,11 @@ namespace CoffeeShopManagement.DTO
     // Để tên Staff cho dễ hiểu, mất công để AccountInfo không hiểu
     public class Staff
     {
-        public string hoten, sdt, chucvu, cmnd, diachi, gioitinh;
+        public string hoten, sdt, chucvu, cmnd, diachi, gioitinh, tinhtrang;
         public int lvPosition, luong, id;
         public DateTime ngaysinh, ngayvaolam;
 
-        public Staff(int id, string hoten, string sdt, string chucvu, int lvposition, int luong, string cmnd, DateTime ngaysinh, string diachi, DateTime ngayvaolam, string gioitinh)
+        public Staff(int id, string hoten, string sdt, string chucvu, int lvposition, int luong, string cmnd, DateTime ngaysinh, string diachi, DateTime ngayvaolam, string gioitinh, string tinhtrang)
         {
             this.id = id;
             this.hoten = hoten;
@@ -27,6 +27,12 @@ namespace CoffeeShopManagement.DTO
             this.diachi = diachi;
             this.ngayvaolam = ngayvaolam;
             this.gioitinh = gioitinh;
+            this.tinhtrang = tinhtrang;
+        }
+
+        public Staff()
+        {
+
         }
     }
 }

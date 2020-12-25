@@ -44,6 +44,8 @@
             this.cbxShow1 = new System.Windows.Forms.CheckBox();
             this.cbxShow2 = new System.Windows.Forms.CheckBox();
             this.cbShow3 = new System.Windows.Forms.CheckBox();
+            this.lOldPassNotification = new System.Windows.Forms.Label();
+            this.lPasswordNotification = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lTitle
@@ -82,6 +84,8 @@
             this.tbConfirm.ShadowDecoration.Parent = this.tbConfirm;
             this.tbConfirm.Size = new System.Drawing.Size(612, 35);
             this.tbConfirm.TabIndex = 3;
+            this.tbConfirm.UseSystemPasswordChar = true;
+            this.tbConfirm.TextChanged += new System.EventHandler(this.tbConfirm_TextChanged);
             // 
             // label3
             // 
@@ -119,6 +123,7 @@
             this.tbNewPassword.ShadowDecoration.Parent = this.tbNewPassword;
             this.tbNewPassword.Size = new System.Drawing.Size(612, 35);
             this.tbNewPassword.TabIndex = 2;
+            this.tbNewPassword.UseSystemPasswordChar = true;
             // 
             // label2
             // 
@@ -156,6 +161,8 @@
             this.tbOldPassword.ShadowDecoration.Parent = this.tbOldPassword;
             this.tbOldPassword.Size = new System.Drawing.Size(612, 35);
             this.tbOldPassword.TabIndex = 1;
+            this.tbOldPassword.UseSystemPasswordChar = true;
+            this.tbOldPassword.TextChanged += new System.EventHandler(this.tbOldPassword_TextChanged);
             // 
             // label1
             // 
@@ -205,6 +212,7 @@
             this.bCancel.AutoRoundedCorners = true;
             this.bCancel.BackColor = System.Drawing.Color.Transparent;
             this.bCancel.BorderRadius = 19;
+            this.bCancel.BorderThickness = 1;
             this.bCancel.CheckedState.Parent = this.bCancel;
             this.bCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bCancel.CustomImages.Parent = this.bCancel;
@@ -225,6 +233,7 @@
             this.bConfirm.AutoRoundedCorners = true;
             this.bConfirm.BackColor = System.Drawing.Color.Transparent;
             this.bConfirm.BorderRadius = 19;
+            this.bConfirm.BorderThickness = 1;
             this.bConfirm.CheckedState.Parent = this.bConfirm;
             this.bConfirm.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bConfirm.CustomImages.Parent = this.bConfirm;
@@ -238,6 +247,7 @@
             this.bConfirm.Size = new System.Drawing.Size(211, 40);
             this.bConfirm.TabIndex = 4;
             this.bConfirm.Text = "Xác nhận";
+            this.bConfirm.Click += new System.EventHandler(this.bConfirm_Click);
             // 
             // cbxShow1
             // 
@@ -254,6 +264,7 @@
             this.cbxShow1.TabStop = false;
             this.cbxShow1.Text = "Hiển thị mật khẩu";
             this.cbxShow1.UseVisualStyleBackColor = false;
+            this.cbxShow1.CheckedChanged += new System.EventHandler(this.cbxShow1_CheckedChanged);
             // 
             // cbxShow2
             // 
@@ -270,6 +281,7 @@
             this.cbxShow2.TabStop = false;
             this.cbxShow2.Text = "Hiển thị mật khẩu";
             this.cbxShow2.UseVisualStyleBackColor = false;
+            this.cbxShow2.CheckedChanged += new System.EventHandler(this.cbxShow2_CheckedChanged);
             // 
             // cbShow3
             // 
@@ -286,6 +298,29 @@
             this.cbShow3.TabStop = false;
             this.cbShow3.Text = "Hiển thị mật khẩu";
             this.cbShow3.UseVisualStyleBackColor = false;
+            this.cbShow3.CheckedChanged += new System.EventHandler(this.cbShow3_CheckedChanged);
+            // 
+            // lOldPassNotification
+            // 
+            this.lOldPassNotification.AutoSize = true;
+            this.lOldPassNotification.BackColor = System.Drawing.Color.Transparent;
+            this.lOldPassNotification.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.lOldPassNotification.ForeColor = System.Drawing.Color.Red;
+            this.lOldPassNotification.Location = new System.Drawing.Point(67, 103);
+            this.lOldPassNotification.Name = "lOldPassNotification";
+            this.lOldPassNotification.Size = new System.Drawing.Size(0, 13);
+            this.lOldPassNotification.TabIndex = 27;
+            // 
+            // lPasswordNotification
+            // 
+            this.lPasswordNotification.AutoSize = true;
+            this.lPasswordNotification.BackColor = System.Drawing.Color.Transparent;
+            this.lPasswordNotification.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.lPasswordNotification.ForeColor = System.Drawing.Color.Red;
+            this.lPasswordNotification.Location = new System.Drawing.Point(67, 264);
+            this.lPasswordNotification.Name = "lPasswordNotification";
+            this.lPasswordNotification.Size = new System.Drawing.Size(0, 13);
+            this.lPasswordNotification.TabIndex = 28;
             // 
             // fPasswordChange
             // 
@@ -294,6 +329,8 @@
             this.BackgroundImage = global::CoffeeShopManagement.Properties.Resources.Small_Background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(734, 361);
+            this.Controls.Add(this.lPasswordNotification);
+            this.Controls.Add(this.lOldPassNotification);
             this.Controls.Add(this.cbShow3);
             this.Controls.Add(this.cbxShow2);
             this.Controls.Add(this.cbxShow1);
@@ -337,5 +374,7 @@
         private System.Windows.Forms.CheckBox cbxShow1;
         private System.Windows.Forms.CheckBox cbxShow2;
         private System.Windows.Forms.CheckBox cbShow3;
+        private System.Windows.Forms.Label lOldPassNotification;
+        private System.Windows.Forms.Label lPasswordNotification;
     }
 }

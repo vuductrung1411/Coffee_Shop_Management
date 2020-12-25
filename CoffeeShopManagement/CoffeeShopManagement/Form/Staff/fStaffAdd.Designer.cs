@@ -102,7 +102,7 @@
             this.tbName.HoverState.Parent = this.tbName;
             this.tbName.IconLeftSize = new System.Drawing.Size(30, 30);
             this.tbName.Location = new System.Drawing.Point(65, 71);
-            this.tbName.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tbName.Margin = new System.Windows.Forms.Padding(5);
             this.tbName.Name = "tbName";
             this.tbName.PasswordChar = '\0';
             this.tbName.PlaceholderForeColor = System.Drawing.Color.Gray;
@@ -157,7 +157,7 @@
             this.tbSDT.HoverState.Parent = this.tbSDT;
             this.tbSDT.IconLeftSize = new System.Drawing.Size(30, 30);
             this.tbSDT.Location = new System.Drawing.Point(65, 151);
-            this.tbSDT.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tbSDT.Margin = new System.Windows.Forms.Padding(5);
             this.tbSDT.Name = "tbSDT";
             this.tbSDT.PasswordChar = '\0';
             this.tbSDT.PlaceholderForeColor = System.Drawing.Color.Gray;
@@ -317,7 +317,7 @@
             this.tbCMND.HoverState.Parent = this.tbCMND;
             this.tbCMND.IconLeftSize = new System.Drawing.Size(30, 30);
             this.tbCMND.Location = new System.Drawing.Point(65, 391);
-            this.tbCMND.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tbCMND.Margin = new System.Windows.Forms.Padding(5);
             this.tbCMND.Name = "tbCMND";
             this.tbCMND.PasswordChar = '\0';
             this.tbCMND.PlaceholderForeColor = System.Drawing.Color.Gray;
@@ -501,7 +501,7 @@
             this.tbID.HoverState.Parent = this.tbID;
             this.tbID.IconLeftSize = new System.Drawing.Size(30, 30);
             this.tbID.Location = new System.Drawing.Point(429, 392);
-            this.tbID.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tbID.Margin = new System.Windows.Forms.Padding(5);
             this.tbID.Name = "tbID";
             this.tbID.PasswordChar = '\0';
             this.tbID.PlaceholderForeColor = System.Drawing.Color.Gray;
@@ -557,7 +557,7 @@
             this.tbAddress.HoverState.Parent = this.tbAddress;
             this.tbAddress.IconLeftSize = new System.Drawing.Size(30, 30);
             this.tbAddress.Location = new System.Drawing.Point(429, 312);
-            this.tbAddress.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tbAddress.Margin = new System.Windows.Forms.Padding(5);
             this.tbAddress.Name = "tbAddress";
             this.tbAddress.PasswordChar = '\0';
             this.tbAddress.PlaceholderForeColor = System.Drawing.Color.Gray;
@@ -596,6 +596,7 @@
             this.bOK.AutoRoundedCorners = true;
             this.bOK.BackColor = System.Drawing.Color.Transparent;
             this.bOK.BorderRadius = 21;
+            this.bOK.BorderThickness = 1;
             this.bOK.CheckedState.Parent = this.bOK;
             this.bOK.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bOK.CustomImages.Parent = this.bOK;
@@ -615,6 +616,7 @@
             this.bCancel.AutoRoundedCorners = true;
             this.bCancel.BackColor = System.Drawing.Color.Transparent;
             this.bCancel.BorderRadius = 21;
+            this.bCancel.BorderThickness = 1;
             this.bCancel.CheckedState.Parent = this.bCancel;
             this.bCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bCancel.CustomImages.Parent = this.bCancel;

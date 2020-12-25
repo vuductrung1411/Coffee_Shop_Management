@@ -16,50 +16,24 @@ namespace CoffeeShopManagement
 {
     public partial class fStart : Form
     {
-        #region Link
-        private string QuotesLink = @".\Information\Quotes about Coffee.txt";
-        #endregion
 
         private int percent = 0;
-        private string[] arrQuotes;
-        private int nQuotes;
 
         public fStart()
-        {
-            // đọc thông tin cần thiết vào
-            Infomation.Instance.LoadInfo();
-
+        { 
             InitializeComponent();
-            
-            ReadQuotes();
 
-            this.timer.Interval = 100; // 0.1miligiay cho 1%
+            this.timer.Interval = 50; // 0.05ms cho 1%
             this.pbProcessStart.Value = 0;
             PrintQuotes();
             this.timer.Start();
-        }
-        
-        // In hoa chuỗi
-        private string UpperString(string s)
-        {
-            return s.ToUpper(); 
-        }
-
-        // Đọc dữ liệu từ file Quotes
-        private void ReadQuotes()
-        {
-            arrQuotes = File.ReadAllLines(this.QuotesLink);
-
-            this.nQuotes = arrQuotes.Count();
-
-            lText.Text = this.nQuotes.ToString();
         }
 
         // Đổi và in câu quotes khác
         private void PrintQuotes()
         {
             var rand = new Random();
-            lText.Text = arrQuotes[rand.Next(0, this.nQuotes)];
+            lText.Text = ShopInfo.Instance.QuotesList[rand.Next(0, ShopInfo.Instance.nQuotes)];
         }
 
         private void timer_Tick(object sender, EventArgs e)
@@ -88,8 +62,8 @@ namespace CoffeeShopManagement
                 case 50:
                     this.BackgroundImage = Properties.Resources.Start3;
 
-                    this.lShopName2.Text = UpperString(Infomation.Instance.shopName);
-                    this.lSlogan2.Text = Infomation.Instance.shopSlogan;
+                    this.lShopName2.Text = ShopInfo.Instance.tenquan.ToUpper();
+                    this.lSlogan2.Text = ShopInfo.Instance.slogan;
 
                     this.lText.ForeColor = Color.White;
                     this.pbProcessStart.Value = 50;
@@ -101,9 +75,10 @@ namespace CoffeeShopManagement
                 case 75:
                     this.BackgroundImage = Properties.Resources.Start4;
 
-                    this.lShopOwner.Text = UpperString(Infomation.Instance.shopOwner);
-                    this.lShopName1.Text = UpperString(Infomation.Instance.shopName);
-                    this.lSlogan1.Text = UpperString(Infomation.Instance.shopSlogan);
+                    this.lShopOwner.Text = ShopInfo.Instance.tenchuquan.ToUpper();
+                    this.lShopName1.Text = ShopInfo.Instance.tenquan.ToUpper();
+                    this.lSlogan1.Text = ShopInfo.Instance.slogan.ToUpper();
+
                     this.lShopName2.Text = "";
                     this.lSlogan2.Text = "";
 

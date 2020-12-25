@@ -10,11 +10,11 @@ namespace CoffeeShopManagement.DTO
     {
         //@hoten, @sdt, @chucvu, @lvposition, @luong, @cmnd, @ngaysinh, @diachi, @ngvl, @gioitinh
 
-        public string hoten, sdt, chucvu, cmnd, diachi, gioitinh;
+        public string hoten, sdt, chucvu, cmnd, diachi, gioitinh, tinhtrang;
         public int lvPosition, luong, id;
         public DateTime ngaysinh, ngayvaolam;
 
-        public AccountInfo(string hoten, string sdt, string chucvu, int lvposition, int luong, string cmnd, DateTime ngaysinh, string diachi, DateTime ngayvaolam, string gioitinh, int id = 0 )
+        public AccountInfo(string hoten, string sdt, string chucvu, int lvposition, int luong, string cmnd, DateTime ngaysinh, string diachi, DateTime ngayvaolam, string gioitinh, int id = 0, string tinhtrang = "Đang làm việc" )
         {
             this.hoten = hoten;
             this.sdt = sdt;
@@ -27,6 +27,7 @@ namespace CoffeeShopManagement.DTO
             this.ngayvaolam = ngayvaolam;
             this.gioitinh = gioitinh;
             this.id = id;
+            this.tinhtrang = tinhtrang;
         }
     }
 }

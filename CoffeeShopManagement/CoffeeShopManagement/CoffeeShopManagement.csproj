@@ -33,12 +33,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Guna.UI2, Version=2.0.1.2, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Guna.UI2.WinForms.2.0.1.2\lib\net40\Guna.UI2.dll</HintPath>
+    <Reference Include="Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\Bin\PcWonderland.com_Guna_UI_Framework_Ultimate_2\PcWonderland.com_Guna_UI_Framework_Ultimate_2\Guna UI Framework Ultimate v2.0.0.1 Lib-Master\Guna.UI2 WinForms\.net 4.0\Guna.UI2.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -64,8 +67,9 @@
     <Compile Include="DTO\Customer.cs" />
     <Compile Include="DTO\Discount.cs" />
     <Compile Include="DTO\Food.cs" />
-    <Compile Include="DTO\Infomation.cs" />
+    <Compile Include="DTO\ShopInfo.cs" />
     <Compile Include="DTO\Staff.cs" />
+    <Compile Include="DTO\Stock.cs" />
     <Compile Include="Form\Account\fAccountAdd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -402,9 +406,6 @@
     <None Include="Resources\icon - Logout.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Sell.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Customer Avatar %28Demo%29 - Boy.png" />
   </ItemGroup>
   <ItemGroup>
@@ -430,6 +431,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Info Background1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sell.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon - Plus.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

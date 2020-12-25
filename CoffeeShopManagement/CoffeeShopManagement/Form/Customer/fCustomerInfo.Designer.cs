@@ -58,7 +58,6 @@
             this.bSave = new Guna.UI2.WinForms.Guna2Button();
             this.bCancel = new Guna.UI2.WinForms.Guna2Button();
             this.cbMember = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.bEdit = new Guna.UI2.WinForms.Guna2Button();
             this.lNotificationSDTSearch = new System.Windows.Forms.Label();
             this.pbAvatar = new Guna.UI2.WinForms.Guna2PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
@@ -148,7 +147,7 @@
             this.tbSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.tbSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbSearch.FocusedState.Parent = this.tbSearch;
-            this.tbSearch.Font = new System.Drawing.Font("Segoe UI", 20.75F);
+            this.tbSearch.Font = new System.Drawing.Font("Segoe UI", 16.75F);
             this.tbSearch.ForeColor = System.Drawing.Color.Black;
             this.tbSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbSearch.HoverState.Parent = this.tbSearch;
@@ -192,7 +191,6 @@
             // 
             this.bSearch.AutoRoundedCorners = true;
             this.bSearch.BackColor = System.Drawing.Color.Transparent;
-            this.bSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.bSearch.BorderRadius = 28;
             this.bSearch.BorderThickness = 1;
             this.bSearch.CheckedState.Parent = this.bSearch;
@@ -311,6 +309,7 @@
             this.tbID.Name = "tbID";
             this.tbID.PasswordChar = '\0';
             this.tbID.PlaceholderText = "Mã khách hàng";
+            this.tbID.ReadOnly = true;
             this.tbID.SelectedText = "";
             this.tbID.ShadowDecoration.Parent = this.tbID;
             this.tbID.Size = new System.Drawing.Size(318, 36);
@@ -376,6 +375,7 @@
             this.tbAge.Name = "tbAge";
             this.tbAge.PasswordChar = '\0';
             this.tbAge.PlaceholderText = "Tuổi khách hàng";
+            this.tbAge.ReadOnly = true;
             this.tbAge.SelectedText = "";
             this.tbAge.ShadowDecoration.Parent = this.tbAge;
             this.tbAge.Size = new System.Drawing.Size(318, 36);
@@ -465,6 +465,7 @@
             this.tbFavoriteFood.Name = "tbFavoriteFood";
             this.tbFavoriteFood.PasswordChar = '\0';
             this.tbFavoriteFood.PlaceholderText = "Món khoái khẩu của khách hàng";
+            this.tbFavoriteFood.ReadOnly = true;
             this.tbFavoriteFood.SelectedText = "";
             this.tbFavoriteFood.ShadowDecoration.Parent = this.tbFavoriteFood;
             this.tbFavoriteFood.Size = new System.Drawing.Size(318, 36);
@@ -506,6 +507,7 @@
             this.tbNumberOfVisit.Name = "tbNumberOfVisit";
             this.tbNumberOfVisit.PasswordChar = '\0';
             this.tbNumberOfVisit.PlaceholderText = "Số lần tới quán của khách hàng";
+            this.tbNumberOfVisit.ReadOnly = true;
             this.tbNumberOfVisit.SelectedText = "";
             this.tbNumberOfVisit.ShadowDecoration.Parent = this.tbNumberOfVisit;
             this.tbNumberOfVisit.Size = new System.Drawing.Size(318, 36);
@@ -547,6 +549,7 @@
             this.tbTurnOver.Name = "tbTurnOver";
             this.tbTurnOver.PasswordChar = '\0';
             this.tbTurnOver.PlaceholderText = "Tổng doanh thu từ khách hàng này";
+            this.tbTurnOver.ReadOnly = true;
             this.tbTurnOver.SelectedText = "";
             this.tbTurnOver.ShadowDecoration.Parent = this.tbTurnOver;
             this.tbTurnOver.Size = new System.Drawing.Size(318, 36);
@@ -557,6 +560,7 @@
             this.bSave.AutoRoundedCorners = true;
             this.bSave.BackColor = System.Drawing.Color.Transparent;
             this.bSave.BorderRadius = 28;
+            this.bSave.BorderThickness = 1;
             this.bSave.CheckedState.Parent = this.bSave;
             this.bSave.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bSave.CustomImages.Parent = this.bSave;
@@ -571,12 +575,14 @@
             this.bSave.Size = new System.Drawing.Size(233, 58);
             this.bSave.TabIndex = 43;
             this.bSave.Text = "Lưu";
+            this.bSave.Click += new System.EventHandler(this.bSave_Click);
             // 
             // bCancel
             // 
             this.bCancel.AutoRoundedCorners = true;
             this.bCancel.BackColor = System.Drawing.Color.Transparent;
             this.bCancel.BorderRadius = 28;
+            this.bCancel.BorderThickness = 1;
             this.bCancel.CheckedState.Parent = this.bCancel;
             this.bCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bCancel.CustomImages.Parent = this.bCancel;
@@ -620,27 +626,6 @@
             this.cbMember.Size = new System.Drawing.Size(318, 36);
             this.cbMember.TabIndex = 45;
             // 
-            // bEdit
-            // 
-            this.bEdit.AutoRoundedCorners = true;
-            this.bEdit.BackColor = System.Drawing.Color.Transparent;
-            this.bEdit.BorderColor = System.Drawing.Color.Red;
-            this.bEdit.BorderRadius = 17;
-            this.bEdit.BorderThickness = 1;
-            this.bEdit.CheckedState.Parent = this.bEdit;
-            this.bEdit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bEdit.CustomImages.Parent = this.bEdit;
-            this.bEdit.FillColor = System.Drawing.Color.Transparent;
-            this.bEdit.Font = new System.Drawing.Font("Segoe UI", 12.25F);
-            this.bEdit.ForeColor = System.Drawing.Color.Red;
-            this.bEdit.HoverState.Parent = this.bEdit;
-            this.bEdit.Location = new System.Drawing.Point(1176, 422);
-            this.bEdit.Name = "bEdit";
-            this.bEdit.ShadowDecoration.Parent = this.bEdit;
-            this.bEdit.Size = new System.Drawing.Size(233, 37);
-            this.bEdit.TabIndex = 84;
-            this.bEdit.Text = "Chỉnh sửa thông tin";
-            // 
             // lNotificationSDTSearch
             // 
             this.lNotificationSDTSearch.AutoSize = true;
@@ -676,7 +661,6 @@
             this.CancelButton = this.bCancel;
             this.ClientSize = new System.Drawing.Size(1484, 761);
             this.Controls.Add(this.lNotificationSDTSearch);
-            this.Controls.Add(this.bEdit);
             this.Controls.Add(this.cbMember);
             this.Controls.Add(this.bCancel);
             this.Controls.Add(this.bSave);
@@ -750,7 +734,6 @@
         private Guna.UI2.WinForms.Guna2Button bSave;
         private Guna.UI2.WinForms.Guna2Button bCancel;
         private Guna.UI2.WinForms.Guna2ComboBox cbMember;
-        private Guna.UI2.WinForms.Guna2Button bEdit;
         private System.Windows.Forms.Label lNotificationSDTSearch;
     }
 }

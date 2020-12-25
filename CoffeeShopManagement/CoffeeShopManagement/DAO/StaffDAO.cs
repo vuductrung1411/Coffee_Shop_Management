@@ -21,10 +21,30 @@ namespace CoffeeShopManagement.DAO
 
         private StaffDAO() { }
 
-        // Danh sách nhân viên
+        // Danh sách nhân viên đang làm việc
         public DataTable LoadStaffList()
         {
-            string query = "SELECT * FROM ACCOUNTINFO WHERE LVPOSITION < 2";
+            string query = "SELECT * FROM ACCOUNTINFO WHERE LVPOSITION = 0 AND TINHTRANG = N'Đang làm việc'";
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            return data;
+        }
+
+        // Danh sách nhân viên đã nghỉ việc
+        public DataTable LoadLayOffStaffList()
+        {
+            string query = "SELECT * FROM ACCOUNTINFO WHERE LVPOSITION = 0 AND TINHTRANG = N'Đã nghỉ việc'";
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            return data;
+        }
+
+        // Danh sách tài khoản Addmin
+        public DataTable LoadAdminList()
+        {
+            string query = "SELECT * FROM ACCOUNTINFO WHERE LVPOSITION = 1";
 
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
 
@@ -59,8 +79,9 @@ namespace CoffeeShopManagement.DAO
             string DIACHI = row["DIACHI"].ToString();
             DateTime NGAYVAOLAM = (DateTime)row["NGVL"];
             string GIOITINH = row["GIOITINH"].ToString();
+            string TINHTRANG = row["TINHTRANG"].ToString();
 
-            Staff staff = new Staff(ID, HOTEN, SDT, CHUCVU, LEVELPOSITION, LUONG, CMND, NGAYSINH, DIACHI, NGAYVAOLAM, GIOITINH);
+            Staff staff = new Staff(ID, HOTEN, SDT, CHUCVU, LEVELPOSITION, LUONG, CMND, NGAYSINH, DIACHI, NGAYVAOLAM, GIOITINH, TINHTRANG);
 
             return staff;
         }

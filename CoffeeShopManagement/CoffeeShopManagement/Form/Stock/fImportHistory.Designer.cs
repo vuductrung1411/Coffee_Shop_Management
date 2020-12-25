@@ -150,7 +150,7 @@
             this.tbName.HoverState.Parent = this.tbName;
             this.tbName.IconLeftSize = new System.Drawing.Size(30, 30);
             this.tbName.Location = new System.Drawing.Point(1147, 83);
-            this.tbName.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tbName.Margin = new System.Windows.Forms.Padding(5);
             this.tbName.Name = "tbName";
             this.tbName.PasswordChar = '\0';
             this.tbName.PlaceholderForeColor = System.Drawing.Color.Gray;
@@ -193,7 +193,7 @@
             this.tbPrice.HoverState.Parent = this.tbPrice;
             this.tbPrice.IconLeftSize = new System.Drawing.Size(30, 30);
             this.tbPrice.Location = new System.Drawing.Point(1147, 152);
-            this.tbPrice.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tbPrice.Margin = new System.Windows.Forms.Padding(5);
             this.tbPrice.Name = "tbPrice";
             this.tbPrice.PasswordChar = '\0';
             this.tbPrice.PlaceholderForeColor = System.Drawing.Color.Gray;
@@ -236,7 +236,7 @@
             this.tbSL.HoverState.Parent = this.tbSL;
             this.tbSL.IconLeftSize = new System.Drawing.Size(30, 30);
             this.tbSL.Location = new System.Drawing.Point(1147, 218);
-            this.tbSL.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tbSL.Margin = new System.Windows.Forms.Padding(5);
             this.tbSL.Name = "tbSL";
             this.tbSL.PasswordChar = '\0';
             this.tbSL.PlaceholderForeColor = System.Drawing.Color.Gray;
@@ -279,7 +279,7 @@
             this.tbCountry.HoverState.Parent = this.tbCountry;
             this.tbCountry.IconLeftSize = new System.Drawing.Size(30, 30);
             this.tbCountry.Location = new System.Drawing.Point(1147, 291);
-            this.tbCountry.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tbCountry.Margin = new System.Windows.Forms.Padding(5);
             this.tbCountry.Name = "tbCountry";
             this.tbCountry.PasswordChar = '\0';
             this.tbCountry.PlaceholderForeColor = System.Drawing.Color.Gray;
@@ -322,7 +322,7 @@
             this.tbProvider.HoverState.Parent = this.tbProvider;
             this.tbProvider.IconLeftSize = new System.Drawing.Size(30, 30);
             this.tbProvider.Location = new System.Drawing.Point(1147, 368);
-            this.tbProvider.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tbProvider.Margin = new System.Windows.Forms.Padding(5);
             this.tbProvider.Name = "tbProvider";
             this.tbProvider.PasswordChar = '\0';
             this.tbProvider.PlaceholderForeColor = System.Drawing.Color.Gray;
@@ -348,6 +348,7 @@
             this.bCancel.AutoRoundedCorners = true;
             this.bCancel.BackColor = System.Drawing.Color.Transparent;
             this.bCancel.BorderRadius = 20;
+            this.bCancel.BorderThickness = 1;
             this.bCancel.CheckedState.Parent = this.bCancel;
             this.bCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bCancel.CustomImages.Parent = this.bCancel;

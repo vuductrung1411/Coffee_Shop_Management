@@ -58,7 +58,7 @@ namespace CoffeeShopManagement.DAO
         {
             string query = "EXEC USP_CreateNewCustomer @name , @sdt , @gioitinh , @ngaysinh";
 
-            int tmp = DataProvider.Instance.ExecuteNonQuery(query, new object[] { hoten, sdt, gioitinh, ngaysinh.ToShortDateString() });
+            int tmp = DataProvider.Instance.ExecuteNonQuery(query, new object[] { hoten, sdt, gioitinh, ngaysinh });
         }
     
         // Lấy ra thông tin khách hàng thông qua SDT
@@ -79,6 +79,17 @@ namespace CoffeeShopManagement.DAO
             Customer customer = new Customer(ID, SDT, NGAYSINH, HOTEN, GIOITINH);
 
             return customer;
+        }
+
+        // Update thông tin của khách hàng
+        public void UpdateCustomerInfo(Customer cus)
+        {
+            string query = "EXEC USP_UpdateCustomerInfo @id , @hoten , @sdt , @gioitinh , @ngaysinh ";
+
+            int tmp = DataProvider.Instance.ExecuteNonQuery(query, new object[]
+            {
+                cus.id, cus.hoten, cus.sdt, cus.gioitinh, cus.ngaysinh
+            });
         }
     }
 }

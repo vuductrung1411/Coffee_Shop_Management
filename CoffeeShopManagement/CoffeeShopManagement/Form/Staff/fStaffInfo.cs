@@ -1,5 +1,6 @@
 ﻿using CoffeeShopManagement.DAO;
 using CoffeeShopManagement.DTO;
+using QuanLyQuanCafe.DAO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,7 +15,13 @@ namespace CoffeeShopManagement
 {
     public partial class fStaffInfo : Form
     {
-        Staff staff;
+        Staff staff; // Thông tin của nhân viên đang hiển thị trên màn hình
+
+        AccountInfo account; // Thông tin của người đang đăng nhập vào phần mềm
+
+        bool InfoChanged = false; // false: không thay đổi gì thông tin, true: có thay đổi
+
+        bool isAdmin = true; // true: Chủ quán, false: Nhân viên 
 
         public fStaffInfo(AccountInfo info = null)
         {
@@ -26,6 +33,11 @@ namespace CoffeeShopManagement
             {
                 this.tbSearch.Text = info.sdt;
                 this.bSearch.PerformClick();
+
+                this.account = info;
+
+                if (this.account.lvPosition == 0)
+                    isAdmin = false;
             }
         }
 
@@ -33,11 +45,10 @@ namespace CoffeeShopManagement
         #region METHODS
         void LoadPositionList()
         {
-            string[] arrPositionList = Infomation.Instance.LoadPositionList();
-            foreach (string item in arrPositionList)
+            for (int i = 0; i < ShopInfo.Instance.nPosition; i++)
             {
-                this.cbPosition.Items.Add(item);
-            }
+                this.cbPosition.Items.Add(ShopInfo.Instance.PositionList[i]);
+            }    
 
             this.cbPosition.Items.Add("ADMIN");
         }
@@ -57,12 +68,20 @@ namespace CoffeeShopManagement
 
         private void bCancel_Click(object sender, EventArgs e)
         {
+            //if (this.InfoChanged == true)
+            //{
+            //    if (MessageBox.Show("Bạn vừa thay đổi thông tin.\nBạn có muốn lưu thay đổi không?", "LƯU THAY ĐỔI", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            //    {
+            //        this.bSave.PerformClick();
+            //    }
+            //}
+
             this.Close();
         }
 
         private void bChangePassword_Click_1(object sender, EventArgs e)
         {
-            fPasswordChange f = new fPasswordChange();
+            fPasswordChange f = new fPasswordChange(account);
             f.ShowDialog();
         }
 
@@ -129,14 +148,12 @@ namespace CoffeeShopManagement
             this.tbAddress.Text = staff.diachi;
             this.nudSalary.Value = (int)staff.luong;
             this.tbCMND.Text = staff.cmnd;
+            this.tbStatus.Text = staff.tinhtrang;
 
             // Tính toán và in ra những thông tin còn lại
             this.tbAge.Text = (DateTime.Now.Year - this.dtpBirthDate.Value.Year).ToString();
             this.tbTimeWorking.Text = (DateTime.Now - this.dtpStartWorking.Value).Days.ToString() + " ngày";
         }
-
-
-        #endregion
 
         private void tbSDT_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -155,5 +172,143 @@ namespace CoffeeShopManagement
                 e.Handled = true;
             }
         }
+
+        private void lUpload_Click(object sender, EventArgs e)
+        {
+            this.InfoChanged = true;
+        }
+
+        private void tbName_TextChanged(object sender, EventArgs e)
+        {
+            this.InfoChanged = true;
+        }
+
+        private void tbSDT_TextChanged(object sender, EventArgs e)
+        {
+            this.InfoChanged = true;
+        }
+
+        private void tbID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbPosition_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.InfoChanged = true;
+        }
+
+        private void dtpStartWorking_ValueChanged(object sender, EventArgs e)
+        {
+            this.tbTimeWorking.Text = (DateTime.Today - this.dtpStartWorking.Value).Days.ToString() + " ngày";
+            this.InfoChanged = true;
+        }
+
+        private void cbGender_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.InfoChanged = true;
+        }
+
+        private void dtpBirthDate_ValueChanged(object sender, EventArgs e)
+        {
+            this.InfoChanged = true;
+            this.tbAge.Text = (DateTime.Today.Year - this.dtpBirthDate.Value.Year).ToString();
+        }
+
+        private void tbAddress_TextChanged(object sender, EventArgs e)
+        {
+            this.InfoChanged = true;
+        }
+
+        private void nudSalary_ValueChanged(object sender, EventArgs e)
+        {
+            this.InfoChanged = true;
+        }
+
+        private void tbCMND_TextChanged(object sender, EventArgs e)
+        {
+            this.InfoChanged = true;
+        }
+
+        private void bSave_Click(object sender, EventArgs e)
+        {
+            this.InfoChanged = false;
+
+            Staff newInfoStaff = new Staff();
+
+            // Trường hợp là nhân viên tự thay thông tin
+            newInfoStaff.hoten = this.tbName.Text;
+            newInfoStaff.sdt = this.tbSDT.Text;
+            newInfoStaff.gioitinh = this.cbGender.Text;
+            newInfoStaff.ngaysinh = this.dtpBirthDate.Value;
+            newInfoStaff.diachi = this.tbAddress.Text;
+            newInfoStaff.cmnd = this.tbCMND.Text;
+
+            // Trường hợp chủ quán thay đổi thông tin
+            newInfoStaff.chucvu = this.cbPosition.Text;
+            newInfoStaff.ngayvaolam = this.dtpStartWorking.Value;
+            newInfoStaff.luong = Convert.ToInt32(this.nudSalary.Value);
+
+            // Lấy ra ID
+            newInfoStaff.id = Int32.Parse(this.tbID.Text);
+
+            // Thực hiện Update
+            AccountDAO.Instance.UpdateAccountInfo(newInfoStaff);
+
+            MessageBox.Show("Thay đổi thông tin thành công", "THÀNH CÔNG", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void cbPosition_MouseClick(object sender, MouseEventArgs e)
+        {
+            // Nếu là nhân viên thì không được thay đổi thông tin này
+            if (isAdmin == false)
+            {
+                MessageBox.Show("Không được phép thay đổi thông tin này");
+            }
+            else
+            {
+                // Nếu là chủ quán thì phải mặc định là ADMIN
+                if (staff.id == Int32.Parse(this.tbID.Text))
+                {
+                    MessageBox.Show("Không được phép thay đổi thông tin này");
+                }
+            }
+        }
+
+        private void bLayOff_Click(object sender, EventArgs e)
+        {
+            // Nếu là nhân viên tự bấm thì bỏ qua
+            if (this.account.lvPosition == 0)
+            {
+                MessageBox.Show("Bạn không có quyền tự sa thải!\nLiên hệ với chủ quán để được nghỉ việc!", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Nếu là chủ quán thì thay đổi TINHTRANG = "Đã nghỉ việc"
+            // Tuy nhiên chủ quán cũng không được "tự hủy" :))
+            if (this.account.id == Int32.Parse(this.tbID.Text))
+            {
+                MessageBox.Show("Không thể xóa tài khoản của chủ quán!", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            // Chủ quán sa thải nhân viên
+            if (MessageBox.Show("Bạn thực sự muốn sa thải nhân viên này?", "THÔNG BÁO", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                AccountDAO.Instance.LayOffStaffByID(Int32.Parse(this.tbID.Text));
+
+                MessageBox.Show("Đã sa thải thành công", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                // Load lại thông tin
+                this.tbSearch.Text = this.tbSDT.Text;
+                this.bSearch.PerformClick();
+            }
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        #endregion
     }
 }

@@ -253,6 +253,7 @@
             this.bCancel.AutoRoundedCorners = true;
             this.bCancel.BackColor = System.Drawing.Color.Transparent;
             this.bCancel.BorderRadius = 19;
+            this.bCancel.BorderThickness = 1;
             this.bCancel.CheckedState.Parent = this.bCancel;
             this.bCancel.CustomImages.Parent = this.bCancel;
             this.bCancel.FillColor = System.Drawing.Color.Red;
@@ -272,6 +273,7 @@
             this.bSave.AutoRoundedCorners = true;
             this.bSave.BackColor = System.Drawing.Color.Transparent;
             this.bSave.BorderRadius = 19;
+            this.bSave.BorderThickness = 1;
             this.bSave.CheckedState.Parent = this.bSave;
             this.bSave.CustomImages.Parent = this.bSave;
             this.bSave.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

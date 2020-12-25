@@ -11,7 +11,9 @@ CREATE PROC USP_Login
 @userName varchar(50), @passWord varchar(200)
 AS
 BEGIN
-	SELECT * FROM ACCOUNT WHERE USERNAME = @userName AND PASSWORD = @passWord
+	SELECT * 
+	FROM ACCOUNT acc JOIN ACCOUNTINFO accinfo ON acc.ID = accinfo.ID
+	WHERE acc.USERNAME = @userName AND acc.PASSWORD = @passWord AND accinfo.TINHTRANG = N'Đang làm việc'
 END
 GO
 
@@ -80,7 +82,7 @@ GO
 
 -- Thêm khách hàng mới
 CREATE PROC USP_CreateNewCustomer
-@name NVARCHAR(50), @sdt VARCHAR(15), @gioitinh INT, @ngaysinh SMALLDATETIME
+@name NVARCHAR(50), @sdt VARCHAR(15), @gioitinh NVARCHAR(20), @ngaysinh SMALLDATETIME
 AS
 BEGIN
 	INSERT INTO CUSTOMER(HOTEN, SDT, GIOITINH, NGAYSINH) VALUES (@name, @sdt, @gioitinh, @ngaysinh)
@@ -109,11 +111,11 @@ GO
 
 -- Thêm món mới
 CREATE PROC USP_CreateNewFood
-@tenmon NVARCHAR(50), @giaban INT, @dvt NVARCHAR(20), @nuocsx NVARCHAR(30)
+@tenmon NVARCHAR(50), @giaban INT, @dvt NVARCHAR(30)
 AS
 BEGIN
-	INSERT INTO FOOD(TENMON, GIABAN, DVT, NUOCSX) VALUES
-		(@tenmon, @giaban, @dvt, @nuocsx)
+	INSERT INTO FOOD(TENMON, GIABAN, DVT) VALUES
+		(@tenmon, @giaban, @dvt)
 END
 GO
 
@@ -132,8 +134,186 @@ CREATE PROC USP_GetAccountInfoByUsername
 @username VARCHAR(50)
 AS
 BEGIN
-	SELECT info.ID, info.HOTEN, info.SDT, info.CHUCVU, info.LVPOSITION, info.LUONG, info.CMND, info.NGAYSINH, info.DIACHI, info.NGVL, info.GIOITINH
+	SELECT info.ID, info.HOTEN, info.SDT, info.CHUCVU, info.LVPOSITION, info.LUONG, info.CMND, info.NGAYSINH, info.DIACHI, info.NGVL, info.GIOITINH, info.TINHTRANG
 	FROM ACCOUNT acc JOIN ACCOUNTINFO info ON acc.ID = info.ID
 	WHERE acc.USERNAME = @username
+END
+GO
+
+-- Update thông tin của nhân viên
+CREATE PROC USP_UpdateAccountInfo
+@id INT, 
+@hoten NVARCHAR(50), @sdt VARCHAR(15), @gioitinh NVARCHAR(20), @ngaysinh SMALLDATETIME, @diachi NVARCHAR(100), @cmnd VARCHAR(50),
+@chucvu NVARCHAR(30), @ngayvaolam SMALLDATETIME, @luong INT
+AS
+BEGIN
+	UPDATE ACCOUNTINFO
+	SET 
+		HOTEN = @hoten,
+		SDT = @sdt,
+		GIOITINH = @gioitinh,
+		NGAYSINH = @ngaysinh,
+		DIACHI = @diachi,
+		CMND = @cmnd,
+		CHUCVU = @chucvu,
+		NGVL = @ngayvaolam,
+		LUONG = @luong
+	WHERE ID = @id
+END
+GO
+
+EXEC USP_UpdateAccountInfo @id = 1 , @hoten = N'Nhân viên 001' , @sdt = '090001' , @gioitinh = 'Nam', 
+							@ngaysinh = '14/11/2001' , @diachi = N'Địa chỉ của nhân viên 000001' ,
+							@cmnd = '00000000001' , @chucvu = 'Nhân viên thu ngân', 
+							@ngayvaolam = '24/12/2020', @luong = 1000000
+
+-- Lấy ra USERNAME thông qua ID
+CREATE PROC USP_GetUsernameByID
+@id INT
+AS
+BEGIN
+	SELECT USERNAME
+	FROM ACCOUNT
+	WHERE ID = @id	
+END
+GO
+
+EXEC USP_GetUsernameByID @id = 1
+
+-- Lấy ra PASSWORD thông qua ID
+CREATE PROC USP_GetPasswordByID
+@id INT
+AS
+BEGIN
+	SELECT PASSWORD
+	FROM ACCOUNT
+	WHERE ID = @id	
+END
+GO
+
+EXEC USP_GetPasswordByID @id = 1
+
+-- Update lại mật khẩu cho Account thông qua ID
+CREATE PROC USP_UpdatePasswordByID
+@id INT, @password VARCHAR(200)
+AS
+BEGIN
+	UPDATE ACCOUNT
+	SET PASSWORD = @password
+	WHERE ID = @id
+END
+GO
+
+-- Cho nhân viên nghỉ việc (Sa thải)
+CREATE PROC USP_LayOffStaffByID
+@id INT, @tinhtrang NVARCHAR(50)
+AS
+BEGIN
+	UPDATE ACCOUNTINFO 
+	SET TINHTRANG = N'Đã nghỉ việc'
+	WHERE ID = @id
+END
+GO
+
+-- Update thông tin của khách hàng
+CREATE PROC USP_UpdateCustomerInfo
+@id INT, @hoten NVARCHAR(50), @sdt VARCHAR(15), @gioitinh NVARCHAR(20), @ngaysinh SMALLDATETIME
+AS
+BEGIN
+	UPDATE CUSTOMER
+	SET
+		HOTEN = @hoten,
+		SDT = @sdt,
+		GIOITINH = @gioitinh,
+		NGAYSINH = @ngaysinh
+	WHERE ID = @id
+END
+GO
+
+-- Xóa món khỏi danh sách thông qua Tên món
+CREATE PROC USP_DeleteFoodByName
+@tenmon NVARCHAR(50)
+AS
+BEGIN
+	DELETE FROM FOOD
+	WHERE TENMON = @tenmon
+END
+GO
+
+-- Lấy ra thông tin món từ Tên món
+CREATE PROC USP_GetFoodByName
+@tenmon NVARCHAR(50)
+AS
+BEGIN
+	SELECT *
+	FROM FOOD
+	WHERE TENMON = @tenmon
+END
+GO
+
+-- Update thông tin món thông qua ID
+CREATE PROC USP_UpdateFoodInfoByID
+@id INT, @tenmon NVARCHAR(50), @giaban INT, @dvt NVARCHAR(30)
+AS
+BEGIN
+	UPDATE FOOD
+	SET
+		TENMON = @tenmon,
+		GIABAN = @giaban,
+		DVT = @dvt
+	WHERE ID = @id
+END
+GO
+
+-- Kiểm tra xem đã tồn tại món ăn này hay chưa thông qua tên món
+CREATE PROC USP_CheckExistsFoodName
+@tenmon NVARCHAR(50)
+AS
+BEGIN
+	SELECT *
+	FROM FOOD
+	WHERE TENMON = @tenmon
+END
+GO
+
+-- Xóa món ra khỏi danh sách thông qua ID
+CREATE PROC USP_DeleteFoodByID
+@id INT
+AS
+BEGIN
+	DELETE FROM FOOD
+	WHERE ID = @id
+END
+GO
+
+-- Tạo thêm hàng mới trong kho hàng
+CREATE PROC USP_NewImport
+@tenhang NVARCHAR(200), @gianhap INT, @sl INT, @nuocsx NVARCHAR(200), @nhacungcap NVARCHAR(200), @timenhaphang SMALLDATETIME, @hsd SMALLDATETIME
+AS
+BEGIN
+	INSERT INTO STOCK(TENHANG, GIANHAP, SL, NUOCSX, NHACUNGCAP, TIMENHAPHANG, NGAYHETHAN) VALUES
+		(@tenhang, @gianhap, @sl, @nuocsx, @nhacungcap, @timenhaphang, @hsd)
+END
+GO
+
+-- Lấy ra thông tin của Stock từ ID
+CREATE PROC USP_GetStockByID
+@id INT
+AS
+BEGIN
+	SELECT * 
+	FROM STOCK
+	WHERE ID = @id
+END
+GO
+
+-- Giảm số lượng hàng của Stock thông qua ID
+CREATE PROC USP_DecreaseSLStockByID
+@id INT
+AS
+BEGIN
+	UPDATE STOCK
+	SET SL = SL - 1
+	WHERE ID = @id
 END
 GO

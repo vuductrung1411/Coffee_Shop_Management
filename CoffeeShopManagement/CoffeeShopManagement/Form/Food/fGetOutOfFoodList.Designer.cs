@@ -39,8 +39,6 @@
             this.lTitleOut = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.dgvMenu = new Guna.UI2.WinForms.Guna2DataGridView();
             this.dgvGetOutOfFood = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.cbxSelectAllMenu = new System.Windows.Forms.CheckBox();
-            this.cbxSelectAllOut = new System.Windows.Forms.CheckBox();
             this.bNotServe = new Guna.UI2.WinForms.Guna2Button();
             this.bServe = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMenu)).BeginInit();
@@ -61,7 +59,7 @@
             // 
             this.lTitleOut.BackColor = System.Drawing.Color.Transparent;
             this.lTitleOut.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
-            this.lTitleOut.Location = new System.Drawing.Point(999, 36);
+            this.lTitleOut.Location = new System.Drawing.Point(976, 36);
             this.lTitleOut.Name = "lTitleOut";
             this.lTitleOut.Size = new System.Drawing.Size(260, 31);
             this.lTitleOut.TabIndex = 5;
@@ -181,37 +179,12 @@
             this.dgvGetOutOfFood.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvGetOutOfFood.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // cbxSelectAllMenu
-            // 
-            this.cbxSelectAllMenu.AutoSize = true;
-            this.cbxSelectAllMenu.BackColor = System.Drawing.Color.Transparent;
-            this.cbxSelectAllMenu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbxSelectAllMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.cbxSelectAllMenu.Location = new System.Drawing.Point(50, 621);
-            this.cbxSelectAllMenu.Name = "cbxSelectAllMenu";
-            this.cbxSelectAllMenu.Size = new System.Drawing.Size(99, 21);
-            this.cbxSelectAllMenu.TabIndex = 28;
-            this.cbxSelectAllMenu.Text = "Chọn tất cả";
-            this.cbxSelectAllMenu.UseVisualStyleBackColor = false;
-            // 
-            // cbxSelectAllOut
-            // 
-            this.cbxSelectAllOut.AutoSize = true;
-            this.cbxSelectAllOut.BackColor = System.Drawing.Color.Transparent;
-            this.cbxSelectAllOut.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbxSelectAllOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.cbxSelectAllOut.Location = new System.Drawing.Point(782, 621);
-            this.cbxSelectAllOut.Name = "cbxSelectAllOut";
-            this.cbxSelectAllOut.Size = new System.Drawing.Size(99, 21);
-            this.cbxSelectAllOut.TabIndex = 29;
-            this.cbxSelectAllOut.Text = "Chọn tất cả";
-            this.cbxSelectAllOut.UseVisualStyleBackColor = false;
-            // 
             // bNotServe
             // 
             this.bNotServe.AutoRoundedCorners = true;
             this.bNotServe.BackColor = System.Drawing.Color.Transparent;
             this.bNotServe.BorderRadius = 23;
+            this.bNotServe.BorderThickness = 1;
             this.bNotServe.CheckedState.Parent = this.bNotServe;
             this.bNotServe.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bNotServe.CustomImages.Parent = this.bNotServe;
@@ -231,6 +204,7 @@
             this.bServe.AutoRoundedCorners = true;
             this.bServe.BackColor = System.Drawing.Color.Transparent;
             this.bServe.BorderRadius = 23;
+            this.bServe.BorderThickness = 1;
             this.bServe.CheckedState.Parent = this.bServe;
             this.bServe.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bServe.CustomImages.Parent = this.bServe;
@@ -238,7 +212,7 @@
             this.bServe.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bServe.ForeColor = System.Drawing.Color.White;
             this.bServe.HoverState.Parent = this.bServe;
-            this.bServe.Location = new System.Drawing.Point(988, 642);
+            this.bServe.Location = new System.Drawing.Point(965, 642);
             this.bServe.Name = "bServe";
             this.bServe.ShadowDecoration.Parent = this.bServe;
             this.bServe.Size = new System.Drawing.Size(271, 48);
@@ -254,8 +228,6 @@
             this.ClientSize = new System.Drawing.Size(1484, 761);
             this.Controls.Add(this.bServe);
             this.Controls.Add(this.bNotServe);
-            this.Controls.Add(this.cbxSelectAllOut);
-            this.Controls.Add(this.cbxSelectAllMenu);
             this.Controls.Add(this.dgvGetOutOfFood);
             this.Controls.Add(this.dgvMenu);
             this.Controls.Add(this.lTitleOut);
@@ -278,8 +250,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel lTitleOut;
         private Guna.UI2.WinForms.Guna2DataGridView dgvMenu;
         private Guna.UI2.WinForms.Guna2DataGridView dgvGetOutOfFood;
-        private System.Windows.Forms.CheckBox cbxSelectAllMenu;
-        private System.Windows.Forms.CheckBox cbxSelectAllOut;
         private Guna.UI2.WinForms.Guna2Button bNotServe;
         private Guna.UI2.WinForms.Guna2Button bServe;
     }

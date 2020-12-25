@@ -83,8 +83,8 @@ namespace QuanLyQuanCafe.DAO
             int tmp = DataProvider.Instance.ExecuteNonQuery(query, new object[]
             {
                 account.hoten, account.sdt, account.chucvu, account.lvPosition,
-                account.luong, account.cmnd, account.ngaysinh.ToShortDateString(), 
-                account.diachi, account.ngayvaolam.ToShortDateString(), account.gioitinh
+                account.luong, account.cmnd, account.ngaysinh, 
+                account.diachi, account.ngayvaolam, account.gioitinh
             });
         }
 
@@ -103,6 +103,45 @@ namespace QuanLyQuanCafe.DAO
                 (DateTime)row["NGVL"], row["GIOITINH"].ToString(), (int)row["ID"]);
 
             return info;
+        }
+
+        // Update lại thông tin của nhân viên
+        public void UpdateAccountInfo(Staff staff)
+        {
+            string query = "EXEC USP_UpdateAccountInfo @id , @hoten , @sdt , @gioitinh , " +
+                "@ngaysinh , @diachi , @cmnd , @chucvu , @ngayvaolam , @luong ";
+
+            int tmp = DataProvider.Instance.ExecuteNonQuery(query, new object[]
+            {
+                staff.id, staff.hoten, staff.sdt, staff.gioitinh, staff.ngaysinh,
+                staff.diachi, staff.cmnd, staff.chucvu, staff.ngayvaolam, staff.luong
+            });
+        }
+
+        // Lấy ra Password thông qua ID
+        public string GetPasswordByID(int id)
+        {
+            string query = "EXEC USP_GetPasswordByID @id ";
+
+            return DataProvider.Instance.ExecuteScalar(query, new object[] { id }).ToString();
+        }
+
+        // Update mật khẩu thông qua ID
+        public void UpdatePasswordByID(int id, string password)
+        {
+            password = Encode(password);
+
+            string query = "EXEC USP_UpdatePasswordByID @id , @password ";
+
+            int tmp = DataProvider.Instance.ExecuteNonQuery(query, new object[] { id, password });
+        }
+
+        // Sa thải nhân viên thông qua ID
+        public void LayOffStaffByID(int id)
+        {
+            string query = "USP_LayOffStaffByID @id , @tinhtrang ";
+
+            int tmp = DataProvider.Instance.ExecuteNonQuery(query, new object[] { id, "Đã nghỉ việc" });
         }
 
         // Mã hóa

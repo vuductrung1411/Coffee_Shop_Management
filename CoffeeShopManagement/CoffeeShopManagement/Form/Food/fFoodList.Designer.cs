@@ -33,11 +33,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fFoodList));
             this.lTitle = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.cbxSelectAll = new System.Windows.Forms.CheckBox();
             this.bAdd = new Guna.UI2.WinForms.Guna2Button();
             this.bEdit = new Guna.UI2.WinForms.Guna2Button();
             this.bCancel = new Guna.UI2.WinForms.Guna2Button();
-            this.bInfo = new Guna.UI2.WinForms.Guna2Button();
+            this.bDelete = new Guna.UI2.WinForms.Guna2Button();
             this.pbAvatar = new Guna.UI2.WinForms.Guna2PictureBox();
             this.dgvShow = new Guna.UI2.WinForms.Guna2DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
@@ -54,24 +53,12 @@
             this.lTitle.TabIndex = 3;
             this.lTitle.Text = "Danh sách món";
             // 
-            // cbxSelectAll
-            // 
-            this.cbxSelectAll.AutoSize = true;
-            this.cbxSelectAll.BackColor = System.Drawing.Color.Transparent;
-            this.cbxSelectAll.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbxSelectAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.cbxSelectAll.Location = new System.Drawing.Point(45, 712);
-            this.cbxSelectAll.Name = "cbxSelectAll";
-            this.cbxSelectAll.Size = new System.Drawing.Size(99, 21);
-            this.cbxSelectAll.TabIndex = 34;
-            this.cbxSelectAll.Text = "Chọn tất cả";
-            this.cbxSelectAll.UseVisualStyleBackColor = false;
-            // 
             // bAdd
             // 
             this.bAdd.AutoRoundedCorners = true;
             this.bAdd.BackColor = System.Drawing.Color.Transparent;
             this.bAdd.BorderRadius = 23;
+            this.bAdd.BorderThickness = 1;
             this.bAdd.CheckedState.Parent = this.bAdd;
             this.bAdd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bAdd.CustomImages.Parent = this.bAdd;
@@ -92,6 +79,7 @@
             this.bEdit.AutoRoundedCorners = true;
             this.bEdit.BackColor = System.Drawing.Color.Transparent;
             this.bEdit.BorderRadius = 23;
+            this.bEdit.BorderThickness = 1;
             this.bEdit.CheckedState.Parent = this.bEdit;
             this.bEdit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bEdit.CustomImages.Parent = this.bEdit;
@@ -104,7 +92,7 @@
             this.bEdit.ShadowDecoration.Parent = this.bEdit;
             this.bEdit.Size = new System.Drawing.Size(271, 48);
             this.bEdit.TabIndex = 32;
-            this.bEdit.Text = "Chỉnh sửa";
+            this.bEdit.Text = "Chỉnh sửa thông tin món";
             this.bEdit.Click += new System.EventHandler(this.bEdit_Click);
             // 
             // bCancel
@@ -112,6 +100,7 @@
             this.bCancel.AutoRoundedCorners = true;
             this.bCancel.BackColor = System.Drawing.Color.Transparent;
             this.bCancel.BorderRadius = 23;
+            this.bCancel.BorderThickness = 1;
             this.bCancel.CheckedState.Parent = this.bCancel;
             this.bCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bCancel.CustomImages.Parent = this.bCancel;
@@ -127,24 +116,26 @@
             this.bCancel.Text = "Thoát";
             this.bCancel.Click += new System.EventHandler(this.bCancel_Click);
             // 
-            // bInfo
+            // bDelete
             // 
-            this.bInfo.AutoRoundedCorners = true;
-            this.bInfo.BackColor = System.Drawing.Color.Transparent;
-            this.bInfo.BorderRadius = 23;
-            this.bInfo.CheckedState.Parent = this.bInfo;
-            this.bInfo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bInfo.CustomImages.Parent = this.bInfo;
-            this.bInfo.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bInfo.ForeColor = System.Drawing.Color.White;
-            this.bInfo.HoverState.Parent = this.bInfo;
-            this.bInfo.Location = new System.Drawing.Point(1159, 589);
-            this.bInfo.Name = "bInfo";
-            this.bInfo.ShadowDecoration.Parent = this.bInfo;
-            this.bInfo.Size = new System.Drawing.Size(271, 48);
-            this.bInfo.TabIndex = 30;
-            this.bInfo.Text = "Thông tin chi tiết";
-            this.bInfo.Click += new System.EventHandler(this.bInfo_Click);
+            this.bDelete.AutoRoundedCorners = true;
+            this.bDelete.BackColor = System.Drawing.Color.Transparent;
+            this.bDelete.BorderRadius = 23;
+            this.bDelete.BorderThickness = 1;
+            this.bDelete.CheckedState.Parent = this.bDelete;
+            this.bDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bDelete.CustomImages.Parent = this.bDelete;
+            this.bDelete.FillColor = System.Drawing.Color.Maroon;
+            this.bDelete.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bDelete.ForeColor = System.Drawing.Color.White;
+            this.bDelete.HoverState.Parent = this.bDelete;
+            this.bDelete.Location = new System.Drawing.Point(1159, 589);
+            this.bDelete.Name = "bDelete";
+            this.bDelete.ShadowDecoration.Parent = this.bDelete;
+            this.bDelete.Size = new System.Drawing.Size(271, 48);
+            this.bDelete.TabIndex = 30;
+            this.bDelete.Text = "Xóa món khỏi danh sách";
+            this.bDelete.Click += new System.EventHandler(this.bDelete_Click);
             // 
             // pbAvatar
             // 
@@ -161,6 +152,7 @@
             // 
             // dgvShow
             // 
+            this.dgvShow.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.dgvShow.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvShow.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -177,6 +169,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvShow.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvShow.ColumnHeadersHeight = 25;
+            this.dgvShow.Cursor = System.Windows.Forms.Cursors.Hand;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -189,7 +182,9 @@
             this.dgvShow.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvShow.Location = new System.Drawing.Point(45, 62);
             this.dgvShow.Name = "dgvShow";
+            this.dgvShow.ReadOnly = true;
             this.dgvShow.RowHeadersVisible = false;
+            this.dgvShow.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvShow.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvShow.Size = new System.Drawing.Size(1064, 645);
             this.dgvShow.TabIndex = 28;
@@ -207,7 +202,7 @@
             this.dgvShow.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dgvShow.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvShow.ThemeStyle.HeaderStyle.Height = 25;
-            this.dgvShow.ThemeStyle.ReadOnly = false;
+            this.dgvShow.ThemeStyle.ReadOnly = true;
             this.dgvShow.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvShow.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvShow.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -215,6 +210,7 @@
             this.dgvShow.ThemeStyle.RowsStyle.Height = 22;
             this.dgvShow.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvShow.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvShow.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvShow_CellContentClick);
             // 
             // fFoodList
             // 
@@ -223,11 +219,10 @@
             this.BackgroundImage = global::CoffeeShopManagement.Properties.Resources.Background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1484, 761);
-            this.Controls.Add(this.cbxSelectAll);
             this.Controls.Add(this.bAdd);
             this.Controls.Add(this.bEdit);
             this.Controls.Add(this.bCancel);
-            this.Controls.Add(this.bInfo);
+            this.Controls.Add(this.bDelete);
             this.Controls.Add(this.pbAvatar);
             this.Controls.Add(this.dgvShow);
             this.Controls.Add(this.lTitle);
@@ -245,11 +240,10 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2HtmlLabel lTitle;
-        private System.Windows.Forms.CheckBox cbxSelectAll;
         private Guna.UI2.WinForms.Guna2Button bAdd;
         private Guna.UI2.WinForms.Guna2Button bEdit;
         private Guna.UI2.WinForms.Guna2Button bCancel;
-        private Guna.UI2.WinForms.Guna2Button bInfo;
+        private Guna.UI2.WinForms.Guna2Button bDelete;
         private Guna.UI2.WinForms.Guna2PictureBox pbAvatar;
         private Guna.UI2.WinForms.Guna2DataGridView dgvShow;
     }

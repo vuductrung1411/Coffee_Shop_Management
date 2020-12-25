@@ -136,11 +136,14 @@
   <data name="icon - Connect to developer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon - Connect to developer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icon - Action History" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon - Action History.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icon - Warehouse" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon - Warehouse.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Sell" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Sell.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon - Import Goods" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon - Import Goods.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon - Bill History" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon - Bill History.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -190,14 +193,17 @@
   <data name="icon - Account Info" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon - Account Info.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon - Manage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon - Manage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="icon - Help" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon - Help.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon - Staff" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon - Staff.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sell" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sell.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon - Manage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon - Manage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon - Discount" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon - Discount.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -211,9 +217,6 @@
   <data name="icon - Shop" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon - Shop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon - Import Goods" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon - Import Goods.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Start1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Start1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -223,13 +226,13 @@
   <data name="icon - Import" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon - Import.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon - Action History" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon - Action History.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Info Background1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Info Background1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="GetOutOfFoodList" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GetOutOfFoodList.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Info Background1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Info Background1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon - Plus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon - Plus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

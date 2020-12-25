@@ -8,15 +8,25 @@ namespace CoffeeShopManagement.DTO
 {
     public class Food
     {
-        public string tenmon, nuocsx, dvt;
-        public int gia;
+        public string tenmon, dvt;
+        public int gia, id;
 
-        public Food(string tenmon, int gia, string nuocsx, string dvt)
+        public Food(string tenmon, int gia, string dvt, int id)
         {
             this.tenmon = tenmon;
             this.gia = gia;
-            this.nuocsx = nuocsx;
+            this.dvt = dvt;
+            this.id = id;
+        }
+
+        public Food(string tenmon, int gia, string dvt)
+        {
+            this.tenmon = tenmon;
+            this.gia = gia;
             this.dvt = dvt;
         }
+
+
+        public Food() { }
     }
 }

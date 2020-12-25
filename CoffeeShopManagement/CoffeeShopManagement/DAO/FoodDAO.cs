@@ -25,7 +25,8 @@ namespace CoffeeShopManagement.DAO
         {
             DataTable data = new DataTable();
 
-            string query = "SELECT * FROM FOOD";
+            string query =  "SELECT TENMON AS [Tên món], GIABAN AS [Giá bán], DVT AS [Đơn vị tính] " +
+                            "FROM FOOD";
 
             data = DataProvider.Instance.ExecuteQuery(query);
 
@@ -79,19 +80,59 @@ namespace CoffeeShopManagement.DAO
         // Kiểm tra xem đã có món nào cùng tên chưa
         public bool CheckExistsFoodName(string name)
         {
-            string query = "SELECT * FROM FOOD WHERE TENMON = '" + name + "'";
-            DataTable result = DataProvider.Instance.ExecuteQuery(query);
+            string query = "EXEC USP_CheckExistsFoodName @tenmon ";
+            DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { name});
             return result.Rows.Count > 0;
         }
 
         // Thêm món mới vào danh sách món
         public void CreateNewFood(Food food)
         {
-            string query = "EXEC USP_CreateNewFood @tenmon , @giaban , @dvt , @nuocsx ";
+            string query = "EXEC USP_CreateNewFood @tenmon , @giaban , @dvt ";
 
             int tmp = (int)DataProvider.Instance.ExecuteNonQuery(query, new object[]
-                { food.tenmon, food.gia, food.nuocsx, food.dvt});
+                { food.tenmon, food.gia, food.dvt });
         }
 
+        // Xóa món ra khỏi danh sách thông qua tên món
+        public void DeleteFoodByName(string tenmon)
+        {
+            string query = "EXEC USP_DeleteFoodByName @tenmon ";
+
+            int tmp = DataProvider.Instance.ExecuteNonQuery(query, new object[] { tenmon });
+        }
+
+        // Lấy ra thông tin món từ tên món
+        public Food GetFoodByName(string tenmon)
+        {
+            string query = "EXEC USP_GetFoodByName @tenmon ";
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(query, new object[] { tenmon });
+
+            DataRow row = data.Rows[0];
+
+            Food food = new Food(row["TENMON"].ToString(), (int)row["GIABAN"], row["DVT"].ToString(), (int)row["ID"]);
+
+            return food;
+        }
+
+        // Update thông tin món
+        public void UpdateFoodInfo(Food food)
+        {
+            string query = "EXEC USP_UpdateFoodInfoByID @id , @tenmon , @giaban , @dvt ";
+
+            int tmp = DataProvider.Instance.ExecuteNonQuery(query, new object[]
+            {
+                food.id, food.tenmon, food.gia, food.dvt
+            });
+        }
+
+        // Xóa món ra khỏi danh sách thông qua ID
+        public void DeleteFoodByID(Food food)
+        {
+            string query = "EXEC USP_DeleteFoodByID @id ";
+
+            int tmp = DataProvider.Instance.ExecuteNonQuery(query, new object[] { food.id });
+        }
     }
 }

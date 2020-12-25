@@ -14,30 +14,36 @@ namespace CoffeeShopManagement
 {
     public partial class fFoodAdd : Form
     {
-        public fFoodAdd(int edit = 0)
+        Food food; // Món đang được hiển thị trên màn hình
+
+        bool isEdit = false; // true: đang edit, false: không edit
+
+        public fFoodAdd()
         {
             InitializeComponent();
-            if (edit == 1)
-            {
-                this.lTitle.Text = "Chỉnh sửa thông tin món";
-                this.bOK.Text = "Lưu";
-            }
-            else
-            {
-                if (edit == 2)
-                {
-                    this.lTitle.Text = "Thông tin món";
-                    this.bOK.Text = "OK";
-                }
-            }
         }
 
-        #region Methods
+        public fFoodAdd(Food f)
+        {
+            InitializeComponent();
+
+            this.food = f;
+            this.lTitle.Text = "Thay đổi thông tin món";
+            this.bOK.Text = "Lưu";
+
+            this.tbName.Text = f.tenmon;
+            this.nudPrice.Value = f.gia;
+            this.tbUnit.Text = f.dvt;
+
+            this.isEdit = true;
+        }
+
+        #region METHODS
 
         #endregion
 
 
-        #region Events
+        #region EVENTS
         private void bCancel_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -47,7 +53,7 @@ namespace CoffeeShopManagement
         {
             string foodName = this.tbName.Text;
 
-            if (FoodDAO.Instance.CheckExistsFoodName(foodName))
+            if (this.isEdit == false && FoodDAO.Instance.CheckExistsFoodName(foodName))
             {
                 this.lNotificationFoodName.Text = "Món này đã có trong danh sách";
             }
@@ -64,10 +70,14 @@ namespace CoffeeShopManagement
 
         private void bOK_Click(object sender, EventArgs e)
         {
-            if (FoodDAO.Instance.CheckExistsFoodName(this.tbName.Text))
+            if (this.isEdit == false && FoodDAO.Instance.CheckExistsFoodName(this.tbName.Text))
             {
                 this.lNotificationFoodName.Text = "Món này đã có trong danh sách";
                 return;
+            }
+            else
+            {
+                this.lNotificationFoodName.Text = "";
             }
             if (this.tbName.Text == "")
             {
@@ -77,11 +87,23 @@ namespace CoffeeShopManagement
 
             this.tbName.BorderColor = Color.Black;
 
-            Food newFood = new Food(this.tbName.Text, (int)this.nudPrice.Value, this.tbCountry.Text, this.tbUnit.Text);
+            if (this.isEdit == false)
+            {
+                Food newFood = new Food(this.tbName.Text, (int)this.nudPrice.Value, this.tbUnit.Text);
 
-            FoodDAO.Instance.CreateNewFood(newFood);
+                FoodDAO.Instance.CreateNewFood(newFood);
 
-            MessageBox.Show("Thêm món thành công", "THÀNH CÔNG", MessageBoxButtons.OK);
+                MessageBox.Show("Thêm món thành công", "THÀNH CÔNG", MessageBoxButtons.OK);
+            }
+            else
+            {
+                Food newFoodInfo = new Food(this.tbName.Text, (int)this.nudPrice.Value, this.tbUnit.Text, this.food.id);
+
+                FoodDAO.Instance.UpdateFoodInfo(newFoodInfo);
+
+                MessageBox.Show("Cập nhật thông tin món thành công", "THÀNH CÔNG", MessageBoxButtons.OK);
+            }
+            this.Close();
         }
 
         private void tbPrice_KeyPress(object sender, KeyPressEventArgs e)

@@ -129,6 +129,7 @@
             this.bInfo.AutoRoundedCorners = true;
             this.bInfo.BackColor = System.Drawing.Color.Transparent;
             this.bInfo.BorderRadius = 23;
+            this.bInfo.BorderThickness = 1;
             this.bInfo.CheckedState.Parent = this.bInfo;
             this.bInfo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bInfo.CustomImages.Parent = this.bInfo;
@@ -148,6 +149,7 @@
             this.bCancel.AutoRoundedCorners = true;
             this.bCancel.BackColor = System.Drawing.Color.Transparent;
             this.bCancel.BorderRadius = 23;
+            this.bCancel.BorderThickness = 1;
             this.bCancel.CheckedState.Parent = this.bCancel;
             this.bCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bCancel.CustomImages.Parent = this.bCancel;
@@ -168,6 +170,7 @@
             this.bEdit.AutoRoundedCorners = true;
             this.bEdit.BackColor = System.Drawing.Color.Transparent;
             this.bEdit.BorderRadius = 23;
+            this.bEdit.BorderThickness = 1;
             this.bEdit.CheckedState.Parent = this.bEdit;
             this.bEdit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bEdit.CustomImages.Parent = this.bEdit;
@@ -188,6 +191,7 @@
             this.bAdd.AutoRoundedCorners = true;
             this.bAdd.BackColor = System.Drawing.Color.Transparent;
             this.bAdd.BorderRadius = 23;
+            this.bAdd.BorderThickness = 1;
             this.bAdd.CheckedState.Parent = this.bAdd;
             this.bAdd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bAdd.CustomImages.Parent = this.bAdd;

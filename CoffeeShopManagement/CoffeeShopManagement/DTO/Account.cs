@@ -11,6 +11,8 @@ namespace CoffeeShopManagement.DTO
     {
         public int id;
 
+        public string username, password;
+
         public Account(string userName)
         {
             this.id = AccountDAO.Instance.GetIDByUsername(userName);

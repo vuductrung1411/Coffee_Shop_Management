@@ -283,6 +283,16 @@ namespace CoffeeShopManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon___Plus {
+            get {
+                object obj = ResourceManager.GetObject("icon - Plus", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon___Report {
             get {
                 object obj = ResourceManager.GetObject("icon - Report", resourceCulture);

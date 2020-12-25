@@ -72,6 +72,7 @@
             this.bConfirm.AutoRoundedCorners = true;
             this.bConfirm.BackColor = System.Drawing.Color.Transparent;
             this.bConfirm.BorderRadius = 19;
+            this.bConfirm.BorderThickness = 1;
             this.bConfirm.CheckedState.Parent = this.bConfirm;
             this.bConfirm.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bConfirm.CustomImages.Parent = this.bConfirm;
@@ -91,6 +92,7 @@
             this.bCancel.AutoRoundedCorners = true;
             this.bCancel.BackColor = System.Drawing.Color.Transparent;
             this.bCancel.BorderRadius = 19;
+            this.bCancel.BorderThickness = 1;
             this.bCancel.CheckedState.Parent = this.bCancel;
             this.bCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bCancel.CustomImages.Parent = this.bCancel;

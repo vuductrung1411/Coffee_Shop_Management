@@ -18,17 +18,7 @@ DROP TABLE ACCOUNT
 DROP TABLE ACCOUNTINFO 
 DROP TABLE HISTORY
 
-
--- Create table --
-	-- ACCOUNTINFO						 -- Thông tin chi tiết của tài khoản
-	-- ACCOUNT							 -- Lưu thông tin tài khoản mật khẩu
-	-- FOOD								 -- Lưu thông tin món ăn
-	-- CUSTOMER							 -- Lưu thông tin về khách hàng
-	-- DISCOUNT							 -- Lưu thông tin về chương trình giảm giá
-	-- BILL								 -- Lưu thông tin hóa đơn
-	-- BILLDETAIL						 -- Chi tiết hóa đơn
-	-- STOCK							 -- Quản lý kho, hàng đầu vào
-	-- HISTORY							 -- Lịch sử hoạt động
+------------------------------------------------------------------------------------------------------
 
 CREATE TABLE ACCOUNTINFO
 (
@@ -42,7 +32,8 @@ CREATE TABLE ACCOUNTINFO
 	NGAYSINH SMALLDATETIME,
 	DIACHI NVARCHAR(100),
 	NGVL SMALLDATETIME,										-- NGÀY VÀO LÀM
-	GIOITINH NVARCHAR(20)						
+	GIOITINH NVARCHAR(20),		
+	TINHTRANG NVARCHAR(50) DEFAULT N'Đang làm việc'
 )
 GO
 
@@ -61,8 +52,7 @@ CREATE TABLE FOOD
 	ID INT IDENTITY(1, 1) PRIMARY KEY,
 	TENMON NVARCHAR(50) NOT NULL,
 	GIABAN INT,
-	DVT NVARCHAR(20),									-- ĐƠN VỊ TÍNH
-	NUOCSX NVARCHAR(30)									-- NƯỚC SẢN XUẤT
+	DVT NVARCHAR(30)									-- ĐƠN VỊ TÍNH
 )
 GO
 
@@ -132,7 +122,8 @@ CREATE TABLE STOCK
 	SL INT,									-- SỐ LƯỢNG HÀNG CÒN LẠI
 	NUOCSX NVARCHAR(200),					-- NƯỚC SẢN XUẤT
 	NHACUNGCAP NVARCHAR(200),				-- NHÀ CUNG CẤP
-	TIMENHAPHANG SMALLDATETIME				-- THỜI GIAN NHẬP HÀNG
+	TIMENHAPHANG SMALLDATETIME,				-- THỜI GIAN NHẬP HÀNG
+	NGAYHETHAN SMALLDATETIME
 )
 GO
 
@@ -155,6 +146,32 @@ CREATE TABLE COMMENTS
 	NAMECMT NVARCHAR(100),									-- HỌ tên của khách
 	TEXTCMT NVARCHAR(1000),									-- Ý kiến đóng góp của khách
 	TIMECMT SMALLDATETIME									-- Thời gian
+)
+GO
+
+CREATE TABLE SHOPINFO
+(
+	TENQUAN NVARCHAR(100),
+	SDT VARCHAR(15),
+	TENCHUQUAN NVARCHAR(100),
+	DIACHI NVARCHAR(200),
+	SOGHE INT DEFAULT 100000000,
+	SOKHACHTOIDA INT DEFAULT 100000000,
+	SOBAN INT DEFAULT 100000000,
+	SINHNHATQUAN SMALLDATETIME,
+	SLOGAN NVARCHAR(500)
+)
+GO
+
+CREATE TABLE QUOTESLIST
+(
+	QUOTES NVARCHAR(300)
+)
+GO
+
+CREATE TABLE POSITIONLIST
+(
+	POSITION NVARCHAR(100)
 )
 GO
 

@@ -93,10 +93,7 @@ namespace CoffeeShopManagement
             this.dgvBill = new Guna.UI2.WinForms.Guna2DataGridView();
             this.bDeleteFood = new Guna.UI2.WinForms.Guna2Button();
             this.bEditFood = new Guna.UI2.WinForms.Guna2Button();
-            this.label17 = new System.Windows.Forms.Label();
             this.cbTableID = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.cbxTakeOut = new System.Windows.Forms.CheckBox();
-            this.label18 = new System.Windows.Forms.Label();
             this.lBillHistory = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.bCheckout = new Guna.UI2.WinForms.Guna2Button();
@@ -106,7 +103,6 @@ namespace CoffeeShopManagement
             this.tbTotalValue = new Guna.UI2.WinForms.Guna2TextBox();
             this.tbValuePayment = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lDiscountNotification = new System.Windows.Forms.Label();
             this.lRemind = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.tbNote = new Guna.UI2.WinForms.Guna2TextBox();
@@ -114,20 +110,26 @@ namespace CoffeeShopManagement
             this.pnlManage = new System.Windows.Forms.FlowLayoutPanel();
             this.bCombine = new Guna.UI2.WinForms.Guna2Button();
             this.bChangeTableID = new Guna.UI2.WinForms.Guna2Button();
-            this.bNewCustomerInShop = new Guna.UI2.WinForms.Guna2Button();
             this.lNotificationCustomer = new System.Windows.Forms.Label();
+            this.bNewCustomer = new Guna.UI2.WinForms.Guna2Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.rbKhachCoTheThanhVien = new System.Windows.Forms.RadioButton();
+            this.rbKhachVangLai = new System.Windows.Forms.RadioButton();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cbTakeAway = new System.Windows.Forms.CheckBox();
             this.msMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudSLCustomer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudSL)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBill)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // msMenu
             // 
             this.msMenu.BackColor = System.Drawing.SystemColors.Control;
-            this.msMenu.Font = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.msMenu.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.msMenu.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.msMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.kháchHàngToolStripMenuItem,
             this.quảnLýToolStripMenuItem,
@@ -138,7 +140,7 @@ namespace CoffeeShopManagement
             this.tàiKhoảnToolStripMenuItem});
             this.msMenu.Location = new System.Drawing.Point(0, 0);
             this.msMenu.Name = "msMenu";
-            this.msMenu.Size = new System.Drawing.Size(1484, 25);
+            this.msMenu.Size = new System.Drawing.Size(1484, 28);
             this.msMenu.TabIndex = 0;
             this.msMenu.Text = "menuStrip1";
             // 
@@ -146,7 +148,7 @@ namespace CoffeeShopManagement
             // 
             this.kháchHàngToolStripMenuItem.Image = global::CoffeeShopManagement.Properties.Resources.icon___Customer;
             this.kháchHàngToolStripMenuItem.Name = "kháchHàngToolStripMenuItem";
-            this.kháchHàngToolStripMenuItem.Size = new System.Drawing.Size(104, 21);
+            this.kháchHàngToolStripMenuItem.Size = new System.Drawing.Size(100, 24);
             this.kháchHàngToolStripMenuItem.Text = "Khách hàng";
             this.kháchHàngToolStripMenuItem.Click += new System.EventHandler(this.kháchHàngToolStripMenuItem_Click);
             // 
@@ -160,14 +162,14 @@ namespace CoffeeShopManagement
             this.chươngTrìnhKhuyếnMãiToolStripMenuItem});
             this.quảnLýToolStripMenuItem.Image = global::CoffeeShopManagement.Properties.Resources.icon___Manage;
             this.quảnLýToolStripMenuItem.Name = "quảnLýToolStripMenuItem";
-            this.quảnLýToolStripMenuItem.Size = new System.Drawing.Size(80, 21);
+            this.quảnLýToolStripMenuItem.Size = new System.Drawing.Size(78, 24);
             this.quảnLýToolStripMenuItem.Text = "Quản lý";
             // 
             // thôngTinQuánToolStripMenuItem
             // 
             this.thôngTinQuánToolStripMenuItem.Image = global::CoffeeShopManagement.Properties.Resources.icon___Shop;
             this.thôngTinQuánToolStripMenuItem.Name = "thôngTinQuánToolStripMenuItem";
-            this.thôngTinQuánToolStripMenuItem.Size = new System.Drawing.Size(221, 22);
+            this.thôngTinQuánToolStripMenuItem.Size = new System.Drawing.Size(210, 26);
             this.thôngTinQuánToolStripMenuItem.Text = "Thông tin quán";
             this.thôngTinQuánToolStripMenuItem.Click += new System.EventHandler(this.thôngTinQuánToolStripMenuItem_Click);
             // 
@@ -175,7 +177,7 @@ namespace CoffeeShopManagement
             // 
             this.danhSáchMónToolStripMenuItem.Image = global::CoffeeShopManagement.Properties.Resources.icon___Food;
             this.danhSáchMónToolStripMenuItem.Name = "danhSáchMónToolStripMenuItem";
-            this.danhSáchMónToolStripMenuItem.Size = new System.Drawing.Size(221, 22);
+            this.danhSáchMónToolStripMenuItem.Size = new System.Drawing.Size(210, 26);
             this.danhSáchMónToolStripMenuItem.Text = "Danh sách món";
             this.danhSáchMónToolStripMenuItem.Click += new System.EventHandler(this.danhSáchMónToolStripMenuItem_Click);
             // 
@@ -183,7 +185,7 @@ namespace CoffeeShopManagement
             // 
             this.danhSáchNhânViênToolStripMenuItem.Image = global::CoffeeShopManagement.Properties.Resources.icon___Staff;
             this.danhSáchNhânViênToolStripMenuItem.Name = "danhSáchNhânViênToolStripMenuItem";
-            this.danhSáchNhânViênToolStripMenuItem.Size = new System.Drawing.Size(221, 22);
+            this.danhSáchNhânViênToolStripMenuItem.Size = new System.Drawing.Size(210, 26);
             this.danhSáchNhânViênToolStripMenuItem.Text = "Danh sách nhân viên";
             this.danhSáchNhânViênToolStripMenuItem.Click += new System.EventHandler(this.danhSáchNhânViênToolStripMenuItem_Click);
             // 
@@ -191,7 +193,7 @@ namespace CoffeeShopManagement
             // 
             this.danhSáchKháchHàngToolStripMenuItem.Image = global::CoffeeShopManagement.Properties.Resources.icon___Customerlist;
             this.danhSáchKháchHàngToolStripMenuItem.Name = "danhSáchKháchHàngToolStripMenuItem";
-            this.danhSáchKháchHàngToolStripMenuItem.Size = new System.Drawing.Size(221, 22);
+            this.danhSáchKháchHàngToolStripMenuItem.Size = new System.Drawing.Size(210, 26);
             this.danhSáchKháchHàngToolStripMenuItem.Text = "Danh sách khách hàng";
             this.danhSáchKháchHàngToolStripMenuItem.Click += new System.EventHandler(this.danhSáchKháchHàngToolStripMenuItem_Click);
             // 
@@ -199,7 +201,7 @@ namespace CoffeeShopManagement
             // 
             this.chươngTrìnhKhuyếnMãiToolStripMenuItem.Image = global::CoffeeShopManagement.Properties.Resources.icon___Discount;
             this.chươngTrìnhKhuyếnMãiToolStripMenuItem.Name = "chươngTrìnhKhuyếnMãiToolStripMenuItem";
-            this.chươngTrìnhKhuyếnMãiToolStripMenuItem.Size = new System.Drawing.Size(221, 22);
+            this.chươngTrìnhKhuyếnMãiToolStripMenuItem.Size = new System.Drawing.Size(210, 26);
             this.chươngTrìnhKhuyếnMãiToolStripMenuItem.Text = "Chương trình khuyến mãi";
             this.chươngTrìnhKhuyếnMãiToolStripMenuItem.Click += new System.EventHandler(this.chươngTrìnhKhuyếnMãiToolStripMenuItem_Click);
             // 
@@ -210,14 +212,14 @@ namespace CoffeeShopManagement
             this.ýKiếnĐóngGópToolStripMenuItem});
             this.thốngKêToolStripMenuItem.Image = global::CoffeeShopManagement.Properties.Resources.icon___Statistical1;
             this.thốngKêToolStripMenuItem.Name = "thốngKêToolStripMenuItem";
-            this.thốngKêToolStripMenuItem.Size = new System.Drawing.Size(90, 21);
+            this.thốngKêToolStripMenuItem.Size = new System.Drawing.Size(88, 24);
             this.thốngKêToolStripMenuItem.Text = "Thống kê";
             // 
             // báoCáoVàThốngKêToolStripMenuItem
             // 
             this.báoCáoVàThốngKêToolStripMenuItem.Image = global::CoffeeShopManagement.Properties.Resources.icon___Report;
             this.báoCáoVàThốngKêToolStripMenuItem.Name = "báoCáoVàThốngKêToolStripMenuItem";
-            this.báoCáoVàThốngKêToolStripMenuItem.Size = new System.Drawing.Size(237, 22);
+            this.báoCáoVàThốngKêToolStripMenuItem.Size = new System.Drawing.Size(219, 26);
             this.báoCáoVàThốngKêToolStripMenuItem.Text = "Báo cáo và thống kê số liệu";
             this.báoCáoVàThốngKêToolStripMenuItem.Click += new System.EventHandler(this.báoCáoVàThốngKêToolStripMenuItem_Click);
             // 
@@ -225,7 +227,7 @@ namespace CoffeeShopManagement
             // 
             this.ýKiếnĐóngGópToolStripMenuItem.Image = global::CoffeeShopManagement.Properties.Resources.icon___Comments;
             this.ýKiếnĐóngGópToolStripMenuItem.Name = "ýKiếnĐóngGópToolStripMenuItem";
-            this.ýKiếnĐóngGópToolStripMenuItem.Size = new System.Drawing.Size(237, 22);
+            this.ýKiếnĐóngGópToolStripMenuItem.Size = new System.Drawing.Size(219, 26);
             this.ýKiếnĐóngGópToolStripMenuItem.Text = "Ý kiến đóng góp";
             // 
             // khoHàngToolStripMenuItem
@@ -235,14 +237,14 @@ namespace CoffeeShopManagement
             this.nhậpThêmHàngToolStripMenuItem});
             this.khoHàngToolStripMenuItem.Image = global::CoffeeShopManagement.Properties.Resources.icon___Warehouse;
             this.khoHàngToolStripMenuItem.Name = "khoHàngToolStripMenuItem";
-            this.khoHàngToolStripMenuItem.Size = new System.Drawing.Size(92, 21);
+            this.khoHàngToolStripMenuItem.Size = new System.Drawing.Size(89, 24);
             this.khoHàngToolStripMenuItem.Text = "Kho hàng";
             // 
             // hàngTrongKhoToolStripMenuItem
             // 
             this.hàngTrongKhoToolStripMenuItem.Image = global::CoffeeShopManagement.Properties.Resources.icon___Goods_in_Warehouse;
             this.hàngTrongKhoToolStripMenuItem.Name = "hàngTrongKhoToolStripMenuItem";
-            this.hàngTrongKhoToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.hàngTrongKhoToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
             this.hàngTrongKhoToolStripMenuItem.Text = "Hàng trong kho";
             this.hàngTrongKhoToolStripMenuItem.Click += new System.EventHandler(this.hàngTrongKhoToolStripMenuItem_Click);
             // 
@@ -250,7 +252,7 @@ namespace CoffeeShopManagement
             // 
             this.nhậpThêmHàngToolStripMenuItem.Image = global::CoffeeShopManagement.Properties.Resources.icon___Import_Goods;
             this.nhậpThêmHàngToolStripMenuItem.Name = "nhậpThêmHàngToolStripMenuItem";
-            this.nhậpThêmHàngToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.nhậpThêmHàngToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
             this.nhậpThêmHàngToolStripMenuItem.Text = "Nhập hàng";
             this.nhậpThêmHàngToolStripMenuItem.Click += new System.EventHandler(this.nhậpThêmHàngToolStripMenuItem_Click);
             // 
@@ -262,14 +264,14 @@ namespace CoffeeShopManagement
             this.lịchSửHoạtĐộngToolStripMenuItem});
             this.lịchSửToolStripMenuItem.Image = global::CoffeeShopManagement.Properties.Resources.icon___History;
             this.lịchSửToolStripMenuItem.Name = "lịchSửToolStripMenuItem";
-            this.lịchSửToolStripMenuItem.Size = new System.Drawing.Size(76, 21);
+            this.lịchSửToolStripMenuItem.Size = new System.Drawing.Size(74, 24);
             this.lịchSửToolStripMenuItem.Text = "Lịch sử";
             // 
             // lịchSửHóaĐơnToolStripMenuItem
             // 
             this.lịchSửHóaĐơnToolStripMenuItem.Image = global::CoffeeShopManagement.Properties.Resources.icon___Bill_History;
             this.lịchSửHóaĐơnToolStripMenuItem.Name = "lịchSửHóaĐơnToolStripMenuItem";
-            this.lịchSửHóaĐơnToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.lịchSửHóaĐơnToolStripMenuItem.Size = new System.Drawing.Size(173, 26);
             this.lịchSửHóaĐơnToolStripMenuItem.Text = "Lịch sử hóa đơn";
             this.lịchSửHóaĐơnToolStripMenuItem.Click += new System.EventHandler(this.lịchSửHóaĐơnToolStripMenuItem_Click);
             // 
@@ -277,7 +279,7 @@ namespace CoffeeShopManagement
             // 
             this.lịchSửNhậpHàngToolStripMenuItem.Image = global::CoffeeShopManagement.Properties.Resources.icon___Import;
             this.lịchSửNhậpHàngToolStripMenuItem.Name = "lịchSửNhậpHàngToolStripMenuItem";
-            this.lịchSửNhậpHàngToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.lịchSửNhậpHàngToolStripMenuItem.Size = new System.Drawing.Size(173, 26);
             this.lịchSửNhậpHàngToolStripMenuItem.Text = "Lịch sử nhập hàng";
             this.lịchSửNhậpHàngToolStripMenuItem.Click += new System.EventHandler(this.lịchSửNhậpHàngToolStripMenuItem_Click);
             // 
@@ -285,7 +287,7 @@ namespace CoffeeShopManagement
             // 
             this.lịchSửHoạtĐộngToolStripMenuItem.Image = global::CoffeeShopManagement.Properties.Resources.icon___Action_History;
             this.lịchSửHoạtĐộngToolStripMenuItem.Name = "lịchSửHoạtĐộngToolStripMenuItem";
-            this.lịchSửHoạtĐộngToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.lịchSửHoạtĐộngToolStripMenuItem.Size = new System.Drawing.Size(173, 26);
             this.lịchSửHoạtĐộngToolStripMenuItem.Text = "Lịch sử hoạt động";
             this.lịchSửHoạtĐộngToolStripMenuItem.Click += new System.EventHandler(this.lịchSửHoạtĐộngToolStripMenuItem_Click);
             // 
@@ -295,14 +297,14 @@ namespace CoffeeShopManagement
             this.liênHệVớiNhàPhátTriểnToolStripMenuItem});
             this.trợGiúpToolStripMenuItem.Image = global::CoffeeShopManagement.Properties.Resources.icon___Help;
             this.trợGiúpToolStripMenuItem.Name = "trợGiúpToolStripMenuItem";
-            this.trợGiúpToolStripMenuItem.Size = new System.Drawing.Size(85, 21);
+            this.trợGiúpToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
             this.trợGiúpToolStripMenuItem.Text = "Trợ giúp";
             // 
             // liênHệVớiNhàPhátTriểnToolStripMenuItem
             // 
             this.liênHệVớiNhàPhátTriểnToolStripMenuItem.Image = global::CoffeeShopManagement.Properties.Resources.icon___Connect_to_developer;
             this.liênHệVớiNhàPhátTriểnToolStripMenuItem.Name = "liênHệVớiNhàPhátTriểnToolStripMenuItem";
-            this.liênHệVớiNhàPhátTriểnToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
+            this.liênHệVớiNhàPhátTriểnToolStripMenuItem.Size = new System.Drawing.Size(210, 26);
             this.liênHệVớiNhàPhátTriểnToolStripMenuItem.Text = "Liên hệ với nhà phát triển";
             this.liênHệVớiNhàPhátTriểnToolStripMenuItem.Click += new System.EventHandler(this.liênHệVớiNhàPhátTriểnToolStripMenuItem_Click);
             // 
@@ -313,14 +315,14 @@ namespace CoffeeShopManagement
             this.đăngXuấtToolStripMenuItem});
             this.tàiKhoảnToolStripMenuItem.Image = global::CoffeeShopManagement.Properties.Resources.icon___Account;
             this.tàiKhoảnToolStripMenuItem.Name = "tàiKhoảnToolStripMenuItem";
-            this.tàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(91, 21);
+            this.tàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(89, 24);
             this.tàiKhoảnToolStripMenuItem.Text = "Tài khoản";
             // 
             // thôngTinTàiKhoảnToolStripMenuItem
             // 
             this.thôngTinTàiKhoảnToolStripMenuItem.Image = global::CoffeeShopManagement.Properties.Resources.icon___Account_Info;
             this.thôngTinTàiKhoảnToolStripMenuItem.Name = "thôngTinTàiKhoảnToolStripMenuItem";
-            this.thôngTinTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.thôngTinTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.thôngTinTàiKhoảnToolStripMenuItem.Text = "Thông tin tài khoản";
             this.thôngTinTàiKhoảnToolStripMenuItem.Click += new System.EventHandler(this.thôngTinTàiKhoảnToolStripMenuItem_Click);
             // 
@@ -328,7 +330,7 @@ namespace CoffeeShopManagement
             // 
             this.đăngXuấtToolStripMenuItem.Image = global::CoffeeShopManagement.Properties.Resources.icon___Logout;
             this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
-            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
             this.đăngXuấtToolStripMenuItem.Click += new System.EventHandler(this.đăngXuấtToolStripMenuItem_Click);
             // 
@@ -336,10 +338,10 @@ namespace CoffeeShopManagement
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(30, 66);
+            this.label1.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(31, 55);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(177, 29);
+            this.label1.Size = new System.Drawing.Size(142, 22);
             this.label1.TabIndex = 1;
             this.label1.Text = "Menu phục vụ";
             // 
@@ -347,10 +349,10 @@ namespace CoffeeShopManagement
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(480, 66);
+            this.label2.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(479, 56);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(266, 29);
+            this.label2.Size = new System.Drawing.Size(213, 22);
             this.label2.TabIndex = 2;
             this.label2.Text = "Thông tin khách hàng";
             // 
@@ -358,10 +360,10 @@ namespace CoffeeShopManagement
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(30, 461);
+            this.label3.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold);
+            this.label3.Location = new System.Drawing.Point(31, 457);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(166, 29);
+            this.label3.Size = new System.Drawing.Size(133, 22);
             this.label3.TabIndex = 3;
             this.label3.Text = "Quản lý quán";
             // 
@@ -369,10 +371,10 @@ namespace CoffeeShopManagement
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(480, 461);
+            this.label4.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold);
+            this.label4.Location = new System.Drawing.Point(974, 56);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(135, 29);
+            this.label4.Size = new System.Drawing.Size(109, 22);
             this.label4.TabIndex = 4;
             this.label4.Text = "Thêm món";
             // 
@@ -380,10 +382,10 @@ namespace CoffeeShopManagement
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(916, 66);
+            this.label5.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold);
+            this.label5.Location = new System.Drawing.Point(480, 457);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(112, 29);
+            this.label5.Size = new System.Drawing.Size(89, 22);
             this.label5.TabIndex = 5;
             this.label5.Text = "Hóa đơn";
             // 
@@ -393,7 +395,7 @@ namespace CoffeeShopManagement
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.dgvMenu.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvMenu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvMenu.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dgvMenu.BackgroundColor = System.Drawing.Color.MediumSeaGreen;
             this.dgvMenu.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvMenu.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvMenu.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -416,13 +418,14 @@ namespace CoffeeShopManagement
             this.dgvMenu.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvMenu.EnableHeadersVisualStyles = false;
             this.dgvMenu.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvMenu.Location = new System.Drawing.Point(35, 107);
+            this.dgvMenu.Location = new System.Drawing.Point(35, 89);
             this.dgvMenu.Name = "dgvMenu";
             this.dgvMenu.ReadOnly = true;
             this.dgvMenu.RowHeadersVisible = false;
+            this.dgvMenu.RowHeadersWidth = 51;
             this.dgvMenu.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvMenu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMenu.Size = new System.Drawing.Size(412, 319);
+            this.dgvMenu.Size = new System.Drawing.Size(412, 334);
             this.dgvMenu.TabIndex = 6;
             this.dgvMenu.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.dgvMenu.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -430,7 +433,7 @@ namespace CoffeeShopManagement
             this.dgvMenu.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
             this.dgvMenu.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.dgvMenu.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dgvMenu.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dgvMenu.ThemeStyle.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.dgvMenu.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvMenu.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.dgvMenu.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -455,7 +458,7 @@ namespace CoffeeShopManagement
             this.lGetOutOfFood.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lGetOutOfFood.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lGetOutOfFood.ForeColor = System.Drawing.Color.Red;
-            this.lGetOutOfFood.Location = new System.Drawing.Point(32, 428);
+            this.lGetOutOfFood.Location = new System.Drawing.Point(32, 426);
             this.lGetOutOfFood.Name = "lGetOutOfFood";
             this.lGetOutOfFood.Size = new System.Drawing.Size(124, 16);
             this.lGetOutOfFood.TabIndex = 9;
@@ -465,8 +468,8 @@ namespace CoffeeShopManagement
             // label7
             // 
             this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(480, 111);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.75F);
+            this.label7.Location = new System.Drawing.Point(480, 160);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(76, 33);
             this.label7.TabIndex = 0;
@@ -478,7 +481,7 @@ namespace CoffeeShopManagement
             this.tbCustomerSDT.AutoRoundedCorners = true;
             this.tbCustomerSDT.BackColor = System.Drawing.Color.Transparent;
             this.tbCustomerSDT.BorderColor = System.Drawing.Color.Black;
-            this.tbCustomerSDT.BorderRadius = 19;
+            this.tbCustomerSDT.BorderRadius = 15;
             this.tbCustomerSDT.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbCustomerSDT.DefaultText = "";
             this.tbCustomerSDT.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -489,17 +492,17 @@ namespace CoffeeShopManagement
             this.tbCustomerSDT.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbCustomerSDT.FocusedState.Parent = this.tbCustomerSDT;
             this.tbCustomerSDT.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbCustomerSDT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.tbCustomerSDT.ForeColor = System.Drawing.Color.Black;
             this.tbCustomerSDT.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbCustomerSDT.HoverState.Parent = this.tbCustomerSDT;
-            this.tbCustomerSDT.Location = new System.Drawing.Point(605, 107);
+            this.tbCustomerSDT.Location = new System.Drawing.Point(605, 162);
             this.tbCustomerSDT.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbCustomerSDT.Name = "tbCustomerSDT";
             this.tbCustomerSDT.PasswordChar = '\0';
             this.tbCustomerSDT.PlaceholderText = "Số điện thoại khách hàng";
             this.tbCustomerSDT.SelectedText = "";
             this.tbCustomerSDT.ShadowDecoration.Parent = this.tbCustomerSDT;
-            this.tbCustomerSDT.Size = new System.Drawing.Size(286, 40);
+            this.tbCustomerSDT.Size = new System.Drawing.Size(336, 33);
             this.tbCustomerSDT.TabIndex = 0;
             this.tbCustomerSDT.TextChanged += new System.EventHandler(this.tbCustomerSDT_TextChanged);
             this.tbCustomerSDT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCustomerSDT_KeyPress);
@@ -509,7 +512,7 @@ namespace CoffeeShopManagement
             this.tbCustomerName.AutoRoundedCorners = true;
             this.tbCustomerName.BackColor = System.Drawing.Color.Transparent;
             this.tbCustomerName.BorderColor = System.Drawing.Color.Black;
-            this.tbCustomerName.BorderRadius = 19;
+            this.tbCustomerName.BorderRadius = 15;
             this.tbCustomerName.Cursor = System.Windows.Forms.Cursors.No;
             this.tbCustomerName.DefaultText = "";
             this.tbCustomerName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -520,25 +523,25 @@ namespace CoffeeShopManagement
             this.tbCustomerName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbCustomerName.FocusedState.Parent = this.tbCustomerName;
             this.tbCustomerName.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbCustomerName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.tbCustomerName.ForeColor = System.Drawing.Color.Black;
             this.tbCustomerName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbCustomerName.HoverState.Parent = this.tbCustomerName;
-            this.tbCustomerName.Location = new System.Drawing.Point(605, 153);
+            this.tbCustomerName.Location = new System.Drawing.Point(605, 199);
             this.tbCustomerName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbCustomerName.Name = "tbCustomerName";
             this.tbCustomerName.PasswordChar = '\0';
             this.tbCustomerName.PlaceholderText = "Tên khách hàng";
             this.tbCustomerName.SelectedText = "";
             this.tbCustomerName.ShadowDecoration.Parent = this.tbCustomerName;
-            this.tbCustomerName.Size = new System.Drawing.Size(286, 40);
+            this.tbCustomerName.Size = new System.Drawing.Size(336, 33);
             this.tbCustomerName.TabIndex = 0;
             this.tbCustomerName.TabStop = false;
             // 
             // label8
             // 
             this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(480, 156);
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.75F);
+            this.label8.Location = new System.Drawing.Point(480, 196);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(98, 37);
             this.label8.TabIndex = 0;
@@ -550,7 +553,7 @@ namespace CoffeeShopManagement
             this.tbCustomerMember.AutoRoundedCorners = true;
             this.tbCustomerMember.BackColor = System.Drawing.Color.Transparent;
             this.tbCustomerMember.BorderColor = System.Drawing.Color.Black;
-            this.tbCustomerMember.BorderRadius = 19;
+            this.tbCustomerMember.BorderRadius = 15;
             this.tbCustomerMember.Cursor = System.Windows.Forms.Cursors.No;
             this.tbCustomerMember.DefaultText = "";
             this.tbCustomerMember.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -561,25 +564,26 @@ namespace CoffeeShopManagement
             this.tbCustomerMember.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbCustomerMember.FocusedState.Parent = this.tbCustomerMember;
             this.tbCustomerMember.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbCustomerMember.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.tbCustomerMember.ForeColor = System.Drawing.Color.Black;
             this.tbCustomerMember.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbCustomerMember.HoverState.Parent = this.tbCustomerMember;
-            this.tbCustomerMember.Location = new System.Drawing.Point(605, 199);
+            this.tbCustomerMember.Location = new System.Drawing.Point(605, 235);
             this.tbCustomerMember.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbCustomerMember.Name = "tbCustomerMember";
             this.tbCustomerMember.PasswordChar = '\0';
             this.tbCustomerMember.PlaceholderText = "Member";
+            this.tbCustomerMember.ReadOnly = true;
             this.tbCustomerMember.SelectedText = "";
             this.tbCustomerMember.ShadowDecoration.Parent = this.tbCustomerMember;
-            this.tbCustomerMember.Size = new System.Drawing.Size(286, 40);
+            this.tbCustomerMember.Size = new System.Drawing.Size(336, 33);
             this.tbCustomerMember.TabIndex = 0;
             this.tbCustomerMember.TabStop = false;
             // 
             // label9
             // 
             this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(480, 202);
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.75F);
+            this.label9.Location = new System.Drawing.Point(480, 232);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(98, 37);
             this.label9.TabIndex = 0;
@@ -591,7 +595,7 @@ namespace CoffeeShopManagement
             this.tbCustomerAge.AutoRoundedCorners = true;
             this.tbCustomerAge.BackColor = System.Drawing.Color.Transparent;
             this.tbCustomerAge.BorderColor = System.Drawing.Color.Black;
-            this.tbCustomerAge.BorderRadius = 19;
+            this.tbCustomerAge.BorderRadius = 15;
             this.tbCustomerAge.Cursor = System.Windows.Forms.Cursors.No;
             this.tbCustomerAge.DefaultText = "";
             this.tbCustomerAge.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -602,25 +606,26 @@ namespace CoffeeShopManagement
             this.tbCustomerAge.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbCustomerAge.FocusedState.Parent = this.tbCustomerAge;
             this.tbCustomerAge.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbCustomerAge.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.tbCustomerAge.ForeColor = System.Drawing.Color.Black;
             this.tbCustomerAge.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbCustomerAge.HoverState.Parent = this.tbCustomerAge;
-            this.tbCustomerAge.Location = new System.Drawing.Point(605, 245);
+            this.tbCustomerAge.Location = new System.Drawing.Point(605, 271);
             this.tbCustomerAge.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbCustomerAge.Name = "tbCustomerAge";
             this.tbCustomerAge.PasswordChar = '\0';
             this.tbCustomerAge.PlaceholderText = "Tuổi của khách hàng";
+            this.tbCustomerAge.ReadOnly = true;
             this.tbCustomerAge.SelectedText = "";
             this.tbCustomerAge.ShadowDecoration.Parent = this.tbCustomerAge;
-            this.tbCustomerAge.Size = new System.Drawing.Size(286, 40);
+            this.tbCustomerAge.Size = new System.Drawing.Size(336, 33);
             this.tbCustomerAge.TabIndex = 0;
             this.tbCustomerAge.TabStop = false;
             // 
             // label10
             // 
             this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(480, 248);
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.75F);
+            this.label10.Location = new System.Drawing.Point(480, 268);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(98, 37);
             this.label10.TabIndex = 0;
@@ -632,7 +637,7 @@ namespace CoffeeShopManagement
             this.tbFavoriteFood.AutoRoundedCorners = true;
             this.tbFavoriteFood.BackColor = System.Drawing.Color.Transparent;
             this.tbFavoriteFood.BorderColor = System.Drawing.Color.Black;
-            this.tbFavoriteFood.BorderRadius = 19;
+            this.tbFavoriteFood.BorderRadius = 15;
             this.tbFavoriteFood.Cursor = System.Windows.Forms.Cursors.No;
             this.tbFavoriteFood.DefaultText = "";
             this.tbFavoriteFood.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -643,25 +648,26 @@ namespace CoffeeShopManagement
             this.tbFavoriteFood.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbFavoriteFood.FocusedState.Parent = this.tbFavoriteFood;
             this.tbFavoriteFood.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbFavoriteFood.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.tbFavoriteFood.ForeColor = System.Drawing.Color.Black;
             this.tbFavoriteFood.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbFavoriteFood.HoverState.Parent = this.tbFavoriteFood;
-            this.tbFavoriteFood.Location = new System.Drawing.Point(605, 291);
+            this.tbFavoriteFood.Location = new System.Drawing.Point(605, 307);
             this.tbFavoriteFood.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbFavoriteFood.Name = "tbFavoriteFood";
             this.tbFavoriteFood.PasswordChar = '\0';
             this.tbFavoriteFood.PlaceholderText = "Món khoái khẩu của khách hàng";
+            this.tbFavoriteFood.ReadOnly = true;
             this.tbFavoriteFood.SelectedText = "";
             this.tbFavoriteFood.ShadowDecoration.Parent = this.tbFavoriteFood;
-            this.tbFavoriteFood.Size = new System.Drawing.Size(286, 40);
+            this.tbFavoriteFood.Size = new System.Drawing.Size(336, 33);
             this.tbFavoriteFood.TabIndex = 0;
             this.tbFavoriteFood.TabStop = false;
             // 
             // label11
             // 
             this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(480, 291);
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.75F);
+            this.label11.Location = new System.Drawing.Point(480, 306);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(140, 37);
             this.label11.TabIndex = 0;
@@ -672,7 +678,8 @@ namespace CoffeeShopManagement
             // 
             this.bAddCustomer.AutoRoundedCorners = true;
             this.bAddCustomer.BackColor = System.Drawing.Color.Transparent;
-            this.bAddCustomer.BorderRadius = 19;
+            this.bAddCustomer.BorderRadius = 16;
+            this.bAddCustomer.BorderThickness = 1;
             this.bAddCustomer.CheckedState.Parent = this.bAddCustomer;
             this.bAddCustomer.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bAddCustomer.CustomImages.Parent = this.bAddCustomer;
@@ -680,30 +687,31 @@ namespace CoffeeShopManagement
             this.bAddCustomer.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bAddCustomer.ForeColor = System.Drawing.Color.White;
             this.bAddCustomer.HoverState.Parent = this.bAddCustomer;
-            this.bAddCustomer.Location = new System.Drawing.Point(480, 356);
+            this.bAddCustomer.Location = new System.Drawing.Point(480, 368);
             this.bAddCustomer.Name = "bAddCustomer";
             this.bAddCustomer.ShadowDecoration.Parent = this.bAddCustomer;
-            this.bAddCustomer.Size = new System.Drawing.Size(411, 40);
+            this.bAddCustomer.Size = new System.Drawing.Size(461, 35);
             this.bAddCustomer.TabIndex = 10;
             this.bAddCustomer.TabStop = false;
-            this.bAddCustomer.Text = "Thêm mới";
+            this.bAddCustomer.Text = "Thêm thẻ thành viên mới";
             this.bAddCustomer.Click += new System.EventHandler(this.bAddCustomer_Click);
             // 
             // bCustomerInfo
             // 
             this.bCustomerInfo.AutoRoundedCorners = true;
             this.bCustomerInfo.BackColor = System.Drawing.Color.Transparent;
-            this.bCustomerInfo.BorderRadius = 19;
+            this.bCustomerInfo.BorderRadius = 15;
+            this.bCustomerInfo.BorderThickness = 1;
             this.bCustomerInfo.CheckedState.Parent = this.bCustomerInfo;
             this.bCustomerInfo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bCustomerInfo.CustomImages.Parent = this.bCustomerInfo;
             this.bCustomerInfo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bCustomerInfo.ForeColor = System.Drawing.Color.White;
             this.bCustomerInfo.HoverState.Parent = this.bCustomerInfo;
-            this.bCustomerInfo.Location = new System.Drawing.Point(480, 402);
+            this.bCustomerInfo.Location = new System.Drawing.Point(480, 408);
             this.bCustomerInfo.Name = "bCustomerInfo";
             this.bCustomerInfo.ShadowDecoration.Parent = this.bCustomerInfo;
-            this.bCustomerInfo.Size = new System.Drawing.Size(193, 40);
+            this.bCustomerInfo.Size = new System.Drawing.Size(220, 33);
             this.bCustomerInfo.TabIndex = 11;
             this.bCustomerInfo.TabStop = false;
             this.bCustomerInfo.Text = "Thông tin chi tiết";
@@ -713,7 +721,8 @@ namespace CoffeeShopManagement
             // 
             this.bComments.AutoRoundedCorners = true;
             this.bComments.BackColor = System.Drawing.Color.Transparent;
-            this.bComments.BorderRadius = 19;
+            this.bComments.BorderRadius = 15;
+            this.bComments.BorderThickness = 1;
             this.bComments.CheckedState.Parent = this.bComments;
             this.bComments.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bComments.CustomImages.Parent = this.bComments;
@@ -721,10 +730,10 @@ namespace CoffeeShopManagement
             this.bComments.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bComments.ForeColor = System.Drawing.Color.White;
             this.bComments.HoverState.Parent = this.bComments;
-            this.bComments.Location = new System.Drawing.Point(698, 402);
+            this.bComments.Location = new System.Drawing.Point(721, 408);
             this.bComments.Name = "bComments";
             this.bComments.ShadowDecoration.Parent = this.bComments;
-            this.bComments.Size = new System.Drawing.Size(193, 40);
+            this.bComments.Size = new System.Drawing.Size(220, 33);
             this.bComments.TabIndex = 12;
             this.bComments.TabStop = false;
             this.bComments.Text = "Đóng góp ý kiến";
@@ -732,8 +741,8 @@ namespace CoffeeShopManagement
             // label12
             // 
             this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(480, 497);
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.75F);
+            this.label12.Location = new System.Drawing.Point(976, 154);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(119, 33);
             this.label12.TabIndex = 13;
@@ -757,10 +766,10 @@ namespace CoffeeShopManagement
             this.nudSLCustomer.FocusedState.Parent = this.nudSLCustomer;
             this.nudSLCustomer.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.nudSLCustomer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.nudSLCustomer.Location = new System.Drawing.Point(605, 495);
+            this.nudSLCustomer.Location = new System.Drawing.Point(1079, 153);
             this.nudSLCustomer.Name = "nudSLCustomer";
             this.nudSLCustomer.ShadowDecoration.Parent = this.nudSLCustomer;
-            this.nudSLCustomer.Size = new System.Drawing.Size(286, 36);
+            this.nudSLCustomer.Size = new System.Drawing.Size(374, 36);
             this.nudSLCustomer.TabIndex = 14;
             this.nudSLCustomer.TabStop = false;
             this.nudSLCustomer.Value = new decimal(new int[] {
@@ -772,8 +781,8 @@ namespace CoffeeShopManagement
             // label13
             // 
             this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(480, 536);
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.75F);
+            this.label13.Location = new System.Drawing.Point(976, 196);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(119, 33);
             this.label13.TabIndex = 15;
@@ -783,8 +792,8 @@ namespace CoffeeShopManagement
             // label14
             // 
             this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(480, 575);
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.75F);
+            this.label14.Location = new System.Drawing.Point(976, 237);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(119, 33);
             this.label14.TabIndex = 17;
@@ -808,10 +817,10 @@ namespace CoffeeShopManagement
             this.nudSL.FocusedState.Parent = this.nudSL;
             this.nudSL.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.nudSL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.nudSL.Location = new System.Drawing.Point(605, 573);
+            this.nudSL.Location = new System.Drawing.Point(1079, 235);
             this.nudSL.Name = "nudSL";
             this.nudSL.ShadowDecoration.Parent = this.nudSL;
-            this.nudSL.Size = new System.Drawing.Size(286, 36);
+            this.nudSL.Size = new System.Drawing.Size(374, 36);
             this.nudSL.TabIndex = 2;
             this.nudSL.Value = new decimal(new int[] {
             1,
@@ -822,8 +831,8 @@ namespace CoffeeShopManagement
             // label15
             // 
             this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(480, 614);
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.75F);
+            this.label15.Location = new System.Drawing.Point(976, 277);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(119, 33);
             this.label15.TabIndex = 19;
@@ -849,23 +858,23 @@ namespace CoffeeShopManagement
             this.tbPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.tbPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbPrice.HoverState.Parent = this.tbPrice;
-            this.tbPrice.Location = new System.Drawing.Point(605, 612);
+            this.tbPrice.Location = new System.Drawing.Point(1079, 275);
             this.tbPrice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbPrice.Name = "tbPrice";
             this.tbPrice.PasswordChar = '\0';
             this.tbPrice.PlaceholderText = "Đơn giá của món ";
             this.tbPrice.SelectedText = "";
             this.tbPrice.ShadowDecoration.Parent = this.tbPrice;
-            this.tbPrice.Size = new System.Drawing.Size(286, 36);
+            this.tbPrice.Size = new System.Drawing.Size(374, 36);
             this.tbPrice.TabIndex = 20;
             this.tbPrice.TabStop = false;
-            this.tbPrice.TextChanged += new System.EventHandler(this.tbPrice_TextChanged);
             // 
             // bAddFood
             // 
             this.bAddFood.AutoRoundedCorners = true;
             this.bAddFood.BackColor = System.Drawing.Color.Transparent;
-            this.bAddFood.BorderRadius = 20;
+            this.bAddFood.BorderRadius = 35;
+            this.bAddFood.BorderThickness = 1;
             this.bAddFood.CheckedState.Parent = this.bAddFood;
             this.bAddFood.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bAddFood.CustomImages.Parent = this.bAddFood;
@@ -873,15 +882,14 @@ namespace CoffeeShopManagement
             this.bAddFood.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bAddFood.ForeColor = System.Drawing.Color.White;
             this.bAddFood.HoverState.Parent = this.bAddFood;
-            this.bAddFood.Location = new System.Drawing.Point(480, 691);
+            this.bAddFood.Location = new System.Drawing.Point(981, 368);
             this.bAddFood.Name = "bAddFood";
             this.bAddFood.ShadowDecoration.BorderRadius = 10;
             this.bAddFood.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.bAddFood.ShadowDecoration.Parent = this.bAddFood;
-            this.bAddFood.Size = new System.Drawing.Size(411, 42);
+            this.bAddFood.Size = new System.Drawing.Size(472, 72);
             this.bAddFood.TabIndex = 3;
             this.bAddFood.Text = "Thêm món";
-            this.bAddFood.Click += new System.EventHandler(this.bAddFood_Click);
             // 
             // cbFood
             // 
@@ -901,10 +909,10 @@ namespace CoffeeShopManagement
             this.cbFood.HoverState.Parent = this.cbFood;
             this.cbFood.ItemHeight = 30;
             this.cbFood.ItemsAppearance.Parent = this.cbFood;
-            this.cbFood.Location = new System.Drawing.Point(605, 534);
+            this.cbFood.Location = new System.Drawing.Point(1079, 194);
             this.cbFood.Name = "cbFood";
             this.cbFood.ShadowDecoration.Parent = this.cbFood;
-            this.cbFood.Size = new System.Drawing.Size(286, 36);
+            this.cbFood.Size = new System.Drawing.Size(374, 36);
             this.cbFood.TabIndex = 1;
             this.cbFood.SelectedIndexChanged += new System.EventHandler(this.cbFood_SelectedIndexChanged);
             // 
@@ -914,7 +922,7 @@ namespace CoffeeShopManagement
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
             this.dgvBill.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvBill.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvBill.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dgvBill.BackgroundColor = System.Drawing.Color.White;
             this.dgvBill.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvBill.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvBill.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -936,14 +944,15 @@ namespace CoffeeShopManagement
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvBill.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvBill.EnableHeadersVisualStyles = false;
-            this.dgvBill.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvBill.Location = new System.Drawing.Point(921, 107);
+            this.dgvBill.GridColor = System.Drawing.Color.White;
+            this.dgvBill.Location = new System.Drawing.Point(480, 484);
             this.dgvBill.Name = "dgvBill";
             this.dgvBill.ReadOnly = true;
             this.dgvBill.RowHeadersVisible = false;
+            this.dgvBill.RowHeadersWidth = 51;
             this.dgvBill.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvBill.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvBill.Size = new System.Drawing.Size(394, 319);
+            this.dgvBill.Size = new System.Drawing.Size(325, 230);
             this.dgvBill.TabIndex = 23;
             this.dgvBill.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.dgvBill.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -951,8 +960,8 @@ namespace CoffeeShopManagement
             this.dgvBill.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
             this.dgvBill.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.dgvBill.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dgvBill.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.dgvBill.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvBill.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dgvBill.ThemeStyle.GridColor = System.Drawing.Color.White;
             this.dgvBill.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.dgvBill.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvBill.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -972,7 +981,8 @@ namespace CoffeeShopManagement
             // 
             this.bDeleteFood.AutoRoundedCorners = true;
             this.bDeleteFood.BackColor = System.Drawing.Color.Transparent;
-            this.bDeleteFood.BorderRadius = 17;
+            this.bDeleteFood.BorderRadius = 21;
+            this.bDeleteFood.BorderThickness = 1;
             this.bDeleteFood.CheckedState.Parent = this.bDeleteFood;
             this.bDeleteFood.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bDeleteFood.CustomImages.Parent = this.bDeleteFood;
@@ -980,10 +990,10 @@ namespace CoffeeShopManagement
             this.bDeleteFood.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bDeleteFood.ForeColor = System.Drawing.Color.White;
             this.bDeleteFood.HoverState.Parent = this.bDeleteFood;
-            this.bDeleteFood.Location = new System.Drawing.Point(1321, 390);
+            this.bDeleteFood.Location = new System.Drawing.Point(817, 670);
             this.bDeleteFood.Name = "bDeleteFood";
             this.bDeleteFood.ShadowDecoration.Parent = this.bDeleteFood;
-            this.bDeleteFood.Size = new System.Drawing.Size(132, 36);
+            this.bDeleteFood.Size = new System.Drawing.Size(132, 44);
             this.bDeleteFood.TabIndex = 24;
             this.bDeleteFood.Text = "Xóa";
             // 
@@ -991,7 +1001,8 @@ namespace CoffeeShopManagement
             // 
             this.bEditFood.AutoRoundedCorners = true;
             this.bEditFood.BackColor = System.Drawing.Color.Transparent;
-            this.bEditFood.BorderRadius = 17;
+            this.bEditFood.BorderRadius = 21;
+            this.bEditFood.BorderThickness = 1;
             this.bEditFood.CheckedState.Parent = this.bEditFood;
             this.bEditFood.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bEditFood.CustomImages.Parent = this.bEditFood;
@@ -999,22 +1010,12 @@ namespace CoffeeShopManagement
             this.bEditFood.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bEditFood.ForeColor = System.Drawing.Color.White;
             this.bEditFood.HoverState.Parent = this.bEditFood;
-            this.bEditFood.Location = new System.Drawing.Point(1321, 349);
+            this.bEditFood.Location = new System.Drawing.Point(817, 608);
             this.bEditFood.Name = "bEditFood";
             this.bEditFood.ShadowDecoration.Parent = this.bEditFood;
-            this.bEditFood.Size = new System.Drawing.Size(132, 36);
+            this.bEditFood.Size = new System.Drawing.Size(132, 44);
             this.bEditFood.TabIndex = 25;
             this.bEditFood.Text = "Sửa";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.Color.Transparent;
-            this.label17.Location = new System.Drawing.Point(1321, 107);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(42, 13);
-            this.label17.TabIndex = 26;
-            this.label17.Text = "Bàn/ID";
             // 
             // cbTableID
             // 
@@ -1034,36 +1035,11 @@ namespace CoffeeShopManagement
             this.cbTableID.HoverState.Parent = this.cbTableID;
             this.cbTableID.ItemHeight = 30;
             this.cbTableID.ItemsAppearance.Parent = this.cbTableID;
-            this.cbTableID.Location = new System.Drawing.Point(1321, 122);
+            this.cbTableID.Location = new System.Drawing.Point(1079, 89);
             this.cbTableID.Name = "cbTableID";
             this.cbTableID.ShadowDecoration.Parent = this.cbTableID;
-            this.cbTableID.Size = new System.Drawing.Size(132, 36);
+            this.cbTableID.Size = new System.Drawing.Size(374, 36);
             this.cbTableID.TabIndex = 4;
-            this.cbTableID.SelectedIndexChanged += new System.EventHandler(this.cbTableID_SelectedIndexChanged);
-            // 
-            // cbxTakeOut
-            // 
-            this.cbxTakeOut.AutoSize = true;
-            this.cbxTakeOut.BackColor = System.Drawing.Color.Transparent;
-            this.cbxTakeOut.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbxTakeOut.Location = new System.Drawing.Point(1321, 160);
-            this.cbxTakeOut.Name = "cbxTakeOut";
-            this.cbxTakeOut.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.cbxTakeOut.Size = new System.Drawing.Size(91, 17);
-            this.cbxTakeOut.TabIndex = 28;
-            this.cbxTakeOut.Text = "Mua mang về";
-            this.cbxTakeOut.UseVisualStyleBackColor = false;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.BackColor = System.Drawing.Color.Transparent;
-            this.label18.ForeColor = System.Drawing.Color.Red;
-            this.label18.Location = new System.Drawing.Point(1360, 108);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(11, 13);
-            this.label18.TabIndex = 29;
-            this.label18.Text = "*";
             // 
             // lBillHistory
             // 
@@ -1072,7 +1048,7 @@ namespace CoffeeShopManagement
             this.lBillHistory.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lBillHistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lBillHistory.ForeColor = System.Drawing.Color.Red;
-            this.lBillHistory.Location = new System.Drawing.Point(918, 430);
+            this.lBillHistory.Location = new System.Drawing.Point(477, 717);
             this.lBillHistory.Name = "lBillHistory";
             this.lBillHistory.Size = new System.Drawing.Size(101, 16);
             this.lBillHistory.TabIndex = 30;
@@ -1083,7 +1059,7 @@ namespace CoffeeShopManagement
             // 
             this.label20.BackColor = System.Drawing.Color.Transparent;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(921, 497);
+            this.label20.Location = new System.Drawing.Point(974, 499);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(192, 33);
             this.label20.TabIndex = 31;
@@ -1094,7 +1070,8 @@ namespace CoffeeShopManagement
             // 
             this.bCheckout.AutoRoundedCorners = true;
             this.bCheckout.BackColor = System.Drawing.Color.Transparent;
-            this.bCheckout.BorderRadius = 47;
+            this.bCheckout.BorderRadius = 42;
+            this.bCheckout.BorderThickness = 1;
             this.bCheckout.CheckedState.Parent = this.bCheckout;
             this.bCheckout.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bCheckout.CustomImages.Parent = this.bCheckout;
@@ -1102,10 +1079,10 @@ namespace CoffeeShopManagement
             this.bCheckout.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bCheckout.ForeColor = System.Drawing.Color.White;
             this.bCheckout.HoverState.Parent = this.bCheckout;
-            this.bCheckout.Location = new System.Drawing.Point(921, 635);
+            this.bCheckout.Location = new System.Drawing.Point(979, 645);
             this.bCheckout.Name = "bCheckout";
             this.bCheckout.ShadowDecoration.Parent = this.bCheckout;
-            this.bCheckout.Size = new System.Drawing.Size(537, 96);
+            this.bCheckout.Size = new System.Drawing.Size(479, 86);
             this.bCheckout.TabIndex = 5;
             this.bCheckout.Text = "Thanh toán";
             this.bCheckout.Click += new System.EventHandler(this.bCheckout_Click);
@@ -1114,7 +1091,7 @@ namespace CoffeeShopManagement
             // 
             this.label21.BackColor = System.Drawing.Color.Transparent;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(921, 537);
+            this.label21.Location = new System.Drawing.Point(974, 543);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(192, 33);
             this.label21.TabIndex = 33;
@@ -1125,7 +1102,7 @@ namespace CoffeeShopManagement
             // 
             this.label22.BackColor = System.Drawing.Color.Transparent;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(921, 577);
+            this.label22.Location = new System.Drawing.Point(974, 587);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(192, 33);
             this.label22.TabIndex = 34;
@@ -1145,20 +1122,19 @@ namespace CoffeeShopManagement
             this.tbDiscountValue.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.tbDiscountValue.DisabledState.Parent = this.tbDiscountValue;
             this.tbDiscountValue.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbDiscountValue.Enabled = false;
             this.tbDiscountValue.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbDiscountValue.FocusedState.Parent = this.tbDiscountValue;
             this.tbDiscountValue.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbDiscountValue.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbDiscountValue.HoverState.Parent = this.tbDiscountValue;
-            this.tbDiscountValue.Location = new System.Drawing.Point(1078, 537);
+            this.tbDiscountValue.Location = new System.Drawing.Point(1133, 542);
             this.tbDiscountValue.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbDiscountValue.Name = "tbDiscountValue";
             this.tbDiscountValue.PasswordChar = '\0';
             this.tbDiscountValue.PlaceholderText = "Giảm giá";
             this.tbDiscountValue.SelectedText = "";
             this.tbDiscountValue.ShadowDecoration.Parent = this.tbDiscountValue;
-            this.tbDiscountValue.Size = new System.Drawing.Size(375, 36);
+            this.tbDiscountValue.Size = new System.Drawing.Size(320, 36);
             this.tbDiscountValue.TabIndex = 35;
             this.tbDiscountValue.TabStop = false;
             // 
@@ -1175,20 +1151,20 @@ namespace CoffeeShopManagement
             this.tbTotalValue.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.tbTotalValue.DisabledState.Parent = this.tbTotalValue;
             this.tbTotalValue.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbTotalValue.Enabled = false;
             this.tbTotalValue.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbTotalValue.FocusedState.Parent = this.tbTotalValue;
             this.tbTotalValue.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbTotalValue.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbTotalValue.HoverState.Parent = this.tbTotalValue;
-            this.tbTotalValue.Location = new System.Drawing.Point(1078, 497);
+            this.tbTotalValue.Location = new System.Drawing.Point(1133, 497);
             this.tbTotalValue.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbTotalValue.Name = "tbTotalValue";
             this.tbTotalValue.PasswordChar = '\0';
             this.tbTotalValue.PlaceholderText = "Tổng giá trị hóa đơn";
+            this.tbTotalValue.ReadOnly = true;
             this.tbTotalValue.SelectedText = "";
             this.tbTotalValue.ShadowDecoration.Parent = this.tbTotalValue;
-            this.tbTotalValue.Size = new System.Drawing.Size(375, 36);
+            this.tbTotalValue.Size = new System.Drawing.Size(320, 36);
             this.tbTotalValue.TabIndex = 36;
             this.tbTotalValue.TabStop = false;
             // 
@@ -1205,45 +1181,31 @@ namespace CoffeeShopManagement
             this.tbValuePayment.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.tbValuePayment.DisabledState.Parent = this.tbValuePayment;
             this.tbValuePayment.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbValuePayment.Enabled = false;
             this.tbValuePayment.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbValuePayment.FocusedState.Parent = this.tbValuePayment;
             this.tbValuePayment.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbValuePayment.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbValuePayment.HoverState.Parent = this.tbValuePayment;
-            this.tbValuePayment.Location = new System.Drawing.Point(1078, 577);
+            this.tbValuePayment.Location = new System.Drawing.Point(1133, 587);
             this.tbValuePayment.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbValuePayment.Name = "tbValuePayment";
             this.tbValuePayment.PasswordChar = '\0';
-            this.tbValuePayment.PlaceholderText = "Thành tiên";
+            this.tbValuePayment.PlaceholderText = "Thành tiền";
+            this.tbValuePayment.ReadOnly = true;
             this.tbValuePayment.SelectedText = "";
             this.tbValuePayment.ShadowDecoration.Parent = this.tbValuePayment;
-            this.tbValuePayment.Size = new System.Drawing.Size(375, 36);
+            this.tbValuePayment.Size = new System.Drawing.Size(320, 36);
             this.tbValuePayment.TabIndex = 37;
             this.tbValuePayment.TabStop = false;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Brown;
-            this.panel1.Controls.Add(this.lDiscountNotification);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 25);
+            this.panel1.Location = new System.Drawing.Point(0, 28);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1484, 24);
+            this.panel1.Size = new System.Drawing.Size(1484, 19);
             this.panel1.TabIndex = 38;
-            // 
-            // lDiscountNotification
-            // 
-            this.lDiscountNotification.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lDiscountNotification.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.lDiscountNotification.ForeColor = System.Drawing.Color.White;
-            this.lDiscountNotification.Location = new System.Drawing.Point(0, 0);
-            this.lDiscountNotification.Name = "lDiscountNotification";
-            this.lDiscountNotification.Size = new System.Drawing.Size(1484, 24);
-            this.lDiscountNotification.TabIndex = 0;
-            this.lDiscountNotification.Text = "*** Thông báo: Nhân dịp sinh nhật lần thứ 5 của quán 5/1/2015 - 5/1/2020, giảm gi" +
-    "á 15% cho tất cả các hóa đơn ***";
-            this.lDiscountNotification.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lRemind
             // 
@@ -1261,8 +1223,8 @@ namespace CoffeeShopManagement
             // label16
             // 
             this.label16.BackColor = System.Drawing.Color.Transparent;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(480, 653);
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.75F);
+            this.label16.Location = new System.Drawing.Point(976, 319);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(119, 33);
             this.label16.TabIndex = 40;
@@ -1288,7 +1250,7 @@ namespace CoffeeShopManagement
             this.tbNote.ForeColor = System.Drawing.Color.Red;
             this.tbNote.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbNote.HoverState.Parent = this.tbNote;
-            this.tbNote.Location = new System.Drawing.Point(605, 651);
+            this.tbNote.Location = new System.Drawing.Point(1079, 317);
             this.tbNote.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbNote.Name = "tbNote";
             this.tbNote.PasswordChar = '\0';
@@ -1296,7 +1258,7 @@ namespace CoffeeShopManagement
             this.tbNote.PlaceholderText = "Lưu ý";
             this.tbNote.SelectedText = "";
             this.tbNote.ShadowDecoration.Parent = this.tbNote;
-            this.tbNote.Size = new System.Drawing.Size(286, 36);
+            this.tbNote.Size = new System.Drawing.Size(374, 36);
             this.tbNote.TabIndex = 41;
             this.tbNote.TabStop = false;
             // 
@@ -1304,10 +1266,10 @@ namespace CoffeeShopManagement
             // 
             this.label25.AutoSize = true;
             this.label25.BackColor = System.Drawing.Color.Transparent;
-            this.label25.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(916, 461);
+            this.label25.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold);
+            this.label25.Location = new System.Drawing.Point(974, 457);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(144, 29);
+            this.label25.Size = new System.Drawing.Size(116, 22);
             this.label25.TabIndex = 42;
             this.label25.Text = "Thanh toán";
             // 
@@ -1315,16 +1277,17 @@ namespace CoffeeShopManagement
             // 
             this.pnlManage.AutoScroll = true;
             this.pnlManage.BackColor = System.Drawing.Color.Transparent;
-            this.pnlManage.Location = new System.Drawing.Point(35, 497);
+            this.pnlManage.Location = new System.Drawing.Point(35, 484);
             this.pnlManage.Name = "pnlManage";
-            this.pnlManage.Size = new System.Drawing.Size(412, 234);
+            this.pnlManage.Size = new System.Drawing.Size(412, 247);
             this.pnlManage.TabIndex = 43;
             // 
             // bCombine
             // 
             this.bCombine.AutoRoundedCorners = true;
             this.bCombine.BackColor = System.Drawing.Color.Transparent;
-            this.bCombine.BorderRadius = 17;
+            this.bCombine.BorderRadius = 21;
+            this.bCombine.BorderThickness = 1;
             this.bCombine.CheckedState.Parent = this.bCombine;
             this.bCombine.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bCombine.CustomImages.Parent = this.bCombine;
@@ -1332,10 +1295,10 @@ namespace CoffeeShopManagement
             this.bCombine.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bCombine.ForeColor = System.Drawing.Color.White;
             this.bCombine.HoverState.Parent = this.bCombine;
-            this.bCombine.Location = new System.Drawing.Point(1321, 308);
+            this.bCombine.Location = new System.Drawing.Point(817, 546);
             this.bCombine.Name = "bCombine";
             this.bCombine.ShadowDecoration.Parent = this.bCombine;
-            this.bCombine.Size = new System.Drawing.Size(132, 36);
+            this.bCombine.Size = new System.Drawing.Size(132, 44);
             this.bCombine.TabIndex = 44;
             this.bCombine.Text = "Gộp bàn";
             // 
@@ -1343,7 +1306,8 @@ namespace CoffeeShopManagement
             // 
             this.bChangeTableID.AutoRoundedCorners = true;
             this.bChangeTableID.BackColor = System.Drawing.Color.Transparent;
-            this.bChangeTableID.BorderRadius = 17;
+            this.bChangeTableID.BorderRadius = 21;
+            this.bChangeTableID.BorderThickness = 1;
             this.bChangeTableID.CheckedState.Parent = this.bChangeTableID;
             this.bChangeTableID.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bChangeTableID.CustomImages.Parent = this.bChangeTableID;
@@ -1351,33 +1315,12 @@ namespace CoffeeShopManagement
             this.bChangeTableID.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bChangeTableID.ForeColor = System.Drawing.Color.White;
             this.bChangeTableID.HoverState.Parent = this.bChangeTableID;
-            this.bChangeTableID.Location = new System.Drawing.Point(1321, 266);
+            this.bChangeTableID.Location = new System.Drawing.Point(817, 484);
             this.bChangeTableID.Name = "bChangeTableID";
             this.bChangeTableID.ShadowDecoration.Parent = this.bChangeTableID;
-            this.bChangeTableID.Size = new System.Drawing.Size(132, 36);
+            this.bChangeTableID.Size = new System.Drawing.Size(132, 44);
             this.bChangeTableID.TabIndex = 45;
             this.bChangeTableID.Text = "Đổi bàn";
-            // 
-            // bNewCustomerInShop
-            // 
-            this.bNewCustomerInShop.AutoRoundedCorners = true;
-            this.bNewCustomerInShop.BackColor = System.Drawing.Color.Transparent;
-            this.bNewCustomerInShop.BorderRadius = 16;
-            this.bNewCustomerInShop.CheckedState.Parent = this.bNewCustomerInShop;
-            this.bNewCustomerInShop.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bNewCustomerInShop.CustomImages.Parent = this.bNewCustomerInShop;
-            this.bNewCustomerInShop.Enabled = false;
-            this.bNewCustomerInShop.FillColor = System.Drawing.Color.Transparent;
-            this.bNewCustomerInShop.Font = new System.Drawing.Font("Segoe UI", 8.75F, System.Drawing.FontStyle.Bold);
-            this.bNewCustomerInShop.ForeColor = System.Drawing.Color.White;
-            this.bNewCustomerInShop.HoverState.Parent = this.bNewCustomerInShop;
-            this.bNewCustomerInShop.Location = new System.Drawing.Point(772, 58);
-            this.bNewCustomerInShop.Name = "bNewCustomerInShop";
-            this.bNewCustomerInShop.ShadowDecoration.Parent = this.bNewCustomerInShop;
-            this.bNewCustomerInShop.Size = new System.Drawing.Size(119, 35);
-            this.bNewCustomerInShop.TabIndex = 46;
-            this.bNewCustomerInShop.TabStop = false;
-            this.bNewCustomerInShop.Click += new System.EventHandler(this.bNewCustomerInShop_Click);
             // 
             // lNotificationCustomer
             // 
@@ -1386,10 +1329,94 @@ namespace CoffeeShopManagement
             this.lNotificationCustomer.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lNotificationCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lNotificationCustomer.ForeColor = System.Drawing.Color.Red;
-            this.lNotificationCustomer.Location = new System.Drawing.Point(491, 335);
+            this.lNotificationCustomer.Location = new System.Drawing.Point(483, 348);
             this.lNotificationCustomer.Name = "lNotificationCustomer";
-            this.lNotificationCustomer.Size = new System.Drawing.Size(0, 16);
+            this.lNotificationCustomer.Size = new System.Drawing.Size(146, 16);
             this.lNotificationCustomer.TabIndex = 47;
+            this.lNotificationCustomer.Text = "Thông báo khách hàng";
+            // 
+            // bNewCustomer
+            // 
+            this.bNewCustomer.AutoRoundedCorners = true;
+            this.bNewCustomer.BackColor = System.Drawing.Color.Transparent;
+            this.bNewCustomer.BorderRadius = 20;
+            this.bNewCustomer.BorderThickness = 1;
+            this.bNewCustomer.CheckedState.Parent = this.bNewCustomer;
+            this.bNewCustomer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bNewCustomer.CustomImages.Parent = this.bNewCustomer;
+            this.bNewCustomer.FillColor = System.Drawing.Color.LightSeaGreen;
+            this.bNewCustomer.Font = new System.Drawing.Font("Segoe UI", 12.25F, System.Drawing.FontStyle.Bold);
+            this.bNewCustomer.ForeColor = System.Drawing.Color.White;
+            this.bNewCustomer.HoverState.Parent = this.bNewCustomer;
+            this.bNewCustomer.Location = new System.Drawing.Point(486, 89);
+            this.bNewCustomer.Name = "bNewCustomer";
+            this.bNewCustomer.ShadowDecoration.Parent = this.bNewCustomer;
+            this.bNewCustomer.Size = new System.Drawing.Size(121, 63);
+            this.bNewCustomer.TabIndex = 48;
+            this.bNewCustomer.TabStop = false;
+            this.bNewCustomer.Text = "Khách mới";
+            this.bNewCustomer.Click += new System.EventHandler(this.bNewCustomer_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Controls.Add(this.rbKhachCoTheThanhVien);
+            this.panel2.Controls.Add(this.rbKhachVangLai);
+            this.panel2.Location = new System.Drawing.Point(634, 89);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(307, 66);
+            this.panel2.TabIndex = 49;
+            // 
+            // rbKhachCoTheThanhVien
+            // 
+            this.rbKhachCoTheThanhVien.AutoSize = true;
+            this.rbKhachCoTheThanhVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.rbKhachCoTheThanhVien.Location = new System.Drawing.Point(6, 34);
+            this.rbKhachCoTheThanhVien.Name = "rbKhachCoTheThanhVien";
+            this.rbKhachCoTheThanhVien.Size = new System.Drawing.Size(237, 24);
+            this.rbKhachCoTheThanhVien.TabIndex = 1;
+            this.rbKhachCoTheThanhVien.TabStop = true;
+            this.rbKhachCoTheThanhVien.Text = "Khách hàng có thẻ thành viên";
+            this.rbKhachCoTheThanhVien.UseVisualStyleBackColor = true;
+            this.rbKhachCoTheThanhVien.CheckedChanged += new System.EventHandler(this.rbKhachCoTheThanhVien_CheckedChanged);
+            // 
+            // rbKhachVangLai
+            // 
+            this.rbKhachVangLai.AutoSize = true;
+            this.rbKhachVangLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.rbKhachVangLai.Location = new System.Drawing.Point(6, 5);
+            this.rbKhachVangLai.Name = "rbKhachVangLai";
+            this.rbKhachVangLai.Size = new System.Drawing.Size(129, 24);
+            this.rbKhachVangLai.TabIndex = 0;
+            this.rbKhachVangLai.TabStop = true;
+            this.rbKhachVangLai.Text = "Khách vãng lai";
+            this.rbKhachVangLai.UseVisualStyleBackColor = true;
+            this.rbKhachVangLai.CheckedChanged += new System.EventHandler(this.rbKhachVangLai_CheckedChanged);
+            // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.75F);
+            this.label6.Location = new System.Drawing.Point(971, 90);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(85, 33);
+            this.label6.TabIndex = 50;
+            this.label6.Text = "Bàn/ID:";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // cbTakeAway
+            // 
+            this.cbTakeAway.AutoSize = true;
+            this.cbTakeAway.BackColor = System.Drawing.Color.Transparent;
+            this.cbTakeAway.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F);
+            this.cbTakeAway.Location = new System.Drawing.Point(1079, 128);
+            this.cbTakeAway.Name = "cbTakeAway";
+            this.cbTakeAway.Size = new System.Drawing.Size(99, 19);
+            this.cbTakeAway.TabIndex = 51;
+            this.cbTakeAway.Text = "Mua mang đi";
+            this.cbTakeAway.UseVisualStyleBackColor = false;
+            this.cbTakeAway.CheckedChanged += new System.EventHandler(this.cbTakeAway_CheckedChanged);
             // 
             // fSell
             // 
@@ -1399,8 +1426,11 @@ namespace CoffeeShopManagement
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1484, 761);
+            this.Controls.Add(this.cbTakeAway);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.bNewCustomer);
             this.Controls.Add(this.lNotificationCustomer);
-            this.Controls.Add(this.bNewCustomerInShop);
             this.Controls.Add(this.bChangeTableID);
             this.Controls.Add(this.bCombine);
             this.Controls.Add(this.pnlManage);
@@ -1417,10 +1447,7 @@ namespace CoffeeShopManagement
             this.Controls.Add(this.bCheckout);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.lBillHistory);
-            this.Controls.Add(this.label18);
-            this.Controls.Add(this.cbxTakeOut);
             this.Controls.Add(this.cbTableID);
-            this.Controls.Add(this.label17);
             this.Controls.Add(this.bEditFood);
             this.Controls.Add(this.bDeleteFood);
             this.Controls.Add(this.dgvBill);
@@ -1466,7 +1493,8 @@ namespace CoffeeShopManagement
             ((System.ComponentModel.ISupportInitialize)(this.nudSLCustomer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudSL)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBill)).EndInit();
-            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1525,10 +1553,7 @@ namespace CoffeeShopManagement
         private Guna.UI2.WinForms.Guna2DataGridView dgvBill;
         private Guna.UI2.WinForms.Guna2Button bDeleteFood;
         private Guna.UI2.WinForms.Guna2Button bEditFood;
-        private System.Windows.Forms.Label label17;
         private Guna.UI2.WinForms.Guna2ComboBox cbTableID;
-        private System.Windows.Forms.CheckBox cbxTakeOut;
-        private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label lBillHistory;
         private System.Windows.Forms.Label label20;
         private Guna.UI2.WinForms.Guna2Button bCheckout;
@@ -1538,7 +1563,6 @@ namespace CoffeeShopManagement
         private Guna.UI2.WinForms.Guna2TextBox tbTotalValue;
         private Guna.UI2.WinForms.Guna2TextBox tbValuePayment;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label lDiscountNotification;
         private System.Windows.Forms.Label lRemind;
         private System.Windows.Forms.Label label16;
         private Guna.UI2.WinForms.Guna2TextBox tbNote;
@@ -1550,7 +1574,12 @@ namespace CoffeeShopManagement
         private System.Windows.Forms.FlowLayoutPanel pnlManage;
         private Guna.UI2.WinForms.Guna2Button bCombine;
         private Guna.UI2.WinForms.Guna2Button bChangeTableID;
-        private Guna.UI2.WinForms.Guna2Button bNewCustomerInShop;
         private Label lNotificationCustomer;
+        private Guna.UI2.WinForms.Guna2Button bNewCustomer;
+        private Panel panel2;
+        private RadioButton rbKhachCoTheThanhVien;
+        private RadioButton rbKhachVangLai;
+        private Label label6;
+        private CheckBox cbTakeAway;
     }
 }

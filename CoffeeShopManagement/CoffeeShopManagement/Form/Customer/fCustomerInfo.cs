@@ -106,5 +106,32 @@ namespace CoffeeShopManagement
                 e.Handled = true;
             }
         }
+
+        private void bSave_Click(object sender, EventArgs e)
+        {
+            Customer newCustomerInfo = new Customer();
+
+            newCustomerInfo.id = Int32.Parse(this.tbID.Text);
+            newCustomerInfo.hoten = this.tbName.Text;
+            newCustomerInfo.sdt = this.tbSDT.Text;
+            newCustomerInfo.gioitinh = this.cbGender.Text;
+            newCustomerInfo.ngaysinh = this.dtpBirthdate.Value;
+
+            // Nếu có thay đổi số điện thoại thì số điện thoại đó phải là duy nhất
+            if (this.customer.sdt != this.tbSDT.Text && CustomerDAO.Instance.CheckExistCustomerInDatabaseBySDT(this.tbSDT.Text))
+            {
+                MessageBox.Show("Số điện thoại này đã tồn tại trong cơ sở dữ liệu", "THẤT BẠI", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }    
+
+            // Thay đổi thông tin
+            CustomerDAO.Instance.UpdateCustomerInfo(newCustomerInfo);
+
+            MessageBox.Show("Cập nhật thông tin khách hàng thành công", "THÀNH CÔNG", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            // Load lại thông tin
+            this.tbSearch.Text = this.tbSDT.Text;
+            this.bSearch.PerformClick();
+        }
     }
 }

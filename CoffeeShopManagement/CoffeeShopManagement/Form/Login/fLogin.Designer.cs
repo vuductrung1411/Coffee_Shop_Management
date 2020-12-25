@@ -96,6 +96,7 @@
             this.bLogin.AutoRoundedCorners = true;
             this.bLogin.BackColor = System.Drawing.Color.Transparent;
             this.bLogin.BorderRadius = 27;
+            this.bLogin.BorderThickness = 1;
             this.bLogin.CheckedState.Parent = this.bLogin;
             this.bLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bLogin.CustomImages.Parent = this.bLogin;
@@ -119,7 +120,7 @@
             this.tbUsername.BorderRadius = 28;
             this.tbUsername.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.tbUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbUsername.DefaultText = "";
+            this.tbUsername.DefaultText = "admin";
             this.tbUsername.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.tbUsername.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.tbUsername.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -133,12 +134,13 @@
             this.tbUsername.HoverState.Parent = this.tbUsername;
             this.tbUsername.IconLeftSize = new System.Drawing.Size(30, 30);
             this.tbUsername.Location = new System.Drawing.Point(983, 185);
-            this.tbUsername.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tbUsername.Margin = new System.Windows.Forms.Padding(5);
             this.tbUsername.Name = "tbUsername";
             this.tbUsername.PasswordChar = '\0';
             this.tbUsername.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.tbUsername.PlaceholderText = "Nhập tên đăng nhập";
             this.tbUsername.SelectedText = "";
+            this.tbUsername.SelectionStart = 5;
             this.tbUsername.ShadowDecoration.Parent = this.tbUsername;
             this.tbUsername.Size = new System.Drawing.Size(483, 58);
             this.tbUsername.TabIndex = 0;
@@ -187,7 +189,7 @@
             this.tbPassword.BorderRadius = 28;
             this.tbPassword.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.tbPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbPassword.DefaultText = "";
+            this.tbPassword.DefaultText = "admin";
             this.tbPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.tbPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.tbPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -200,12 +202,13 @@
             this.tbPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbPassword.HoverState.Parent = this.tbPassword;
             this.tbPassword.Location = new System.Drawing.Point(983, 295);
-            this.tbPassword.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tbPassword.Margin = new System.Windows.Forms.Padding(5);
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.PasswordChar = '\0';
             this.tbPassword.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.tbPassword.PlaceholderText = "Nhập mật khẩu";
             this.tbPassword.SelectedText = "";
+            this.tbPassword.SelectionStart = 5;
             this.tbPassword.ShadowDecoration.Parent = this.tbPassword;
             this.tbPassword.Size = new System.Drawing.Size(483, 58);
             this.tbPassword.TabIndex = 1;
@@ -248,6 +251,7 @@
             this.bCreateAccount.AutoRoundedCorners = true;
             this.bCreateAccount.BackColor = System.Drawing.Color.Transparent;
             this.bCreateAccount.BorderRadius = 21;
+            this.bCreateAccount.BorderThickness = 1;
             this.bCreateAccount.CheckedState.Parent = this.bCreateAccount;
             this.bCreateAccount.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bCreateAccount.CustomImages.Parent = this.bCreateAccount;

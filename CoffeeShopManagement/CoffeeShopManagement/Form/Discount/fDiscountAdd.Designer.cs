@@ -205,6 +205,7 @@
             this.bCancel.AutoRoundedCorners = true;
             this.bCancel.BackColor = System.Drawing.Color.Transparent;
             this.bCancel.BorderRadius = 19;
+            this.bCancel.BorderThickness = 1;
             this.bCancel.CheckedState.Parent = this.bCancel;
             this.bCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bCancel.CustomImages.Parent = this.bCancel;
@@ -225,6 +226,7 @@
             this.bOK.AutoRoundedCorners = true;
             this.bOK.BackColor = System.Drawing.Color.Transparent;
             this.bOK.BorderRadius = 19;
+            this.bOK.BorderThickness = 1;
             this.bOK.CheckedState.Parent = this.bOK;
             this.bOK.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bOK.CustomImages.Parent = this.bOK;

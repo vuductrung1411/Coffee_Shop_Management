@@ -28,7 +28,7 @@ namespace CoffeeShopManagement
         // Đọc ra danh sách chức vụ rồi đưa vào combobox Chức vụ
         void LoadPositionList()
         {
-            string[] arrPositionList = Infomation.Instance.LoadPositionList();
+            string[] arrPositionList = ShopInfo.Instance.PositionList;
             foreach (string item in arrPositionList)
             {
                 this.cbPosition.Items.Add(item);

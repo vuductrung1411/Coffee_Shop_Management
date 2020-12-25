@@ -35,6 +35,8 @@ namespace CoffeeShopManagement.DTO
             this.ngaysinh = ngaysinh;
         }
 
+        public Customer() { }
+
         private int GetBillID()
         {
             return (int)DataProvider.Instance.ExecuteScalar("SELECT COUNT(*) FROM BILL");

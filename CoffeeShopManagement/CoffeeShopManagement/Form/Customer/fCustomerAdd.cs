@@ -114,6 +114,8 @@ namespace CoffeeShopManagement
 
                     // Reset lại thông tin
                     ResetInformation();
+
+                    this.Close();
                 }
                 // Đã tồn tại => Không cho phép thêm
                 else
