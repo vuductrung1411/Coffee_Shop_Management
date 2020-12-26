@@ -64,12 +64,14 @@
     <Compile Include="DAO\StockDAO.cs" />
     <Compile Include="DTO\Account.cs" />
     <Compile Include="DTO\AccountInfo.cs" />
+    <Compile Include="DTO\Bill.cs" />
     <Compile Include="DTO\Customer.cs" />
     <Compile Include="DTO\Discount.cs" />
     <Compile Include="DTO\Food.cs" />
     <Compile Include="DTO\ShopInfo.cs" />
     <Compile Include="DTO\Staff.cs" />
     <Compile Include="DTO\Stock.cs" />
+    <Compile Include="DTO\Table.cs" />
     <Compile Include="Form\Account\fAccountAdd.cs">
       <SubType>Form</SubType>
     </Compile>

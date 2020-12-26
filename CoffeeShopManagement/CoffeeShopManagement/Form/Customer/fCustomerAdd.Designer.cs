@@ -112,7 +112,8 @@
             this.tbName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.tbName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbName.FocusedState.Parent = this.tbName;
-            this.tbName.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tbName.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.tbName.ForeColor = System.Drawing.Color.Black;
             this.tbName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbName.HoverState.Parent = this.tbName;
             this.tbName.Location = new System.Drawing.Point(55, 65);
@@ -139,7 +140,8 @@
             this.tbSDT.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.tbSDT.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbSDT.FocusedState.Parent = this.tbSDT;
-            this.tbSDT.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tbSDT.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.tbSDT.ForeColor = System.Drawing.Color.Black;
             this.tbSDT.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbSDT.HoverState.Parent = this.tbSDT;
             this.tbSDT.Location = new System.Drawing.Point(55, 145);
@@ -162,7 +164,8 @@
             this.dtpBirthdate.CheckedState.Parent = this.dtpBirthdate;
             this.dtpBirthdate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dtpBirthdate.FillColor = System.Drawing.Color.White;
-            this.dtpBirthdate.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dtpBirthdate.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.dtpBirthdate.ForeColor = System.Drawing.Color.Black;
             this.dtpBirthdate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpBirthdate.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.dtpBirthdate.HoverState.Parent = this.dtpBirthdate;
@@ -187,7 +190,7 @@
             this.cbGender.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbGender.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbGender.FocusedState.Parent = this.cbGender;
-            this.cbGender.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbGender.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.cbGender.ForeColor = System.Drawing.Color.Black;
             this.cbGender.HoverState.Parent = this.cbGender;
             this.cbGender.ItemHeight = 30;

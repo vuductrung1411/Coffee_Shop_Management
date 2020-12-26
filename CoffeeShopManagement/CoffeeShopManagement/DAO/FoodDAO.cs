@@ -62,6 +62,20 @@ namespace CoffeeShopManagement.DAO
             string query = "SELECT GIABAN FROM FOOD WHERE TENMON = N'" + name + "'";
             return (int)DataProvider.Instance.ExecuteScalar(query);
         }
+        // Lấy ra tên món từ ID
+        public string GetNameByID(int id)
+        {
+            string query = "SELECT TENMON FROM FOOD WHERE ID = " + id;
+            return DataProvider.Instance.ExecuteScalar(query).ToString();
+        }
+
+        // Lấy ra giá món từ ID
+        public int GetPriceByID(int id)
+        {
+            string query = "SELECT GIABAN FROM FOOD WHERE ID = " + id;
+            return (int)DataProvider.Instance.ExecuteScalar(query);
+        }
+
 
         // lấy ra ID của món từ tên món
         public int GetIDByNameFood(string name)
